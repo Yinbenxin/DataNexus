@@ -1,0 +1,39 @@
+2025-02-25 10:30:23,741 - INFO - INFO - 添加任务到队列: a6a16304-6a6b-49e4-a6fb-7c61e489919f, 类型: embedding
+2025-02-25 10:30:23,857 - INFO - INFO - 从队列获取任务: a6a16304-6a6b-49e4-a6fb-7c61e489919f, 类型: embedding
+2025-02-25 10:30:23,881 - INFO - INFO - 完成任务处理: a6a16304-6a6b-49e4-a6fb-7c61e489919f
+2025-02-25 10:37:31,845 - INFO - INFO - 获取任务状态 task_id: f96643fb-fabc-4eee-987c-4a32abe3b8e0, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-25 13:39:08,715 - INFO - INFO - 添加任务到队列: 2e648c7d-a464-427a-9600-12200814bdd9, 类型: embedding
+2025-02-25 13:39:09,356 - INFO - INFO - 从队列获取任务: 2e648c7d-a464-427a-9600-12200814bdd9, 类型: embedding
+2025-02-25 13:39:29,406 - INFO - INFO - 完成任务处理: 2e648c7d-a464-427a-9600-12200814bdd9
+2025-02-25 13:40:11,753 - INFO - INFO - 获取任务状态 task_id: 2e648c7d-a464-427a-9600-12200814bdd9, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-25 13:40:20,134 - INFO - INFO - 添加任务到队列: ea7f73ca-538f-486b-942a-ce08a9b46023, 类型: embedding
+2025-02-25 13:40:20,742 - INFO - INFO - 从队列获取任务: ea7f73ca-538f-486b-942a-ce08a9b46023, 类型: embedding
+2025-02-25 13:40:40,765 - INFO - INFO - 完成任务处理: ea7f73ca-538f-486b-942a-ce08a9b46023
+2025-02-25 13:40:40,770 - INFO - INFO - 获取任务状态 task_id: ea7f73ca-538f-486b-942a-ce08a9b46023, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-25 13:41:54,355 - INFO - INFO - 添加任务到队列: 2a785058-2691-448c-a4c4-67c3ca4083ac, 类型: embedding
+2025-02-25 13:41:54,589 - INFO - INFO - 从队列获取任务: 2a785058-2691-448c-a4c4-67c3ca4083ac, 类型: embedding
+2025-02-25 13:42:14,619 - INFO - INFO - 完成任务处理: 2a785058-2691-448c-a4c4-67c3ca4083ac
+2025-02-25 13:42:14,624 - INFO - INFO - 获取任务状态 task_id: 2a785058-2691-448c-a4c4-67c3ca4083ac, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-25 13:43:27,522 - INFO - INFO - 获取任务状态 task_id: 2a785058-2691-448c-a4c4-67c3ca4083ac, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-25 13:43:30,701 - INFO - INFO - 添加任务到队列: 0fe8a388-8088-4377-a7bd-20cfc033d442, 类型: embedding
+2025-02-25 13:43:30,704 - INFO - INFO - 从队列获取任务: 0fe8a388-8088-4377-a7bd-20cfc033d442, 类型: embedding
+2025-02-25 13:43:50,729 - INFO - INFO - 完成任务处理: 0fe8a388-8088-4377-a7bd-20cfc033d442
+2025-02-25 16:14:03,572 - INFO - INFO - 添加任务到队列: 4999223b-d65d-425b-b215-efbcd5635b84, 类型: embedding
+2025-02-25 16:14:03,589 - INFO - INFO - 获取任务状态 task_id: 4999223b-d65d-425b-b215-efbcd5635b84, status: pending, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-25 16:14:04,210 - INFO - INFO - 从队列获取任务: 4999223b-d65d-425b-b215-efbcd5635b84, 类型: embedding
+2025-02-25 16:14:24,325 - INFO - INFO - 完成任务处理: 4999223b-d65d-425b-b215-efbcd5635b84
+2025-02-25 16:14:24,330 - INFO - INFO - 获取任务状态 task_id: 4999223b-d65d-425b-b215-efbcd5635b84, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-25 16:32:14,856 - INFO - INFO - 添加任务到队列: 1bd94473-761f-4c08-988e-eaeb3ef2d8d0, 类型: embedding
+2025-02-25 16:32:14,867 - INFO - INFO - 获取任务状态 task_id: 1bd94473-761f-4c08-988e-eaeb3ef2d8d0, status: pending, text: 张三的手机号是18063218951，李四的手机号是19099099090， 王五的手机号是18063218951
+2025-02-25 16:32:15,567 - INFO - INFO - 从队列获取任务: 1bd94473-761f-4c08-988e-eaeb3ef2d8d0, 类型: embedding
+2025-02-25 16:32:35,596 - INFO - INFO - 完成任务处理: 1bd94473-761f-4c08-988e-eaeb3ef2d8d0
+2025-02-25 16:32:35,602 - INFO - INFO - 获取任务状态 task_id: 1bd94473-761f-4c08-988e-eaeb3ef2d8d0, status: completed, text: 张三的手机号是18063218951，李四的手机号是19099099090， 王五的手机号是18063218951
+2025-02-25 16:49:14,705 - INFO - INFO - 添加任务到队列: 3e55dac9-ead7-4812-b1dd-9c3ee954d51b, 类型: mask
+2025-02-25 16:49:15,424 - INFO - INFO - 从队列获取任务: 3e55dac9-ead7-4812-b1dd-9c3ee954d51b, 类型: mask
+2025-02-25 16:49:15,444 - INFO - INFO - 完成任务处理: 3e55dac9-ead7-4812-b1dd-9c3ee954d51b
+2025-02-25 16:50:19,372 - INFO - INFO - 添加任务到队列: a26e5ed2-5a5a-4bfd-ae23-bb0f98faed65, 类型: mask
+2025-02-25 16:50:20,352 - INFO - INFO - 从队列获取任务: a26e5ed2-5a5a-4bfd-ae23-bb0f98faed65, 类型: mask
+2025-02-25 16:50:20,363 - INFO - INFO - 完成任务处理: a26e5ed2-5a5a-4bfd-ae23-bb0f98faed65
+2025-02-25 16:53:27,904 - INFO - INFO - 添加任务到队列: e62d7450-f755-41f5-8437-816c3d85a099, 类型: mask
+2025-02-25 16:53:27,948 - INFO - INFO - 从队列获取任务: e62d7450-f755-41f5-8437-816c3d85a099, 类型: mask
+2025-02-25 16:53:27,960 - INFO - INFO - 完成任务处理: e62d7450-f755-41f5-8437-816c3d85a099
