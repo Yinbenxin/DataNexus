@@ -1,6 +1,6 @@
-# ModApp - 数据脱敏和Embedding服务
+## DataNexus - 数据脱敏、Embedding、rarank服务
 
-这是一个基于FastAPI的异步API服务，提供数据脱敏和文本embedding功能。
+这是一个基于FastAPI的异步API服务，提供数据脱敏、文本embedding和rarank功能。
 
 ## 功能特点
 
