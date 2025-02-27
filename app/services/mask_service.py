@@ -60,8 +60,6 @@ class MaskService:
 
     async def mask_text(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None) -> Tuple[str, Dict[str, str]]:
         """对文本进行脱敏处理"""
-
-
         # 提取关键词
         keywords = self.extract_keywords(mask_field, text)
         if len(keywords) == 0:

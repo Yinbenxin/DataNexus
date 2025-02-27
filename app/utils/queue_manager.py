@@ -34,7 +34,7 @@ class TaskQueue:
         task = await self.queue.get()
         async with self.lock:
             self.processing[task["task_id"]] = task
-        logger.info(f"从队列获取任务: {task['task_id']}, 类型: {task['type']}")
+        logger.info(f"从队列获取任务: {task['task_id']}, 任务类型: {task['type']}")
         return task
 
     async def complete_task(self, task_id: str) -> None:

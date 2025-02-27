@@ -1,40 +1,123 @@
+import unittest
 import requests
 import json
 import time
+import os
+from typing import Dict, Any
 
-# 创建mask任务
-url = "http://127.0.0.1:8000/api/v1/mask"
+class TestMaskAPI(unittest.TestCase):
+    def setUp(self):
+        """测试前的准备工作"""
+        # 从环境变量中读取API配置
+        api_host = os.getenv("API_HOST", "127.0.0.1")
+        api_port = os.getenv("API_PORT", "8000")
+        api_version = os.getenv("API_VERSION", "v1")
+        
+        # 构建API基础URL
+        self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/mask"
+        self.headers = {"Content-Type": "application/json"}
+        self.sample_text = "2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。"
+        self.mask_fields = ["日期", "姓名", "职业", "地区", "外国人名", "时间"]
 
-# 准备请求数据
-data = {
-    "text": "2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。他在会上发表了一篇演讲，探讨了人工智能在金融领域的应用。他提到，根据《数字金融安全法》，银行应确保至少80%的交易符合安全标准。李明还展示了一款新型智能手机——XPhone Pro，其内置的语音助手能够用英语和法语进行自然交流。该手机目前售价为6999元人民币，较上一代价格降低了10%，首批限量1000台。此外，他还提到，未来五年内，亚洲地区将成为人工智能发展的核心市场。根据统计，目前已有超过300万名开发者投入该领域。他引用了一段来自《智能时代》一书的话，鼓励与会者迎接科技变革。当天的会议于下午3点结束，与会者们纷纷表示收获良多。会后，美国总统汤姆逊、法国总理托斯卡纳接见了李明。",
-    "mask_type": "AES",
-    "mask_model": "paddle",
-    "mask_field": ["日期", '姓名', '职业', '地区', '外国人名', '时间']
-}
+    def create_mask_task(self, mask_type: str) -> Dict[str, Any]:
+        """创建脱敏任务并等待结果"""
+        data = {
+            "text": self.sample_text,
+            "mask_type": mask_type,
+            "mask_model": "paddle",
+            "mask_field": self.mask_fields
+        }
 
-# 发送POST请求
-headers = {"Content-Type": "application/json"}
-response = requests.post(url, json=data, headers=headers)
-print("创建任务响应：")
-print(response.text)
+        # 创建任务
+        response = requests.post(self.base_url, json=data, headers=self.headers)
+        self.assertEqual(response.status_code, 200, "创建任务失败")
+        
+        task_data = response.json()
+        task_id = task_data["task_id"]
+        
+        # 等待任务完成
+        while True:
+            response = requests.get(f"{self.base_url}/{task_id}")
+            result = response.json()
+            
+            if result["status"] in ["completed", "failed"]:
+                return result
+            
+            time.sleep(1)
 
-# # 解析响应获取task_id
-task_data = json.loads(response.text)
-print(task_data)
-task_id = task_data["task_id"]
+    def test_similar_mask(self):
+        """测试相似文本脱敏"""
+        result = self.create_mask_task("similar")
+        self.assertEqual(result["status"], "completed")
+        self.assertIsNotNone(result["masked_text"])
+        self.assertIsNotNone(result["mapping"])
 
-# 查询任务状态和结果
-url = f"http://127.0.0.1:8000/api/v1/mask/{task_id}"
+    def test_type_replace_mask(self):
+        """测试类型替换脱敏"""
+        result = self.create_mask_task("type_replace")
+        self.assertEqual(result["status"], "completed")
+        self.assertIsNotNone(result["masked_text"])
+        self.assertIsNotNone(result["mapping"])
 
-# 循环查询直到任务完成
-while True:
-    response = requests.get(url)
-    result = json.loads(response.text)
-    print("\n当前任务状态：")
-    print(json.dumps(result, ensure_ascii=False, indent=2))
-    
-    if result["status"] in ["completed", "failed"]:
-        break
-    
-    time.sleep(1)  # 每秒查询一次状态
+    def test_delete_mask(self):
+        """测试删除脱敏"""
+        result = self.create_mask_task("delete")
+        self.assertEqual(result["status"], "completed")
+        self.assertIsNotNone(result["masked_text"])
+        self.assertIsNotNone(result["mapping"])
+
+    def test_aes_mask(self):
+        """测试AES加密脱敏"""
+        result = self.create_mask_task("aes")
+        self.assertEqual(result["status"], "completed")
+        self.assertIsNotNone(result["masked_text"])
+        self.assertIsNotNone(result["mapping"])
+
+    def test_md5_mask(self):
+        """测试MD5脱敏"""
+        result = self.create_mask_task("md5")
+        self.assertEqual(result["status"], "completed")
+        self.assertIsNotNone(result["masked_text"])
+        self.assertIsNotNone(result["mapping"])
+
+    def test_sha256_mask(self):
+        """测试SHA256脱敏"""
+        result = self.create_mask_task("sha256")
+        self.assertEqual(result["status"], "completed")
+        self.assertIsNotNone(result["masked_text"])
+        self.assertIsNotNone(result["mapping"])
+
+    def test_asterisk_mask(self):
+        """测试星号掩码脱敏"""
+        result = self.create_mask_task("asterisk")
+        self.assertEqual(result["status"], "completed")
+        self.assertIsNotNone(result["masked_text"])
+        self.assertIsNotNone(result["mapping"])
+
+    def test_invalid_mask_type(self):
+        """测试无效的脱敏类型"""
+        data = {
+            "text": self.sample_text,
+            "mask_type": "invalid_type",
+            "mask_model": "paddle",
+            "mask_field": self.mask_fields
+        }
+        response = requests.post(self.base_url, json=data, headers=self.headers)
+        self.assertEqual(response.status_code, 200)
+        
+        task_data = response.json()
+        task_id = task_data["task_id"]
+        
+        # 等待任务完成
+        result = None
+        while True:
+            response = requests.get(f"{self.base_url}/{task_id}")
+            result = response.json()
+            if result["status"] in ["completed", "failed"]:
+                break
+            time.sleep(1)
+        
+        self.assertEqual(result["status"], "failed")
+
+if __name__ == "__main__":
+    unittest.main()

@@ -38,46 +38,6 @@
    # 使用 \q 退出psql
    ```
 
-4. 配置环境变量：
-   在项目根目录创建或编辑 `.env` 文件，添加数据库连接信息：
-   ```
-   DATABASE_URL=postgresql://datanexus:123@localhost:5432/modapp
-   ```
-
-5. 创建数据库表结构：
-   连接到数据库后，执行以下SQL命令创建必要的表：
-   ```sql
-   -- 创建mask_tasks表
-   CREATE TABLE mask_tasks (
-       id SERIAL PRIMARY KEY,
-       task_id VARCHAR UNIQUE,
-       status VARCHAR,
-       original_text TEXT,
-       masked_text TEXT,
-       mapping JSONB,
-       mask_type VARCHAR DEFAULT 'similar',
-       mask_model VARCHAR DEFAULT 'paddle',
-       mask_field JSONB,
-       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-       updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
-
-   -- 创建embedding_tasks表
-   CREATE TABLE embedding_tasks (
-       id SERIAL PRIMARY KEY,
-       task_id VARCHAR UNIQUE,
-       status VARCHAR,
-       text TEXT,
-       embedding JSONB,
-       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-       updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
-
-   -- 创建索引
-   CREATE INDEX idx_mask_tasks_task_id ON mask_tasks(task_id);
-   CREATE INDEX idx_embedding_tasks_task_id ON embedding_tasks(task_id);
-   ```
-
 ## 环境要求
 
 - Python 3.9
