@@ -6,11 +6,12 @@ from app.services.embedding_service import EmbeddingService
 from app.services.mask_service import MaskService
 from app.utils.queue_manager import task_queue
 from app.models.database import get_db
+from app.utils.logger import logger
 
 class TaskProcessor:
     def __init__(self):
         self.embedding_service = EmbeddingService()
-        self.mask_service = MaskService()
+        self.mask_service = MaskService(embedding_model = self.embedding_service.model)
         self.running = False
 
     async def process_embedding_task(self, task: Dict[str, Any], db: Session) -> None:
@@ -36,7 +37,7 @@ class TaskProcessor:
                 # 处理失败，更新状态
                 db_task.status = "failed"
                 db.commit()
-                print(f"处理任务 {task_id} 时发生错误: {str(e)}")
+                logger.info(f"处理任务 {task_id} 时发生错误: {str(e)}")
 
         # 标记任务完成
         await task_queue.complete_task(task_id)
@@ -72,8 +73,10 @@ class TaskProcessor:
             except Exception as e:
                 # 处理失败，更新状态
                 db_task.status = "failed"
+                db_task.masked_text = str(e)
+                
                 db.commit()
-                print(f"处理任务 {task_id} 时发生错误: {str(e)}")
+                logger.info(f"处理任务 {task_id} 时发生错误: {str(e)}")
 
         # 标记任务完成
         await task_queue.complete_task(task_id)

@@ -5,11 +5,11 @@ import uuid
 
 from app.models.database import get_db, EmbeddingTask
 from app.utils.queue_manager import task_queue
-from app.services.embedding_service import EmbeddingService
+# from app.services.embedding_service import EmbeddingService
 from app.utils.logger import logger
 
 router = APIRouter()
-embedding_service = EmbeddingService()
+# embedding_service = EmbeddingService()
 
 @router.post("/", response_model=Dict[str, str])
 async def create_embedding_task(
@@ -48,7 +48,11 @@ async def get_embedding_task(task_id: str, db: Session = Depends(get_db)):
     """获取Embedding任务状态和结果"""
     task = db.query(EmbeddingTask).filter(EmbeddingTask.task_id == task_id).first()
     if not task:
-        raise HTTPException(status_code=404, detail="任务不存在")
+        return {
+        "task_id": task.task_id,
+        "status": "failed",
+        "original_text": task.original_text,
+        }
     logger.info(f"获取任务状态 task_id: {task.task_id}, status: {task.status}, text: {task.text}")
     return {
         "task_id": task.task_id,

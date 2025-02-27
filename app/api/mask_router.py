@@ -61,9 +61,14 @@ async def get_mask_task(task_id: str, db: Session = Depends(get_db)):
     """获取脱敏任务状态和结果"""
     task = db.query(MaskTask).filter(MaskTask.task_id == task_id).first()
     if not task:
-        raise HTTPException(status_code=404, detail="任务不存在")
+        return {
+            "task_id": None,
+            "status": "failed",
+            "error": "任务不存在",
+            "original_text": None
+        }
     
-    return {
+    response = {
         "task_id": task.task_id,
         "status": task.status,
         "original_text": task.original_text,
@@ -72,6 +77,14 @@ async def get_mask_task(task_id: str, db: Session = Depends(get_db)):
         "created_at": task.created_at,
         "updated_at": task.updated_at
     }
+    
+    # 如果任务失败，添加错误信息
+    if task.status == "failed":
+        # 从任务处理器的错误信息中提取具体原因
+        response["error"] = task.masked_text
+        response["masked_text"] = ""
+    
+    return response
 
 @router.get("/", response_model=Dict[str, int])
 async def get_queue_status():

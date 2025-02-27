@@ -5,12 +5,27 @@ import hashlib
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 import base64
-
+from sentence_transformers import SentenceTransformer
+from paddlenlp import Taskflow
 load_dotenv()
 
+default_schema = ['身份证号','姓名','出生日期','民族/种族','社交媒体账号','银行卡号','公司名称','证件号码','手机号','电子邮件地址','地址']
+
+
 class MaskService:
-    def __init__(self):
-        pass
+    def __init__(self, embedding_model=None):
+        if embedding_model:
+            self.model = embedding_model
+        else:
+            self.model = SentenceTransformer('TencentBAC/Conan-embedding-v1')
+        self.information_extract = Taskflow('information_extraction')  # 初始化时设置临时schema避免警告
+    
+    def extract_keywords(self, schema: List[str], text: str) -> List[str]:
+        schema_set = set(schema+default_schema)
+        self.information_extract.set_schema(schema_set)
+        result = self.information_extract(text)
+        keys_list = [entity['text'] for entity_type in result[0] for entity in result[0][entity_type]]
+        return set(keys_list)
 
     def _generate_similar_text(self, text: str) -> str:
         """生成相似文本"""
@@ -45,34 +60,38 @@ class MaskService:
 
     async def mask_text(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None) -> Tuple[str, Dict[str, str]]:
         """对文本进行脱敏处理"""
-        if not mask_field:
+
+
+        # 提取关键词
+        keywords = self.extract_keywords(mask_field, text)
+        if len(keywords) == 0:
             return text, {}
-            
         masked_text = text
         mapping = {}
-        for i, field in enumerate(mask_field):
+        mask_type_smart = mask_type.lower()
+        for i, field in enumerate(keywords):
             if field in text:
                 mask_token = f"[MASK_{i}]"
                 # 根据不同的脱敏类型处理
-                if mask_type == "similar":
+                if mask_type_smart == "similar":
                     masked_value = self._generate_similar_text(field)
-                elif mask_type == "type_replace":
+                elif mask_type_smart == "type_replace":
                     masked_value = self._type_replacement(field)
-                elif mask_type == "delete":
+                elif mask_type_smart == "delete":
                     masked_value = ""
-                elif mask_type == "aes":
+                elif mask_type_smart == "aes":
                     masked_value = self._aes_encrypt(field)
-                elif mask_type == "md5":
+                elif mask_type_smart == "md5":
                     masked_value = self._md5_hash(field)
-                elif mask_type == "sha256":
+                elif mask_type_smart == "sha256":
                     masked_value = self._sha256_hash(field)
-                elif mask_type == "asterisk":
+                elif mask_type_smart == "asterisk":
                     masked_value = self._mask_with_asterisk(field)
                 else:
                     raise ValueError(f"不支持的脱敏类型：{mask_type}")
                 
-                masked_text = masked_text.replace(field, mask_token)
-                mapping[mask_token] = masked_value
+                masked_text = masked_text.replace(field, masked_value)
+                mapping[field] = masked_value
         return masked_text, mapping
 
     async def process_mask(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None) -> Tuple[str, Dict[str, str]]:

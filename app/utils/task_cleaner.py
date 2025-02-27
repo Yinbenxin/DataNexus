@@ -1,15 +1,13 @@
 from datetime import datetime, timedelta
 from sqlalchemy import and_
 from app.models.database import get_db, MaskTask, EmbeddingTask
-import logging
 import os
 from dotenv import load_dotenv
+from app.utils.logger import logger
 
 # 加载环境变量
 load_dotenv()
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 async def clean_expired_tasks():
     """清理一个月前的任务记录"""

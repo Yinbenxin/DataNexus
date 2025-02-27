@@ -22,18 +22,18 @@
 
 1. 创建数据库用户：
    ```bash
-   createuser -P admin
+   createuser -P datanexus
    # 根据提示输入密码（示例使用：123）
    ```
 
 2. 创建应用数据库：
    ```bash
-   createdb -O admin modapp
+   createdb -O datanexus modapp
    ```
 
 3. 验证数据库连接：
    ```bash
-   psql -U admin -d modapp
+   psql -U datanexus -d modapp
    # 使用 \l 命令查看数据库列表
    # 使用 \q 退出psql
    ```
@@ -41,7 +41,7 @@
 4. 配置环境变量：
    在项目根目录创建或编辑 `.env` 文件，添加数据库连接信息：
    ```
-   DATABASE_URL=postgresql://admin:123@localhost:5432/modapp
+   DATABASE_URL=postgresql://datanexus:123@localhost:5432/modapp
    ```
 
 5. 创建数据库表结构：
