@@ -1,0 +1,211 @@
+2025-02-28 10:18:24,886 - INFO - INFO - 添加任务到队列: c54d1009-0bb1-4522-99c0-d11b459a13f8, 类型: embedding
+2025-02-28 10:18:24,894 - INFO - INFO - 获取任务状态 task_id: c54d1009-0bb1-4522-99c0-d11b459a13f8, status: pending, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:18:25,392 - INFO - INFO - 从队列获取任务: c54d1009-0bb1-4522-99c0-d11b459a13f8, 任务类型: embedding
+2025-02-28 10:18:25,404 - INFO - INFO - 处理任务 c54d1009-0bb1-4522-99c0-d11b459a13f8 时发生错误: name 'model' is not defined
+2025-02-28 10:18:25,405 - INFO - INFO - 完成任务处理: c54d1009-0bb1-4522-99c0-d11b459a13f8
+2025-02-28 10:18:34,904 - INFO - INFO - 获取任务状态 task_id: c54d1009-0bb1-4522-99c0-d11b459a13f8, status: failed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:19:44,936 - INFO - INFO - 添加任务到队列: 1e91341a-7fe7-441e-b616-e64b354ff2f9, 类型: embedding
+2025-02-28 10:19:44,941 - INFO - INFO - 获取任务状态 task_id: 1e91341a-7fe7-441e-b616-e64b354ff2f9, status: pending, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:19:45,067 - INFO - INFO - 从队列获取任务: 1e91341a-7fe7-441e-b616-e64b354ff2f9, 任务类型: embedding
+2025-02-28 10:19:45,075 - INFO - INFO - 处理任务 1e91341a-7fe7-441e-b616-e64b354ff2f9 时发生错误: name 'model' is not defined
+2025-02-28 10:19:45,075 - INFO - INFO - 完成任务处理: 1e91341a-7fe7-441e-b616-e64b354ff2f9
+2025-02-28 10:19:54,960 - INFO - INFO - 获取任务状态 task_id: 1e91341a-7fe7-441e-b616-e64b354ff2f9, status: failed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:24:32,788 - INFO - INFO - 添加任务到队列: 743e7dbf-ca1a-4b41-8d78-b95d7a30e0a5, 类型: embedding
+2025-02-28 10:24:32,793 - INFO - INFO - 获取任务状态 task_id: 743e7dbf-ca1a-4b41-8d78-b95d7a30e0a5, status: pending, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:24:33,772 - INFO - INFO - 从队列获取任务: 743e7dbf-ca1a-4b41-8d78-b95d7a30e0a5, 任务类型: embedding
+2025-02-28 10:24:35,092 - INFO - INFO - 完成任务处理: 743e7dbf-ca1a-4b41-8d78-b95d7a30e0a5
+2025-02-28 10:24:35,094 - INFO - INFO - 获取任务状态 task_id: 743e7dbf-ca1a-4b41-8d78-b95d7a30e0a5, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:35:47,984 - INFO - INFO - 添加任务到队列: f15ce6f3-826a-45d7-b357-7ff61aaed251, 类型: embedding
+2025-02-28 10:35:47,989 - INFO - INFO - 获取任务状态 task_id: f15ce6f3-826a-45d7-b357-7ff61aaed251, status: pending, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:35:48,654 - INFO - INFO - 从队列获取任务: f15ce6f3-826a-45d7-b357-7ff61aaed251, 任务类型: embedding
+2025-02-28 10:35:49,597 - INFO - INFO - 完成任务处理: f15ce6f3-826a-45d7-b357-7ff61aaed251
+2025-02-28 10:35:49,600 - INFO - INFO - 获取任务状态 task_id: f15ce6f3-826a-45d7-b357-7ff61aaed251, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:35:49,606 - INFO - INFO - 添加任务到队列: 7f2a0077-027f-4ac3-b2c5-26c5923c29ce, 类型: embedding
+2025-02-28 10:35:49,608 - INFO - INFO - 获取任务状态 task_id: 7f2a0077-027f-4ac3-b2c5-26c5923c29ce, status: pending, text: 
+2025-02-28 10:35:50,599 - INFO - INFO - 从队列获取任务: 7f2a0077-027f-4ac3-b2c5-26c5923c29ce, 任务类型: embedding
+2025-02-28 10:35:51,110 - INFO - INFO - 完成任务处理: 7f2a0077-027f-4ac3-b2c5-26c5923c29ce
+2025-02-28 10:35:51,113 - INFO - INFO - 获取任务状态 task_id: 7f2a0077-027f-4ac3-b2c5-26c5923c29ce, status: completed, text: 
+2025-02-28 10:37:09,604 - INFO - INFO - 添加任务到队列: a38c254b-ac21-49f1-9983-d03edd93023b, 类型: embedding
+2025-02-28 10:37:09,609 - INFO - INFO - 获取任务状态 task_id: a38c254b-ac21-49f1-9983-d03edd93023b, status: pending, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:37:10,588 - INFO - INFO - 从队列获取任务: a38c254b-ac21-49f1-9983-d03edd93023b, 任务类型: embedding
+2025-02-28 10:37:11,324 - INFO - INFO - 完成任务处理: a38c254b-ac21-49f1-9983-d03edd93023b
+2025-02-28 10:37:11,327 - INFO - INFO - 获取任务状态 task_id: a38c254b-ac21-49f1-9983-d03edd93023b, status: completed, text: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-02-28 10:37:11,334 - INFO - INFO - 获取任务状态 task_id: 9dcd5ee5-1211-4790-85c4-cbae4f6a1751, status: failed, text: 
+2025-02-28 11:04:21,628 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 7bdc5516-ebab-4060-9b37-ed07d22b9657, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:04:21,643 - INFO - INFO - 添加任务到队列: 7bdc5516-ebab-4060-9b37-ed07d22b9657, 类型: embedding
+2025-02-28 11:04:22,136 - INFO - INFO - 从队列获取任务: 7bdc5516-ebab-4060-9b37-ed07d22b9657, 任务类型: embedding
+2025-02-28 11:06:11,018 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 2dd60789-9e43-4717-8e37-f725892597c4, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:06:11,061 - INFO - INFO - 添加任务到队列: 2dd60789-9e43-4717-8e37-f725892597c4, 类型: embedding
+2025-02-28 11:06:11,602 - INFO - INFO - 从队列获取任务: 2dd60789-9e43-4717-8e37-f725892597c4, 任务类型: embedding
+2025-02-28 11:08:01,948 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 3fa2bed2-9e43-403a-bd58-5a2c6aa4b744, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:08:01,955 - INFO - INFO - 添加任务到队列: 3fa2bed2-9e43-403a-bd58-5a2c6aa4b744, 类型: embedding
+2025-02-28 11:08:02,944 - INFO - INFO - 从队列获取任务: 3fa2bed2-9e43-403a-bd58-5a2c6aa4b744, 任务类型: embedding
+2025-02-28 11:09:02,036 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: a8d535ea-9158-457f-8206-e3e69330fb18, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:09:02,040 - INFO - INFO - 添加任务到队列: a8d535ea-9158-457f-8206-e3e69330fb18, 类型: embedding
+2025-02-28 11:09:02,864 - INFO - INFO - 从队列获取任务: a8d535ea-9158-457f-8206-e3e69330fb18, 任务类型: embedding
+2025-02-28 11:12:28,245 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: a36fc80c-8920-4e99-863f-4e7a15c5a5a9, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:12:28,250 - INFO - INFO - 添加任务到队列: a36fc80c-8920-4e99-863f-4e7a15c5a5a9, 类型: embedding
+2025-02-28 11:12:29,007 - INFO - INFO - 从队列获取任务: a36fc80c-8920-4e99-863f-4e7a15c5a5a9, 任务类型: embedding
+2025-02-28 11:12:29,010 - INFO - INFO - 开始处理Mask任务 a36fc80c-8920-4e99-863f-4e7a15c5a5a9, 文本长度: 36字符
+2025-02-28 11:14:19,257 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 56d40712-d4ce-4b12-b543-238e7facab1e, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:14:19,265 - INFO - INFO - 添加任务到队列: 56d40712-d4ce-4b12-b543-238e7facab1e, 类型: embedding
+2025-02-28 11:14:19,847 - INFO - INFO - 从队列获取任务: 56d40712-d4ce-4b12-b543-238e7facab1e, 任务类型: embedding
+2025-02-28 11:14:19,856 - INFO - INFO - 开始处理任务 56d40712-d4ce-4b12-b543-238e7facab1e, 文本长度: 36字符
+2025-02-28 11:14:20,547 - INFO - INFO - Embedding任务 56d40712-d4ce-4b12-b543-238e7facab1e 处理完成
+2025-02-28 11:14:20,547 - INFO - INFO - 完成任务处理: 56d40712-d4ce-4b12-b543-238e7facab1e
+2025-02-28 11:16:02,497 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: edd77f13-7aaf-4af3-80d3-ed4b277340df, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:16:02,506 - INFO - INFO - 添加任务到队列: edd77f13-7aaf-4af3-80d3-ed4b277340df, 类型: embedding
+2025-02-28 11:16:03,038 - INFO - INFO - 从队列获取任务: edd77f13-7aaf-4af3-80d3-ed4b277340df, 任务类型: embedding
+2025-02-28 11:16:03,048 - INFO - INFO - 开始处理任务 edd77f13-7aaf-4af3-80d3-ed4b277340df, 文本长度: 36字符
+2025-02-28 11:16:03,754 - INFO - INFO - Embedding任务 edd77f13-7aaf-4af3-80d3-ed4b277340df 处理完成
+2025-02-28 11:16:03,754 - INFO - INFO - 完成任务处理: edd77f13-7aaf-4af3-80d3-ed4b277340df
+2025-02-28 11:17:24,628 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 57b71542-4807-47f8-9493-eb9e2012142e, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:17:24,637 - INFO - INFO - 添加任务到队列: 57b71542-4807-47f8-9493-eb9e2012142e, 类型: embedding
+2025-02-28 11:17:24,658 - INFO - INFO - 从队列获取任务: 57b71542-4807-47f8-9493-eb9e2012142e, 任务类型: embedding
+2025-02-28 11:17:24,661 - INFO - INFO - 开始处理任务 57b71542-4807-47f8-9493-eb9e2012142e, 文本长度: 36字符
+2025-02-28 11:17:25,207 - INFO - INFO - Embedding任务 57b71542-4807-47f8-9493-eb9e2012142e 处理完成
+2025-02-28 11:17:25,207 - INFO - INFO - 完成任务处理: 57b71542-4807-47f8-9493-eb9e2012142e
+2025-02-28 11:20:24,072 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 97f74da5-4294-4ed7-9dde-b7704b09dfd2, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:20:24,166 - INFO - INFO - 添加任务到队列: 97f74da5-4294-4ed7-9dde-b7704b09dfd2, 类型: embedding
+2025-02-28 11:20:25,052 - INFO - INFO - 从队列获取任务: 97f74da5-4294-4ed7-9dde-b7704b09dfd2, 任务类型: embedding
+2025-02-28 11:20:25,060 - INFO - INFO - 开始处理任务 97f74da5-4294-4ed7-9dde-b7704b09dfd2, 文本长度: 36字符
+2025-02-28 11:20:25,844 - INFO - INFO - Embedding任务 97f74da5-4294-4ed7-9dde-b7704b09dfd2 处理完成
+2025-02-28 11:20:25,844 - INFO - INFO - 完成任务处理: 97f74da5-4294-4ed7-9dde-b7704b09dfd2
+2025-02-28 11:20:25,852 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: ed30de43-14a0-4366-96b8-ed72d891929c, text: ，文本长度: 0
+2025-02-28 11:20:25,853 - INFO - INFO - 添加任务到队列: ed30de43-14a0-4366-96b8-ed72d891929c, 类型: embedding
+2025-02-28 11:20:26,845 - INFO - INFO - 从队列获取任务: ed30de43-14a0-4366-96b8-ed72d891929c, 任务类型: embedding
+2025-02-28 11:20:26,848 - INFO - INFO - 开始处理任务 ed30de43-14a0-4366-96b8-ed72d891929c, 文本长度: 0字符
+2025-02-28 11:20:26,967 - INFO - INFO - Embedding任务 ed30de43-14a0-4366-96b8-ed72d891929c 处理完成
+2025-02-28 11:20:26,967 - INFO - INFO - 完成任务处理: ed30de43-14a0-4366-96b8-ed72d891929c
+2025-02-28 11:24:59,255 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 8d1db314-dc17-4c36-bea6-5b56b74cf149, text: 2edca33b-d，文本长度: 36
+2025-02-28 11:24:59,265 - INFO - INFO - 添加任务到队列: 8d1db314-dc17-4c36-bea6-5b56b74cf149, 类型: embedding
+2025-02-28 11:25:00,247 - INFO - INFO - 从队列获取任务: 8d1db314-dc17-4c36-bea6-5b56b74cf149, 任务类型: embedding
+2025-02-28 11:25:00,256 - INFO - INFO - 开始处理任务 8d1db314-dc17-4c36-bea6-5b56b74cf149, 文本长度: 36字符
+2025-02-28 11:25:00,731 - INFO - INFO - Embedding任务 8d1db314-dc17-4c36-bea6-5b56b74cf149 处理完成
+2025-02-28 11:25:00,731 - INFO - INFO - 完成任务处理: 8d1db314-dc17-4c36-bea6-5b56b74cf149
+2025-02-28 11:25:00,738 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: d16a0c07-8e86-426f-a6b4-9641fc9b78a7, text: ，文本长度: 0
+2025-02-28 11:25:00,739 - INFO - INFO - 添加任务到队列: d16a0c07-8e86-426f-a6b4-9641fc9b78a7, 类型: embedding
+2025-02-28 11:25:01,733 - INFO - INFO - 从队列获取任务: d16a0c07-8e86-426f-a6b4-9641fc9b78a7, 任务类型: embedding
+2025-02-28 11:25:01,742 - INFO - INFO - 开始处理任务 d16a0c07-8e86-426f-a6b4-9641fc9b78a7, 文本长度: 0字符
+2025-02-28 11:25:01,836 - INFO - INFO - Embedding任务 d16a0c07-8e86-426f-a6b4-9641fc9b78a7 处理完成
+2025-02-28 11:25:01,836 - INFO - INFO - 完成任务处理: d16a0c07-8e86-426f-a6b4-9641fc9b78a7
+2025-02-28 13:46:41,532 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: b1963500-f718-4904-a18e-cc1ba54911a6, text: 2edca33b-d，文本长度: 36
+2025-02-28 13:46:41,556 - INFO - INFO - 添加任务到队列: b1963500-f718-4904-a18e-cc1ba54911a6, 类型: embedding
+2025-02-28 13:46:42,521 - INFO - INFO - 从队列获取任务: b1963500-f718-4904-a18e-cc1ba54911a6, 任务类型: embedding
+2025-02-28 13:46:42,534 - INFO - INFO - 开始处理任务 b1963500-f718-4904-a18e-cc1ba54911a6, 文本长度: 36字符
+2025-02-28 13:46:43,146 - INFO - INFO - Embedding任务 b1963500-f718-4904-a18e-cc1ba54911a6 处理完成
+2025-02-28 13:46:43,146 - INFO - INFO - 完成任务处理: b1963500-f718-4904-a18e-cc1ba54911a6
+2025-02-28 13:46:43,153 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: de33fb4a-92b2-455e-b1b4-7e4653f36e8e, text: ，文本长度: 0
+2025-02-28 13:46:43,154 - INFO - INFO - 添加任务到队列: de33fb4a-92b2-455e-b1b4-7e4653f36e8e, 类型: embedding
+2025-02-28 13:46:44,147 - INFO - INFO - 从队列获取任务: de33fb4a-92b2-455e-b1b4-7e4653f36e8e, 任务类型: embedding
+2025-02-28 13:46:44,153 - INFO - INFO - 开始处理任务 de33fb4a-92b2-455e-b1b4-7e4653f36e8e, 文本长度: 0字符
+2025-02-28 13:46:44,250 - INFO - INFO - Embedding任务 de33fb4a-92b2-455e-b1b4-7e4653f36e8e 处理完成
+2025-02-28 13:46:44,250 - INFO - INFO - 完成任务处理: de33fb4a-92b2-455e-b1b4-7e4653f36e8e
+2025-02-28 13:47:59,087 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: b9939bd2-ada1-4b80-9ee1-b30ca9078f53, text: 2edca33b-d，文本长度: 36
+2025-02-28 13:47:59,114 - INFO - INFO - 添加任务到队列: b9939bd2-ada1-4b80-9ee1-b30ca9078f53, 类型: embedding
+2025-02-28 13:47:59,441 - INFO - INFO - 从队列获取任务: b9939bd2-ada1-4b80-9ee1-b30ca9078f53, 任务类型: embedding
+2025-02-28 13:47:59,449 - INFO - INFO - 开始处理任务 b9939bd2-ada1-4b80-9ee1-b30ca9078f53, 文本长度: 36字符
+2025-02-28 13:48:00,081 - INFO - INFO - Embedding任务 b9939bd2-ada1-4b80-9ee1-b30ca9078f53 处理完成
+2025-02-28 13:48:00,081 - INFO - INFO - 完成任务处理: b9939bd2-ada1-4b80-9ee1-b30ca9078f53
+2025-02-28 13:48:00,136 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 0c4d7849-57d1-44fc-b9c7-db3e69274101, text: ，文本长度: 0
+2025-02-28 13:48:00,142 - INFO - INFO - 添加任务到队列: 0c4d7849-57d1-44fc-b9c7-db3e69274101, 类型: embedding
+2025-02-28 13:48:01,083 - INFO - INFO - 从队列获取任务: 0c4d7849-57d1-44fc-b9c7-db3e69274101, 任务类型: embedding
+2025-02-28 13:48:01,085 - INFO - INFO - 开始处理任务 0c4d7849-57d1-44fc-b9c7-db3e69274101, 文本长度: 0字符
+2025-02-28 13:48:01,164 - INFO - INFO - Embedding任务 0c4d7849-57d1-44fc-b9c7-db3e69274101 处理完成
+2025-02-28 13:48:01,164 - INFO - INFO - 完成任务处理: 0c4d7849-57d1-44fc-b9c7-db3e69274101
+2025-02-28 13:54:31,859 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: dbad5053-d34d-4e4a-ae7e-1cd2844fafc4, text: 2edca33b-d，文本长度: 36
+2025-02-28 13:54:31,884 - INFO - INFO - 添加任务到队列: dbad5053-d34d-4e4a-ae7e-1cd2844fafc4, 类型: embedding
+2025-02-28 13:54:31,901 - INFO - INFO - 从队列获取任务: dbad5053-d34d-4e4a-ae7e-1cd2844fafc4, 任务类型: embedding
+2025-02-28 13:54:31,904 - INFO - INFO - 开始处理任务 dbad5053-d34d-4e4a-ae7e-1cd2844fafc4, 文本长度: 36字符
+2025-02-28 13:54:32,664 - INFO - INFO - Embedding任务 dbad5053-d34d-4e4a-ae7e-1cd2844fafc4 处理完成
+2025-02-28 13:54:32,664 - INFO - INFO - 完成任务处理: dbad5053-d34d-4e4a-ae7e-1cd2844fafc4
+2025-02-28 13:54:32,904 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 61c8ecf8-4349-451d-9ec2-9e765a56d9a9, text: ，文本长度: 0
+2025-02-28 13:54:32,906 - INFO - INFO - 添加任务到队列: 61c8ecf8-4349-451d-9ec2-9e765a56d9a9, 类型: embedding
+2025-02-28 13:54:33,666 - INFO - INFO - 从队列获取任务: 61c8ecf8-4349-451d-9ec2-9e765a56d9a9, 任务类型: embedding
+2025-02-28 13:54:33,671 - INFO - INFO - 开始处理任务 61c8ecf8-4349-451d-9ec2-9e765a56d9a9, 文本长度: 0字符
+2025-02-28 13:54:33,761 - INFO - INFO - Embedding任务 61c8ecf8-4349-451d-9ec2-9e765a56d9a9 处理完成
+2025-02-28 13:54:33,761 - INFO - INFO - 完成任务处理: 61c8ecf8-4349-451d-9ec2-9e765a56d9a9
+2025-02-28 13:57:32,774 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 0ed8fcbb-0f33-48fe-b6b9-9c4821305070, text: 2edca33b-d，文本长度: 36
+2025-02-28 13:57:32,805 - INFO - INFO - 添加任务到队列: 0ed8fcbb-0f33-48fe-b6b9-9c4821305070, 类型: embedding
+2025-02-28 13:57:33,594 - INFO - INFO - 从队列获取任务: 0ed8fcbb-0f33-48fe-b6b9-9c4821305070, 任务类型: embedding
+2025-02-28 13:57:33,599 - INFO - INFO - 开始处理任务 0ed8fcbb-0f33-48fe-b6b9-9c4821305070, 文本长度: 36字符
+2025-02-28 13:57:34,381 - INFO - INFO - Embedding任务 0ed8fcbb-0f33-48fe-b6b9-9c4821305070 处理完成
+2025-02-28 13:57:34,381 - INFO - INFO - 完成任务处理: 0ed8fcbb-0f33-48fe-b6b9-9c4821305070
+2025-02-28 13:57:34,387 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: b0e3de31-567f-4e9b-a967-1b8aaadc3be6, text: ，文本长度: 0
+2025-02-28 13:57:34,388 - INFO - INFO - 添加任务到队列: b0e3de31-567f-4e9b-a967-1b8aaadc3be6, 类型: embedding
+2025-02-28 13:57:35,382 - INFO - INFO - 从队列获取任务: b0e3de31-567f-4e9b-a967-1b8aaadc3be6, 任务类型: embedding
+2025-02-28 13:57:35,388 - INFO - INFO - 开始处理任务 b0e3de31-567f-4e9b-a967-1b8aaadc3be6, 文本长度: 0字符
+2025-02-28 13:57:35,484 - INFO - INFO - Embedding任务 b0e3de31-567f-4e9b-a967-1b8aaadc3be6 处理完成
+2025-02-28 13:57:35,484 - INFO - INFO - 完成任务处理: b0e3de31-567f-4e9b-a967-1b8aaadc3be6
+2025-02-28 13:59:21,748 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: d84fe853-6986-461e-857a-923fea9a105f, text: 2edca33b-d，文本长度: 36
+2025-02-28 13:59:21,762 - INFO - INFO - 添加任务到队列: d84fe853-6986-461e-857a-923fea9a105f, 类型: embedding
+2025-02-28 13:59:22,737 - INFO - INFO - 从队列获取任务: d84fe853-6986-461e-857a-923fea9a105f, 任务类型: embedding
+2025-02-28 13:59:22,747 - INFO - INFO - 开始处理任务 d84fe853-6986-461e-857a-923fea9a105f, 文本长度: 36字符
+2025-02-28 13:59:23,319 - INFO - INFO - Embedding任务 d84fe853-6986-461e-857a-923fea9a105f 处理完成
+2025-02-28 13:59:23,319 - INFO - INFO - 完成任务处理: d84fe853-6986-461e-857a-923fea9a105f
+2025-02-28 13:59:23,326 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: d8b670d7-e151-4f73-b581-533a825d26bd, text: ，文本长度: 0
+2025-02-28 13:59:23,327 - INFO - INFO - 添加任务到队列: d8b670d7-e151-4f73-b581-533a825d26bd, 类型: embedding
+2025-02-28 13:59:24,320 - INFO - INFO - 从队列获取任务: d8b670d7-e151-4f73-b581-533a825d26bd, 任务类型: embedding
+2025-02-28 13:59:24,327 - INFO - INFO - 开始处理任务 d8b670d7-e151-4f73-b581-533a825d26bd, 文本长度: 0字符
+2025-02-28 13:59:24,431 - INFO - INFO - Embedding任务 d8b670d7-e151-4f73-b581-533a825d26bd 处理完成
+2025-02-28 13:59:24,431 - INFO - INFO - 完成任务处理: d8b670d7-e151-4f73-b581-533a825d26bd
+2025-02-28 14:12:08,780 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 48278d3e-1f65-45ec-a326-547d3de96b65, text: ['The weather is lovely today.', "It's so sunny outside!", 'He drove to the stadium.']，文本长度: 3
+2025-02-28 14:12:08,805 - INFO - INFO - 添加任务到队列: 48278d3e-1f65-45ec-a326-547d3de96b65, 类型: embedding
+2025-02-28 14:12:09,003 - INFO - INFO - 从队列获取任务: 48278d3e-1f65-45ec-a326-547d3de96b65, 任务类型: embedding
+2025-02-28 14:12:09,007 - INFO - INFO - 开始处理任务 48278d3e-1f65-45ec-a326-547d3de96b65, 文本长度: 3字符
+2025-02-28 14:12:13,318 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 7679777e-e017-4728-9578-9155f03ca06d, text: ['The weather is lovely today.', "It's so sunny outside!", 'He drove to the stadium.']，文本长度: 3
+2025-02-28 14:12:13,320 - INFO - INFO - 添加任务到队列: 7679777e-e017-4728-9578-9155f03ca06d, 类型: embedding
+2025-02-28 14:19:24,733 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 3ea7520a-2bf4-4773-aa49-5139c67ef904, text: ['The weather is lovely today.', "It's so sunny outside!", 'He drove to the stadium.']，文本长度: 3
+2025-02-28 14:19:24,745 - INFO - INFO - 添加任务到队列: 3ea7520a-2bf4-4773-aa49-5139c67ef904, 类型: embedding
+2025-02-28 14:19:25,725 - INFO - INFO - 从队列获取任务: 3ea7520a-2bf4-4773-aa49-5139c67ef904, 任务类型: embedding
+2025-02-28 14:19:25,755 - INFO - INFO - 开始处理任务 3ea7520a-2bf4-4773-aa49-5139c67ef904, 文本长度: 3
+2025-02-28 14:19:35,582 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 26562df5-586e-4c3f-ad5f-5ade3073e0c9, text: []，文本长度: 0
+2025-02-28 14:19:35,586 - INFO - INFO - 添加任务到队列: 26562df5-586e-4c3f-ad5f-5ade3073e0c9, 类型: embedding
+2025-02-28 14:21:28,715 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 2d7f5626-c929-4c91-8e8e-a2608194bb9b, text: ['The weather is lovely today.', "It's so sunny outside!", 'He drove to the stadium.']，文本长度: 3
+2025-02-28 14:21:28,729 - INFO - INFO - 添加任务到队列: 2d7f5626-c929-4c91-8e8e-a2608194bb9b, 类型: embedding
+2025-02-28 14:21:29,118 - INFO - INFO - 从队列获取任务: 2d7f5626-c929-4c91-8e8e-a2608194bb9b, 任务类型: embedding
+2025-02-28 14:21:29,135 - INFO - INFO - 开始处理任务 2d7f5626-c929-4c91-8e8e-a2608194bb9b, 文本长度: 3
+2025-02-28 14:21:29,835 - INFO - INFO - Embedding任务 2d7f5626-c929-4c91-8e8e-a2608194bb9b 处理完成
+2025-02-28 14:21:29,835 - INFO - INFO - 完成任务处理: 2d7f5626-c929-4c91-8e8e-a2608194bb9b
+2025-02-28 14:21:29,845 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: a5898abe-562f-422f-9eb9-383d2d4bc0d7, text: []，文本长度: 0
+2025-02-28 14:21:29,846 - INFO - INFO - 添加任务到队列: a5898abe-562f-422f-9eb9-383d2d4bc0d7, 类型: embedding
+2025-02-28 14:21:30,836 - INFO - INFO - 从队列获取任务: a5898abe-562f-422f-9eb9-383d2d4bc0d7, 任务类型: embedding
+2025-02-28 14:21:30,842 - INFO - INFO - 开始处理任务 a5898abe-562f-422f-9eb9-383d2d4bc0d7, 文本长度: 0
+2025-02-28 14:21:30,845 - INFO - INFO - Embedding任务 a5898abe-562f-422f-9eb9-383d2d4bc0d7 处理完成
+2025-02-28 14:21:30,846 - INFO - INFO - 完成任务处理: a5898abe-562f-422f-9eb9-383d2d4bc0d7
+2025-02-28 14:23:28,853 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: d390f63b-f3e4-44fd-b38d-b892e2e1b77e, text: ['The weather is lovely today.', "It's so sunny outside!", 'He drove to the stadium.']，文本长度: 3
+2025-02-28 14:23:28,952 - INFO - INFO - 添加任务到队列: d390f63b-f3e4-44fd-b38d-b892e2e1b77e, 类型: embedding
+2025-02-28 14:23:29,085 - INFO - INFO - 从队列获取任务: d390f63b-f3e4-44fd-b38d-b892e2e1b77e, 任务类型: embedding
+2025-02-28 14:23:29,091 - INFO - INFO - 开始处理任务 d390f63b-f3e4-44fd-b38d-b892e2e1b77e, 文本长度: 3
+2025-02-28 14:23:29,708 - INFO - INFO - Embedding任务 d390f63b-f3e4-44fd-b38d-b892e2e1b77e 处理完成
+2025-02-28 14:23:29,708 - INFO - INFO - 完成任务处理: d390f63b-f3e4-44fd-b38d-b892e2e1b77e
+2025-02-28 14:23:29,980 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 80e7e806-5f44-4932-bd72-d097531b7c9f, text: []，文本长度: 0
+2025-02-28 14:23:29,981 - INFO - INFO - 添加任务到队列: 80e7e806-5f44-4932-bd72-d097531b7c9f, 类型: embedding
+2025-02-28 14:23:30,709 - INFO - INFO - 从队列获取任务: 80e7e806-5f44-4932-bd72-d097531b7c9f, 任务类型: embedding
+2025-02-28 14:23:30,714 - INFO - INFO - 开始处理任务 80e7e806-5f44-4932-bd72-d097531b7c9f, 文本长度: 0
+2025-02-28 14:23:30,716 - INFO - INFO - Embedding任务 80e7e806-5f44-4932-bd72-d097531b7c9f 处理完成
+2025-02-28 14:23:30,716 - INFO - INFO - 完成任务处理: 80e7e806-5f44-4932-bd72-d097531b7c9f
+2025-02-28 14:26:13,854 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 7558e7f3-ac1c-4046-bbf3-8b6aaa6cc2be, text: 2edca33b-d，文本长度: 36
+2025-02-28 14:26:13,862 - INFO - INFO - 添加任务到队列: 7558e7f3-ac1c-4046-bbf3-8b6aaa6cc2be, 类型: embedding
+2025-02-28 14:26:14,124 - INFO - INFO - 从队列获取任务: 7558e7f3-ac1c-4046-bbf3-8b6aaa6cc2be, 任务类型: embedding
+2025-02-28 14:26:14,135 - INFO - INFO - 开始处理任务 7558e7f3-ac1c-4046-bbf3-8b6aaa6cc2be, 文本长度: 36
+2025-02-28 14:26:14,820 - INFO - INFO - Embedding任务 7558e7f3-ac1c-4046-bbf3-8b6aaa6cc2be 处理完成
+2025-02-28 14:26:14,820 - INFO - INFO - 完成任务处理: 7558e7f3-ac1c-4046-bbf3-8b6aaa6cc2be
+2025-02-28 14:26:14,879 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: b3b8d765-b502-411a-8f79-d38ccbcae1c6, text: ，文本长度: 0
+2025-02-28 14:26:14,880 - INFO - INFO - 添加任务到队列: b3b8d765-b502-411a-8f79-d38ccbcae1c6, 类型: embedding
+2025-02-28 14:26:15,821 - INFO - INFO - 从队列获取任务: b3b8d765-b502-411a-8f79-d38ccbcae1c6, 任务类型: embedding
+2025-02-28 14:26:15,827 - INFO - INFO - 开始处理任务 b3b8d765-b502-411a-8f79-d38ccbcae1c6, 文本长度: 0
+2025-02-28 14:26:15,917 - INFO - INFO - Embedding任务 b3b8d765-b502-411a-8f79-d38ccbcae1c6 处理完成
+2025-02-28 14:26:15,917 - INFO - INFO - 完成任务处理: b3b8d765-b502-411a-8f79-d38ccbcae1c6
+2025-02-28 14:27:28,297 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 8afb226c-409c-4aa4-87ff-96ac81b879b9, text: 2edca33b-d，文本长度: 36
+2025-02-28 14:27:28,306 - INFO - INFO - 添加任务到队列: 8afb226c-409c-4aa4-87ff-96ac81b879b9, 类型: embedding
+2025-02-28 14:27:29,291 - INFO - INFO - 从队列获取任务: 8afb226c-409c-4aa4-87ff-96ac81b879b9, 任务类型: embedding
+2025-02-28 14:27:29,300 - INFO - INFO - 开始处理任务 8afb226c-409c-4aa4-87ff-96ac81b879b9, 文本长度: 36
+2025-02-28 14:27:29,703 - INFO - INFO - Embedding任务 8afb226c-409c-4aa4-87ff-96ac81b879b9 处理完成
+2025-02-28 14:27:29,703 - INFO - INFO - 完成任务处理: 8afb226c-409c-4aa4-87ff-96ac81b879b9
+2025-02-28 14:27:29,711 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 9bf47e15-4631-4343-b89b-e772c42152fa, text: ，文本长度: 0
+2025-02-28 14:27:29,712 - INFO - INFO - 添加任务到队列: 9bf47e15-4631-4343-b89b-e772c42152fa, 类型: embedding
+2025-02-28 14:27:30,704 - INFO - INFO - 从队列获取任务: 9bf47e15-4631-4343-b89b-e772c42152fa, 任务类型: embedding
+2025-02-28 14:27:30,711 - INFO - INFO - 开始处理任务 9bf47e15-4631-4343-b89b-e772c42152fa, 文本长度: 0
+2025-02-28 14:27:30,816 - INFO - INFO - Embedding任务 9bf47e15-4631-4343-b89b-e772c42152fa 处理完成
+2025-02-28 14:27:30,816 - INFO - INFO - 完成任务处理: 9bf47e15-4631-4343-b89b-e772c42152fa

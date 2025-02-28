@@ -5,7 +5,7 @@ import uuid
 from app.models.database import get_db, MaskTask
 from app.utils.queue_manager import task_queue
 from app.services.mask_service import MaskService
-
+import app.utils.logger as logger
 router = APIRouter()
 mask_service = MaskService()
 
@@ -22,9 +22,6 @@ async def create_mask_task(
     mask_type = request.get("mask_type", "similar")
     mask_model = request.get("mask_model", "paddle")
     mask_field = request.get("mask_field", None)
-    print("mask_type: ", mask_type)
-    print("mask_model: ", mask_model)
-    print("mask_field: ", mask_field)
     # 创建任务记录
     task = MaskTask(
         task_id=task_id,
@@ -34,6 +31,8 @@ async def create_mask_task(
         mask_model=mask_model,
         mask_field=mask_field
     )
+    logger.info(f"Received request: {request}, task_id: {task_id}, text: {text[:20]}..., mask_type: {mask_type}, mask_model: {mask_model}, mask_field: {mask_field}")
+
     db.add(task)
     db.commit()
     

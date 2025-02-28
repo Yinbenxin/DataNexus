@@ -7,6 +7,7 @@ from Crypto.Util.Padding import pad
 import base64
 from sentence_transformers import SentenceTransformer
 from paddlenlp import Taskflow
+import datasets
 load_dotenv()
 
 default_schema = ['身份证号','姓名','出生日期','民族/种族','社交媒体账号','银行卡号','公司名称','证件号码','手机号','电子邮件地址','地址']

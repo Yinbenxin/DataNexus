@@ -24,15 +24,21 @@ class TaskProcessor:
         if db_task:
             db_task.status = "processing"
             db.commit()
+            logger.info(f"开始处理任务 {task_id}, 文本长度: {len(text)}")
 
             try:
                 # 生成embedding
                 embedding = await self.embedding_service.generate_embedding(text)
                 
+                # 将NumPy数组转换为Python列表
+                if hasattr(embedding, 'tolist'):
+                    embedding = embedding.tolist()
+                
                 # 更新任务状态和结果
                 db_task.status = "completed"
                 db_task.embedding = embedding
                 db.commit()
+                logger.info(f"Embedding任务 {task_id} 处理完成")
             except Exception as e:
                 # 处理失败，更新状态
                 db_task.status = "failed"
@@ -55,6 +61,10 @@ class TaskProcessor:
         if db_task:
             db_task.status = "processing"
             db.commit()
+            logger.info(f"开始处理Mask任务 {task_id}, 文本长度: {len(text)}字符, 脱敏类型: {mask_type}, 模型: {mask_model}")
+            if mask_field:
+                logger.info(f"指定脱敏字段: {mask_field}")
+            logger.info(f"开始处理Embedding任务 {task_id}, 文本长度: {len(text)}字符")
 
             try:
                 # 执行脱敏处理
@@ -70,6 +80,7 @@ class TaskProcessor:
                 db_task.masked_text = masked_text
                 db_task.mapping = mapping
                 db.commit()
+                logger.info(f"Mask任务 {task_id} 处理完成")
             except Exception as e:
                 # 处理失败，更新状态
                 db_task.status = "failed"
