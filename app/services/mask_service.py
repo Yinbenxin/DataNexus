@@ -100,7 +100,10 @@ class MaskService:
             for convert_pair in force_convert:
                 if len(convert_pair) == 2:
                     original_text, target_text = convert_pair
-                    if original_text in masked_text:
+                    if original_text in mapping:
+                        masked_text = masked_text.replace(mapping[original_text], target_text)
+                        mapping[original_text] = target_text
+                    elif original_text in masked_text:
                         masked_text = masked_text.replace(original_text, target_text)
                         mapping[original_text] = target_text
 
