@@ -100,11 +100,15 @@ class MaskService:
             for convert_pair in force_convert:
                 if len(convert_pair) == 2:
                     original_text, target_text = convert_pair
-                    if original_text in mapping:
-                        masked_text = masked_text.replace(mapping[original_text], target_text)
-                        mapping[original_text] = target_text
-                    elif original_text in masked_text:
-                        masked_text = masked_text.replace(original_text, target_text)
+                    # 统一处理文本替换和映射更新
+                    if original_text in mapping or original_text in masked_text:
+                        # 如果原文本在映射中，先替换映射值
+                        if original_text in mapping:
+                            masked_text = masked_text.replace(mapping[original_text], target_text)
+                        # 如果原文本在文本中，直接替换
+                        else:
+                            masked_text = masked_text.replace(original_text, target_text)
+                        # 更新映射关系
                         mapping[original_text] = target_text
 
 
