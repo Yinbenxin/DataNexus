@@ -28,12 +28,12 @@
 
 2. 创建应用数据库：
    ```bash
-   createdb -O datanexus modapp
+   createdb -O datanexus nexusdata
    ```
 
 3. 验证数据库连接：
    ```bash
-   psql -U datanexus -d modapp
+   psql -U datanexus -d nexusdata
    # 使用 \l 命令查看数据库列表
    # 使用 \q 退出psql
    ```
@@ -42,6 +42,12 @@
 
 - Python 3.9
 - PostgreSQL
+- 足够的磁盘空间用于模型存储
+
+## 模型要求
+
+- TencentBAC/Conan-embedding-v1
+- gte-multilingual-reranker-base
 - 足够的磁盘空间用于模型存储
 
 ## 安装说明

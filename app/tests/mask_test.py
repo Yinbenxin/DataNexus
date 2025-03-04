@@ -119,5 +119,47 @@ class TestMaskAPI(unittest.TestCase):
         
         self.assertEqual(result["status"], "failed")
 
+    def test_force_convert(self):
+        """测试强制文本转换"""
+        # 准备测试数据
+        data = {
+            "text": self.sample_text,
+            "mask_type": "similar",
+            "mask_model": "paddle",
+            "mask_field": self.mask_fields,
+            "force_convert": [["北京", "上海"], ["人工智能", "AI"]]
+        }
+
+        # 创建任务
+        response = requests.post(self.base_url, json=data, headers=self.headers)
+        self.assertEqual(response.status_code, 200, "创建任务失败")
+        
+        task_data = response.json()
+        task_id = task_data["task_id"]
+        
+        # 等待任务完成
+        result = None
+        while True:
+            response = requests.get(f"{self.base_url}/{task_id}")
+            result = response.json()
+            if result["status"] in ["completed", "failed"]:
+                break
+            time.sleep(1)
+
+        # 验证结果
+        self.assertEqual(result["status"], "completed")
+        self.assertIsNotNone(result["masked_text"])
+        self.assertIsNotNone(result["mapping"])
+        
+        # 验证强制转换是否生效
+        self.assertIn("上海", result["masked_text"])
+        self.assertNotIn("北京", result["masked_text"])
+        self.assertIn("AI", result["masked_text"])
+        self.assertNotIn("人工智能", result["masked_text"])
+        
+        # 验证映射关系
+        self.assertEqual(result["mapping"]["北京"], "上海")
+        self.assertEqual(result["mapping"]["人工智能"], "AI")
+
 if __name__ == "__main__":
     unittest.main()

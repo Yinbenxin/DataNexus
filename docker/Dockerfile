@@ -16,10 +16,8 @@ COPY . /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 设置环境变量
-ENV DATABASE_URL=postgresql://datanexus:123@localhost:5432/modapp
+ENV DATABASE_URL=postgresql://datanexus:123@localhost:5432/nexusdata
 ENV MODEL_DIR=./models
-ENV MASK_MODEL_PATH=./models/mask
-ENV EMBEDDING_MODEL_PATH=./models/embedding
 ENV HOST=0.0.0.0
 ENV PORT=8000
 ENV WORKERS=4

@@ -14,7 +14,7 @@ init_db()
 
 # 创建FastAPI应用实例
 app = FastAPI(
-    title="ModApp API",
+    title="nexusdata API",
     description="数据脱敏和Embedding服务API",
     version="1.0.0"
 )
@@ -49,10 +49,12 @@ def shutdown_event():
 # 导入路由
 from app.api.mask_router import router as mask_router
 from app.api.embedding_router import router as embedding_router
+from app.api.rerank_router import router as rerank_router
 
 # 注册路由
 app.include_router(mask_router, prefix="/api/v1/mask", tags=["mask"])
 app.include_router(embedding_router, prefix="/api/v1/embedding", tags=["embedding"])
+app.include_router(rerank_router, prefix="/api/v1/rerank", tags=["rerank"])
 
 @app.get("/ping")
 async def ping():
@@ -60,7 +62,7 @@ async def ping():
 
 @app.get("/")
 async def root():
-    return {"message": "欢迎使用ModApp API服务"}
+    return {"message": "欢迎使用nexusdata API服务"}
 
 @app.get("/health")
 async def health_check():

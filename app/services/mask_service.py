@@ -8,6 +8,8 @@ import base64
 from sentence_transformers import SentenceTransformer
 from paddlenlp import Taskflow
 import datasets
+from app.utils.logger import logger
+
 load_dotenv()
 
 default_schema = ['身份证号','姓名','出生日期','民族/种族','社交媒体账号','银行卡号','公司名称','证件号码','手机号','电子邮件地址','地址']
@@ -15,12 +17,12 @@ default_schema = ['身份证号','姓名','出生日期','民族/种族','社交
 
 class MaskService:
     def __init__(self, embedding_model=None):
-        if embedding_model:
-            self.model = embedding_model
-        else:
-            self.model = SentenceTransformer('TencentBAC/Conan-embedding-v1')
+        # if embedding_model:
+        #     self.model = embedding_model
+        # else:
+        #     self.model = SentenceTransformer('TencentBAC/Conan-embedding-v1')
         self.information_extract = Taskflow('information_extraction')  # 初始化时设置临时schema避免警告
-    
+        logger.info("MaskService initialized, embedding model: {}".format(embedding_model))  
     def extract_keywords(self, schema: List[str], text: str) -> List[str]:
         schema_set = set(schema+default_schema)
         self.information_extract.set_schema(schema_set)
@@ -59,17 +61,19 @@ class MaskService:
         """使用星号掩码"""
         return '*' * len(text)
 
-    async def mask_text(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None) -> Tuple[str, Dict[str, str]]:
+    async def mask_text(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None, force_convert: List[List[str]] = None) -> Tuple[str, Dict[str, str]]:
         """对文本进行脱敏处理"""
-        # 提取关键词
-        keywords = self.extract_keywords(mask_field, text)
-        if len(keywords) == 0:
-            return text, {}
+        # 首先处理强制转换
         masked_text = text
         mapping = {}
+        # 提取关键词
+        keywords = self.extract_keywords(mask_field, masked_text)
+        if len(keywords) == 0:
+            return masked_text, mapping
+
         mask_type_smart = mask_type.lower()
         for i, field in enumerate(keywords):
-            if field in text:
+            if field in masked_text:
                 mask_token = f"[MASK_{i}]"
                 # 根据不同的脱敏类型处理
                 if mask_type_smart == "similar":
@@ -91,8 +95,18 @@ class MaskService:
                 
                 masked_text = masked_text.replace(field, masked_value)
                 mapping[field] = masked_value
+
+        if force_convert:
+            for convert_pair in force_convert:
+                if len(convert_pair) == 2:
+                    original_text, target_text = convert_pair
+                    if original_text in masked_text:
+                        masked_text = masked_text.replace(original_text, target_text)
+                        mapping[original_text] = target_text
+
+
         return masked_text, mapping
 
-    async def process_mask(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None) -> Tuple[str, Dict[str, str]]:
+    async def process_mask(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None, force_convert: List[List[str]] = None) -> Tuple[str, Dict[str, str]]:
         """处理脱敏任务"""
-        return await self.mask_text(text, mask_type, mask_model, mask_field)
+        return await self.mask_text(text, mask_type, mask_model, mask_field, force_convert)

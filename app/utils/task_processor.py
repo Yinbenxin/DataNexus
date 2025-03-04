@@ -2,8 +2,10 @@ import asyncio
 from typing import Dict, Any
 from sqlalchemy.orm import Session
 from app.models.database import EmbeddingTask, MaskTask
+from app.models.rerank import RerankTask
 from app.services.embedding_service import EmbeddingService
 from app.services.mask_service import MaskService
+from app.services.rerank_service import RerankService
 from app.utils.queue_manager import task_queue
 from app.models.database import get_db
 from app.utils.logger import logger
@@ -12,6 +14,7 @@ class TaskProcessor:
     def __init__(self):
         self.embedding_service = EmbeddingService()
         self.mask_service = MaskService(embedding_model = self.embedding_service.model)
+        self.rerank_service = RerankService()
         self.running = False
 
     async def process_embedding_task(self, task: Dict[str, Any], db: Session) -> None:
@@ -55,6 +58,7 @@ class TaskProcessor:
         mask_type = task["data"]["mask_type"]
         mask_model = task["data"]["mask_model"]
         mask_field = task["data"]["mask_field"]
+        force_convert = task["data"]["force_convert"]
 
         # 更新任务状态为处理中
         db_task = db.query(MaskTask).filter(MaskTask.task_id == task_id).first()
@@ -64,6 +68,8 @@ class TaskProcessor:
             logger.info(f"开始处理Mask任务 {task_id}, 文本长度: {len(text)}字符, 脱敏类型: {mask_type}, 模型: {mask_model}")
             if mask_field:
                 logger.info(f"指定脱敏字段: {mask_field}")
+            if force_convert:
+                logger.info(f"强制转换映射: {force_convert}")
             logger.info(f"开始处理Embedding任务 {task_id}, 文本长度: {len(text)}字符")
 
             try:
@@ -72,7 +78,8 @@ class TaskProcessor:
                     text=text,
                     mask_type=mask_type,
                     mask_model=mask_model,
-                    mask_field=mask_field
+                    mask_field=mask_field,
+                    force_convert=force_convert
                 )
                 
                 # 更新任务状态和结果
@@ -106,11 +113,49 @@ class TaskProcessor:
                         await self.process_embedding_task(task, db)
                     elif task["type"] == "mask":
                         await self.process_mask_task(task, db)
+                    elif task["type"] == "rerank":
+                        await self.process_rerank_task(task, db)
                 finally:
                     db.close()
             else:
                 # 如果没有任务，等待一段时间
                 await asyncio.sleep(1)
+
+    async def process_rerank_task(self, task: Dict[str, Any], db: Session) -> None:
+        """处理rerank任务"""
+        task_id = task["task_id"]
+        query = task["data"]["query"]
+        texts = task["data"]["texts"]
+        top_k = task["data"]["top_k"]
+
+        # 更新任务状态为处理中
+        db_task = db.query(RerankTask).filter(RerankTask.task_id == task_id).first()
+        if db_task:
+            db_task.status = "processing"
+            db.commit()
+            logger.info(f"开始处理Rerank任务 {task_id}, 查询文本: {query[:50]}, 候选文本数量: {len(texts)}")
+
+            try:
+                # 执行重排序
+                ranked_pairs = await self.rerank_service.rerank_texts(
+                    query=query,
+                    texts=texts,
+                    top_k=top_k
+                )
+                
+                # 更新任务状态和结果
+                db_task.status = "completed"
+                db_task.rankings = ranked_pairs  # 直接存储元组列表
+                db.commit()
+                logger.info(f"Rerank任务 {task_id} 处理完成")
+            except Exception as e:
+                # 处理失败，更新状态
+                db_task.status = "failed"
+                db.commit()
+                logger.info(f"处理任务 {task_id} 时发生错误: {str(e)}")
+
+        # 标记任务完成
+        await task_queue.complete_task(task_id)
 
     def stop_processing(self):
         """停止任务处理"""

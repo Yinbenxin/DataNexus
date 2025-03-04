@@ -6,11 +6,11 @@ services:
     environment:
       POSTGRES_USER: datanexus
       POSTGRES_PASSWORD: 123
-      POSTGRES_DB: modapp
+      POSTGRES_DB: nexusdata
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U datanexus -d modapp"]
+      test: ["CMD-SHELL", "pg_isready -U datanexus -d nexusdata"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -20,7 +20,7 @@ services:
       context: ..
       dockerfile: docker/Dockerfile
     environment:
-      DATABASE_URL: postgresql://datanexus:123@db:5432/modapp
+      DATABASE_URL: postgresql://datanexus:123@db:5432/nexusdata
     ports:
       - "8000:8000"
     depends_on:

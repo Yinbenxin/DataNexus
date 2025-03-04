@@ -11,7 +11,7 @@ load_dotenv()
 # 创建数据库引擎
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
-
+print(DATABASE_URL)
 # 创建基类
 Base = declarative_base()
 
@@ -27,6 +27,7 @@ class MaskTask(Base):
     mask_type = Column(String, default="similar")  # 脱敏类型，如text、image等
     mask_model = Column(String, default="paddle")  # 脱敏模型类型
     mask_field = Column(JSON)  # 需要脱敏的字段列表
+    force_convert = Column(JSON)  # 强制转换的映射关系，格式：[[str1,str2],[str1,str2],...]，默认为空
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
