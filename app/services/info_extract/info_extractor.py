@@ -1,7 +1,7 @@
 import re
 import os
 
-from typing import  List
+from typing import  List, Dict
 from paddlenlp import Taskflow
 from .config import FIXED_TYPES, CONVERT_MAP
 from app.utils.logger import logger
@@ -27,7 +27,7 @@ class InfoExtractor:
         return {info_type: self.extract_by_pattern(text, pattern)
                 for info_type, pattern in self.FIXED_TYPES.items()}
     
-    def extract_by_type(self, text, info_types)-> List[str]:
+    def extract_by_type(self, text, info_types)-> Dict[str, List[str]]:
         """根据指定的类型提取信息
 
         Args:
@@ -35,7 +35,7 @@ class InfoExtractor:
             info_types: 信息类型列表或单个类型，可选值包括InfoExtractor.FIXED_TYPES中定义的类型
 
         Returns:
-            List[str]: 提取到的信息列表
+            Dict[str, List[str]]: 提取到的信息字典，键为信息类型，值为对应的提取结果列表
 
         """
         # 如果传入的是单个类型字符串，转换为列表
@@ -46,19 +46,35 @@ class InfoExtractor:
         info_extract_types = set(info_types)
         info_types_by_fixed = []
         info_types_by_other = []
+        result_dict = {}
+
         for i in info_extract_types:
             if i in self.FIXED_TYPES:
                 info_types_by_fixed.append(i)
             else:
                 if i in self.CONVERT_MAP:
                     info_types_by_other.append(self.CONVERT_MAP[i])
+                    result_dict[i] = []
                 else:
                     info_types_by_other.append(i)
-        info_extract_by_fixed=self.extract_by_fixed_type(text, info_types_by_fixed)
-        info_extract_by_other=self.extract_by_other_type(text, info_types_by_other)
-        return info_extract_by_fixed+info_extract_by_other
+                    result_dict[i] = []
 
-    def extract_by_fixed_type(self, text, info_types)-> List[str]:
+        # 处理固定类型的提取结果
+        if info_types_by_fixed:
+            fixed_results = self.extract_by_fixed_type(text, info_types_by_fixed)
+            for info_type, values in fixed_results.items():
+                result_dict[info_type] = values
+
+        # 处理其他类型的提取结果
+        if info_types_by_other:
+            other_results = self.extract_by_other_type(text, info_types_by_other)
+            for info_type, result in zip(info_types_by_other, other_results):
+                original_type = next((k for k, v in self.CONVERT_MAP.items() if v == info_type), info_type)
+                result_dict[original_type] = result
+
+        return result_dict
+
+    def extract_by_fixed_type(self, text, info_types)-> Dict[str, List[str]]:
         """根据指定的类型提取信息
         
         Args:
@@ -66,7 +82,7 @@ class InfoExtractor:
             info_types: 信息类型列表或单个类型，可选值包括InfoExtractor.FIXED_TYPES中定义的类型
         
         Returns:
-            List[str]: 提取到的信息列表
+            Dict[str, List[str]]: 提取到的信息字典，键为信息类型，值为对应的提取结果列表
 
         """
         # 如果传入的是单个类型字符串，转换为列表
@@ -78,15 +94,21 @@ class InfoExtractor:
         if invalid_types:
             raise ValueError(f'不支持的信息类型：{invalid_types}')
         
-        # 提取指定类型的信息并合并结果
-        results = []
+        # 提取指定类型的信息并组织为字典
+        results = {}
         for info_type in info_types:
-            results.extend(self.extract_by_pattern(text, self.FIXED_TYPES[info_type]))
+            results[info_type] = self.extract_by_pattern(text, self.FIXED_TYPES[info_type])
         return results
     
-    def extract_by_other_type(self, text, info_types)-> List[str]:
+    def extract_by_other_type(self, text, info_types)-> List[List[str]]:
         schema_set = set(info_types)
         self.information_extract.set_schema(schema_set)
         result = self.information_extract(text)
-        keys_list = [entity['text'] for entity_type in result[0] for entity in result[0][entity_type]]
-        return keys_list
+        results = []
+        for info_type in info_types:
+            type_results = []
+            if info_type in result[0]:
+                for entity in result[0][info_type]:
+                    type_results.append(entity['text'])
+            results.append(type_results)
+        return results
