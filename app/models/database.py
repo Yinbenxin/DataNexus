@@ -11,7 +11,6 @@ load_dotenv()
 # 创建数据库引擎
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
-print(DATABASE_URL)
 # 创建基类
 Base = declarative_base()
 

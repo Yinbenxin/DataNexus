@@ -5,9 +5,7 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import os
 from app.utils.logger import logger
-from dotenv import load_dotenv
 
-load_dotenv()
 
 class RerankService:
     def __init__(self):

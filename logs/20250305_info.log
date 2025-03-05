@@ -1,0 +1,457 @@
+2025-03-05 09:42:13,907 - INFO - INFO - Embedding模型加载中
+2025-03-05 09:49:39,321 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 09:49:41,219 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 09:49:41,219 - INFO - INFO - Rerank模型加载中
+2025-03-05 09:49:43,362 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 09:49:44,977 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 09:49:49,796 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 09:50:02,243 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 09:50:04,076 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 09:50:04,076 - INFO - INFO - Rerank模型加载中
+2025-03-05 09:50:05,723 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 09:50:07,080 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 09:50:09,894 - INFO - INFO - 开始创建Rerank任务，task_id: 0e0893a5-dc23-4e20-8877-f976c390b4a3, query: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:09,905 - INFO - INFO - 添加任务到队列: 0e0893a5-dc23-4e20-8877-f976c390b4a3, 类型: rerank
+2025-03-05 09:50:10,094 - INFO - INFO - 从队列获取任务: 0e0893a5-dc23-4e20-8877-f976c390b4a3, 任务类型: rerank
+2025-03-05 09:50:10,101 - INFO - INFO - 开始处理Rerank任务 0e0893a5-dc23-4e20-8877-f976c390b4a3, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:10,101 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:10,101 - INFO - INFO - 使用设备: cpu
+2025-03-05 09:50:10,436 - INFO - INFO - Rerank任务 0e0893a5-dc23-4e20-8877-f976c390b4a3 处理完成
+2025-03-05 09:50:10,436 - INFO - INFO - 完成任务处理: 0e0893a5-dc23-4e20-8877-f976c390b4a3
+2025-03-05 09:50:10,924 - INFO - INFO - 开始创建Rerank任务，task_id: 1e3e0416-89b4-4352-95e6-0e0fba4ba97a, query: , 候选文本数量: 10
+2025-03-05 09:50:10,927 - INFO - INFO - 添加任务到队列: 1e3e0416-89b4-4352-95e6-0e0fba4ba97a, 类型: rerank
+2025-03-05 09:50:11,437 - INFO - INFO - 从队列获取任务: 1e3e0416-89b4-4352-95e6-0e0fba4ba97a, 任务类型: rerank
+2025-03-05 09:50:11,440 - INFO - INFO - 开始处理Rerank任务 1e3e0416-89b4-4352-95e6-0e0fba4ba97a, 查询文本: , 候选文本数量: 10
+2025-03-05 09:50:11,440 - INFO - INFO - 正在对查询文本进行重排序: , 候选文本数量: 10
+2025-03-05 09:50:11,440 - INFO - INFO - 使用设备: cpu
+2025-03-05 09:50:11,625 - INFO - INFO - Rerank任务 1e3e0416-89b4-4352-95e6-0e0fba4ba97a 处理完成
+2025-03-05 09:50:11,626 - INFO - INFO - 完成任务处理: 1e3e0416-89b4-4352-95e6-0e0fba4ba97a
+2025-03-05 09:50:11,955 - INFO - INFO - 开始创建Rerank任务，task_id: d0c3452d-7c4b-4a98-b2ce-11c211ac878d, query: 药品管理, 候选文本数量: 0
+2025-03-05 09:50:11,957 - INFO - INFO - 添加任务到队列: d0c3452d-7c4b-4a98-b2ce-11c211ac878d, 类型: rerank
+2025-03-05 09:50:12,627 - INFO - INFO - 从队列获取任务: d0c3452d-7c4b-4a98-b2ce-11c211ac878d, 任务类型: rerank
+2025-03-05 09:50:12,631 - INFO - INFO - 开始处理Rerank任务 d0c3452d-7c4b-4a98-b2ce-11c211ac878d, 查询文本: 药品管理, 候选文本数量: 0
+2025-03-05 09:50:12,631 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 0
+2025-03-05 09:50:12,631 - INFO - INFO - 使用设备: cpu
+2025-03-05 09:50:12,633 - INFO - INFO - Rerank任务 d0c3452d-7c4b-4a98-b2ce-11c211ac878d 处理完成
+2025-03-05 09:50:12,633 - INFO - INFO - 完成任务处理: d0c3452d-7c4b-4a98-b2ce-11c211ac878d
+2025-03-05 09:50:12,994 - INFO - INFO - 开始创建Rerank任务，task_id: fdfb5357-96ca-4238-9255-7ac08cdff814, query: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 候选文本数量: 10
+2025-03-05 09:50:12,997 - INFO - INFO - 添加任务到队列: fdfb5357-96ca-4238-9255-7ac08cdff814, 类型: rerank
+2025-03-05 09:50:13,634 - INFO - INFO - 从队列获取任务: fdfb5357-96ca-4238-9255-7ac08cdff814, 任务类型: rerank
+2025-03-05 09:50:13,637 - INFO - INFO - 开始处理Rerank任务 fdfb5357-96ca-4238-9255-7ac08cdff814, 查询文本: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 候选文本数量: 10
+2025-03-05 09:50:13,637 - INFO - INFO - 正在对查询文本进行重排序: aaaaaaaaaa, 候选文本数量: 10
+2025-03-05 09:50:13,638 - INFO - INFO - 使用设备: cpu
+2025-03-05 09:50:16,943 - INFO - INFO - Rerank任务 fdfb5357-96ca-4238-9255-7ac08cdff814 处理完成
+2025-03-05 09:50:16,943 - INFO - INFO - 完成任务处理: fdfb5357-96ca-4238-9255-7ac08cdff814
+2025-03-05 09:50:16,948 - INFO - INFO - 开始创建Rerank任务，task_id: 72e46be5-3b7b-4b10-bb68-7979130a8c1a, query: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:16,949 - INFO - INFO - 添加任务到队列: 72e46be5-3b7b-4b10-bb68-7979130a8c1a, 类型: rerank
+2025-03-05 09:50:17,944 - INFO - INFO - 从队列获取任务: 72e46be5-3b7b-4b10-bb68-7979130a8c1a, 任务类型: rerank
+2025-03-05 09:50:17,947 - INFO - INFO - 开始处理Rerank任务 72e46be5-3b7b-4b10-bb68-7979130a8c1a, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:17,947 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:17,947 - INFO - INFO - 使用设备: cpu
+2025-03-05 09:50:18,164 - INFO - INFO - Rerank任务 72e46be5-3b7b-4b10-bb68-7979130a8c1a 处理完成
+2025-03-05 09:50:18,164 - INFO - INFO - 完成任务处理: 72e46be5-3b7b-4b10-bb68-7979130a8c1a
+2025-03-05 09:50:18,169 - INFO - INFO - 开始创建Rerank任务，task_id: e7bd28e9-fcd4-4451-a0be-9ce6942760d2, query: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:18,170 - INFO - INFO - 添加任务到队列: e7bd28e9-fcd4-4451-a0be-9ce6942760d2, 类型: rerank
+2025-03-05 09:50:19,165 - INFO - INFO - 从队列获取任务: e7bd28e9-fcd4-4451-a0be-9ce6942760d2, 任务类型: rerank
+2025-03-05 09:50:19,170 - INFO - INFO - 开始处理Rerank任务 e7bd28e9-fcd4-4451-a0be-9ce6942760d2, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:19,171 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-05 09:50:19,171 - INFO - INFO - 使用设备: cpu
+2025-03-05 09:50:19,399 - INFO - INFO - Rerank任务 e7bd28e9-fcd4-4451-a0be-9ce6942760d2 处理完成
+2025-03-05 09:50:19,399 - INFO - INFO - 完成任务处理: e7bd28e9-fcd4-4451-a0be-9ce6942760d2
+2025-03-05 09:50:25,462 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: ea3ac547-4171-458a-b528-90229d278bba, text: 2edca33b-d，文本长度: 36
+2025-03-05 09:50:25,466 - INFO - INFO - 添加任务到队列: ea3ac547-4171-458a-b528-90229d278bba, 类型: embedding
+2025-03-05 09:50:26,407 - INFO - INFO - 从队列获取任务: ea3ac547-4171-458a-b528-90229d278bba, 任务类型: embedding
+2025-03-05 09:50:26,410 - INFO - INFO - 开始处理任务 ea3ac547-4171-458a-b528-90229d278bba, 文本长度: 36
+2025-03-05 09:50:26,410 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-05 09:50:27,013 - INFO - INFO - Embedding任务 ea3ac547-4171-458a-b528-90229d278bba 处理完成
+2025-03-05 09:50:27,013 - INFO - INFO - 完成任务处理: ea3ac547-4171-458a-b528-90229d278bba
+2025-03-05 09:50:27,020 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 9aee5d45-6b3a-4007-b14d-ae84815499cd, text: ，文本长度: 0
+2025-03-05 09:50:27,021 - INFO - INFO - 添加任务到队列: 9aee5d45-6b3a-4007-b14d-ae84815499cd, 类型: embedding
+2025-03-05 09:50:28,014 - INFO - INFO - 从队列获取任务: 9aee5d45-6b3a-4007-b14d-ae84815499cd, 任务类型: embedding
+2025-03-05 09:50:28,023 - INFO - INFO - 开始处理任务 9aee5d45-6b3a-4007-b14d-ae84815499cd, 文本长度: 0
+2025-03-05 09:50:28,023 - INFO - INFO - Embedding文本: 
+2025-03-05 09:50:28,149 - INFO - INFO - Embedding任务 9aee5d45-6b3a-4007-b14d-ae84815499cd 处理完成
+2025-03-05 09:50:28,149 - INFO - INFO - 完成任务处理: 9aee5d45-6b3a-4007-b14d-ae84815499cd
+2025-03-05 15:48:51,248 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:49:05,107 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:49:06,579 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+)
+2025-03-05 15:49:06,579 - INFO - INFO - Rerank模型加载中
+2025-03-05 15:49:09,106 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 15:49:10,408 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 15:49:40,906 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:49:49,242 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:50:06,861 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:50:20,046 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:50:29,757 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:50:40,612 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:50:45,418 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:50:55,659 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:51:03,152 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:51:13,129 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:51:21,530 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:51:35,663 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:51:40,438 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:51:52,253 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:51:57,977 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:52:08,036 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:52:31,592 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:52:42,153 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:52:46,982 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:52:59,078 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:53:58,969 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:54:07,634 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:54:13,605 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 15:54:13,607 - INFO - INFO - Rerank模型加载中
+2025-03-05 15:54:16,401 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 15:54:17,751 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 15:57:53,033 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:58:06,008 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:58:11,829 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 15:58:11,830 - INFO - INFO - Rerank模型加载中
+2025-03-05 15:58:14,372 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 15:58:15,408 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 15:58:32,581 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:58:43,458 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:58:56,394 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:59:06,125 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:59:16,396 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:59:16,400 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 15:59:21,362 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:59:34,068 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 15:59:34,069 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:00:31,026 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:00:42,032 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:00:42,034 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:00:43,251 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:00:43,252 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 16:00:43,252 - INFO - INFO - Rerank模型加载中
+2025-03-05 16:00:45,843 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 16:00:45,917 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:00:46,758 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:00:46,758 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 16:01:18,474 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'aes', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: f2f04c1b-2603-4110-9082-d01468d327ea, text: 2024年2月17日，李明在北京参加了第..., mask_type: aes, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:01:18,489 - INFO - INFO - 添加任务到队列: f2f04c1b-2603-4110-9082-d01468d327ea, 类型: mask
+2025-03-05 16:01:18,800 - INFO - INFO - 从队列获取任务: f2f04c1b-2603-4110-9082-d01468d327ea, 任务类型: mask
+2025-03-05 16:01:18,809 - INFO - INFO - 开始处理Mask任务 f2f04c1b-2603-4110-9082-d01468d327ea, 文本长度: 57字符, 脱敏类型: aes, 模型: paddle
+2025-03-05 16:01:18,810 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:18,810 - INFO - INFO - 开始处理Embedding任务 f2f04c1b-2603-4110-9082-d01468d327ea, 文本长度: 57字符
+2025-03-05 16:01:21,209 - INFO - INFO - Mask任务 f2f04c1b-2603-4110-9082-d01468d327ea 处理完成
+2025-03-05 16:01:21,209 - INFO - INFO - 完成任务处理: f2f04c1b-2603-4110-9082-d01468d327ea
+2025-03-05 16:01:21,214 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'asterisk', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 10cd9d87-84ce-4546-ad44-826ad65529c0, text: 2024年2月17日，李明在北京参加了第..., mask_type: asterisk, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:01:21,214 - INFO - INFO - 添加任务到队列: 10cd9d87-84ce-4546-ad44-826ad65529c0, 类型: mask
+2025-03-05 16:01:22,210 - INFO - INFO - 从队列获取任务: 10cd9d87-84ce-4546-ad44-826ad65529c0, 任务类型: mask
+2025-03-05 16:01:22,217 - INFO - INFO - 开始处理Mask任务 10cd9d87-84ce-4546-ad44-826ad65529c0, 文本长度: 57字符, 脱敏类型: asterisk, 模型: paddle
+2025-03-05 16:01:22,218 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:22,218 - INFO - INFO - 开始处理Embedding任务 10cd9d87-84ce-4546-ad44-826ad65529c0, 文本长度: 57字符
+2025-03-05 16:01:24,632 - INFO - INFO - Mask任务 10cd9d87-84ce-4546-ad44-826ad65529c0 处理完成
+2025-03-05 16:01:24,632 - INFO - INFO - 完成任务处理: 10cd9d87-84ce-4546-ad44-826ad65529c0
+2025-03-05 16:01:24,637 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'delete', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: ad6790ca-0b38-4fa5-a22e-4680d94fd9f8, text: 2024年2月17日，李明在北京参加了第..., mask_type: delete, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:01:24,638 - INFO - INFO - 添加任务到队列: ad6790ca-0b38-4fa5-a22e-4680d94fd9f8, 类型: mask
+2025-03-05 16:01:25,637 - INFO - INFO - 从队列获取任务: ad6790ca-0b38-4fa5-a22e-4680d94fd9f8, 任务类型: mask
+2025-03-05 16:01:25,640 - INFO - INFO - 开始处理Mask任务 ad6790ca-0b38-4fa5-a22e-4680d94fd9f8, 文本长度: 57字符, 脱敏类型: delete, 模型: paddle
+2025-03-05 16:01:25,640 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:25,640 - INFO - INFO - 开始处理Embedding任务 ad6790ca-0b38-4fa5-a22e-4680d94fd9f8, 文本长度: 57字符
+2025-03-05 16:01:28,028 - INFO - INFO - Mask任务 ad6790ca-0b38-4fa5-a22e-4680d94fd9f8 处理完成
+2025-03-05 16:01:28,028 - INFO - INFO - 完成任务处理: ad6790ca-0b38-4fa5-a22e-4680d94fd9f8
+2025-03-05 16:01:28,032 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间'], 'force_convert': [['北京', '上海'], ['人工智能', 'AI']]}, task_id: 4e7d193f-b57d-4e46-a101-a321445521c0, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: [['北京', '上海'], ['人工智能', 'AI']]
+2025-03-05 16:01:28,033 - INFO - INFO - 添加任务到队列: 4e7d193f-b57d-4e46-a101-a321445521c0, 类型: mask
+2025-03-05 16:01:29,029 - INFO - INFO - 从队列获取任务: 4e7d193f-b57d-4e46-a101-a321445521c0, 任务类型: mask
+2025-03-05 16:01:29,032 - INFO - INFO - 开始处理Mask任务 4e7d193f-b57d-4e46-a101-a321445521c0, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle
+2025-03-05 16:01:29,032 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:29,033 - INFO - INFO - 强制转换映射: [['北京', '上海'], ['人工智能', 'AI']]
+2025-03-05 16:01:29,033 - INFO - INFO - 开始处理Embedding任务 4e7d193f-b57d-4e46-a101-a321445521c0, 文本长度: 57字符
+2025-03-05 16:01:31,388 - INFO - INFO - Mask任务 4e7d193f-b57d-4e46-a101-a321445521c0 处理完成
+2025-03-05 16:01:31,388 - INFO - INFO - 完成任务处理: 4e7d193f-b57d-4e46-a101-a321445521c0
+2025-03-05 16:01:31,392 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'invalid_type', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: dcca8ecd-f5e3-4aa3-8cd4-80d39cfa7ae3, text: 2024年2月17日，李明在北京参加了第..., mask_type: invalid_type, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:01:31,393 - INFO - INFO - 添加任务到队列: dcca8ecd-f5e3-4aa3-8cd4-80d39cfa7ae3, 类型: mask
+2025-03-05 16:01:32,389 - INFO - INFO - 从队列获取任务: dcca8ecd-f5e3-4aa3-8cd4-80d39cfa7ae3, 任务类型: mask
+2025-03-05 16:01:32,396 - INFO - INFO - 开始处理Mask任务 dcca8ecd-f5e3-4aa3-8cd4-80d39cfa7ae3, 文本长度: 57字符, 脱敏类型: invalid_type, 模型: paddle
+2025-03-05 16:01:32,396 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:32,396 - INFO - INFO - 开始处理Embedding任务 dcca8ecd-f5e3-4aa3-8cd4-80d39cfa7ae3, 文本长度: 57字符
+2025-03-05 16:01:34,779 - INFO - INFO - 处理任务 dcca8ecd-f5e3-4aa3-8cd4-80d39cfa7ae3 时发生错误: 不支持的脱敏类型：invalid_type
+2025-03-05 16:01:34,779 - INFO - INFO - 完成任务处理: dcca8ecd-f5e3-4aa3-8cd4-80d39cfa7ae3
+2025-03-05 16:01:34,787 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'md5', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: faf1e984-fd9a-4b3e-8825-db5aed7d6d44, text: 2024年2月17日，李明在北京参加了第..., mask_type: md5, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:01:34,789 - INFO - INFO - 添加任务到队列: faf1e984-fd9a-4b3e-8825-db5aed7d6d44, 类型: mask
+2025-03-05 16:01:35,781 - INFO - INFO - 从队列获取任务: faf1e984-fd9a-4b3e-8825-db5aed7d6d44, 任务类型: mask
+2025-03-05 16:01:35,786 - INFO - INFO - 开始处理Mask任务 faf1e984-fd9a-4b3e-8825-db5aed7d6d44, 文本长度: 57字符, 脱敏类型: md5, 模型: paddle
+2025-03-05 16:01:35,787 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:35,787 - INFO - INFO - 开始处理Embedding任务 faf1e984-fd9a-4b3e-8825-db5aed7d6d44, 文本长度: 57字符
+2025-03-05 16:01:38,276 - INFO - INFO - Mask任务 faf1e984-fd9a-4b3e-8825-db5aed7d6d44 处理完成
+2025-03-05 16:01:38,277 - INFO - INFO - 完成任务处理: faf1e984-fd9a-4b3e-8825-db5aed7d6d44
+2025-03-05 16:01:38,281 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'sha256', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: ef8d7275-2314-45a1-8ae5-0c9a4abd024b, text: 2024年2月17日，李明在北京参加了第..., mask_type: sha256, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:01:38,282 - INFO - INFO - 添加任务到队列: ef8d7275-2314-45a1-8ae5-0c9a4abd024b, 类型: mask
+2025-03-05 16:01:39,278 - INFO - INFO - 从队列获取任务: ef8d7275-2314-45a1-8ae5-0c9a4abd024b, 任务类型: mask
+2025-03-05 16:01:39,281 - INFO - INFO - 开始处理Mask任务 ef8d7275-2314-45a1-8ae5-0c9a4abd024b, 文本长度: 57字符, 脱敏类型: sha256, 模型: paddle
+2025-03-05 16:01:39,281 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:39,281 - INFO - INFO - 开始处理Embedding任务 ef8d7275-2314-45a1-8ae5-0c9a4abd024b, 文本长度: 57字符
+2025-03-05 16:01:41,635 - INFO - INFO - Mask任务 ef8d7275-2314-45a1-8ae5-0c9a4abd024b 处理完成
+2025-03-05 16:01:41,635 - INFO - INFO - 完成任务处理: ef8d7275-2314-45a1-8ae5-0c9a4abd024b
+2025-03-05 16:01:41,640 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 0d0c1fc4-cbe7-48c8-a09f-01be86ccb486, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:01:41,640 - INFO - INFO - 添加任务到队列: 0d0c1fc4-cbe7-48c8-a09f-01be86ccb486, 类型: mask
+2025-03-05 16:01:42,636 - INFO - INFO - 从队列获取任务: 0d0c1fc4-cbe7-48c8-a09f-01be86ccb486, 任务类型: mask
+2025-03-05 16:01:42,643 - INFO - INFO - 开始处理Mask任务 0d0c1fc4-cbe7-48c8-a09f-01be86ccb486, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle
+2025-03-05 16:01:42,644 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:42,644 - INFO - INFO - 开始处理Embedding任务 0d0c1fc4-cbe7-48c8-a09f-01be86ccb486, 文本长度: 57字符
+2025-03-05 16:01:45,040 - INFO - INFO - Mask任务 0d0c1fc4-cbe7-48c8-a09f-01be86ccb486 处理完成
+2025-03-05 16:01:45,041 - INFO - INFO - 完成任务处理: 0d0c1fc4-cbe7-48c8-a09f-01be86ccb486
+2025-03-05 16:01:45,046 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'type_replace', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: ac1666a2-23f5-4764-b374-59748aa42792, text: 2024年2月17日，李明在北京参加了第..., mask_type: type_replace, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:01:45,047 - INFO - INFO - 添加任务到队列: ac1666a2-23f5-4764-b374-59748aa42792, 类型: mask
+2025-03-05 16:01:46,041 - INFO - INFO - 从队列获取任务: ac1666a2-23f5-4764-b374-59748aa42792, 任务类型: mask
+2025-03-05 16:01:46,049 - INFO - INFO - 开始处理Mask任务 ac1666a2-23f5-4764-b374-59748aa42792, 文本长度: 57字符, 脱敏类型: type_replace, 模型: paddle
+2025-03-05 16:01:46,049 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:01:46,049 - INFO - INFO - 开始处理Embedding任务 ac1666a2-23f5-4764-b374-59748aa42792, 文本长度: 57字符
+2025-03-05 16:01:48,435 - INFO - INFO - Mask任务 ac1666a2-23f5-4764-b374-59748aa42792 处理完成
+2025-03-05 16:01:48,435 - INFO - INFO - 完成任务处理: ac1666a2-23f5-4764-b374-59748aa42792
+2025-03-05 16:04:33,287 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:04:46,481 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:04:46,482 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:04:47,848 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:04:47,848 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+)
+2025-03-05 16:04:47,848 - INFO - INFO - Rerank模型加载中
+2025-03-05 16:04:50,213 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 16:04:50,347 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:04:51,277 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:04:51,277 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 16:04:56,106 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:05:05,435 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:05:18,250 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:05:18,251 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:05:19,626 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:05:19,626 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 16:05:19,626 - INFO - INFO - Rerank模型加载中
+2025-03-05 16:05:22,142 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 16:05:22,173 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:05:23,093 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:05:23,094 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 16:05:27,211 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:05:38,740 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:05:38,740 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:05:40,231 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:05:40,231 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 16:05:40,231 - INFO - INFO - Rerank模型加载中
+2025-03-05 16:05:42,672 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 16:05:42,716 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:05:43,548 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:05:43,548 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 16:06:02,912 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'aes', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 7954d7c1-e40e-407e-bf3f-08c6c522b58d, text: 2024年2月17日，李明在北京参加了第..., mask_type: aes, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:06:02,917 - INFO - INFO - 添加任务到队列: 7954d7c1-e40e-407e-bf3f-08c6c522b58d, 类型: mask
+2025-03-05 16:06:03,577 - INFO - INFO - 从队列获取任务: 7954d7c1-e40e-407e-bf3f-08c6c522b58d, 任务类型: mask
+2025-03-05 16:06:03,586 - INFO - INFO - 开始处理Mask任务 7954d7c1-e40e-407e-bf3f-08c6c522b58d, 文本长度: 57字符, 脱敏类型: aes, 模型: paddle
+2025-03-05 16:06:03,586 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:03,586 - INFO - INFO - 开始处理Embedding任务 7954d7c1-e40e-407e-bf3f-08c6c522b58d, 文本长度: 57字符
+2025-03-05 16:06:06,050 - INFO - INFO - Mask任务 7954d7c1-e40e-407e-bf3f-08c6c522b58d 处理完成
+2025-03-05 16:06:06,050 - INFO - INFO - 完成任务处理: 7954d7c1-e40e-407e-bf3f-08c6c522b58d
+2025-03-05 16:06:06,055 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'asterisk', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: b3f3f185-1ad8-4652-8e6f-7ea5046f5a04, text: 2024年2月17日，李明在北京参加了第..., mask_type: asterisk, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:06:06,056 - INFO - INFO - 添加任务到队列: b3f3f185-1ad8-4652-8e6f-7ea5046f5a04, 类型: mask
+2025-03-05 16:06:07,051 - INFO - INFO - 从队列获取任务: b3f3f185-1ad8-4652-8e6f-7ea5046f5a04, 任务类型: mask
+2025-03-05 16:06:07,057 - INFO - INFO - 开始处理Mask任务 b3f3f185-1ad8-4652-8e6f-7ea5046f5a04, 文本长度: 57字符, 脱敏类型: asterisk, 模型: paddle
+2025-03-05 16:06:07,057 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:07,058 - INFO - INFO - 开始处理Embedding任务 b3f3f185-1ad8-4652-8e6f-7ea5046f5a04, 文本长度: 57字符
+2025-03-05 16:06:09,520 - INFO - INFO - Mask任务 b3f3f185-1ad8-4652-8e6f-7ea5046f5a04 处理完成
+2025-03-05 16:06:09,520 - INFO - INFO - 完成任务处理: b3f3f185-1ad8-4652-8e6f-7ea5046f5a04
+2025-03-05 16:06:09,524 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'delete', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 2eee76d8-f966-4927-a549-410954d6d5b7, text: 2024年2月17日，李明在北京参加了第..., mask_type: delete, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:06:09,525 - INFO - INFO - 添加任务到队列: 2eee76d8-f966-4927-a549-410954d6d5b7, 类型: mask
+2025-03-05 16:06:10,521 - INFO - INFO - 从队列获取任务: 2eee76d8-f966-4927-a549-410954d6d5b7, 任务类型: mask
+2025-03-05 16:06:10,529 - INFO - INFO - 开始处理Mask任务 2eee76d8-f966-4927-a549-410954d6d5b7, 文本长度: 57字符, 脱敏类型: delete, 模型: paddle
+2025-03-05 16:06:10,529 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:10,530 - INFO - INFO - 开始处理Embedding任务 2eee76d8-f966-4927-a549-410954d6d5b7, 文本长度: 57字符
+2025-03-05 16:06:13,026 - INFO - INFO - Mask任务 2eee76d8-f966-4927-a549-410954d6d5b7 处理完成
+2025-03-05 16:06:13,026 - INFO - INFO - 完成任务处理: 2eee76d8-f966-4927-a549-410954d6d5b7
+2025-03-05 16:06:13,033 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间'], 'force_convert': [['北京', '上海'], ['人工智能', 'AI']]}, task_id: 2992b3ca-48e4-4a1c-bd4f-259d125126e9, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: [['北京', '上海'], ['人工智能', 'AI']]
+2025-03-05 16:06:13,034 - INFO - INFO - 添加任务到队列: 2992b3ca-48e4-4a1c-bd4f-259d125126e9, 类型: mask
+2025-03-05 16:06:14,027 - INFO - INFO - 从队列获取任务: 2992b3ca-48e4-4a1c-bd4f-259d125126e9, 任务类型: mask
+2025-03-05 16:06:14,030 - INFO - INFO - 开始处理Mask任务 2992b3ca-48e4-4a1c-bd4f-259d125126e9, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle
+2025-03-05 16:06:14,030 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:14,030 - INFO - INFO - 强制转换映射: [['北京', '上海'], ['人工智能', 'AI']]
+2025-03-05 16:06:14,030 - INFO - INFO - 开始处理Embedding任务 2992b3ca-48e4-4a1c-bd4f-259d125126e9, 文本长度: 57字符
+2025-03-05 16:06:16,443 - INFO - INFO - Mask任务 2992b3ca-48e4-4a1c-bd4f-259d125126e9 处理完成
+2025-03-05 16:06:16,443 - INFO - INFO - 完成任务处理: 2992b3ca-48e4-4a1c-bd4f-259d125126e9
+2025-03-05 16:06:16,448 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'invalid_type', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: eea886c7-44f3-4880-b0a8-30114925bb07, text: 2024年2月17日，李明在北京参加了第..., mask_type: invalid_type, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:06:16,449 - INFO - INFO - 添加任务到队列: eea886c7-44f3-4880-b0a8-30114925bb07, 类型: mask
+2025-03-05 16:06:17,444 - INFO - INFO - 从队列获取任务: eea886c7-44f3-4880-b0a8-30114925bb07, 任务类型: mask
+2025-03-05 16:06:17,449 - INFO - INFO - 开始处理Mask任务 eea886c7-44f3-4880-b0a8-30114925bb07, 文本长度: 57字符, 脱敏类型: invalid_type, 模型: paddle
+2025-03-05 16:06:17,449 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:17,449 - INFO - INFO - 开始处理Embedding任务 eea886c7-44f3-4880-b0a8-30114925bb07, 文本长度: 57字符
+2025-03-05 16:06:19,911 - INFO - INFO - 处理任务 eea886c7-44f3-4880-b0a8-30114925bb07 时发生错误: 不支持的脱敏类型：invalid_type
+2025-03-05 16:06:19,911 - INFO - INFO - 完成任务处理: eea886c7-44f3-4880-b0a8-30114925bb07
+2025-03-05 16:06:19,915 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'md5', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: a6704e1f-62ed-44e5-80e3-ff9cb417b990, text: 2024年2月17日，李明在北京参加了第..., mask_type: md5, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:06:19,916 - INFO - INFO - 添加任务到队列: a6704e1f-62ed-44e5-80e3-ff9cb417b990, 类型: mask
+2025-03-05 16:06:20,912 - INFO - INFO - 从队列获取任务: a6704e1f-62ed-44e5-80e3-ff9cb417b990, 任务类型: mask
+2025-03-05 16:06:20,920 - INFO - INFO - 开始处理Mask任务 a6704e1f-62ed-44e5-80e3-ff9cb417b990, 文本长度: 57字符, 脱敏类型: md5, 模型: paddle
+2025-03-05 16:06:20,920 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:20,920 - INFO - INFO - 开始处理Embedding任务 a6704e1f-62ed-44e5-80e3-ff9cb417b990, 文本长度: 57字符
+2025-03-05 16:06:23,460 - INFO - INFO - Mask任务 a6704e1f-62ed-44e5-80e3-ff9cb417b990 处理完成
+2025-03-05 16:06:23,461 - INFO - INFO - 完成任务处理: a6704e1f-62ed-44e5-80e3-ff9cb417b990
+2025-03-05 16:06:23,465 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'sha256', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 3756745c-f8f5-467d-af99-239b8685b021, text: 2024年2月17日，李明在北京参加了第..., mask_type: sha256, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:06:23,466 - INFO - INFO - 添加任务到队列: 3756745c-f8f5-467d-af99-239b8685b021, 类型: mask
+2025-03-05 16:06:24,462 - INFO - INFO - 从队列获取任务: 3756745c-f8f5-467d-af99-239b8685b021, 任务类型: mask
+2025-03-05 16:06:24,469 - INFO - INFO - 开始处理Mask任务 3756745c-f8f5-467d-af99-239b8685b021, 文本长度: 57字符, 脱敏类型: sha256, 模型: paddle
+2025-03-05 16:06:24,469 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:24,469 - INFO - INFO - 开始处理Embedding任务 3756745c-f8f5-467d-af99-239b8685b021, 文本长度: 57字符
+2025-03-05 16:06:26,972 - INFO - INFO - Mask任务 3756745c-f8f5-467d-af99-239b8685b021 处理完成
+2025-03-05 16:06:26,972 - INFO - INFO - 完成任务处理: 3756745c-f8f5-467d-af99-239b8685b021
+2025-03-05 16:06:26,977 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 866c4e2e-ad4e-406c-bfcd-8ffc5f1eda5e, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:06:26,979 - INFO - INFO - 添加任务到队列: 866c4e2e-ad4e-406c-bfcd-8ffc5f1eda5e, 类型: mask
+2025-03-05 16:06:27,973 - INFO - INFO - 从队列获取任务: 866c4e2e-ad4e-406c-bfcd-8ffc5f1eda5e, 任务类型: mask
+2025-03-05 16:06:27,980 - INFO - INFO - 开始处理Mask任务 866c4e2e-ad4e-406c-bfcd-8ffc5f1eda5e, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle
+2025-03-05 16:06:27,981 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:27,981 - INFO - INFO - 开始处理Embedding任务 866c4e2e-ad4e-406c-bfcd-8ffc5f1eda5e, 文本长度: 57字符
+2025-03-05 16:06:30,514 - INFO - INFO - Mask任务 866c4e2e-ad4e-406c-bfcd-8ffc5f1eda5e 处理完成
+2025-03-05 16:06:30,515 - INFO - INFO - 完成任务处理: 866c4e2e-ad4e-406c-bfcd-8ffc5f1eda5e
+2025-03-05 16:06:30,519 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'type_replace', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 855b29f3-d443-431a-9ae0-b50cdb80f84b, text: 2024年2月17日，李明在北京参加了第..., mask_type: type_replace, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:06:30,520 - INFO - INFO - 添加任务到队列: 855b29f3-d443-431a-9ae0-b50cdb80f84b, 类型: mask
+2025-03-05 16:06:31,516 - INFO - INFO - 从队列获取任务: 855b29f3-d443-431a-9ae0-b50cdb80f84b, 任务类型: mask
+2025-03-05 16:06:31,521 - INFO - INFO - 开始处理Mask任务 855b29f3-d443-431a-9ae0-b50cdb80f84b, 文本长度: 57字符, 脱敏类型: type_replace, 模型: paddle
+2025-03-05 16:06:31,521 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:06:31,521 - INFO - INFO - 开始处理Embedding任务 855b29f3-d443-431a-9ae0-b50cdb80f84b, 文本长度: 57字符
+2025-03-05 16:06:34,039 - INFO - INFO - Mask任务 855b29f3-d443-431a-9ae0-b50cdb80f84b 处理完成
+2025-03-05 16:06:34,039 - INFO - INFO - 完成任务处理: 855b29f3-d443-431a-9ae0-b50cdb80f84b
+2025-03-05 16:07:37,065 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:07:51,544 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:08:02,538 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:08:02,540 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:08:03,697 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:08:03,698 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 16:08:03,698 - INFO - INFO - Rerank模型加载中
+2025-03-05 16:08:06,140 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 16:08:06,289 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:08:07,326 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:08:07,326 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 16:09:13,707 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:09:24,913 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:09:24,914 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:09:26,212 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:09:26,212 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+  (2): Dense({'in_features': 1024, 'out_features': 1792, 'bias': True, 'activation_function': 'torch.nn.modules.linear.Identity'})
+)
+2025-03-05 16:09:26,212 - INFO - INFO - Rerank模型加载中
+2025-03-05 16:09:28,530 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 16:09:28,648 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:09:29,637 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:09:29,637 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 16:10:53,913 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:11:07,585 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-05 16:11:07,586 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:11:08,858 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:11:08,858 - INFO - INFO - MaskService initialized, embedding model: SentenceTransformer(
+  (0): Transformer({'max_seq_length': 512, 'do_lower_case': False}) with Transformer model: BertModel 
+  (1): Pooling({'word_embedding_dimension': 1024, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})
+)
+2025-03-05 16:11:08,858 - INFO - INFO - Rerank模型加载中
+2025-03-05 16:11:11,218 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-05 16:11:11,372 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:11:12,280 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-05 16:11:12,280 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-05 16:11:28,107 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'aes', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: ee2280ae-f084-4af1-9d28-c9ea2df38087, text: 2024年2月17日，李明在北京参加了第..., mask_type: aes, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:11:28,114 - INFO - INFO - 添加任务到队列: ee2280ae-f084-4af1-9d28-c9ea2df38087, 类型: mask
+2025-03-05 16:11:28,309 - INFO - INFO - 从队列获取任务: ee2280ae-f084-4af1-9d28-c9ea2df38087, 任务类型: mask
+2025-03-05 16:11:28,315 - INFO - INFO - 开始处理Mask任务 ee2280ae-f084-4af1-9d28-c9ea2df38087, 文本长度: 57字符, 脱敏类型: aes, 模型: paddle
+2025-03-05 16:11:28,315 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:28,315 - INFO - INFO - 开始处理Embedding任务 ee2280ae-f084-4af1-9d28-c9ea2df38087, 文本长度: 57字符
+2025-03-05 16:11:30,845 - INFO - INFO - Mask任务 ee2280ae-f084-4af1-9d28-c9ea2df38087 处理完成
+2025-03-05 16:11:30,845 - INFO - INFO - 完成任务处理: ee2280ae-f084-4af1-9d28-c9ea2df38087
+2025-03-05 16:11:30,850 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'asterisk', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 600619a3-9444-4c14-81a4-e362966e4d72, text: 2024年2月17日，李明在北京参加了第..., mask_type: asterisk, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:11:30,851 - INFO - INFO - 添加任务到队列: 600619a3-9444-4c14-81a4-e362966e4d72, 类型: mask
+2025-03-05 16:11:31,847 - INFO - INFO - 从队列获取任务: 600619a3-9444-4c14-81a4-e362966e4d72, 任务类型: mask
+2025-03-05 16:11:31,849 - INFO - INFO - 开始处理Mask任务 600619a3-9444-4c14-81a4-e362966e4d72, 文本长度: 57字符, 脱敏类型: asterisk, 模型: paddle
+2025-03-05 16:11:31,849 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:31,849 - INFO - INFO - 开始处理Embedding任务 600619a3-9444-4c14-81a4-e362966e4d72, 文本长度: 57字符
+2025-03-05 16:11:34,264 - INFO - INFO - Mask任务 600619a3-9444-4c14-81a4-e362966e4d72 处理完成
+2025-03-05 16:11:34,264 - INFO - INFO - 完成任务处理: 600619a3-9444-4c14-81a4-e362966e4d72
+2025-03-05 16:11:34,269 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'delete', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 684cacbe-4c5a-4d51-8a90-36e624e2c5e8, text: 2024年2月17日，李明在北京参加了第..., mask_type: delete, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:11:34,270 - INFO - INFO - 添加任务到队列: 684cacbe-4c5a-4d51-8a90-36e624e2c5e8, 类型: mask
+2025-03-05 16:11:35,266 - INFO - INFO - 从队列获取任务: 684cacbe-4c5a-4d51-8a90-36e624e2c5e8, 任务类型: mask
+2025-03-05 16:11:35,270 - INFO - INFO - 开始处理Mask任务 684cacbe-4c5a-4d51-8a90-36e624e2c5e8, 文本长度: 57字符, 脱敏类型: delete, 模型: paddle
+2025-03-05 16:11:35,271 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:35,271 - INFO - INFO - 开始处理Embedding任务 684cacbe-4c5a-4d51-8a90-36e624e2c5e8, 文本长度: 57字符
+2025-03-05 16:11:37,781 - INFO - INFO - Mask任务 684cacbe-4c5a-4d51-8a90-36e624e2c5e8 处理完成
+2025-03-05 16:11:37,781 - INFO - INFO - 完成任务处理: 684cacbe-4c5a-4d51-8a90-36e624e2c5e8
+2025-03-05 16:11:37,786 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间'], 'force_convert': [['北京', '上海'], ['人工智能', 'AI']]}, task_id: b51bc3bf-0c51-4f26-84a5-848bc1e039ac, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: [['北京', '上海'], ['人工智能', 'AI']]
+2025-03-05 16:11:37,787 - INFO - INFO - 添加任务到队列: b51bc3bf-0c51-4f26-84a5-848bc1e039ac, 类型: mask
+2025-03-05 16:11:38,783 - INFO - INFO - 从队列获取任务: b51bc3bf-0c51-4f26-84a5-848bc1e039ac, 任务类型: mask
+2025-03-05 16:11:38,787 - INFO - INFO - 开始处理Mask任务 b51bc3bf-0c51-4f26-84a5-848bc1e039ac, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle
+2025-03-05 16:11:38,787 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:38,787 - INFO - INFO - 强制转换映射: [['北京', '上海'], ['人工智能', 'AI']]
+2025-03-05 16:11:38,788 - INFO - INFO - 开始处理Embedding任务 b51bc3bf-0c51-4f26-84a5-848bc1e039ac, 文本长度: 57字符
+2025-03-05 16:11:41,277 - INFO - INFO - Mask任务 b51bc3bf-0c51-4f26-84a5-848bc1e039ac 处理完成
+2025-03-05 16:11:41,279 - INFO - INFO - 完成任务处理: b51bc3bf-0c51-4f26-84a5-848bc1e039ac
+2025-03-05 16:11:41,288 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'invalid_type', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: bde9ed3d-382c-483d-afb1-0fd828a1a7c6, text: 2024年2月17日，李明在北京参加了第..., mask_type: invalid_type, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:11:41,289 - INFO - INFO - 添加任务到队列: bde9ed3d-382c-483d-afb1-0fd828a1a7c6, 类型: mask
+2025-03-05 16:11:42,281 - INFO - INFO - 从队列获取任务: bde9ed3d-382c-483d-afb1-0fd828a1a7c6, 任务类型: mask
+2025-03-05 16:11:42,285 - INFO - INFO - 开始处理Mask任务 bde9ed3d-382c-483d-afb1-0fd828a1a7c6, 文本长度: 57字符, 脱敏类型: invalid_type, 模型: paddle
+2025-03-05 16:11:42,285 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:42,286 - INFO - INFO - 开始处理Embedding任务 bde9ed3d-382c-483d-afb1-0fd828a1a7c6, 文本长度: 57字符
+2025-03-05 16:11:44,773 - INFO - INFO - 处理任务 bde9ed3d-382c-483d-afb1-0fd828a1a7c6 时发生错误: 不支持的脱敏类型：invalid_type
+2025-03-05 16:11:44,773 - INFO - INFO - 完成任务处理: bde9ed3d-382c-483d-afb1-0fd828a1a7c6
+2025-03-05 16:11:44,781 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'md5', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 9e1fa71c-8b4e-4eb4-ae2f-fe47b9dc97e8, text: 2024年2月17日，李明在北京参加了第..., mask_type: md5, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:11:44,782 - INFO - INFO - 添加任务到队列: 9e1fa71c-8b4e-4eb4-ae2f-fe47b9dc97e8, 类型: mask
+2025-03-05 16:11:45,774 - INFO - INFO - 从队列获取任务: 9e1fa71c-8b4e-4eb4-ae2f-fe47b9dc97e8, 任务类型: mask
+2025-03-05 16:11:45,780 - INFO - INFO - 开始处理Mask任务 9e1fa71c-8b4e-4eb4-ae2f-fe47b9dc97e8, 文本长度: 57字符, 脱敏类型: md5, 模型: paddle
+2025-03-05 16:11:45,780 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:45,780 - INFO - INFO - 开始处理Embedding任务 9e1fa71c-8b4e-4eb4-ae2f-fe47b9dc97e8, 文本长度: 57字符
+2025-03-05 16:11:48,306 - INFO - INFO - Mask任务 9e1fa71c-8b4e-4eb4-ae2f-fe47b9dc97e8 处理完成
+2025-03-05 16:11:48,306 - INFO - INFO - 完成任务处理: 9e1fa71c-8b4e-4eb4-ae2f-fe47b9dc97e8
+2025-03-05 16:11:48,311 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'sha256', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 90699095-8a31-47c9-b2de-832c031ffdc4, text: 2024年2月17日，李明在北京参加了第..., mask_type: sha256, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:11:48,312 - INFO - INFO - 添加任务到队列: 90699095-8a31-47c9-b2de-832c031ffdc4, 类型: mask
+2025-03-05 16:11:49,308 - INFO - INFO - 从队列获取任务: 90699095-8a31-47c9-b2de-832c031ffdc4, 任务类型: mask
+2025-03-05 16:11:49,313 - INFO - INFO - 开始处理Mask任务 90699095-8a31-47c9-b2de-832c031ffdc4, 文本长度: 57字符, 脱敏类型: sha256, 模型: paddle
+2025-03-05 16:11:49,313 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:49,313 - INFO - INFO - 开始处理Embedding任务 90699095-8a31-47c9-b2de-832c031ffdc4, 文本长度: 57字符
+2025-03-05 16:11:51,881 - INFO - INFO - Mask任务 90699095-8a31-47c9-b2de-832c031ffdc4 处理完成
+2025-03-05 16:11:51,881 - INFO - INFO - 完成任务处理: 90699095-8a31-47c9-b2de-832c031ffdc4
+2025-03-05 16:11:51,886 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: 2179042e-63b5-47ff-9c82-80f03225516c, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:11:51,887 - INFO - INFO - 添加任务到队列: 2179042e-63b5-47ff-9c82-80f03225516c, 类型: mask
+2025-03-05 16:11:52,883 - INFO - INFO - 从队列获取任务: 2179042e-63b5-47ff-9c82-80f03225516c, 任务类型: mask
+2025-03-05 16:11:52,888 - INFO - INFO - 开始处理Mask任务 2179042e-63b5-47ff-9c82-80f03225516c, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle
+2025-03-05 16:11:52,888 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:52,888 - INFO - INFO - 开始处理Embedding任务 2179042e-63b5-47ff-9c82-80f03225516c, 文本长度: 57字符
+2025-03-05 16:11:55,319 - INFO - INFO - Mask任务 2179042e-63b5-47ff-9c82-80f03225516c 处理完成
+2025-03-05 16:11:55,319 - INFO - INFO - 完成任务处理: 2179042e-63b5-47ff-9c82-80f03225516c
+2025-03-05 16:11:55,323 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'type_replace', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名', '时间']}, task_id: dd22ebbf-ec65-4ddd-a0b2-1ad8d28eab25, text: 2024年2月17日，李明在北京参加了第..., mask_type: type_replace, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名', '时间'], force_convert: None
+2025-03-05 16:11:55,324 - INFO - INFO - 添加任务到队列: dd22ebbf-ec65-4ddd-a0b2-1ad8d28eab25, 类型: mask
+2025-03-05 16:11:56,320 - INFO - INFO - 从队列获取任务: dd22ebbf-ec65-4ddd-a0b2-1ad8d28eab25, 任务类型: mask
+2025-03-05 16:11:56,327 - INFO - INFO - 开始处理Mask任务 dd22ebbf-ec65-4ddd-a0b2-1ad8d28eab25, 文本长度: 57字符, 脱敏类型: type_replace, 模型: paddle
+2025-03-05 16:11:56,327 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名', '时间']
+2025-03-05 16:11:56,328 - INFO - INFO - 开始处理Embedding任务 dd22ebbf-ec65-4ddd-a0b2-1ad8d28eab25, 文本长度: 57字符
+2025-03-05 16:11:58,950 - INFO - INFO - Mask任务 dd22ebbf-ec65-4ddd-a0b2-1ad8d28eab25 处理完成
+2025-03-05 16:11:58,951 - INFO - INFO - 完成任务处理: dd22ebbf-ec65-4ddd-a0b2-1ad8d28eab25
