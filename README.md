@@ -47,8 +47,8 @@
 ## 模型要求
 
 - TencentBAC/Conan-embedding-v1
-- gte-multilingual-reranker-base
-- 足够的磁盘空间用于模型存储
+- Alibaba-NLP/gte-multilingual-reranker-base
+- PaddlePaddle/uie-medium
 
 
 ## 安装说明
