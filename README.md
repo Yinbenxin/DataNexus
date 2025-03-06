@@ -50,20 +50,21 @@
 - gte-multilingual-reranker-base
 - 足够的磁盘空间用于模型存储
 
-## 模型下载
-   ```bash
-   export MODEL_PATH=./models
-   - git clone https://huggingface.co/TencentBAC/Conan-embedding-v1 ${MODEL_PATH}
-   - git clone https://huggingface.co/Alibaba-NLP/gte-multilingual-reranker-base ${MODEL_PATH}
-   - git clone git clone https://huggingface.co/PaddlePaddle/uie-medium ${MODEL_PATH}
-   ```
+
 ## 安装说明
 
 1. 克隆项目
 2. 安装依赖：
    ```bash
    pip install -r requirements.txt
-
+   ```
+3. 模型下载：
+   ```bash
+   export MODEL_PATH=./models
+   - git clone https://huggingface.co/TencentBAC/Conan-embedding-v1 ${MODEL_PATH}
+   - git clone https://huggingface.co/Alibaba-NLP/gte-multilingual-reranker-base ${MODEL_PATH}
+   - git clone git clone https://huggingface.co/PaddlePaddle/uie-medium ${MODEL_PATH}
+   ```
 ## 配置说明
 
 1. 创建`.env`文件并设置必要的环境变量
