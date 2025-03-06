@@ -49,6 +49,7 @@
 - TencentBAC/Conan-embedding-v1
 - Alibaba-NLP/gte-multilingual-reranker-base
 - PaddlePaddle/uie-medium
+- BAAI/bge-small-zh
 
 
 ## 安装说明
@@ -63,7 +64,8 @@
    export MODEL_PATH=./models
    git clone https://huggingface.co/TencentBAC/Conan-embedding-v1 ${MODEL_PATH}
    git clone https://huggingface.co/Alibaba-NLP/gte-multilingual-reranker-base ${MODEL_PATH}
-   git clone git clone https://huggingface.co/PaddlePaddle/uie-medium ${MODEL_PATH}
+   git clone https://huggingface.co/PaddlePaddle/uie-medium ${MODEL_PATH}
+   git clone https://huggingface.co/BAAI/bge-small-zh ${MODEL_PATH}
    ```
 ## 配置说明
 
@@ -79,4 +81,4 @@ uvicorn app.main:app --reload
 
 ## API文档
 
-启动服务后访问：`http://localhost:8000/docs`
+启动服务后访问：`http://localhost:8000/`

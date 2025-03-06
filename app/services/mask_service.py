@@ -7,9 +7,10 @@ import base64
 from sentence_transformers import SentenceTransformer
 from paddlenlp import Taskflow
 import datasets
-from app.services.info_extract.info_extractor import InfoExtractor
+from .info_extract.info_extractor import InfoExtractor
 
 from app.utils.logger import logger
+from .faker.faker import Faker
 
 
 default_schema = ['身份证号','姓名','出生日期','民族/种族','社交媒体账号','银行卡号','公司名称','证件号码','手机号','电子邮件地址','地址']
@@ -19,15 +20,16 @@ class MaskService:
     def __init__(self, embedding_model=None):
         self.information_extract = InfoExtractor()  
         logger.info("MaskService initialized, embedding model: {}".format(embedding_model))  
+        self.faker_generate = Faker()
     def extract_keywords(self, schema: List[str], text: str) -> Dict[str, List[str]]:
         keys_dict = self.information_extract.extract_by_type(text, schema)
         # 使用列表推导式将所有值合并成一个列表
         return keys_dict
 
-    def _generate_similar_text(self, type: str, texts: List[str]) -> List[str]:
+    def _generate_similar_text(self, data_type: str, texts: List[str]) -> List[str]:
         """生成相似文本"""
-        # 这里可以实现更复杂的相似文本生成逻辑
-        return [f"某{text[-1]}" for text in texts]
+        faker_data = self.faker_generate.generate(data_type, len(texts)) 
+        return faker_data
 
     def _type_replacement(self, type: str, texts: List[str]) -> List[str]:
         """类型置换"""
