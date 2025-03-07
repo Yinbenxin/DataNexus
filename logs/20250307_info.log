@@ -1467,3 +1467,4 @@
 2025-03-07 15:38:40,564 - INFO - INFO - 使用设备: cpu
 2025-03-07 15:38:40,794 - INFO - INFO - Rerank任务 a89352c4-8f9d-4859-adc5-f5e5197c952c 处理完成
 2025-03-07 15:38:40,796 - INFO - INFO - 完成任务处理: a89352c4-8f9d-4859-adc5-f5e5197c952c
+2025-03-07 09:36:21,433 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"

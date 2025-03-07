@@ -21,7 +21,7 @@ class TestRerankHandleAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 启动回调服务器
-        cls.callback_server = HTTPServer(('localhost', 0), CallbackHandler)
+        cls.callback_server = HTTPServer(('0.0.0.0', 0), CallbackHandler)
         cls.server_port = cls.callback_server.server_address[1]
         cls.server_thread = Thread(target=cls.callback_server.serve_forever)
         cls.server_thread.daemon = True
@@ -37,7 +37,7 @@ class TestRerankHandleAPI(unittest.TestCase):
         # 构建API基础URL
         self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/rerank"
         self.headers = {"Content-Type": "application/json"}
-        self.callback_url = f"http://localhost:{self.server_port}/callback"
+        self.callback_url = f"http://192.168.100.138:{self.server_port}/callback"
         
         # 测试数据
         self.sample_query = "药品管理"

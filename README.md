@@ -16,32 +16,12 @@
 - 通用特性
   - 异步API设计
   - 任务队列支持
-  - 数据库持久化
-
-### 数据库初始化
-
-1. 创建数据库用户：
-   ```bash
-   createuser -P datanexus
-   # 根据提示输入密码（示例使用：123）
-   ```
-
-2. 创建应用数据库：
-   ```bash
-   createdb -O datanexus nexusdata
-   ```
-
-3. 验证数据库连接：
-   ```bash
-   psql -U datanexus -d nexusdata
-   # 使用 \l 命令查看数据库列表
-   # 使用 \q 退出psql
-   ```
+  - Redis持久化
 
 ## 环境要求
 
 - Python 3.9
-- PostgreSQL
+- Redis
 - 足够的磁盘空间用于模型存储
 
 ## 模型要求
@@ -50,7 +30,6 @@
 - Alibaba-NLP/gte-multilingual-reranker-base
 - PaddlePaddle/uie-medium
 - BAAI/bge-small-zh
-
 
 ## 安装说明
 
@@ -67,11 +46,33 @@
    git clone https://huggingface.co/PaddlePaddle/uie-medium ${MODEL_PATH}
    git clone https://huggingface.co/BAAI/bge-small-zh ${MODEL_PATH}
    ```
+
 ## 配置说明
 
-1. 创建`.env`文件并设置必要的环境变量
-2. 确保数据库已正确配置
-3. 下载并放置必要的模型文件
+1. 创建`.env`文件并设置必要的环境变量：
+   ```bash
+   # Redis配置
+   REDIS_URL=redis://localhost:6379/0
+
+   # 服务配置
+   HOST=0.0.0.0
+   PORT=8000
+   WORKERS=4
+
+   # 任务队列配置
+   QUEUE_MAX_SIZE=100
+   TASK_TIMEOUT=300
+
+   # 任务清理配置
+   TASK_RETENTION_DAYS=30
+
+   # 模型路径配置
+   MODEL_PATH="/path/to/models"
+   EMBEDDING_MODEL_PATH="${MODEL_PATH}/Conan-embedding-v1"
+   RERANK_MODEL_PATH="${MODEL_PATH}/gte-multilingual-reranker-base"
+   INFO_EXTRACT_MODEL_PATH="${MODEL_PATH}/uie-medium"
+   EMBEDDING_SMELL_ZH="${MODEL_PATH}/bge-small-zh"
+   ```
 
 ## 启动服务
 
@@ -81,7 +82,7 @@ uvicorn app.main:app --reload
 
 ## API文档
 
-启动服务后访问：`http://localhost:8000/`
+启动服务后访问：`http://localhost:8000/docs`
 
 ### API调用方式
 

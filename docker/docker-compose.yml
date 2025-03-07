@@ -10,18 +10,19 @@ services:
     restart: unless-stopped
     ports:
       - "8000:8000"
-      - "5432:5432"
+      - "8001:6379"
     environment:
-      - DATABASE_URL=postgresql://datanexus:123@localhost:5432/nexusdata
+      - REDIS_URL=redis://localhost:6379/0
       - HOST=0.0.0.0
       - PORT=8000
       - WORKERS=4
       - QUEUE_MAX_SIZE=100
       - TASK_TIMEOUT=300
       - TASK_RETENTION_DAYS=30
+      - MODEL_PATH=/app/models
+      - EMBEDDING_MODEL_PATH=/app/models/Conan-embedding-v1
+      - RERANK_MODEL_PATH=/app/models/gte-multilingual-reranker-base
+      - INFO_EXTRACT_MODEL_PATH=/app/models/uie-medium
+      - EMBEDDING_SMELL_ZH=/app/models/bge-small-zh
     volumes:
-      - ../model:/app/model
-      - postgres_data:/var/lib/postgresql/data
-
-volumes:
-  postgres_data:
+      - /Users/yinbenxin/git/model:/app/models
