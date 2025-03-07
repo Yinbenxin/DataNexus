@@ -43,9 +43,7 @@ async def create_rerank_task(request: RerankRequest):
         success = await rerank_task_model.create(task_id, {
             "query": request.query,
             "texts": request.texts,
-            "top_k": request.top_k,
-            "status": "pending",
-            "rankings": []
+            "top_k": request.top_k
         })
         
         if not success:

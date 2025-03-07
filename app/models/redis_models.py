@@ -25,6 +25,11 @@ class RedisModel:
     def _deserialize(self, data: str) -> Dict[str, Any]:
         return json.loads(data) if data else {}
 
+    async def delete(self, task_id: str) -> bool:
+        """删除任务数据"""
+        key = self._get_key(task_id)
+        return bool(redis_client.delete(key))
+
 class MaskTask(RedisModel):
     def __init__(self):
         super().__init__("mask_task")

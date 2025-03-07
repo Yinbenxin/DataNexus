@@ -38,10 +38,16 @@ class TaskProcessor:
                 "embedding": embedding
             })
             logger.info(f"Embedding任务 {task_id} 处理完成")
+            # 不要立即删除任务数据，让测试用例能够获取到结果
+            # await embedding_task_model.delete(task_id)
+            # logger.info(f"已删除Embedding任务 {task_id} 的数据")
         except Exception as e:
             # 处理失败，更新状态
             await embedding_task_model.update(task_id, {"status": "failed"})
             logger.info(f"处理任务 {task_id} 时发生错误: {str(e)}")
+            # 删除任务数据
+            await embedding_task_model.delete(task_id)
+            logger.info(f"已删除失败的Embedding任务 {task_id} 的数据")
 
         # 标记任务完成
         await task_queue.complete_task(task_id)
@@ -133,10 +139,19 @@ class TaskProcessor:
                 "rankings": ranked_pairs
             })
             logger.info(f"Rerank任务 {task_id} 处理完成")
+            # 不要立即删除任务数据，让测试用例能够获取到结果
+            # await rerank_task_model.delete(task_id)
+            # logger.info(f"已删除Rerank任务 {task_id} 的数据")
         except Exception as e:
             # 处理失败，更新状态
-            await rerank_task_model.update(task_id, {"status": "failed"})
+            await rerank_task_model.update(task_id, {
+                "status": "failed",
+                "error": str(e)
+            })
             logger.info(f"处理任务 {task_id} 时发生错误: {str(e)}")
+            # 不要立即删除任务数据，让测试用例能够获取到结果
+            # await rerank_task_model.delete(task_id)
+            # logger.info(f"已删除失败的Rerank任务 {task_id} 的数据")
 
         # 标记任务完成
         await task_queue.complete_task(task_id)
