@@ -1,17 +1,41 @@
-from sqlalchemy import Column, Integer, String, DateTime, JSON, Float
 from datetime import datetime
-from app.models.database import Base
+from typing import Dict, Any, Optional
+from app.utils.redis_client import redis_client
+from app.models.redis_models import RedisModel
 
-class RerankTask(Base):
-    __tablename__ = "rerank_tasks"
+class RerankTask(RedisModel):
+    def __init__(self):
+        super().__init__("rerank_task")
 
-    id = Column(Integer, primary_key=True, index=True)
-    task_id = Column(String, unique=True, index=True)
-    status = Column(String)  # pending, processing, completed, failed
-    query = Column(String)
-    texts = Column(JSON)  # 候选文本列表
-    top_k = Column(Integer)
-    scores = Column(JSON)  # 存储相似度得分
-    rankings = Column(JSON)  # 存储排序后的文本索引
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    async def create(self, task_id: str, data: Dict[str, Any]) -> bool:
+        key = self._get_key(task_id)
+        task_data = {
+            "task_id": task_id,
+            "status": "pending",
+            "query": data["query"],
+            "texts": data["texts"],
+            "top_k": data["top_k"],
+            "scores": None,
+            "rankings": None,
+            "created_at": datetime.utcnow().isoformat(),
+            "updated_at": datetime.utcnow().isoformat()
+        }
+        return redis_client.set(key, self._serialize(task_data))
+
+    async def get(self, task_id: str) -> Optional[Dict[str, Any]]:
+        key = self._get_key(task_id)
+        data = redis_client.get(key)
+        return self._deserialize(data) if data else None
+
+    async def update(self, task_id: str, updates: Dict[str, Any]) -> bool:
+        key = self._get_key(task_id)
+        data = redis_client.get(key)
+        if data:
+            task_data = self._deserialize(data)
+            task_data.update(updates)
+            task_data["updated_at"] = datetime.utcnow().isoformat()
+            return redis_client.set(key, self._serialize(task_data))
+        return False
+
+# 创建全局实例
+rerank_task_model = RerankTask()

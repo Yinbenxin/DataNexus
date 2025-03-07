@@ -1,11 +1,9 @@
-from fastapi import APIRouter, HTTPException, Depends
-from sqlalchemy.orm import Session
+from fastapi import APIRouter, HTTPException
 from typing import Dict, Any, List
 import uuid
 from pydantic import BaseModel, validator
 
-from app.models.database import get_db
-from app.models.rerank import RerankTask
+from app.models.rerank import rerank_task_model
 from app.utils.queue_manager import task_queue
 from app.utils.logger import logger
 
@@ -35,24 +33,29 @@ class RerankRequest(BaseModel):
         return v
 
 @router.post("/", response_model=Dict[str, str])
-async def create_rerank_task(
-    request: RerankRequest,
-    db: Session = Depends(get_db)
-):
+async def create_rerank_task(request: RerankRequest):
     """创建Rerank任务"""
     task_id = str(uuid.uuid4())
     logger.info(f"开始创建Rerank任务，task_id: {task_id}, query: {request.query[:50]}, 候选文本数量: {len(request.texts)}")
     
-    # 创建任务记录
-    task = RerankTask(
-        task_id=task_id,
-        status="pending",
-        query=request.query,
-        texts=request.texts,
-        top_k=request.top_k
-    )
-    db.add(task)
-    db.commit()
+    try:
+        # 创建任务记录
+        success = await rerank_task_model.create(task_id, {
+            "query": request.query,
+            "texts": request.texts,
+            "top_k": request.top_k,
+            "status": "pending",
+            "rankings": []
+        })
+        
+        if not success:
+            logger.error(f"Failed to create task record in Redis for task_id: {task_id}")
+            raise HTTPException(status_code=500, detail="Failed to create task record")
+    except Exception as e:
+        error_message = str(e)
+        logger.error(f"Error occurred while creating task {task_id}: {error_message}")
+        await rerank_task_model.update(task_id, {"status": "failed", "error": error_message})
+        raise HTTPException(status_code=500, detail=error_message)
     
     # 添加到任务队列
     success = await task_queue.add_task(
@@ -66,36 +69,16 @@ async def create_rerank_task(
     )
     
     if not success:
-        task.status = "failed"
-        db.commit()
+        logger.error(f"Task queue is full, failed to add task_id: {task_id}")
+        await rerank_task_model.update(task_id, {"status": "failed", "error": "任务队列已满"})
         raise HTTPException(status_code=503, detail="任务队列已满")
     
     return {"task_id": task_id}
 
 @router.get("/{task_id}", response_model=Dict[str, Any])
-async def get_rerank_task(task_id: str, db: Session = Depends(get_db)):
-    """获取Rerank任务状态和结果"""
-    task = db.query(RerankTask).filter(RerankTask.task_id == task_id).first()
+async def get_rerank_task(task_id: str):
+    """获取Rerank任务状态"""
+    task = await rerank_task_model.get(task_id)
     if not task:
-        return {
-            "task_id": None,
-            "status": "failed",
-            "error": "任务不存在"
-        }
-    
-    return {
-        "task_id": task.task_id,
-        "status": task.status,
-        "query": task.query,
-        "texts": task.texts,
-        "top_k": task.top_k,
-        "scores": task.scores if task.status == "completed" else None,
-        "rankings": task.rankings if task.status == "completed" else None,
-        "created_at": task.created_at,
-        "updated_at": task.updated_at
-    }
-
-@router.get("/", response_model=Dict[str, int])
-async def get_queue_status():
-    """获取队列状态"""
-    return await task_queue.get_queue_status()
+        raise HTTPException(status_code=404, detail="Task not found")
+    return task
