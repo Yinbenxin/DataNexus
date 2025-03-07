@@ -11,31 +11,34 @@ router = APIRouter()
 
 class EmbeddingRequest(BaseModel):
     text: str
+    handle: str
 
-@router.post("/", response_model=Dict[str, str])
+@router.post("/", response_model=Dict[str, Any])
 async def create_embedding_task(request: Dict[str, Any]):
     """创建Embedding任务"""
     text = request["text"]
+    handle = request.get("handle")  # 使用get方法获取handle，如果不存在则为None
     task_id = str(uuid.uuid4())
-    logger.info(f"开始创建Embedding任务， 创建任务 task_id: {task_id}, text: {text[:10]}，文本长度: {len(text)}")
+    logger.info(f"开始创建Embedding任务， 创建任务 task_id: {task_id}, text: {text[:10]}，文本长度: {len(text)}, handle: {handle}")
     
     # 创建任务记录
     await embedding_task_model.create(task_id, {
-        "text": text
+        "text": text,
+        "handle": handle
     })
     
     # 添加到任务队列
     success = await task_queue.add_task(
         task_id=task_id,
         task_type="embedding",
-        data={"text": text}
+        data={"text": text, "handle": handle}
     )
     
     if not success:
         await embedding_task_model.update(task_id, {"status": "failed"})
         raise HTTPException(status_code=503, detail="任务队列已满")
     
-    return {"task_id": task_id}
+    return {"task_id": task_id, "success": True}
 
 @router.get("/{task_id}", response_model=Dict[str, Any])
 async def get_embedding_task(task_id: str):

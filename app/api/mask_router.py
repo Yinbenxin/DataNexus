@@ -20,6 +20,7 @@ async def create_mask_task(request: Dict[str, Any]):
     mask_model = request.get("mask_model", "paddle")
     mask_field = request.get("mask_field", None)
     force_convert = request.get("force_convert", None)
+    handle = request.get("handle", None)  # 获取回调地址
     
     try:
         # 记录请求信息
@@ -47,7 +48,8 @@ async def create_mask_task(request: Dict[str, Any]):
                 "mask_type": mask_type,
                 "mask_model": mask_model,
                 "mask_field": mask_field,
-                "force_convert": force_convert
+                "force_convert": force_convert,
+                "handle": handle  # 添加回调地址到任务数据中
             }
         )
         

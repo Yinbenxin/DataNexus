@@ -1,4 +1,5 @@
 import asyncio
+import aiohttp
 from typing import Dict, Any
 from app.models.redis_models import mask_task_model, embedding_task_model
 from app.models.rerank import rerank_task_model
@@ -19,6 +20,7 @@ class TaskProcessor:
         """处理embedding任务"""
         task_id = task["task_id"]
         text = task["data"]["text"]
+        handle = task["data"]["handle"]
 
         # 更新任务状态为处理中
         await embedding_task_model.update(task_id, {"status": "processing"})
@@ -37,14 +39,41 @@ class TaskProcessor:
                 "status": "completed",
                 "embedding": embedding
             })
-            logger.info(f"Embedding任务 {task_id} 处理完成")
-            # 不要立即删除任务数据，让测试用例能够获取到结果
-            # await embedding_task_model.delete(task_id)
-            # logger.info(f"已删除Embedding任务 {task_id} 的数据")
+            logger.info(f"Embedding任务 {task_id} 处理完成，将通过handle: {handle}返回结果")
+
+            # 根据handle返回结果到对应接口
+            if handle:
+                try:
+                    async with aiohttp.ClientSession() as session:
+                        async with session.post(handle, json={
+                            "task_id": task_id,
+                            "status": "completed",
+                            "embedding": embedding
+                        }) as response:
+                            if response.status != 200:
+                                logger.error(f"返回结果到接口 {handle} 失败: {response.status}")
+                except Exception as e:
+                    logger.error(f"返回结果到接口 {handle} 时发生错误: {str(e)}")
+
         except Exception as e:
             # 处理失败，更新状态
             await embedding_task_model.update(task_id, {"status": "failed"})
             logger.info(f"处理任务 {task_id} 时发生错误: {str(e)}")
+
+            # 根据handle返回错误信息到对应接口
+            if handle:
+                try:
+                    async with aiohttp.ClientSession() as session:
+                        async with session.post(handle, json={
+                            "task_id": task_id,
+                            "status": "failed",
+                            "error": str(e)
+                        }) as response:
+                            if response.status != 200:
+                                logger.error(f"返回错误信息到接口 {handle} 失败: {response.status}")
+                except Exception as callback_error:
+                    logger.error(f"返回错误信息到接口 {handle} 时发生错误: {str(callback_error)}")
+
             # 删除任务数据
             await embedding_task_model.delete(task_id)
             logger.info(f"已删除失败的Embedding任务 {task_id} 的数据")
@@ -60,6 +89,7 @@ class TaskProcessor:
         mask_model = task["data"]["mask_model"]
         mask_field = task["data"]["mask_field"]
         force_convert = task["data"]["force_convert"]
+        handle = task["data"].get("handle")  # 获取回调地址
 
         # 更新任务状态为处理中
         await mask_task_model.update(task_id, {"status": "processing"})
@@ -86,13 +116,44 @@ class TaskProcessor:
                 "mapping": mapping
             })
             logger.info(f"Mask任务 {task_id} 处理完成")
+
+            # 如果有回调地址，发送成功结果
+            if handle:
+                try:
+                    async with aiohttp.ClientSession() as session:
+                        async with session.post(handle, json={
+                            "task_id": task_id,
+                            "status": "completed",
+                            "masked_text": masked_text,
+                            "mapping": mapping
+                        }) as response:
+                            if response.status != 200:
+                                logger.error(f"返回结果到接口 {handle} 失败: {response.status}")
+                except Exception as e:
+                    logger.error(f"返回结果到接口 {handle} 时发生错误: {str(e)}")
+
         except Exception as e:
+            error_message = str(e)
             # 处理失败，更新状态
             await mask_task_model.update(task_id, {
                 "status": "failed",
-                "masked_text": str(e)
+                "masked_text": error_message
             })
-            logger.info(f"处理任务 {task_id} 时发生错误: {str(e)}")
+            logger.info(f"处理任务 {task_id} 时发生错误: {error_message}")
+
+            # 如果有回调地址，发送失败结果
+            if handle:
+                try:
+                    async with aiohttp.ClientSession() as session:
+                        async with session.post(handle, json={
+                            "task_id": task_id,
+                            "status": "failed",
+                            "error": error_message
+                        }) as response:
+                            if response.status != 200:
+                                logger.error(f"返回错误信息到接口 {handle} 失败: {response.status}")
+                except Exception as callback_error:
+                    logger.error(f"返回错误信息到接口 {handle} 时发生错误: {str(callback_error)}")
 
         # 标记任务完成
         await task_queue.complete_task(task_id)
@@ -139,19 +200,45 @@ class TaskProcessor:
                 "rankings": ranked_pairs
             })
             logger.info(f"Rerank任务 {task_id} 处理完成")
-            # 不要立即删除任务数据，让测试用例能够获取到结果
-            # await rerank_task_model.delete(task_id)
-            # logger.info(f"已删除Rerank任务 {task_id} 的数据")
+
+            # 如果有回调地址，发送成功结果
+            handle = task["data"].get("handle")
+            if handle:
+                try:
+                    async with aiohttp.ClientSession() as session:
+                        async with session.post(handle, json={
+                            "task_id": task_id,
+                            "status": "completed",
+                            "rankings": ranked_pairs
+                        }) as response:
+                            if response.status != 200:
+                                logger.error(f"返回结果到接口 {handle} 失败: {response.status}")
+                except Exception as e:
+                    logger.error(f"返回结果到接口 {handle} 时发生错误: {str(e)}")
+
         except Exception as e:
+            error_message = str(e)
             # 处理失败，更新状态
             await rerank_task_model.update(task_id, {
                 "status": "failed",
-                "error": str(e)
+                "error": error_message
             })
-            logger.info(f"处理任务 {task_id} 时发生错误: {str(e)}")
-            # 不要立即删除任务数据，让测试用例能够获取到结果
-            # await rerank_task_model.delete(task_id)
-            # logger.info(f"已删除失败的Rerank任务 {task_id} 的数据")
+            logger.info(f"处理任务 {task_id} 时发生错误: {error_message}")
+
+            # 如果有回调地址，发送失败结果
+            handle = task["data"].get("handle")
+            if handle:
+                try:
+                    async with aiohttp.ClientSession() as session:
+                        async with session.post(handle, json={
+                            "task_id": task_id,
+                            "status": "failed",
+                            "error": error_message
+                        }) as response:
+                            if response.status != 200:
+                                logger.error(f"返回错误信息到接口 {handle} 失败: {response.status}")
+                except Exception as callback_error:
+                    logger.error(f"返回错误信息到接口 {handle} 时发生错误: {str(callback_error)}")
 
         # 标记任务完成
         await task_queue.complete_task(task_id)

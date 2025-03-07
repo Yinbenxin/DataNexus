@@ -82,3 +82,102 @@ uvicorn app.main:app --reload
 ## API文档
 
 启动服务后访问：`http://localhost:8000/`
+
+### API调用方式
+
+本服务支持两种API调用方式：同步调用和异步回调。
+
+#### 1. 同步调用
+
+同步调用方式通过轮询获取任务结果：
+
+1. 创建任务：
+```python
+import requests
+
+# 创建Embedding任务
+response = requests.post(
+    "http://localhost:8000/api/v1/embedding",
+    json={"text": "需要处理的文本"}
+)
+
+task_id = response.json()["task_id"]
+```
+
+2. 轮询获取结果：
+```python
+import time
+
+while True:
+    # 查询任务状态
+    response = requests.get(f"http://localhost:8000/api/v1/embedding/{task_id}")
+    result = response.json()
+    
+    if result["status"] == "completed":
+        # 处理成功的结果
+        embedding = result["embedding"]
+        break
+    elif result["status"] == "failed":
+        # 处理失败
+        error = result.get("error")
+        break
+    
+    # 等待一段时间后继续查询
+    time.sleep(1)
+```
+
+#### 2. 异步回调
+
+异步回调方式通过提供回调地址自动接收结果：
+
+1. 创建任务时提供回调地址：
+```python
+import requests
+
+# 创建Embedding任务
+response = requests.post(
+    "http://localhost:8000/api/v1/embedding",
+    json={
+        "text": "需要处理的文本",
+        "handle": "http://your-callback-url/api/callback"
+    }
+)
+
+task_id = response.json()["task_id"]
+```
+
+2. 实现回调接口：
+```python
+from fastapi import FastAPI, Request
+
+app = FastAPI()
+
+@app.post("/api/callback")
+async def callback(request: Request):
+    result = await request.json()
+    
+    if result["status"] == "completed":
+        # 处理成功的结果
+        task_id = result["task_id"]
+        embedding = result["embedding"]
+    else:
+        # 处理失败
+        error = result.get("error")
+    
+    return {"status": "ok"}
+```
+
+回调结果格式：
+```json
+{
+    "task_id": "任务ID",
+    "status": "completed",  # 或 "failed"
+    "embedding": [...],     # 处理成功时返回
+    "error": "错误信息"     # 处理失败时返回
+}
+```
+
+注意事项：
+- 回调接口需要返回HTTP状态码200表示成功接收
+- 建议实现回调接口的幂等性，防止重复处理
+- 回调超时或失败可能会重试

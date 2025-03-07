@@ -44,11 +44,11 @@ class TaskQueue:
                 del self.processing[task_id]
                 logger.info(f"完成任务处理: {task_id}")
 
-    async def get_queue_status(self) -> Dict[str, int]:
+    async def get_queue_status(self) -> Dict[str, Any]:
         """获取队列状态"""
         return {
             "waiting": self.queue.qsize(),
-            "processing": len(self.processing)
+            "processing": list(self.processing.keys())
         }
 
 # 创建全局任务队列实例
