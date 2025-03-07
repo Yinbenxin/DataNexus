@@ -1,31 +1,27 @@
 version: '3.8'
 
 services:
-  db:
-    image: postgres:13
-    environment:
-      POSTGRES_USER: datanexus
-      POSTGRES_PASSWORD: 123
-      POSTGRES_DB: nexusdata
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U datanexus -d nexusdata"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  app:
+  nexusdata:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    environment:
-      DATABASE_URL: postgresql://datanexus:123@db:5432/nexusdata
+    image: nexusdata:latest
+    container_name: nexusdata
+    restart: unless-stopped
     ports:
       - "8000:8000"
-    depends_on:
-      db:
-        condition: service_healthy
+      - "5432:5432"
+    environment:
+      - DATABASE_URL=postgresql://datanexus:123@localhost:5432/nexusdata
+      - HOST=0.0.0.0
+      - PORT=8000
+      - WORKERS=4
+      - QUEUE_MAX_SIZE=100
+      - TASK_TIMEOUT=300
+      - TASK_RETENTION_DAYS=30
+    volumes:
+      - ../model:/app/model
+      - postgres_data:/var/lib/postgresql/data
 
 volumes:
   postgres_data:

@@ -17,7 +17,7 @@ class TestMaskAPI(unittest.TestCase):
         self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/mask"
         self.headers = {"Content-Type": "application/json"}
         self.sample_text = "2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。"
-        self.mask_fields = ["日期", "姓名", "职业", "地区", "外国人名", "时间"]
+        self.mask_fields = ["日期", "姓名", "职业", "地区", "外国人名"]
 
     def create_mask_task(self, mask_type: str) -> Dict[str, Any]:
         """创建脱敏任务并等待结果"""
