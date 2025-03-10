@@ -88,7 +88,108 @@ uvicorn app.main:app --reload
 
 本服务支持两种API调用方式：同步调用和异步回调。
 
-#### 1. 同步调用
+#### 1. 数据脱敏接口
+
+##### 请求地址
+`POST /api/v1/mask`
+
+##### 请求参数
+```json
+{
+    "text": "待脱敏文本",
+    "mask_type": "脱敏类型",  // similar, type_replace, delete, aes, md5, sha256, asterisk
+    "mask_model": "paddle",  // 使用的模型，目前支持paddle
+    "mask_field": ["日期", "姓名", "职业", "地区", "外国人名"],  // 需要脱敏的字段
+    "handle": "回调地址"  // 可选，异步回调时使用
+}
+```
+
+##### 响应格式
+```json
+{
+    "task_id": "任务ID",
+    "success": true
+}
+```
+
+##### 回调数据格式
+```json
+{
+    "task_id": "任务ID",
+    "status": "completed",
+    "masked_text": "脱敏后的文本",
+    "mapping": {"原文": "脱敏后的文本"}
+}
+```
+
+#### 2. Embedding接口
+
+##### 请求地址
+`POST /api/v1/embedding`
+
+##### 请求参数
+```json
+{
+    "text": "待处理文本",
+    "handle": "回调地址"  // 可选，异步回调时使用
+}
+```
+
+##### 响应格式
+```json
+{
+    "task_id": "任务ID",
+    "success": true
+}
+```
+
+##### 回调数据格式
+```json
+{
+    "task_id": "任务ID",
+    "status": "completed",
+    "embedding": [0.1, 0.2, ...],  // 向量数组
+    "text": "原始文本"
+}
+```
+
+#### 3. Rerank接口
+
+##### 请求地址
+`POST /api/v1/rerank`
+
+##### 请求参数
+```json
+{
+    "query": "查询文本",
+    "texts": ["候选文本1", "候选文本2", ...],
+    "top_k": 3,  // 可选，返回前k个结果
+    "handle": "回调地址"  // 可选，异步回调时使用
+}
+```
+
+##### 响应格式
+```json
+{
+    "task_id": "任务ID",
+    "success": true
+}
+```
+
+##### 回调数据格式
+```json
+{
+    "task_id": "任务ID",
+    "status": "completed",
+    "rankings": [
+        ["最相关文本", 0.95],
+        ["次相关文本", 0.85],
+        ...
+    ]
+}
+```
+
+#### 4. 同步调用示例
 
 同步调用方式通过轮询获取任务结果：
 
