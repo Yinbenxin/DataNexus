@@ -6,6 +6,8 @@ import time
 import asyncio
 from aiohttp import web
 from typing import Dict, Any
+from dotenv import load_dotenv
+load_dotenv()
 
 class TestEmbeddingAPI(unittest.TestCase):
     def setUp(self):
@@ -14,8 +16,9 @@ class TestEmbeddingAPI(unittest.TestCase):
         api_host = os.getenv("API_HOST", "127.0.0.1")
         api_port = os.getenv("API_PORT", "8000")
         api_version = os.getenv("API_VERSION", "v1")
-        self.callback_port = os.getenv("HANDLE_PORT", "8888")
-        
+        self.callback_host = "127.0.0.1"
+        self.callback_port = 61916
+        self.handle_url = "http://127.0.0.1:61916/callback"
         # 构建API基础URL
         self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/embedding"
         self.headers = {"Content-Type": "application/json"}
@@ -23,7 +26,7 @@ class TestEmbeddingAPI(unittest.TestCase):
         # 设置回调相关的属性
         self.callback_received = False
         self.callback_data = None
-    
+        
     async def callback_handler(self, request):
         """处理回调请求"""
         self.callback_received = True
@@ -36,7 +39,7 @@ class TestEmbeddingAPI(unittest.TestCase):
         app.router.add_post("/callback", self.callback_handler)
         runner = web.AppRunner(app)
         await runner.setup()
-        site = web.TCPSite(runner, "localhost", int(self.callback_port))
+        site = web.TCPSite(runner, self.callback_host, int(self.callback_port))
         await site.start()
         return runner
     
@@ -51,7 +54,6 @@ class TestEmbeddingAPI(unittest.TestCase):
                 self.base_url,
                 json={
                     "text": "测试文本",
-                    "handle": f"http://localhost:{self.callback_port}/callback"
                 },
                 headers=self.headers
             )
@@ -83,7 +85,7 @@ class TestEmbeddingAPI(unittest.TestCase):
     def test_embedding_with_callback(self):
         """同步方法调用异步测试"""
         asyncio.run(self.test_embedding_with_callback_async())
-
+    
     def create_embedding_task(self, text) -> Dict[str, Any]:
         """创建embedding任务并等待结果"""
         # 创建任务
@@ -102,7 +104,7 @@ class TestEmbeddingAPI(unittest.TestCase):
                 return result
             
             time.sleep(1)
-
+    
     def test_embedding_generation(self):
         """测试生成embedding"""
         sample_text = "2edca33b-dad9-49c3-a441-e5672d6b1429"
@@ -112,7 +114,7 @@ class TestEmbeddingAPI(unittest.TestCase):
             self.assertIsNotNone(result["embedding"])
             self.assertEqual(result["text"], sample_text)
             print(len(result["embedding"]))
-
+    
     def test_invalid_text(self):
         """测试无效的文本输入"""
         sample_text = ""

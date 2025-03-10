@@ -42,7 +42,7 @@ class TaskProcessor:
         logger.info(f"返回结果到接口 {handle}")
 
         if not handle:
-            handle = os.getenv("HANDLE")
+            handle = os.getenv("HANDLE_URL")
         if not handle:
             # 如果没有回调地址，直接删除本地任务数据
             logger.info(f"没有回调地址，直接删除本地任务数据 {task_id}")
