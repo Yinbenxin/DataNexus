@@ -3,7 +3,7 @@ from typing import Dict, Any, List
 import uuid
 from pydantic import BaseModel, validator
 
-from app.models.rerank import rerank_task_model
+from app.models import rerank_task_model
 from app.utils.queue_manager import task_queue
 from app.utils.logger import logger
 
@@ -50,13 +50,7 @@ async def create_rerank_task(request: RerankRequest):
     # 添加到任务队列
     success = await task_queue.add_task(
         task_id=task_id,
-        task_type="rerank",
-        data={
-            "query": request.query,
-            "texts": request.texts,
-            "top_k": request.top_k,
-            "handle": request.handle
-        }
+        task_type="rerank"
     )
     
     if not success:

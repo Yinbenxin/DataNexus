@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from typing import Dict, Any, List
 import uuid
-from app.models.redis_models import mask_task_model
+from app.models import mask_task_model
 from app.utils.queue_manager import task_queue
 from app.services.mask_service import MaskService
 from app.utils.logger import logger
@@ -32,7 +32,8 @@ async def create_mask_task(request: Dict[str, Any]):
             "mask_type": mask_type,
             "mask_model": mask_model,
             "mask_field": mask_field,
-            "force_convert": force_convert
+            "force_convert": force_convert,
+            "handle": handle
         })
         
         if not success:
@@ -42,21 +43,13 @@ async def create_mask_task(request: Dict[str, Any]):
         # 添加到任务队列
         success = await task_queue.add_task(
             task_id=task_id,
-            task_type="mask",
-            data={
-                "text": text,
-                "mask_type": mask_type,
-                "mask_model": mask_model,
-                "mask_field": mask_field,
-                "force_convert": force_convert,
-                "handle": handle  # 添加回调地址到任务数据中
-            }
+            task_type="mask"
         )
         
         if not success:
             logger.error(f"Task queue is full, failed to add task_id: {task_id}")
             await mask_task_model.update(task_id, {"status": "failed", "masked_text": "任务队列已满"})
-            raise HTTPException(status_code=503, detail="任务队列已满")
+            raise HTTPException(status_code=503, detail="任务队列已满, 请稍后再试")
         
         return {"task_id": task_id}
     except Exception as e:

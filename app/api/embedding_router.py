@@ -3,7 +3,7 @@ from typing import Dict, Any
 import uuid
 from pydantic import BaseModel
 
-from app.models.redis_models import embedding_task_model
+from app.models import embedding_task_model
 from app.utils.queue_manager import task_queue
 from app.utils.logger import logger
 
@@ -30,8 +30,7 @@ async def create_embedding_task(request: Dict[str, Any]):
     # 添加到任务队列
     success = await task_queue.add_task(
         task_id=task_id,
-        task_type="embedding",
-        data={"text": text, "handle": handle}
+        task_type="embedding"
     )
     
     if not success:
