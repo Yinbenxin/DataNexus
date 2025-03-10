@@ -22,15 +22,15 @@ class TestEmbeddingHandle(unittest.TestCase):
         self.callback_received = False
         self.callback_data = None
         
-    def tearDown(self):
-        # 清理测试数据
-        asyncio.run(self.cleanup_test_data())
+    # def tearDown(self):
+    #     # 清理测试数据
+    #     asyncio.run(self.cleanup_test_data())
         
-    async def cleanup_test_data(self):
-        # 清理Redis中的测试数据
-        tasks = await task_queue.get_queue_status()
-        for task_id in tasks.get("processing", []):
-            await embedding_task_model.delete(task_id)
+    # async def cleanup_test_data(self):
+    #     # 清理Redis中的测试数据
+    #     tasks = await task_queue.get_queue_status()
+    #     for task_id in tasks.get("processing", []):
+    #         await embedding_task_model.delete(task_id)
     
     async def callback_handler(self, request):
         # 模拟回调接口处理

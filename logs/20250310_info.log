@@ -1,457 +1,846 @@
-2025-03-10 15:45:35,633 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['北京', '上海'], ['人工智能', 'AI']], 'handle': 'http://localhost:61916/callback'}, task_id: 47159a7b-0588-4892-ad3d-93aaafddba1c, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['北京', '上海'], ['人工智能', 'AI']]
-2025-03-10 15:45:35,633 - INFO - INFO - 添加任务到队列: 47159a7b-0588-4892-ad3d-93aaafddba1c, 类型: mask
-2025-03-10 15:45:36,076 - INFO - INFO - 从队列获取任务: 47159a7b-0588-4892-ad3d-93aaafddba1c, 任务类型: mask
-2025-03-10 15:45:36,077 - INFO - INFO - 开始处理Mask任务 47159a7b-0588-4892-ad3d-93aaafddba1c, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://localhost:61916/callback
-2025-03-10 15:45:36,077 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 15:45:36,077 - INFO - INFO - 强制转换映射: [['北京', '上海'], ['人工智能', 'AI']]
-2025-03-10 15:45:38,149 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 15:45:38,167 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 15:45:38,182 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 15:45:38,200 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 15:45:38,200 - INFO - INFO - Mask任务 47159a7b-0588-4892-ad3d-93aaafddba1c 处理完成
-2025-03-10 15:45:38,202 - INFO - INFO - 完成任务处理: 47159a7b-0588-4892-ad3d-93aaafddba1c
-2025-03-10 15:45:38,656 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://invalid-url:12345/callback'}, task_id: 66715003-8544-4cab-908c-b4251cf8cbc3, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
-2025-03-10 15:45:38,657 - INFO - INFO - 添加任务到队列: 66715003-8544-4cab-908c-b4251cf8cbc3, 类型: mask
-2025-03-10 15:45:39,203 - INFO - INFO - 从队列获取任务: 66715003-8544-4cab-908c-b4251cf8cbc3, 任务类型: mask
-2025-03-10 15:45:39,204 - INFO - INFO - 开始处理Mask任务 66715003-8544-4cab-908c-b4251cf8cbc3, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://invalid-url:12345/callback
-2025-03-10 15:45:39,204 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 15:45:41,297 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 15:45:41,314 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 15:45:41,332 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 15:45:41,348 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 15:45:41,348 - INFO - INFO - Mask任务 66715003-8544-4cab-908c-b4251cf8cbc3 处理完成
-2025-03-10 15:45:41,350 - INFO - ERROR - 返回结果到接口 http://invalid-url:12345/callback 时发生错误: Cannot connect to host invalid-url:12345 ssl:default [nodename nor servname provided, or not known]
-2025-03-10 15:45:41,351 - INFO - INFO - 完成任务处理: 66715003-8544-4cab-908c-b4251cf8cbc3
-2025-03-10 15:45:43,680 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://localhost:61916/callback'}, task_id: 61fa316a-fee0-43a7-961e-c26cf09cb748, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
-2025-03-10 15:45:43,681 - INFO - INFO - 添加任务到队列: 61fa316a-fee0-43a7-961e-c26cf09cb748, 类型: mask
-2025-03-10 15:45:44,354 - INFO - INFO - 从队列获取任务: 61fa316a-fee0-43a7-961e-c26cf09cb748, 任务类型: mask
-2025-03-10 15:45:44,355 - INFO - INFO - 开始处理Mask任务 61fa316a-fee0-43a7-961e-c26cf09cb748, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://localhost:61916/callback
-2025-03-10 15:45:44,355 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 15:45:46,399 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 15:45:46,416 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 15:45:46,434 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 15:45:46,450 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 15:45:46,450 - INFO - INFO - Mask任务 61fa316a-fee0-43a7-961e-c26cf09cb748 处理完成
-2025-03-10 15:45:46,452 - INFO - INFO - 完成任务处理: 61fa316a-fee0-43a7-961e-c26cf09cb748
-2025-03-10 15:47:22,884 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:47:26,509 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:47:26,509 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:47:27,726 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:47:27,726 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:47:27,752 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:47:27,891 - INFO - INFO - 加载模型完成
-2025-03-10 15:47:28,031 - INFO - INFO - Rerank模型加载中
-2025-03-10 15:47:30,034 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 15:47:30,039 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:47:30,832 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:47:30,832 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:47:30,832 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:47:31,120 - INFO - INFO - 加载模型完成
-2025-03-10 15:47:35,448 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:47:42,094 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:47:45,378 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:47:45,378 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:47:46,647 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:47:46,647 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:47:46,671 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:47:46,763 - INFO - INFO - 加载模型完成
-2025-03-10 15:47:46,879 - INFO - INFO - Rerank模型加载中
-2025-03-10 15:47:48,907 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 15:47:48,918 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:47:49,716 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:47:49,716 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:47:49,717 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:47:49,890 - INFO - INFO - 加载模型完成
-2025-03-10 15:47:58,801 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:48:02,375 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:48:02,375 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:03,608 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:03,608 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:48:03,628 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:48:03,718 - INFO - INFO - 加载模型完成
-2025-03-10 15:48:03,844 - INFO - INFO - Rerank模型加载中
-2025-03-10 15:48:05,578 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 15:48:05,582 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:06,372 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:06,372 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:48:06,373 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:48:06,729 - INFO - INFO - 加载模型完成
-2025-03-10 15:48:29,361 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:48:32,209 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:48:32,209 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:33,319 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:33,319 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:48:33,338 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:48:33,404 - INFO - INFO - 加载模型完成
-2025-03-10 15:48:33,516 - INFO - INFO - Rerank模型加载中
-2025-03-10 15:48:35,379 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 15:48:35,385 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:36,195 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:36,195 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:48:36,196 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:48:36,415 - INFO - INFO - 加载模型完成
-2025-03-10 15:48:40,627 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:48:43,296 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:48:43,296 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:44,450 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:44,450 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:48:44,469 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:48:44,522 - INFO - INFO - 加载模型完成
-2025-03-10 15:48:44,660 - INFO - INFO - Rerank模型加载中
-2025-03-10 15:48:46,592 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 15:48:46,597 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:47,399 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:48:47,399 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:48:47,400 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:48:47,611 - INFO - INFO - 加载模型完成
-2025-03-10 15:49:03,422 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['北京', '上海'], ['人工智能', 'AI']], 'handle': 'http://localhost:62558/callback'}, task_id: 33aef1b5-37e1-4bd9-b278-aca68936801c, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['北京', '上海'], ['人工智能', 'AI']]
-2025-03-10 15:49:03,423 - INFO - INFO - 添加任务到队列: 33aef1b5-37e1-4bd9-b278-aca68936801c, 类型: mask
-2025-03-10 15:49:03,648 - INFO - INFO - 从队列获取任务: 33aef1b5-37e1-4bd9-b278-aca68936801c, 任务类型: mask
-2025-03-10 15:49:03,649 - INFO - INFO - 开始处理Mask任务 33aef1b5-37e1-4bd9-b278-aca68936801c, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://localhost:62558/callback
-2025-03-10 15:49:03,649 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 15:49:03,649 - INFO - INFO - 强制转换映射: [['北京', '上海'], ['人工智能', 'AI']]
-2025-03-10 15:49:05,761 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 15:49:05,777 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 15:49:05,826 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 15:49:05,842 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 15:49:05,842 - INFO - INFO - Mask任务 33aef1b5-37e1-4bd9-b278-aca68936801c 处理完成
-2025-03-10 15:49:05,846 - INFO - INFO - 完成任务处理: 33aef1b5-37e1-4bd9-b278-aca68936801c
-2025-03-10 15:49:06,439 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://invalid-url:12345/callback'}, task_id: ad4fdb29-29f8-4573-8830-92a82d43c21b, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
-2025-03-10 15:49:06,439 - INFO - INFO - 添加任务到队列: ad4fdb29-29f8-4573-8830-92a82d43c21b, 类型: mask
-2025-03-10 15:49:06,847 - INFO - INFO - 从队列获取任务: ad4fdb29-29f8-4573-8830-92a82d43c21b, 任务类型: mask
-2025-03-10 15:49:06,847 - INFO - INFO - 开始处理Mask任务 ad4fdb29-29f8-4573-8830-92a82d43c21b, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://invalid-url:12345/callback
-2025-03-10 15:49:06,847 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 15:49:08,923 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 15:49:08,951 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 15:49:08,969 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 15:49:08,985 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 15:49:08,985 - INFO - INFO - Mask任务 ad4fdb29-29f8-4573-8830-92a82d43c21b 处理完成
-2025-03-10 15:49:08,990 - INFO - ERROR - 返回结果到接口 http://invalid-url:12345/callback 时发生错误: Cannot connect to host invalid-url:12345 ssl:default [nodename nor servname provided, or not known]
-2025-03-10 15:49:08,990 - INFO - INFO - 完成任务处理: ad4fdb29-29f8-4573-8830-92a82d43c21b
-2025-03-10 15:49:11,452 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://localhost:62558/callback'}, task_id: da346f5b-ea3f-4ede-b5d8-967336f77cec, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
-2025-03-10 15:49:11,453 - INFO - INFO - 添加任务到队列: da346f5b-ea3f-4ede-b5d8-967336f77cec, 类型: mask
-2025-03-10 15:49:11,993 - INFO - INFO - 从队列获取任务: da346f5b-ea3f-4ede-b5d8-967336f77cec, 任务类型: mask
-2025-03-10 15:49:11,993 - INFO - INFO - 开始处理Mask任务 da346f5b-ea3f-4ede-b5d8-967336f77cec, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://localhost:62558/callback
-2025-03-10 15:49:11,993 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 15:49:14,060 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 15:49:14,079 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 15:49:14,095 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 15:49:14,113 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 15:49:14,113 - INFO - INFO - Mask任务 da346f5b-ea3f-4ede-b5d8-967336f77cec 处理完成
-2025-03-10 15:49:14,114 - INFO - INFO - 完成任务处理: da346f5b-ea3f-4ede-b5d8-967336f77cec
-2025-03-10 15:57:09,399 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:57:12,145 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 15:57:12,145 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:57:13,231 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:57:13,231 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:57:13,250 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:57:13,357 - INFO - INFO - 加载模型完成
-2025-03-10 15:57:13,479 - INFO - INFO - Rerank模型加载中
-2025-03-10 15:57:15,310 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 15:57:15,315 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:57:16,111 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 15:57:16,111 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 15:57:16,111 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 15:57:16,318 - INFO - INFO - 加载模型完成
-2025-03-10 16:01:42,580 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:01:45,990 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:01:45,990 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:01:47,277 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:01:47,277 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:01:47,300 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:01:47,435 - INFO - INFO - 加载模型完成
-2025-03-10 16:01:47,609 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:01:49,635 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:01:49,640 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:01:50,450 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:01:50,450 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:01:50,451 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:01:50,784 - INFO - INFO - 加载模型完成
-2025-03-10 16:02:38,817 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:02:43,794 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:02:46,395 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:02:46,395 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:02:47,523 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:02:47,523 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:02:47,543 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:02:47,648 - INFO - INFO - 加载模型完成
-2025-03-10 16:02:47,781 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:02:49,668 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:02:49,677 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:02:50,519 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:02:50,519 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:02:50,520 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:02:50,866 - INFO - INFO - 加载模型完成
-2025-03-10 16:02:55,116 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:02:57,452 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:02:57,453 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:02:58,439 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:02:58,439 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:02:58,459 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:02:58,537 - INFO - INFO - 加载模型完成
-2025-03-10 16:02:58,658 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:03:00,426 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:03:00,438 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:01,259 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:01,259 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:03:01,260 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:03:01,425 - INFO - INFO - 加载模型完成
-2025-03-10 16:03:17,626 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:03:20,131 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:03:20,132 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:21,153 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:21,153 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:03:21,172 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:03:21,224 - INFO - INFO - 加载模型完成
-2025-03-10 16:03:21,338 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:03:22,618 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:03:22,626 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:23,518 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:23,518 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:03:23,519 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:03:23,726 - INFO - INFO - 加载模型完成
-2025-03-10 16:03:27,964 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:03:30,059 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:03:30,060 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:31,074 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:31,074 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:03:31,090 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:03:31,162 - INFO - INFO - 加载模型完成
-2025-03-10 16:03:31,287 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:03:32,867 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:03:32,873 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:33,689 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:33,689 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:03:33,690 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:03:33,879 - INFO - INFO - 加载模型完成
-2025-03-10 16:03:37,889 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:03:40,487 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:03:40,487 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:41,623 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:41,624 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:03:41,644 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:03:41,700 - INFO - INFO - 加载模型完成
-2025-03-10 16:03:41,816 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:03:43,131 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:03:43,136 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:43,936 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:03:43,936 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:03:43,938 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:03:44,109 - INFO - INFO - 加载模型完成
-2025-03-10 16:03:55,562 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['北京', '上海'], ['人工智能', 'AI']], 'handle': 'http://localhost:8888/callback'}, task_id: 6444eb69-d3ad-480e-9778-8dd4cccd7ecd, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['北京', '上海'], ['人工智能', 'AI']]
-2025-03-10 16:03:55,562 - INFO - INFO - 添加任务到队列: 6444eb69-d3ad-480e-9778-8dd4cccd7ecd, 类型: mask
-2025-03-10 16:03:56,140 - INFO - INFO - 从队列获取任务: 6444eb69-d3ad-480e-9778-8dd4cccd7ecd, 任务类型: mask
-2025-03-10 16:03:56,140 - INFO - INFO - 开始处理Mask任务 6444eb69-d3ad-480e-9778-8dd4cccd7ecd, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://localhost:8888/callback
-2025-03-10 16:03:56,141 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 16:03:56,141 - INFO - INFO - 强制转换映射: [['北京', '上海'], ['人工智能', 'AI']]
-2025-03-10 16:03:58,234 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 16:03:58,252 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 16:03:58,300 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 16:03:58,316 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 16:03:58,317 - INFO - INFO - Mask任务 6444eb69-d3ad-480e-9778-8dd4cccd7ecd 处理完成
-2025-03-10 16:03:58,318 - INFO - ERROR - 返回结果到接口 http://localhost:8888/callback 时发生错误: Cannot connect to host localhost:8888 ssl:default [Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 8888), [Errno 61] Connect call failed ('::1', 8888, 0, 0)]
-2025-03-10 16:03:58,318 - INFO - INFO - 完成任务处理: 6444eb69-d3ad-480e-9778-8dd4cccd7ecd
-2025-03-10 16:04:25,697 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://invalid-url:12345/callback'}, task_id: 339d8576-dfbe-4c6f-9a0e-7fa6eb721d10, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
-2025-03-10 16:04:25,699 - INFO - INFO - 添加任务到队列: 339d8576-dfbe-4c6f-9a0e-7fa6eb721d10, 类型: mask
-2025-03-10 16:04:26,345 - INFO - INFO - 从队列获取任务: 339d8576-dfbe-4c6f-9a0e-7fa6eb721d10, 任务类型: mask
-2025-03-10 16:04:26,346 - INFO - INFO - 开始处理Mask任务 339d8576-dfbe-4c6f-9a0e-7fa6eb721d10, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://invalid-url:12345/callback
-2025-03-10 16:04:26,346 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 16:04:28,344 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 16:04:28,362 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 16:04:28,381 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 16:04:28,397 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 16:04:28,397 - INFO - INFO - Mask任务 339d8576-dfbe-4c6f-9a0e-7fa6eb721d10 处理完成
-2025-03-10 16:04:28,401 - INFO - ERROR - 返回结果到接口 http://invalid-url:12345/callback 时发生错误: Cannot connect to host invalid-url:12345 ssl:default [nodename nor servname provided, or not known]
-2025-03-10 16:04:28,402 - INFO - INFO - 完成任务处理: 339d8576-dfbe-4c6f-9a0e-7fa6eb721d10
-2025-03-10 16:04:30,714 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://localhost:8888/callback'}, task_id: 093f68f6-fa33-4843-be02-0f09da847f19, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
-2025-03-10 16:04:30,715 - INFO - INFO - 添加任务到队列: 093f68f6-fa33-4843-be02-0f09da847f19, 类型: mask
-2025-03-10 16:04:31,405 - INFO - INFO - 从队列获取任务: 093f68f6-fa33-4843-be02-0f09da847f19, 任务类型: mask
-2025-03-10 16:04:31,405 - INFO - INFO - 开始处理Mask任务 093f68f6-fa33-4843-be02-0f09da847f19, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://localhost:8888/callback
-2025-03-10 16:04:31,405 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 16:04:33,435 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 16:04:33,453 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 16:04:33,469 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 16:04:33,486 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 16:04:33,486 - INFO - INFO - Mask任务 093f68f6-fa33-4843-be02-0f09da847f19 处理完成
-2025-03-10 16:04:33,487 - INFO - ERROR - 返回结果到接口 http://localhost:8888/callback 时发生错误: Cannot connect to host localhost:8888 ssl:default [Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 8888), [Errno 61] Connect call failed ('::1', 8888, 0, 0)]
-2025-03-10 16:04:33,487 - INFO - INFO - 完成任务处理: 093f68f6-fa33-4843-be02-0f09da847f19
-2025-03-10 16:06:12,728 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:06:15,327 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:06:15,327 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:06:16,595 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:06:16,595 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:06:16,614 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:06:16,694 - INFO - INFO - 加载模型完成
-2025-03-10 16:06:16,811 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:06:18,654 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:06:18,667 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:06:19,532 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:06:19,532 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:06:19,534 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:06:19,777 - INFO - INFO - 加载模型完成
-2025-03-10 16:06:19,806 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['北京', '上海'], ['人工智能', 'AI']], 'handle': 'http://localhost:64623/callback'}, task_id: b4f599c1-9276-4180-9310-01e25c162022, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['北京', '上海'], ['人工智能', 'AI']]
-2025-03-10 16:06:19,806 - INFO - INFO - 添加任务到队列: b4f599c1-9276-4180-9310-01e25c162022, 类型: mask
-2025-03-10 16:06:20,801 - INFO - INFO - 从队列获取任务: b4f599c1-9276-4180-9310-01e25c162022, 任务类型: mask
-2025-03-10 16:06:20,801 - INFO - INFO - 开始处理Mask任务 b4f599c1-9276-4180-9310-01e25c162022, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://localhost:64623/callback
-2025-03-10 16:06:20,801 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 16:06:20,801 - INFO - INFO - 强制转换映射: [['北京', '上海'], ['人工智能', 'AI']]
-2025-03-10 16:06:23,013 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 16:06:23,063 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 16:06:23,080 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 16:06:23,096 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 16:06:23,096 - INFO - INFO - Mask任务 b4f599c1-9276-4180-9310-01e25c162022 处理完成
-2025-03-10 16:06:23,100 - INFO - INFO - 完成任务处理: b4f599c1-9276-4180-9310-01e25c162022
-2025-03-10 16:06:23,826 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://invalid-url:12345/callback'}, task_id: fe923149-abbc-4a63-877a-08a7844c431a, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
-2025-03-10 16:06:23,826 - INFO - INFO - 添加任务到队列: fe923149-abbc-4a63-877a-08a7844c431a, 类型: mask
-2025-03-10 16:06:24,101 - INFO - INFO - 从队列获取任务: fe923149-abbc-4a63-877a-08a7844c431a, 任务类型: mask
-2025-03-10 16:06:24,101 - INFO - INFO - 开始处理Mask任务 fe923149-abbc-4a63-877a-08a7844c431a, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://invalid-url:12345/callback
-2025-03-10 16:06:24,101 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 16:06:26,149 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 16:06:26,168 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 16:06:26,186 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 16:06:26,202 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 16:06:26,202 - INFO - INFO - Mask任务 fe923149-abbc-4a63-877a-08a7844c431a 处理完成
-2025-03-10 16:06:26,207 - INFO - ERROR - 返回结果到接口 http://invalid-url:12345/callback 时发生错误: Cannot connect to host invalid-url:12345 ssl:default [nodename nor servname provided, or not known]
-2025-03-10 16:06:26,207 - INFO - INFO - 完成任务处理: fe923149-abbc-4a63-877a-08a7844c431a
-2025-03-10 16:06:28,847 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://localhost:64623/callback'}, task_id: 55fb0d37-bb0e-4cdf-b28d-00955f80f419, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
-2025-03-10 16:06:28,848 - INFO - INFO - 添加任务到队列: 55fb0d37-bb0e-4cdf-b28d-00955f80f419, 类型: mask
-2025-03-10 16:06:29,209 - INFO - INFO - 从队列获取任务: 55fb0d37-bb0e-4cdf-b28d-00955f80f419, 任务类型: mask
-2025-03-10 16:06:29,210 - INFO - INFO - 开始处理Mask任务 55fb0d37-bb0e-4cdf-b28d-00955f80f419, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://localhost:64623/callback
-2025-03-10 16:06:29,210 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
-2025-03-10 16:06:31,336 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
-2025-03-10 16:06:31,355 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
-2025-03-10 16:06:31,373 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
-2025-03-10 16:06:31,400 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
-2025-03-10 16:06:31,401 - INFO - INFO - Mask任务 55fb0d37-bb0e-4cdf-b28d-00955f80f419 处理完成
-2025-03-10 16:06:31,403 - INFO - INFO - 完成任务处理: 55fb0d37-bb0e-4cdf-b28d-00955f80f419
-2025-03-10 16:08:27,909 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:08:30,749 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:08:30,750 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:08:31,887 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:08:31,887 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:08:31,907 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:08:31,962 - INFO - INFO - 加载模型完成
-2025-03-10 16:08:32,085 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:08:35,377 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:09:07,271 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:09:10,717 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:09:12,752 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:09:12,752 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:13,804 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:13,804 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:09:13,823 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:09:13,875 - INFO - INFO - 加载模型完成
-2025-03-10 16:09:13,987 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:09:15,801 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:09:15,813 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:16,604 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:16,604 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:09:16,605 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:09:16,791 - INFO - INFO - 加载模型完成
-2025-03-10 16:09:24,279 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:09:26,926 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:09:26,926 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:27,913 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:27,913 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:09:27,932 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:09:27,985 - INFO - INFO - 加载模型完成
-2025-03-10 16:09:28,106 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:09:29,839 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:09:29,850 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:30,647 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:30,647 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:09:30,648 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:09:30,835 - INFO - INFO - 加载模型完成
-2025-03-10 16:09:34,950 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:09:37,310 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:09:37,310 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:38,304 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:38,305 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:09:38,328 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:09:38,384 - INFO - INFO - 加载模型完成
-2025-03-10 16:09:38,497 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:09:40,306 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:09:40,312 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:41,098 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:09:41,098 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:09:41,099 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:09:41,282 - INFO - INFO - 加载模型完成
-2025-03-10 16:11:04,520 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:11:07,301 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:11:07,302 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:11:08,439 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:11:08,439 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:11:08,463 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:11:08,536 - INFO - INFO - 加载模型完成
-2025-03-10 16:11:08,650 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:11:12,600 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:11:16,777 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:11:19,566 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:11:19,566 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:11:20,710 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:11:20,710 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:11:20,738 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:11:20,828 - INFO - INFO - 加载模型完成
-2025-03-10 16:11:20,952 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:11:22,918 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:11:22,927 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:11:23,736 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:11:23,737 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:11:23,738 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:11:23,928 - INFO - INFO - 加载模型完成
-2025-03-10 16:14:17,343 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:14:19,539 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:14:19,540 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:14:21,147 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:14:21,147 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:14:21,166 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:14:21,255 - INFO - INFO - 加载模型完成
-2025-03-10 16:14:21,409 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:14:23,204 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:14:23,213 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:14:24,046 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:14:24,046 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:14:24,047 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:14:24,216 - INFO - INFO - 加载模型完成
-2025-03-10 16:17:12,721 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:17:15,600 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:17:15,601 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:17:16,634 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:17:16,634 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:17:16,652 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:17:16,773 - INFO - INFO - 加载模型完成
-2025-03-10 16:17:16,890 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:17:18,754 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:17:18,770 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:17:19,577 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:17:19,577 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:17:19,579 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:17:19,754 - INFO - INFO - 加载模型完成
-2025-03-10 16:23:32,842 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:23:36,139 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:23:36,139 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:23:37,412 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:23:37,412 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:23:37,435 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:23:37,559 - INFO - INFO - 加载模型完成
-2025-03-10 16:23:37,740 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:23:39,637 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:23:39,643 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:23:40,429 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:23:40,430 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:23:40,430 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:23:40,803 - INFO - INFO - 加载模型完成
-2025-03-10 16:24:38,551 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:24:41,260 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1"
-2025-03-10 16:24:41,260 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:24:42,540 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:24:42,541 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:24:42,564 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:24:42,677 - INFO - INFO - 加载模型完成
-2025-03-10 16:24:42,796 - INFO - INFO - Rerank模型加载中
-2025-03-10 16:24:44,756 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
-2025-03-10 16:24:44,762 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:24:45,753 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
-2025-03-10 16:24:45,753 - INFO - INFO - MaskService initialized, embedding model: None
-2025-03-10 16:24:45,754 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
-2025-03-10 16:24:46,130 - INFO - INFO - 加载模型完成
+2025-03-10 16:45:27,036 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:45:29,651 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:45:29,651 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:45:30,840 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:45:30,840 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:45:30,863 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:45:30,929 - INFO - INFO - 加载模型完成
+2025-03-10 16:45:31,041 - INFO - INFO - Rerank模型加载中
+2025-03-10 16:45:32,154 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 16:45:32,158 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:45:33,140 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:45:33,141 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:45:33,141 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:45:33,284 - INFO - INFO - 加载模型完成
+2025-03-10 16:45:36,037 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '地区']}, task_id: 97545c97-f0ce-4798-89a4-37eacd5f973c, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '地区'], force_convert: None
+2025-03-10 16:45:36,038 - INFO - INFO - 添加任务到队列: 97545c97-f0ce-4798-89a4-37eacd5f973c, 类型: mask
+2025-03-10 16:45:36,309 - INFO - INFO - 从队列获取任务: 97545c97-f0ce-4798-89a4-37eacd5f973c, 任务类型: mask
+2025-03-10 16:45:36,309 - INFO - INFO - 开始处理Mask任务 97545c97-f0ce-4798-89a4-37eacd5f973c, 文本长度: 31字符, 脱敏类型: similar, 模型: paddle, handle: None
+2025-03-10 16:45:36,309 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '地区']
+2025-03-10 16:45:37,637 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
+2025-03-10 16:45:37,654 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
+2025-03-10 16:45:37,654 - INFO - INFO - Mask任务 97545c97-f0ce-4798-89a4-37eacd5f973c 处理完成
+2025-03-10 16:45:37,654 - INFO - INFO - 完成任务处理: 97545c97-f0ce-4798-89a4-37eacd5f973c
+2025-03-10 16:48:00,401 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:48:02,961 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:48:02,961 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:48:04,034 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:48:04,034 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:48:04,055 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:48:04,107 - INFO - INFO - 加载模型完成
+2025-03-10 16:48:04,220 - INFO - INFO - Rerank模型加载中
+2025-03-10 16:48:06,051 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 16:48:06,055 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:48:06,847 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:48:06,847 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:48:06,848 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:48:07,274 - INFO - INFO - 加载模型完成
+2025-03-10 16:48:12,955 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:48:15,428 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:48:15,428 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:48:16,556 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:48:16,556 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:48:16,573 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:48:16,645 - INFO - INFO - 加载模型完成
+2025-03-10 16:48:16,761 - INFO - INFO - Rerank模型加载中
+2025-03-10 16:48:17,875 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 16:48:17,880 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:48:18,883 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:48:18,883 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:48:18,883 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:48:19,052 - INFO - INFO - 加载模型完成
+2025-03-10 16:48:20,344 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '地区']}, task_id: 112ae855-54a4-4f8e-83f7-941ede03da15, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '地区'], force_convert: None
+2025-03-10 16:48:20,344 - INFO - INFO - 添加任务到队列: 112ae855-54a4-4f8e-83f7-941ede03da15, 类型: mask
+2025-03-10 16:48:21,074 - INFO - INFO - 从队列获取任务: 112ae855-54a4-4f8e-83f7-941ede03da15, 任务类型: mask
+2025-03-10 16:48:21,075 - INFO - INFO - 开始处理Mask任务 112ae855-54a4-4f8e-83f7-941ede03da15, 文本长度: 31字符, 脱敏类型: similar, 模型: paddle, handle: None
+2025-03-10 16:48:21,075 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '地区']
+2025-03-10 16:48:22,400 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
+2025-03-10 16:48:22,416 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
+2025-03-10 16:48:22,417 - INFO - INFO - Mask任务 112ae855-54a4-4f8e-83f7-941ede03da15 处理完成
+2025-03-10 16:48:22,417 - INFO - INFO - 完成任务处理: 112ae855-54a4-4f8e-83f7-941ede03da15
+2025-03-10 16:50:06,360 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:10,006 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:10,006 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:15,149 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:16,848 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:16,848 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:17,853 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:17,853 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:50:17,872 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:50:17,926 - INFO - INFO - 加载模型完成
+2025-03-10 16:50:18,039 - INFO - INFO - Rerank模型加载中
+2025-03-10 16:50:19,932 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 16:50:19,936 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:20,744 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:20,744 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:50:20,744 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:50:20,930 - INFO - INFO - 加载模型完成
+2025-03-10 16:50:27,255 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:30,121 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:30,121 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:31,217 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:31,217 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:50:31,235 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:50:31,288 - INFO - INFO - 加载模型完成
+2025-03-10 16:50:31,401 - INFO - INFO - Rerank模型加载中
+2025-03-10 16:50:32,307 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 16:50:32,312 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:33,257 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:33,258 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:50:33,259 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:50:33,396 - INFO - INFO - 加载模型完成
+2025-03-10 16:50:40,707 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:48,378 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:51,080 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:50:51,080 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:52,260 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:52,260 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:50:52,280 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:50:52,346 - INFO - INFO - 加载模型完成
+2025-03-10 16:50:52,457 - INFO - INFO - Rerank模型加载中
+2025-03-10 16:50:53,989 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 16:50:53,994 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:54,833 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:50:54,833 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:50:54,834 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:50:54,968 - INFO - INFO - 加载模型完成
+2025-03-10 16:51:03,665 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '地区']}, task_id: 261518bf-132f-4c84-a427-f49bd11c5b19, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '地区'], force_convert: None
+2025-03-10 16:51:03,665 - INFO - INFO - 添加任务到队列: 261518bf-132f-4c84-a427-f49bd11c5b19, 类型: mask
+2025-03-10 16:51:03,999 - INFO - INFO - 从队列获取任务: 261518bf-132f-4c84-a427-f49bd11c5b19, 任务类型: mask
+2025-03-10 16:51:04,001 - INFO - INFO - 开始处理Mask任务 261518bf-132f-4c84-a427-f49bd11c5b19, 文本长度: 31字符, 脱敏类型: similar, 模型: paddle, handle: None
+2025-03-10 16:51:04,001 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '地区']
+2025-03-10 16:51:05,351 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
+2025-03-10 16:51:05,369 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
+2025-03-10 16:51:05,369 - INFO - INFO - Mask任务 261518bf-132f-4c84-a427-f49bd11c5b19 处理完成
+2025-03-10 16:51:05,369 - INFO - INFO - 返回结果到接口 None
+2025-03-10 16:51:05,369 - INFO - ERROR - 处理任务 261518bf-132f-4c84-a427-f49bd11c5b19 时发生错误: unsupported operand type(s) for |: 'NoneType' and 'NoneType'
+2025-03-10 16:51:05,369 - INFO - INFO - 返回结果到接口 None
+2025-03-10 16:51:05,369 - INFO - INFO - 完成任务处理: 261518bf-132f-4c84-a427-f49bd11c5b19
+2025-03-10 16:52:04,112 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:52:06,819 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:52:06,819 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:52:07,999 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:52:07,999 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:52:08,022 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:52:08,119 - INFO - INFO - 加载模型完成
+2025-03-10 16:52:08,229 - INFO - INFO - Rerank模型加载中
+2025-03-10 16:52:09,322 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 16:52:09,326 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:52:10,285 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:52:10,285 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:52:10,286 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:52:10,457 - INFO - INFO - 加载模型完成
+2025-03-10 16:52:12,203 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '地区']}, task_id: f8c656c1-6dd2-4d7d-affc-4a8b97208a0e, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '地区'], force_convert: None
+2025-03-10 16:52:12,203 - INFO - INFO - 添加任务到队列: f8c656c1-6dd2-4d7d-affc-4a8b97208a0e, 类型: mask
+2025-03-10 16:52:12,505 - INFO - INFO - 从队列获取任务: f8c656c1-6dd2-4d7d-affc-4a8b97208a0e, 任务类型: mask
+2025-03-10 16:52:12,507 - INFO - INFO - 开始处理Mask任务 f8c656c1-6dd2-4d7d-affc-4a8b97208a0e, 文本长度: 31字符, 脱敏类型: similar, 模型: paddle, handle: None
+2025-03-10 16:52:12,507 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '地区']
+2025-03-10 16:52:13,896 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
+2025-03-10 16:52:13,919 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
+2025-03-10 16:52:13,919 - INFO - INFO - Mask任务 f8c656c1-6dd2-4d7d-affc-4a8b97208a0e 处理完成
+2025-03-10 16:52:13,919 - INFO - INFO - 返回结果到接口 None
+2025-03-10 16:52:13,919 - INFO - ERROR - 处理任务 f8c656c1-6dd2-4d7d-affc-4a8b97208a0e 时发生错误: name 'os' is not defined
+2025-03-10 16:52:13,919 - INFO - INFO - 返回结果到接口 None
+2025-03-10 16:52:13,919 - INFO - INFO - 完成任务处理: f8c656c1-6dd2-4d7d-affc-4a8b97208a0e
+2025-03-10 16:52:28,702 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:52:30,239 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 16:52:30,239 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:52:31,415 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:52:31,416 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:52:31,435 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:52:31,502 - INFO - INFO - 加载模型完成
+2025-03-10 16:52:31,614 - INFO - INFO - Rerank模型加载中
+2025-03-10 16:52:33,226 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 16:52:33,231 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:52:34,026 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 16:52:34,026 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 16:52:34,026 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 16:52:34,155 - INFO - INFO - 加载模型完成
+2025-03-10 16:52:38,299 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '地区']}, task_id: 83cce388-71f7-4193-b416-afa2cd4dbed2, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '地区'], force_convert: None
+2025-03-10 16:52:38,300 - INFO - INFO - 添加任务到队列: 83cce388-71f7-4193-b416-afa2cd4dbed2, 类型: mask
+2025-03-10 16:52:39,179 - INFO - INFO - 从队列获取任务: 83cce388-71f7-4193-b416-afa2cd4dbed2, 任务类型: mask
+2025-03-10 16:52:39,180 - INFO - INFO - 开始处理Mask任务 83cce388-71f7-4193-b416-afa2cd4dbed2, 文本长度: 31字符, 脱敏类型: similar, 模型: paddle, handle: None
+2025-03-10 16:52:39,180 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '地区']
+2025-03-10 16:52:40,456 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
+2025-03-10 16:52:40,473 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
+2025-03-10 16:52:40,474 - INFO - INFO - Mask任务 83cce388-71f7-4193-b416-afa2cd4dbed2 处理完成
+2025-03-10 16:52:40,474 - INFO - INFO - 返回结果到接口 None
+2025-03-10 16:52:40,474 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 16:52:40,475 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 16:52:40,475 - INFO - INFO - 完成任务处理: 83cce388-71f7-4193-b416-afa2cd4dbed2
+2025-03-10 17:04:47,114 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:05:00,779 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:05:00,779 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:05:02,036 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:05:02,037 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:05:02,062 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:05:02,185 - INFO - INFO - 加载模型完成
+2025-03-10 17:05:02,318 - INFO - INFO - Rerank模型加载中
+2025-03-10 17:05:04,896 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 17:05:04,902 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:05:05,790 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:05:05,790 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:05:05,791 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:05:06,103 - INFO - INFO - 加载模型完成
+2025-03-10 17:27:00,253 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: b3475710-3823-47ef-aa33-e088e7e5c555, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:27:00,254 - INFO - INFO - 添加任务到队列: b3475710-3823-47ef-aa33-e088e7e5c555, 类型: embedding
+2025-03-10 17:27:00,441 - INFO - INFO - 从队列获取任务: b3475710-3823-47ef-aa33-e088e7e5c555, 任务类型: embedding
+2025-03-10 17:27:00,442 - INFO - INFO - 开始处理Embedding任务 b3475710-3823-47ef-aa33-e088e7e5c555, 文本长度: 36
+2025-03-10 17:27:00,442 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:27:00,956 - INFO - INFO - Embedding任务 b3475710-3823-47ef-aa33-e088e7e5c555 处理完成
+2025-03-10 17:27:00,956 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:27:00,956 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:27:00,957 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:27:00,957 - INFO - INFO - 完成任务处理: b3475710-3823-47ef-aa33-e088e7e5c555
+2025-03-10 17:27:01,269 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: c1fbd3b7-5edb-4847-a076-f6427d328de7, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:27:01,270 - INFO - INFO - 添加任务到队列: c1fbd3b7-5edb-4847-a076-f6427d328de7, 类型: embedding
+2025-03-10 17:27:01,959 - INFO - INFO - 从队列获取任务: c1fbd3b7-5edb-4847-a076-f6427d328de7, 任务类型: embedding
+2025-03-10 17:27:01,960 - INFO - INFO - 开始处理Embedding任务 c1fbd3b7-5edb-4847-a076-f6427d328de7, 文本长度: 4
+2025-03-10 17:27:01,960 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:27:02,048 - INFO - INFO - Embedding任务 c1fbd3b7-5edb-4847-a076-f6427d328de7 处理完成
+2025-03-10 17:27:02,048 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:27:02,048 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:27:02,052 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:27:02,052 - INFO - INFO - 完成任务处理: c1fbd3b7-5edb-4847-a076-f6427d328de7
+2025-03-10 17:27:02,282 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: ef7cd66c-ce17-44c2-9ff9-79d4a2a0cf00, text: ，文本长度: 0, handle: None
+2025-03-10 17:27:02,283 - INFO - INFO - 添加任务到队列: ef7cd66c-ce17-44c2-9ff9-79d4a2a0cf00, 类型: embedding
+2025-03-10 17:27:03,054 - INFO - INFO - 从队列获取任务: ef7cd66c-ce17-44c2-9ff9-79d4a2a0cf00, 任务类型: embedding
+2025-03-10 17:27:03,055 - INFO - INFO - 开始处理Embedding任务 ef7cd66c-ce17-44c2-9ff9-79d4a2a0cf00, 文本长度: 0
+2025-03-10 17:27:03,055 - INFO - INFO - Embedding文本: 
+2025-03-10 17:27:03,171 - INFO - INFO - Embedding任务 ef7cd66c-ce17-44c2-9ff9-79d4a2a0cf00 处理完成
+2025-03-10 17:27:03,171 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:27:03,171 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:27:03,172 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:27:03,172 - INFO - INFO - 完成任务处理: ef7cd66c-ce17-44c2-9ff9-79d4a2a0cf00
+2025-03-10 17:32:23,323 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:32:34,260 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:32:34,260 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:32:35,440 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:32:35,440 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:32:35,464 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:32:35,585 - INFO - INFO - 加载模型完成
+2025-03-10 17:32:35,725 - INFO - INFO - Rerank模型加载中
+2025-03-10 17:32:38,066 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 17:32:38,071 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:32:39,011 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:32:39,011 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:32:39,012 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:32:39,368 - INFO - INFO - 加载模型完成
+2025-03-10 17:32:41,527 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 61d9f9e7-c90e-4382-b824-275f9c17f51f, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:32:41,528 - INFO - INFO - 添加任务到队列: 61d9f9e7-c90e-4382-b824-275f9c17f51f, 类型: embedding
+2025-03-10 17:32:42,409 - INFO - INFO - 从队列获取任务: 61d9f9e7-c90e-4382-b824-275f9c17f51f, 任务类型: embedding
+2025-03-10 17:32:42,409 - INFO - INFO - 开始处理Embedding任务 61d9f9e7-c90e-4382-b824-275f9c17f51f, 文本长度: 36
+2025-03-10 17:32:42,409 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:32:42,539 - INFO - INFO - Embedding任务 61d9f9e7-c90e-4382-b824-275f9c17f51f 处理完成
+2025-03-10 17:32:42,539 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:32:42,539 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:32:42,540 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:32:42,540 - INFO - INFO - 完成任务处理: 61d9f9e7-c90e-4382-b824-275f9c17f51f
+2025-03-10 17:32:42,545 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: ad37d6ab-40cc-4ea1-b3d0-34e9f1b131fa, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:32:42,545 - INFO - INFO - 添加任务到队列: ad37d6ab-40cc-4ea1-b3d0-34e9f1b131fa, 类型: embedding
+2025-03-10 17:32:43,542 - INFO - INFO - 从队列获取任务: ad37d6ab-40cc-4ea1-b3d0-34e9f1b131fa, 任务类型: embedding
+2025-03-10 17:32:43,543 - INFO - INFO - 开始处理Embedding任务 ad37d6ab-40cc-4ea1-b3d0-34e9f1b131fa, 文本长度: 4
+2025-03-10 17:32:43,543 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:32:43,657 - INFO - INFO - Embedding任务 ad37d6ab-40cc-4ea1-b3d0-34e9f1b131fa 处理完成
+2025-03-10 17:32:43,657 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:32:43,657 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:32:43,661 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:32:43,661 - INFO - INFO - 完成任务处理: ad37d6ab-40cc-4ea1-b3d0-34e9f1b131fa
+2025-03-10 17:32:44,561 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 50ada1c8-5f4b-47a9-a695-32681223bc19, text: ，文本长度: 0, handle: None
+2025-03-10 17:32:44,562 - INFO - INFO - 添加任务到队列: 50ada1c8-5f4b-47a9-a695-32681223bc19, 类型: embedding
+2025-03-10 17:32:44,664 - INFO - INFO - 从队列获取任务: 50ada1c8-5f4b-47a9-a695-32681223bc19, 任务类型: embedding
+2025-03-10 17:32:44,665 - INFO - INFO - 开始处理Embedding任务 50ada1c8-5f4b-47a9-a695-32681223bc19, 文本长度: 0
+2025-03-10 17:32:44,665 - INFO - INFO - Embedding文本: 
+2025-03-10 17:32:44,746 - INFO - INFO - Embedding任务 50ada1c8-5f4b-47a9-a695-32681223bc19 处理完成
+2025-03-10 17:32:44,746 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:32:44,746 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:32:44,747 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:32:44,747 - INFO - INFO - 完成任务处理: 50ada1c8-5f4b-47a9-a695-32681223bc19
+2025-03-10 17:34:38,231 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:35:10,505 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:35:14,037 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:36:00,293 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:38:07,246 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:38:33,409 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:38:43,709 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:38:43,709 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:38:44,835 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:38:44,835 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:38:44,857 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:38:44,962 - INFO - INFO - 加载模型完成
+2025-03-10 17:38:45,096 - INFO - INFO - Rerank模型加载中
+2025-03-10 17:38:47,359 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 17:38:47,364 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:38:48,257 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:38:48,257 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:38:48,258 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:38:48,664 - INFO - INFO - 加载模型完成
+2025-03-10 17:38:50,640 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 67374a5a-3634-4401-b900-bb249d20ab0a, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:38:50,640 - INFO - INFO - 添加任务到队列: 67374a5a-3634-4401-b900-bb249d20ab0a, 类型: embedding
+2025-03-10 17:38:50,686 - INFO - INFO - 从队列获取任务: 67374a5a-3634-4401-b900-bb249d20ab0a, 任务类型: embedding
+2025-03-10 17:38:50,687 - INFO - INFO - 开始处理Embedding任务 67374a5a-3634-4401-b900-bb249d20ab0a, 文本长度: 36
+2025-03-10 17:38:50,687 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:38:50,797 - INFO - INFO - Embedding任务 67374a5a-3634-4401-b900-bb249d20ab0a 处理完成
+2025-03-10 17:38:50,797 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:38:50,797 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:38:50,799 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:38:50,799 - INFO - INFO - 完成任务处理: 67374a5a-3634-4401-b900-bb249d20ab0a
+2025-03-10 17:38:51,659 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 97a56d9c-2ad8-472d-959f-acdfcd8d3536, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:38:51,660 - INFO - INFO - 添加任务到队列: 97a56d9c-2ad8-472d-959f-acdfcd8d3536, 类型: embedding
+2025-03-10 17:38:51,800 - INFO - INFO - 从队列获取任务: 97a56d9c-2ad8-472d-959f-acdfcd8d3536, 任务类型: embedding
+2025-03-10 17:38:51,800 - INFO - INFO - 开始处理Embedding任务 97a56d9c-2ad8-472d-959f-acdfcd8d3536, 文本长度: 4
+2025-03-10 17:38:51,800 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:38:51,884 - INFO - INFO - Embedding任务 97a56d9c-2ad8-472d-959f-acdfcd8d3536 处理完成
+2025-03-10 17:38:51,884 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:38:51,884 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:38:51,887 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:38:51,888 - INFO - INFO - 完成任务处理: 97a56d9c-2ad8-472d-959f-acdfcd8d3536
+2025-03-10 17:38:52,675 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 56da8c1e-3c91-4ce2-b7c9-7eafb578a4c2, text: ，文本长度: 0, handle: None
+2025-03-10 17:38:52,676 - INFO - INFO - 添加任务到队列: 56da8c1e-3c91-4ce2-b7c9-7eafb578a4c2, 类型: embedding
+2025-03-10 17:38:52,889 - INFO - INFO - 从队列获取任务: 56da8c1e-3c91-4ce2-b7c9-7eafb578a4c2, 任务类型: embedding
+2025-03-10 17:38:52,890 - INFO - INFO - 开始处理Embedding任务 56da8c1e-3c91-4ce2-b7c9-7eafb578a4c2, 文本长度: 0
+2025-03-10 17:38:52,890 - INFO - INFO - Embedding文本: 
+2025-03-10 17:38:52,983 - INFO - INFO - Embedding任务 56da8c1e-3c91-4ce2-b7c9-7eafb578a4c2 处理完成
+2025-03-10 17:38:52,983 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:38:52,983 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:38:52,984 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:38:52,984 - INFO - INFO - 完成任务处理: 56da8c1e-3c91-4ce2-b7c9-7eafb578a4c2
+2025-03-10 17:40:14,008 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 577e0329-e2d3-47d6-863f-76014ff86671, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:40:14,008 - INFO - INFO - 添加任务到队列: 577e0329-e2d3-47d6-863f-76014ff86671, 类型: embedding
+2025-03-10 17:40:14,069 - INFO - INFO - 从队列获取任务: 577e0329-e2d3-47d6-863f-76014ff86671, 任务类型: embedding
+2025-03-10 17:40:14,069 - INFO - INFO - 开始处理Embedding任务 577e0329-e2d3-47d6-863f-76014ff86671, 文本长度: 36
+2025-03-10 17:40:14,069 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:40:14,143 - INFO - INFO - Embedding任务 577e0329-e2d3-47d6-863f-76014ff86671 处理完成
+2025-03-10 17:40:14,144 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:14,144 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:14,145 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:14,145 - INFO - INFO - 完成任务处理: 577e0329-e2d3-47d6-863f-76014ff86671
+2025-03-10 17:40:15,023 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: f643a5fb-100b-422f-b0ec-84ad007f732a, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:40:15,024 - INFO - INFO - 添加任务到队列: f643a5fb-100b-422f-b0ec-84ad007f732a, 类型: embedding
+2025-03-10 17:40:15,146 - INFO - INFO - 从队列获取任务: f643a5fb-100b-422f-b0ec-84ad007f732a, 任务类型: embedding
+2025-03-10 17:40:15,146 - INFO - INFO - 开始处理Embedding任务 f643a5fb-100b-422f-b0ec-84ad007f732a, 文本长度: 4
+2025-03-10 17:40:15,146 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:40:15,182 - INFO - INFO - Embedding任务 f643a5fb-100b-422f-b0ec-84ad007f732a 处理完成
+2025-03-10 17:40:15,182 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:15,182 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:15,185 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:40:15,185 - INFO - INFO - 完成任务处理: f643a5fb-100b-422f-b0ec-84ad007f732a
+2025-03-10 17:40:16,030 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: ad40c983-a499-424e-91d0-be3e910ac5e8, text: ，文本长度: 0, handle: None
+2025-03-10 17:40:16,030 - INFO - INFO - 添加任务到队列: ad40c983-a499-424e-91d0-be3e910ac5e8, 类型: embedding
+2025-03-10 17:40:16,187 - INFO - INFO - 从队列获取任务: ad40c983-a499-424e-91d0-be3e910ac5e8, 任务类型: embedding
+2025-03-10 17:40:16,187 - INFO - INFO - 开始处理Embedding任务 ad40c983-a499-424e-91d0-be3e910ac5e8, 文本长度: 0
+2025-03-10 17:40:16,187 - INFO - INFO - Embedding文本: 
+2025-03-10 17:40:16,222 - INFO - INFO - Embedding任务 ad40c983-a499-424e-91d0-be3e910ac5e8 处理完成
+2025-03-10 17:40:16,222 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:16,222 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:16,223 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:16,223 - INFO - INFO - 完成任务处理: ad40c983-a499-424e-91d0-be3e910ac5e8
+2025-03-10 17:40:18,799 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 94202cc7-4e11-409f-81a0-35ba1bd542e1, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:40:18,799 - INFO - INFO - 添加任务到队列: 94202cc7-4e11-409f-81a0-35ba1bd542e1, 类型: embedding
+2025-03-10 17:40:19,227 - INFO - INFO - 从队列获取任务: 94202cc7-4e11-409f-81a0-35ba1bd542e1, 任务类型: embedding
+2025-03-10 17:40:19,227 - INFO - INFO - 开始处理Embedding任务 94202cc7-4e11-409f-81a0-35ba1bd542e1, 文本长度: 36
+2025-03-10 17:40:19,227 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:40:19,311 - INFO - INFO - Embedding任务 94202cc7-4e11-409f-81a0-35ba1bd542e1 处理完成
+2025-03-10 17:40:19,311 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:19,311 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:19,312 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:19,312 - INFO - INFO - 完成任务处理: 94202cc7-4e11-409f-81a0-35ba1bd542e1
+2025-03-10 17:40:19,814 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 4b8f0b79-b2d0-4c6e-ad74-1979a5d8b730, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:40:19,815 - INFO - INFO - 添加任务到队列: 4b8f0b79-b2d0-4c6e-ad74-1979a5d8b730, 类型: embedding
+2025-03-10 17:40:20,314 - INFO - INFO - 从队列获取任务: 4b8f0b79-b2d0-4c6e-ad74-1979a5d8b730, 任务类型: embedding
+2025-03-10 17:40:20,315 - INFO - INFO - 开始处理Embedding任务 4b8f0b79-b2d0-4c6e-ad74-1979a5d8b730, 文本长度: 4
+2025-03-10 17:40:20,315 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:40:20,355 - INFO - INFO - Embedding任务 4b8f0b79-b2d0-4c6e-ad74-1979a5d8b730 处理完成
+2025-03-10 17:40:20,355 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:20,355 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:20,359 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:40:20,360 - INFO - INFO - 完成任务处理: 4b8f0b79-b2d0-4c6e-ad74-1979a5d8b730
+2025-03-10 17:40:20,825 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 483b2eca-1f37-482e-9fcc-66c885753452, text: ，文本长度: 0, handle: None
+2025-03-10 17:40:20,825 - INFO - INFO - 添加任务到队列: 483b2eca-1f37-482e-9fcc-66c885753452, 类型: embedding
+2025-03-10 17:40:21,361 - INFO - INFO - 从队列获取任务: 483b2eca-1f37-482e-9fcc-66c885753452, 任务类型: embedding
+2025-03-10 17:40:21,361 - INFO - INFO - 开始处理Embedding任务 483b2eca-1f37-482e-9fcc-66c885753452, 文本长度: 0
+2025-03-10 17:40:21,362 - INFO - INFO - Embedding文本: 
+2025-03-10 17:40:21,404 - INFO - INFO - Embedding任务 483b2eca-1f37-482e-9fcc-66c885753452 处理完成
+2025-03-10 17:40:21,404 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:21,405 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:21,406 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:21,406 - INFO - INFO - 完成任务处理: 483b2eca-1f37-482e-9fcc-66c885753452
+2025-03-10 17:40:23,477 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 1b729618-19fa-42c7-89a8-cbb377487d65, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:40:23,478 - INFO - INFO - 添加任务到队列: 1b729618-19fa-42c7-89a8-cbb377487d65, 类型: embedding
+2025-03-10 17:40:24,410 - INFO - INFO - 从队列获取任务: 1b729618-19fa-42c7-89a8-cbb377487d65, 任务类型: embedding
+2025-03-10 17:40:24,411 - INFO - INFO - 开始处理Embedding任务 1b729618-19fa-42c7-89a8-cbb377487d65, 文本长度: 36
+2025-03-10 17:40:24,411 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:40:24,513 - INFO - INFO - Embedding任务 1b729618-19fa-42c7-89a8-cbb377487d65 处理完成
+2025-03-10 17:40:24,513 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:24,513 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:24,514 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:24,514 - INFO - INFO - 完成任务处理: 1b729618-19fa-42c7-89a8-cbb377487d65
+2025-03-10 17:40:24,519 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 38b83857-51dd-4392-9908-0f2b039ab3b8, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:40:24,519 - INFO - INFO - 添加任务到队列: 38b83857-51dd-4392-9908-0f2b039ab3b8, 类型: embedding
+2025-03-10 17:40:25,515 - INFO - INFO - 从队列获取任务: 38b83857-51dd-4392-9908-0f2b039ab3b8, 任务类型: embedding
+2025-03-10 17:40:25,516 - INFO - INFO - 开始处理Embedding任务 38b83857-51dd-4392-9908-0f2b039ab3b8, 文本长度: 4
+2025-03-10 17:40:25,516 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:40:25,556 - INFO - INFO - Embedding任务 38b83857-51dd-4392-9908-0f2b039ab3b8 处理完成
+2025-03-10 17:40:25,556 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:25,556 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:25,559 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:40:25,559 - INFO - INFO - 完成任务处理: 38b83857-51dd-4392-9908-0f2b039ab3b8
+2025-03-10 17:40:26,533 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 031e2819-6344-4fcd-a75b-e14358571fcc, text: ，文本长度: 0, handle: None
+2025-03-10 17:40:26,534 - INFO - INFO - 添加任务到队列: 031e2819-6344-4fcd-a75b-e14358571fcc, 类型: embedding
+2025-03-10 17:40:26,561 - INFO - INFO - 从队列获取任务: 031e2819-6344-4fcd-a75b-e14358571fcc, 任务类型: embedding
+2025-03-10 17:40:26,561 - INFO - INFO - 开始处理Embedding任务 031e2819-6344-4fcd-a75b-e14358571fcc, 文本长度: 0
+2025-03-10 17:40:26,561 - INFO - INFO - Embedding文本: 
+2025-03-10 17:40:26,597 - INFO - INFO - Embedding任务 031e2819-6344-4fcd-a75b-e14358571fcc 处理完成
+2025-03-10 17:40:26,597 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:26,597 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:26,599 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:26,599 - INFO - INFO - 完成任务处理: 031e2819-6344-4fcd-a75b-e14358571fcc
+2025-03-10 17:40:28,569 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 3334f605-0120-416e-83d4-bbef7ad59a36, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:40:28,569 - INFO - INFO - 添加任务到队列: 3334f605-0120-416e-83d4-bbef7ad59a36, 类型: embedding
+2025-03-10 17:40:28,606 - INFO - INFO - 从队列获取任务: 3334f605-0120-416e-83d4-bbef7ad59a36, 任务类型: embedding
+2025-03-10 17:40:28,606 - INFO - INFO - 开始处理Embedding任务 3334f605-0120-416e-83d4-bbef7ad59a36, 文本长度: 36
+2025-03-10 17:40:28,606 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:40:28,671 - INFO - INFO - Embedding任务 3334f605-0120-416e-83d4-bbef7ad59a36 处理完成
+2025-03-10 17:40:28,671 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:28,671 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:28,672 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:28,672 - INFO - INFO - 完成任务处理: 3334f605-0120-416e-83d4-bbef7ad59a36
+2025-03-10 17:40:29,587 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 0393f37e-b649-4144-85fa-63383638ffe8, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:40:29,587 - INFO - INFO - 添加任务到队列: 0393f37e-b649-4144-85fa-63383638ffe8, 类型: embedding
+2025-03-10 17:40:29,673 - INFO - INFO - 从队列获取任务: 0393f37e-b649-4144-85fa-63383638ffe8, 任务类型: embedding
+2025-03-10 17:40:29,674 - INFO - INFO - 开始处理Embedding任务 0393f37e-b649-4144-85fa-63383638ffe8, 文本长度: 4
+2025-03-10 17:40:29,674 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:40:29,712 - INFO - INFO - Embedding任务 0393f37e-b649-4144-85fa-63383638ffe8 处理完成
+2025-03-10 17:40:29,712 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:29,712 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:29,715 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:40:29,715 - INFO - INFO - 完成任务处理: 0393f37e-b649-4144-85fa-63383638ffe8
+2025-03-10 17:40:30,599 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 0d9d350c-dccb-42f8-9850-4ef84b09f6e2, text: ，文本长度: 0, handle: None
+2025-03-10 17:40:30,600 - INFO - INFO - 添加任务到队列: 0d9d350c-dccb-42f8-9850-4ef84b09f6e2, 类型: embedding
+2025-03-10 17:40:30,716 - INFO - INFO - 从队列获取任务: 0d9d350c-dccb-42f8-9850-4ef84b09f6e2, 任务类型: embedding
+2025-03-10 17:40:30,717 - INFO - INFO - 开始处理Embedding任务 0d9d350c-dccb-42f8-9850-4ef84b09f6e2, 文本长度: 0
+2025-03-10 17:40:30,717 - INFO - INFO - Embedding文本: 
+2025-03-10 17:40:30,757 - INFO - INFO - Embedding任务 0d9d350c-dccb-42f8-9850-4ef84b09f6e2 处理完成
+2025-03-10 17:40:30,757 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:30,757 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:30,759 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:30,759 - INFO - INFO - 完成任务处理: 0d9d350c-dccb-42f8-9850-4ef84b09f6e2
+2025-03-10 17:40:33,337 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: d87229e0-5655-4b18-8b0b-eca41b2ca2d4, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:40:33,337 - INFO - INFO - 添加任务到队列: d87229e0-5655-4b18-8b0b-eca41b2ca2d4, 类型: embedding
+2025-03-10 17:40:33,762 - INFO - INFO - 从队列获取任务: d87229e0-5655-4b18-8b0b-eca41b2ca2d4, 任务类型: embedding
+2025-03-10 17:40:33,763 - INFO - INFO - 开始处理Embedding任务 d87229e0-5655-4b18-8b0b-eca41b2ca2d4, 文本长度: 36
+2025-03-10 17:40:33,763 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:40:33,856 - INFO - INFO - Embedding任务 d87229e0-5655-4b18-8b0b-eca41b2ca2d4 处理完成
+2025-03-10 17:40:33,856 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:33,856 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:33,857 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:33,857 - INFO - INFO - 完成任务处理: d87229e0-5655-4b18-8b0b-eca41b2ca2d4
+2025-03-10 17:40:34,363 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: daf43575-1487-4ffe-beb3-e4954a1abab6, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:40:34,363 - INFO - INFO - 添加任务到队列: daf43575-1487-4ffe-beb3-e4954a1abab6, 类型: embedding
+2025-03-10 17:40:34,858 - INFO - INFO - 从队列获取任务: daf43575-1487-4ffe-beb3-e4954a1abab6, 任务类型: embedding
+2025-03-10 17:40:34,858 - INFO - INFO - 开始处理Embedding任务 daf43575-1487-4ffe-beb3-e4954a1abab6, 文本长度: 4
+2025-03-10 17:40:34,858 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:40:34,913 - INFO - INFO - Embedding任务 daf43575-1487-4ffe-beb3-e4954a1abab6 处理完成
+2025-03-10 17:40:34,913 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:34,913 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:34,916 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:40:34,916 - INFO - INFO - 完成任务处理: daf43575-1487-4ffe-beb3-e4954a1abab6
+2025-03-10 17:40:35,374 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 495dca25-0d83-48ae-b924-dcca95881ace, text: ，文本长度: 0, handle: None
+2025-03-10 17:40:35,374 - INFO - INFO - 添加任务到队列: 495dca25-0d83-48ae-b924-dcca95881ace, 类型: embedding
+2025-03-10 17:40:35,917 - INFO - INFO - 从队列获取任务: 495dca25-0d83-48ae-b924-dcca95881ace, 任务类型: embedding
+2025-03-10 17:40:35,917 - INFO - INFO - 开始处理Embedding任务 495dca25-0d83-48ae-b924-dcca95881ace, 文本长度: 0
+2025-03-10 17:40:35,917 - INFO - INFO - Embedding文本: 
+2025-03-10 17:40:35,956 - INFO - INFO - Embedding任务 495dca25-0d83-48ae-b924-dcca95881ace 处理完成
+2025-03-10 17:40:35,957 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:35,957 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:35,958 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:35,958 - INFO - INFO - 完成任务处理: 495dca25-0d83-48ae-b924-dcca95881ace
+2025-03-10 17:40:38,042 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 4f5a90e4-4bac-464b-a0b4-91b5eb7b2544, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 17:40:38,043 - INFO - INFO - 添加任务到队列: 4f5a90e4-4bac-464b-a0b4-91b5eb7b2544, 类型: embedding
+2025-03-10 17:40:38,960 - INFO - INFO - 从队列获取任务: 4f5a90e4-4bac-464b-a0b4-91b5eb7b2544, 任务类型: embedding
+2025-03-10 17:40:38,961 - INFO - INFO - 开始处理Embedding任务 4f5a90e4-4bac-464b-a0b4-91b5eb7b2544, 文本长度: 36
+2025-03-10 17:40:38,962 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 17:40:39,063 - INFO - INFO - Embedding任务 4f5a90e4-4bac-464b-a0b4-91b5eb7b2544 处理完成
+2025-03-10 17:40:39,064 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:39,064 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:39,065 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:39,065 - INFO - INFO - 完成任务处理: 4f5a90e4-4bac-464b-a0b4-91b5eb7b2544
+2025-03-10 17:40:39,069 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 595127c2-2b0c-4c40-98b9-cdec7cc2fee1, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 17:40:39,070 - INFO - INFO - 添加任务到队列: 595127c2-2b0c-4c40-98b9-cdec7cc2fee1, 类型: embedding
+2025-03-10 17:40:40,066 - INFO - INFO - 从队列获取任务: 595127c2-2b0c-4c40-98b9-cdec7cc2fee1, 任务类型: embedding
+2025-03-10 17:40:40,066 - INFO - INFO - 开始处理Embedding任务 595127c2-2b0c-4c40-98b9-cdec7cc2fee1, 文本长度: 4
+2025-03-10 17:40:40,067 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 17:40:40,102 - INFO - INFO - Embedding任务 595127c2-2b0c-4c40-98b9-cdec7cc2fee1 处理完成
+2025-03-10 17:40:40,102 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:40,102 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 17:40:40,106 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 17:40:40,106 - INFO - INFO - 完成任务处理: 595127c2-2b0c-4c40-98b9-cdec7cc2fee1
+2025-03-10 17:40:41,086 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 47134c9f-e8cb-4c4b-8fbe-88086d8da408, text: ，文本长度: 0, handle: None
+2025-03-10 17:40:41,087 - INFO - INFO - 添加任务到队列: 47134c9f-e8cb-4c4b-8fbe-88086d8da408, 类型: embedding
+2025-03-10 17:40:41,107 - INFO - INFO - 从队列获取任务: 47134c9f-e8cb-4c4b-8fbe-88086d8da408, 任务类型: embedding
+2025-03-10 17:40:41,107 - INFO - INFO - 开始处理Embedding任务 47134c9f-e8cb-4c4b-8fbe-88086d8da408, 文本长度: 0
+2025-03-10 17:40:41,107 - INFO - INFO - Embedding文本: 
+2025-03-10 17:40:41,143 - INFO - INFO - Embedding任务 47134c9f-e8cb-4c4b-8fbe-88086d8da408 处理完成
+2025-03-10 17:40:41,143 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:40:41,143 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:40:41,144 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:40:41,145 - INFO - INFO - 完成任务处理: 47134c9f-e8cb-4c4b-8fbe-88086d8da408
+2025-03-10 17:50:36,938 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:50:47,726 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:50:47,731 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:50:48,882 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:50:48,882 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:50:48,908 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:50:49,042 - INFO - INFO - 加载模型完成
+2025-03-10 17:50:49,247 - INFO - INFO - Rerank模型加载中
+2025-03-10 17:50:51,503 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 17:50:51,508 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:50:52,402 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:50:52,402 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:50:52,403 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:50:52,912 - INFO - INFO - 加载模型完成
+2025-03-10 17:51:07,273 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:51:17,384 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:51:17,384 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:51:18,442 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:51:18,442 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:51:18,465 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:51:18,555 - INFO - INFO - 加载模型完成
+2025-03-10 17:51:18,671 - INFO - INFO - Rerank模型加载中
+2025-03-10 17:51:20,818 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 17:51:20,823 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:51:21,671 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:51:21,671 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:51:21,672 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:51:22,048 - INFO - INFO - 加载模型完成
+2025-03-10 17:51:31,445 - INFO - INFO - 开始创建Rerank任务，task_id: 607469b9-3cb9-467c-825f-5a5d0b938028, query: 药品管理, 候选文本数量: 10
+2025-03-10 17:51:31,445 - INFO - INFO - 添加任务到队列: 607469b9-3cb9-467c-825f-5a5d0b938028, 类型: rerank
+2025-03-10 17:51:32,082 - INFO - INFO - 从队列获取任务: 607469b9-3cb9-467c-825f-5a5d0b938028, 任务类型: rerank
+2025-03-10 17:51:32,082 - INFO - INFO - 开始处理Rerank任务 607469b9-3cb9-467c-825f-5a5d0b938028, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-10 17:51:32,082 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-10 17:51:32,082 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:51:32,396 - INFO - INFO - Rerank任务 607469b9-3cb9-467c-825f-5a5d0b938028 处理完成
+2025-03-10 17:51:32,396 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:51:32,396 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:51:32,396 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:51:32,396 - INFO - INFO - 完成任务处理: 607469b9-3cb9-467c-825f-5a5d0b938028
+2025-03-10 17:52:01,464 - INFO - INFO - 开始创建Rerank任务，task_id: c6997317-a7de-4bfa-8d01-e7011ee86bb3, query: , 候选文本数量: 10
+2025-03-10 17:52:01,466 - INFO - INFO - 添加任务到队列: c6997317-a7de-4bfa-8d01-e7011ee86bb3, 类型: rerank
+2025-03-10 17:52:02,428 - INFO - INFO - 从队列获取任务: c6997317-a7de-4bfa-8d01-e7011ee86bb3, 任务类型: rerank
+2025-03-10 17:52:02,429 - INFO - INFO - 开始处理Rerank任务 c6997317-a7de-4bfa-8d01-e7011ee86bb3, 查询文本: , 候选文本数量: 10
+2025-03-10 17:52:02,429 - INFO - INFO - 正在对查询文本进行重排序: , 候选文本数量: 10
+2025-03-10 17:52:02,429 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:52:02,707 - INFO - INFO - Rerank任务 c6997317-a7de-4bfa-8d01-e7011ee86bb3 处理完成
+2025-03-10 17:52:02,708 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:52:02,708 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:52:02,708 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:52:02,708 - INFO - INFO - 完成任务处理: c6997317-a7de-4bfa-8d01-e7011ee86bb3
+2025-03-10 17:52:31,482 - INFO - INFO - 开始创建Rerank任务，task_id: 0ebebf91-0de1-49d8-9193-60b009c55dc9, query: 药品管理, 候选文本数量: 0
+2025-03-10 17:52:31,483 - INFO - INFO - 添加任务到队列: 0ebebf91-0de1-49d8-9193-60b009c55dc9, 类型: rerank
+2025-03-10 17:52:31,738 - INFO - INFO - 从队列获取任务: 0ebebf91-0de1-49d8-9193-60b009c55dc9, 任务类型: rerank
+2025-03-10 17:52:31,739 - INFO - INFO - 开始处理Rerank任务 0ebebf91-0de1-49d8-9193-60b009c55dc9, 查询文本: 药品管理, 候选文本数量: 0
+2025-03-10 17:52:31,739 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 0
+2025-03-10 17:52:31,739 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:52:31,739 - INFO - INFO - Rerank任务 0ebebf91-0de1-49d8-9193-60b009c55dc9 处理完成
+2025-03-10 17:52:31,739 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:52:31,739 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:52:31,740 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:52:31,740 - INFO - INFO - 完成任务处理: 0ebebf91-0de1-49d8-9193-60b009c55dc9
+2025-03-10 17:53:01,497 - INFO - INFO - 开始创建Rerank任务，task_id: 89090bdd-1df9-4fe4-9bce-fcc0f910ad52, query: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 候选文本数量: 10
+2025-03-10 17:53:01,498 - INFO - INFO - 添加任务到队列: 89090bdd-1df9-4fe4-9bce-fcc0f910ad52, 类型: rerank
+2025-03-10 17:53:01,771 - INFO - INFO - 从队列获取任务: 89090bdd-1df9-4fe4-9bce-fcc0f910ad52, 任务类型: rerank
+2025-03-10 17:53:01,772 - INFO - INFO - 开始处理Rerank任务 89090bdd-1df9-4fe4-9bce-fcc0f910ad52, 查询文本: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 候选文本数量: 10
+2025-03-10 17:53:01,772 - INFO - INFO - 正在对查询文本进行重排序: aaaaaaaaaa, 候选文本数量: 10
+2025-03-10 17:53:01,772 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:53:05,315 - INFO - INFO - Rerank任务 89090bdd-1df9-4fe4-9bce-fcc0f910ad52 处理完成
+2025-03-10 17:53:05,315 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:53:05,315 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:53:05,316 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:53:05,316 - INFO - INFO - 完成任务处理: 89090bdd-1df9-4fe4-9bce-fcc0f910ad52
+2025-03-10 17:53:31,514 - INFO - INFO - 开始创建Rerank任务，task_id: d5454b02-31d7-4154-9c2a-ee0b8577015e, query: 药品管理, 候选文本数量: 10
+2025-03-10 17:53:31,515 - INFO - INFO - 添加任务到队列: d5454b02-31d7-4154-9c2a-ee0b8577015e, 类型: rerank
+2025-03-10 17:53:32,344 - INFO - INFO - 从队列获取任务: d5454b02-31d7-4154-9c2a-ee0b8577015e, 任务类型: rerank
+2025-03-10 17:53:32,345 - INFO - INFO - 开始处理Rerank任务 d5454b02-31d7-4154-9c2a-ee0b8577015e, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-10 17:53:32,345 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-10 17:53:32,346 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:53:32,605 - INFO - INFO - Rerank任务 d5454b02-31d7-4154-9c2a-ee0b8577015e 处理完成
+2025-03-10 17:53:32,605 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:53:32,605 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:53:32,606 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:53:32,606 - INFO - INFO - 完成任务处理: d5454b02-31d7-4154-9c2a-ee0b8577015e
+2025-03-10 17:54:01,533 - INFO - INFO - 开始创建Rerank任务，task_id: 53b2b527-e245-40d7-bc99-db982e4b5743, query: 药品管理, 候选文本数量: 10
+2025-03-10 17:54:01,535 - INFO - INFO - 添加任务到队列: 53b2b527-e245-40d7-bc99-db982e4b5743, 类型: rerank
+2025-03-10 17:54:01,637 - INFO - INFO - 从队列获取任务: 53b2b527-e245-40d7-bc99-db982e4b5743, 任务类型: rerank
+2025-03-10 17:54:01,637 - INFO - INFO - 开始处理Rerank任务 53b2b527-e245-40d7-bc99-db982e4b5743, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-10 17:54:01,638 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-10 17:54:01,638 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:54:01,913 - INFO - INFO - Rerank任务 53b2b527-e245-40d7-bc99-db982e4b5743 处理完成
+2025-03-10 17:54:01,913 - INFO - INFO - 返回结果到接口 None
+2025-03-10 17:54:01,913 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 17:54:01,914 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 17:54:01,914 - INFO - INFO - 完成任务处理: 53b2b527-e245-40d7-bc99-db982e4b5743
+2025-03-10 17:54:29,263 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:54:42,396 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:54:42,396 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:54:43,471 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:54:43,471 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:54:43,494 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:54:43,598 - INFO - INFO - 加载模型完成
+2025-03-10 17:54:43,727 - INFO - INFO - Rerank模型加载中
+2025-03-10 17:54:46,118 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 17:54:46,125 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:54:47,023 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:54:47,023 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:54:47,024 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:54:47,399 - INFO - INFO - 加载模型完成
+2025-03-10 17:56:58,078 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:57:08,543 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 17:57:08,543 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:57:09,642 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:57:09,643 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:57:09,665 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:57:09,797 - INFO - INFO - 加载模型完成
+2025-03-10 17:57:10,005 - INFO - INFO - Rerank模型加载中
+2025-03-10 17:57:12,366 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 17:57:12,370 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:57:13,223 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 17:57:13,223 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 17:57:13,223 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 17:57:13,714 - INFO - INFO - 加载模型完成
+2025-03-10 17:57:13,739 - INFO - INFO - 开始创建Rerank任务，task_id: f471a710-bd09-4763-8d26-2034e2a28105, query: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:13,740 - INFO - INFO - 添加任务到队列: f471a710-bd09-4763-8d26-2034e2a28105, 类型: rerank
+2025-03-10 17:57:14,736 - INFO - INFO - 从队列获取任务: f471a710-bd09-4763-8d26-2034e2a28105, 任务类型: rerank
+2025-03-10 17:57:14,736 - INFO - INFO - 开始处理Rerank任务 f471a710-bd09-4763-8d26-2034e2a28105, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:14,736 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:14,736 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:57:15,045 - INFO - INFO - Rerank任务 f471a710-bd09-4763-8d26-2034e2a28105 处理完成
+2025-03-10 17:57:15,046 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:15,046 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:15,049 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback 成功
+2025-03-10 17:57:15,049 - INFO - INFO - 完成任务处理: f471a710-bd09-4763-8d26-2034e2a28105
+2025-03-10 17:57:15,752 - INFO - INFO - 开始创建Rerank任务，task_id: 2f362e4e-892a-4a8f-8bba-4908431b3584, query: , 候选文本数量: 10
+2025-03-10 17:57:15,753 - INFO - INFO - 添加任务到队列: 2f362e4e-892a-4a8f-8bba-4908431b3584, 类型: rerank
+2025-03-10 17:57:16,050 - INFO - INFO - 从队列获取任务: 2f362e4e-892a-4a8f-8bba-4908431b3584, 任务类型: rerank
+2025-03-10 17:57:16,050 - INFO - INFO - 开始处理Rerank任务 2f362e4e-892a-4a8f-8bba-4908431b3584, 查询文本: , 候选文本数量: 10
+2025-03-10 17:57:16,051 - INFO - INFO - 正在对查询文本进行重排序: , 候选文本数量: 10
+2025-03-10 17:57:16,051 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:57:16,250 - INFO - INFO - Rerank任务 2f362e4e-892a-4a8f-8bba-4908431b3584 处理完成
+2025-03-10 17:57:16,251 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:16,251 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:16,252 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback 成功
+2025-03-10 17:57:16,252 - INFO - INFO - 完成任务处理: 2f362e4e-892a-4a8f-8bba-4908431b3584
+2025-03-10 17:57:16,768 - INFO - INFO - 开始创建Rerank任务，task_id: 091e0b47-9291-4ca3-9141-05c7da6f3623, query: 药品管理, 候选文本数量: 0
+2025-03-10 17:57:16,771 - INFO - INFO - 添加任务到队列: 091e0b47-9291-4ca3-9141-05c7da6f3623, 类型: rerank
+2025-03-10 17:57:17,253 - INFO - INFO - 从队列获取任务: 091e0b47-9291-4ca3-9141-05c7da6f3623, 任务类型: rerank
+2025-03-10 17:57:17,254 - INFO - INFO - 开始处理Rerank任务 091e0b47-9291-4ca3-9141-05c7da6f3623, 查询文本: 药品管理, 候选文本数量: 0
+2025-03-10 17:57:17,254 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 0
+2025-03-10 17:57:17,254 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:57:17,254 - INFO - INFO - Rerank任务 091e0b47-9291-4ca3-9141-05c7da6f3623 处理完成
+2025-03-10 17:57:17,254 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:17,254 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:17,256 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback 成功
+2025-03-10 17:57:17,256 - INFO - INFO - 完成任务处理: 091e0b47-9291-4ca3-9141-05c7da6f3623
+2025-03-10 17:57:17,796 - INFO - INFO - 开始创建Rerank任务，task_id: fe645040-5aed-4491-b71c-a71f78627fc2, query: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 候选文本数量: 10
+2025-03-10 17:57:17,797 - INFO - INFO - 添加任务到队列: fe645040-5aed-4491-b71c-a71f78627fc2, 类型: rerank
+2025-03-10 17:57:18,258 - INFO - INFO - 从队列获取任务: fe645040-5aed-4491-b71c-a71f78627fc2, 任务类型: rerank
+2025-03-10 17:57:18,259 - INFO - INFO - 开始处理Rerank任务 fe645040-5aed-4491-b71c-a71f78627fc2, 查询文本: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 候选文本数量: 10
+2025-03-10 17:57:18,259 - INFO - INFO - 正在对查询文本进行重排序: aaaaaaaaaa, 候选文本数量: 10
+2025-03-10 17:57:18,260 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:57:21,579 - INFO - INFO - Rerank任务 fe645040-5aed-4491-b71c-a71f78627fc2 处理完成
+2025-03-10 17:57:21,579 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:21,579 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:21,580 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback 成功
+2025-03-10 17:57:21,580 - INFO - INFO - 完成任务处理: fe645040-5aed-4491-b71c-a71f78627fc2
+2025-03-10 17:57:21,821 - INFO - INFO - 开始创建Rerank任务，task_id: 91e1f686-2119-49f1-93ef-018608201917, query: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:21,822 - INFO - INFO - 添加任务到队列: 91e1f686-2119-49f1-93ef-018608201917, 类型: rerank
+2025-03-10 17:57:22,582 - INFO - INFO - 从队列获取任务: 91e1f686-2119-49f1-93ef-018608201917, 任务类型: rerank
+2025-03-10 17:57:22,582 - INFO - INFO - 开始处理Rerank任务 91e1f686-2119-49f1-93ef-018608201917, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:22,582 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:22,582 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:57:22,793 - INFO - INFO - Rerank任务 91e1f686-2119-49f1-93ef-018608201917 处理完成
+2025-03-10 17:57:22,793 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:22,793 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:22,794 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback 成功
+2025-03-10 17:57:22,795 - INFO - INFO - 完成任务处理: 91e1f686-2119-49f1-93ef-018608201917
+2025-03-10 17:57:22,826 - INFO - INFO - 开始创建Rerank任务，task_id: e8edc8a4-6814-4e28-afc7-cf796a50e977, query: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:22,826 - INFO - INFO - 添加任务到队列: e8edc8a4-6814-4e28-afc7-cf796a50e977, 类型: rerank
+2025-03-10 17:57:23,796 - INFO - INFO - 从队列获取任务: e8edc8a4-6814-4e28-afc7-cf796a50e977, 任务类型: rerank
+2025-03-10 17:57:23,797 - INFO - INFO - 开始处理Rerank任务 e8edc8a4-6814-4e28-afc7-cf796a50e977, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:23,797 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-10 17:57:23,797 - INFO - INFO - 使用设备: cpu
+2025-03-10 17:57:24,034 - INFO - INFO - Rerank任务 e8edc8a4-6814-4e28-afc7-cf796a50e977 处理完成
+2025-03-10 17:57:24,035 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:24,035 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback
+2025-03-10 17:57:24,036 - INFO - INFO - 返回结果到接口 http://localhost:50156/callback 成功
+2025-03-10 17:57:24,037 - INFO - INFO - 完成任务处理: e8edc8a4-6814-4e28-afc7-cf796a50e977
+2025-03-10 17:59:54,956 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:00:22,139 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:00:22,140 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:00:23,203 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:00:23,203 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 18:00:23,227 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 18:00:23,336 - INFO - INFO - 加载模型完成
+2025-03-10 18:00:23,471 - INFO - INFO - Rerank模型加载中
+2025-03-10 18:00:25,779 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 18:00:25,786 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:00:26,662 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:00:26,662 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 18:00:26,663 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 18:00:27,108 - INFO - INFO - 加载模型完成
+2025-03-10 18:05:37,513 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:05:48,023 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:05:48,023 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:05:49,138 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:05:49,138 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 18:05:49,161 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 18:05:49,281 - INFO - INFO - 加载模型完成
+2025-03-10 18:05:49,484 - INFO - INFO - Rerank模型加载中
+2025-03-10 18:05:51,885 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 18:05:51,892 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:05:52,863 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:05:52,864 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 18:05:52,864 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 18:05:53,273 - INFO - INFO - 加载模型完成
+2025-03-10 18:06:23,951 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 6bf02e05-0016-4c5b-8f3f-eac3bb77536c, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-10 18:06:23,952 - INFO - INFO - 添加任务到队列: 6bf02e05-0016-4c5b-8f3f-eac3bb77536c, 类型: embedding
+2025-03-10 18:06:24,518 - INFO - INFO - 从队列获取任务: 6bf02e05-0016-4c5b-8f3f-eac3bb77536c, 任务类型: embedding
+2025-03-10 18:06:24,518 - INFO - INFO - 开始处理Embedding任务 6bf02e05-0016-4c5b-8f3f-eac3bb77536c, 文本长度: 36
+2025-03-10 18:06:24,518 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-10 18:06:24,888 - INFO - INFO - Embedding任务 6bf02e05-0016-4c5b-8f3f-eac3bb77536c 处理完成
+2025-03-10 18:06:24,888 - INFO - INFO - 返回结果到接口 None
+2025-03-10 18:06:24,888 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:06:24,890 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 18:06:24,890 - INFO - INFO - 完成任务处理: 6bf02e05-0016-4c5b-8f3f-eac3bb77536c
+2025-03-10 18:06:24,965 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 83081b45-ccb8-4686-99be-9ac8cc327baa, text: 测试文本，文本长度: 4, handle: http://localhost:8888/callback
+2025-03-10 18:06:24,965 - INFO - INFO - 添加任务到队列: 83081b45-ccb8-4686-99be-9ac8cc327baa, 类型: embedding
+2025-03-10 18:06:25,891 - INFO - INFO - 从队列获取任务: 83081b45-ccb8-4686-99be-9ac8cc327baa, 任务类型: embedding
+2025-03-10 18:06:25,893 - INFO - INFO - 开始处理Embedding任务 83081b45-ccb8-4686-99be-9ac8cc327baa, 文本长度: 4
+2025-03-10 18:06:25,893 - INFO - INFO - Embedding文本: 测试文本
+2025-03-10 18:06:25,981 - INFO - INFO - Embedding任务 83081b45-ccb8-4686-99be-9ac8cc327baa 处理完成
+2025-03-10 18:06:25,981 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 18:06:25,981 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback
+2025-03-10 18:06:25,985 - INFO - INFO - 返回结果到接口 http://localhost:8888/callback 成功
+2025-03-10 18:06:25,985 - INFO - INFO - 完成任务处理: 83081b45-ccb8-4686-99be-9ac8cc327baa
+2025-03-10 18:06:26,983 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 656e2925-7b14-4b49-b1ac-c280822bcfcd, text: ，文本长度: 0, handle: None
+2025-03-10 18:06:26,983 - INFO - INFO - 添加任务到队列: 656e2925-7b14-4b49-b1ac-c280822bcfcd, 类型: embedding
+2025-03-10 18:06:26,985 - INFO - INFO - 从队列获取任务: 656e2925-7b14-4b49-b1ac-c280822bcfcd, 任务类型: embedding
+2025-03-10 18:06:26,985 - INFO - INFO - 开始处理Embedding任务 656e2925-7b14-4b49-b1ac-c280822bcfcd, 文本长度: 0
+2025-03-10 18:06:26,986 - INFO - INFO - Embedding文本: 
+2025-03-10 18:06:27,081 - INFO - INFO - Embedding任务 656e2925-7b14-4b49-b1ac-c280822bcfcd 处理完成
+2025-03-10 18:06:27,081 - INFO - INFO - 返回结果到接口 None
+2025-03-10 18:06:27,081 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:06:27,082 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-10 18:06:27,082 - INFO - INFO - 完成任务处理: 656e2925-7b14-4b49-b1ac-c280822bcfcd
+2025-03-10 18:07:37,628 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:07:45,176 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:07:56,803 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:07:56,804 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:07:58,048 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:07:58,048 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 18:07:58,070 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 18:07:58,207 - INFO - INFO - 加载模型完成
+2025-03-10 18:07:58,343 - INFO - INFO - Rerank模型加载中
+2025-03-10 18:08:00,703 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 18:08:00,707 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:08:01,545 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:08:01,545 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 18:08:01,545 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 18:08:01,947 - INFO - INFO - 加载模型完成
+2025-03-10 18:08:06,056 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:08:23,461 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-10 18:08:23,461 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:08:24,621 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:08:24,621 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 18:08:24,645 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 18:08:24,734 - INFO - INFO - 加载模型完成
+2025-03-10 18:08:24,850 - INFO - INFO - Rerank模型加载中
+2025-03-10 18:08:27,065 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-10 18:08:27,070 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:08:27,919 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-10 18:08:27,920 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-10 18:08:27,920 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-10 18:08:28,351 - INFO - INFO - 加载模型完成
+2025-03-10 18:08:35,500 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'aes', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://127.0.0.1:61916/callback'}, task_id: 8b7e3b29-f2af-48c1-a37d-97a71f97bcb8, text: 2024年2月17日，李明在北京参加了第..., mask_type: aes, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
+2025-03-10 18:08:35,501 - INFO - INFO - 添加任务到队列: 8b7e3b29-f2af-48c1-a37d-97a71f97bcb8, 类型: mask
+2025-03-10 18:08:36,489 - INFO - INFO - 从队列获取任务: 8b7e3b29-f2af-48c1-a37d-97a71f97bcb8, 任务类型: mask
+2025-03-10 18:08:36,489 - INFO - INFO - 开始处理Mask任务 8b7e3b29-f2af-48c1-a37d-97a71f97bcb8, 文本长度: 57字符, 脱敏类型: aes, 模型: paddle, handle: http://127.0.0.1:61916/callback
+2025-03-10 18:08:36,490 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-10 18:08:38,499 - INFO - INFO - Mask任务 8b7e3b29-f2af-48c1-a37d-97a71f97bcb8 处理完成
+2025-03-10 18:08:38,500 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:38,500 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:38,504 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 18:08:38,505 - INFO - INFO - 完成任务处理: 8b7e3b29-f2af-48c1-a37d-97a71f97bcb8
+2025-03-10 18:08:38,521 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'asterisk', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://127.0.0.1:61916/callback'}, task_id: 2edb1bc0-7668-4d52-a291-0b76ae83b5cf, text: 2024年2月17日，李明在北京参加了第..., mask_type: asterisk, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
+2025-03-10 18:08:38,522 - INFO - INFO - 添加任务到队列: 2edb1bc0-7668-4d52-a291-0b76ae83b5cf, 类型: mask
+2025-03-10 18:08:39,506 - INFO - INFO - 从队列获取任务: 2edb1bc0-7668-4d52-a291-0b76ae83b5cf, 任务类型: mask
+2025-03-10 18:08:39,506 - INFO - INFO - 开始处理Mask任务 2edb1bc0-7668-4d52-a291-0b76ae83b5cf, 文本长度: 57字符, 脱敏类型: asterisk, 模型: paddle, handle: http://127.0.0.1:61916/callback
+2025-03-10 18:08:39,506 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-10 18:08:41,473 - INFO - INFO - Mask任务 2edb1bc0-7668-4d52-a291-0b76ae83b5cf 处理完成
+2025-03-10 18:08:41,473 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:41,473 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:41,474 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 18:08:41,474 - INFO - INFO - 完成任务处理: 2edb1bc0-7668-4d52-a291-0b76ae83b5cf
+2025-03-10 18:08:41,533 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'delete', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://127.0.0.1:61916/callback'}, task_id: 6bfeb186-b1ef-4ef0-8999-8a175bb85313, text: 2024年2月17日，李明在北京参加了第..., mask_type: delete, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
+2025-03-10 18:08:41,533 - INFO - INFO - 添加任务到队列: 6bfeb186-b1ef-4ef0-8999-8a175bb85313, 类型: mask
+2025-03-10 18:08:42,475 - INFO - INFO - 从队列获取任务: 6bfeb186-b1ef-4ef0-8999-8a175bb85313, 任务类型: mask
+2025-03-10 18:08:42,475 - INFO - INFO - 开始处理Mask任务 6bfeb186-b1ef-4ef0-8999-8a175bb85313, 文本长度: 57字符, 脱敏类型: delete, 模型: paddle, handle: http://127.0.0.1:61916/callback
+2025-03-10 18:08:42,475 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-10 18:08:44,376 - INFO - INFO - Mask任务 6bfeb186-b1ef-4ef0-8999-8a175bb85313 处理完成
+2025-03-10 18:08:44,376 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:44,376 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:44,377 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 18:08:44,378 - INFO - INFO - 完成任务处理: 6bfeb186-b1ef-4ef0-8999-8a175bb85313
+2025-03-10 18:08:44,588 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'invalid_type', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://127.0.0.1:61916/callback'}, task_id: 9091170b-352b-44f0-b14d-d42901040f7c, text: 2024年2月17日，李明在北京参加了第..., mask_type: invalid_type, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
+2025-03-10 18:08:44,589 - INFO - INFO - 添加任务到队列: 9091170b-352b-44f0-b14d-d42901040f7c, 类型: mask
+2025-03-10 18:08:45,378 - INFO - INFO - 从队列获取任务: 9091170b-352b-44f0-b14d-d42901040f7c, 任务类型: mask
+2025-03-10 18:08:45,379 - INFO - INFO - 开始处理Mask任务 9091170b-352b-44f0-b14d-d42901040f7c, 文本长度: 57字符, 脱敏类型: invalid_type, 模型: paddle, handle: http://127.0.0.1:61916/callback
+2025-03-10 18:08:45,379 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-10 18:08:47,349 - INFO - ERROR - 处理任务 9091170b-352b-44f0-b14d-d42901040f7c 时发生错误: 不支持的脱敏类型：invalid_type
+2025-03-10 18:08:47,350 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:47,350 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:47,351 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 18:08:47,351 - INFO - INFO - 完成任务处理: 9091170b-352b-44f0-b14d-d42901040f7c
+2025-03-10 18:08:47,600 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'md5', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://127.0.0.1:61916/callback'}, task_id: e90da108-f51d-4f7c-b1a9-48c9587c2549, text: 2024年2月17日，李明在北京参加了第..., mask_type: md5, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
+2025-03-10 18:08:47,600 - INFO - INFO - 添加任务到队列: e90da108-f51d-4f7c-b1a9-48c9587c2549, 类型: mask
+2025-03-10 18:08:48,352 - INFO - INFO - 从队列获取任务: e90da108-f51d-4f7c-b1a9-48c9587c2549, 任务类型: mask
+2025-03-10 18:08:48,353 - INFO - INFO - 开始处理Mask任务 e90da108-f51d-4f7c-b1a9-48c9587c2549, 文本长度: 57字符, 脱敏类型: md5, 模型: paddle, handle: http://127.0.0.1:61916/callback
+2025-03-10 18:08:48,353 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-10 18:08:50,344 - INFO - INFO - Mask任务 e90da108-f51d-4f7c-b1a9-48c9587c2549 处理完成
+2025-03-10 18:08:50,345 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:50,345 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:50,345 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 18:08:50,346 - INFO - INFO - 完成任务处理: e90da108-f51d-4f7c-b1a9-48c9587c2549
+2025-03-10 18:08:50,614 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'sha256', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://127.0.0.1:61916/callback'}, task_id: 05186a10-b6db-45c2-908d-09524159b22c, text: 2024年2月17日，李明在北京参加了第..., mask_type: sha256, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
+2025-03-10 18:08:50,614 - INFO - INFO - 添加任务到队列: 05186a10-b6db-45c2-908d-09524159b22c, 类型: mask
+2025-03-10 18:08:51,346 - INFO - INFO - 从队列获取任务: 05186a10-b6db-45c2-908d-09524159b22c, 任务类型: mask
+2025-03-10 18:08:51,347 - INFO - INFO - 开始处理Mask任务 05186a10-b6db-45c2-908d-09524159b22c, 文本长度: 57字符, 脱敏类型: sha256, 模型: paddle, handle: http://127.0.0.1:61916/callback
+2025-03-10 18:08:51,347 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-10 18:08:53,322 - INFO - INFO - Mask任务 05186a10-b6db-45c2-908d-09524159b22c 处理完成
+2025-03-10 18:08:53,323 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:53,323 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:53,323 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 18:08:53,324 - INFO - INFO - 完成任务处理: 05186a10-b6db-45c2-908d-09524159b22c
+2025-03-10 18:08:53,624 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://127.0.0.1:61916/callback'}, task_id: 5fb751ae-0307-4dfc-936b-0daa79127110, text: 2024年2月17日，李明在北京参加了第..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
+2025-03-10 18:08:53,624 - INFO - INFO - 添加任务到队列: 5fb751ae-0307-4dfc-936b-0daa79127110, 类型: mask
+2025-03-10 18:08:54,325 - INFO - INFO - 从队列获取任务: 5fb751ae-0307-4dfc-936b-0daa79127110, 任务类型: mask
+2025-03-10 18:08:54,325 - INFO - INFO - 开始处理Mask任务 5fb751ae-0307-4dfc-936b-0daa79127110, 文本长度: 57字符, 脱敏类型: similar, 模型: paddle, handle: http://127.0.0.1:61916/callback
+2025-03-10 18:08:54,325 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-10 18:08:56,371 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
+2025-03-10 18:08:56,405 - INFO - INFO - 相似度最高的类型: 日期-->日期, 相似度:1.0000001192092896
+2025-03-10 18:08:56,428 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061164855957031
+2025-03-10 18:08:56,482 - INFO - INFO - 相似度最高的类型: 外国人名-->姓名, 相似度:0.8769354224205017
+2025-03-10 18:08:56,482 - INFO - INFO - Mask任务 5fb751ae-0307-4dfc-936b-0daa79127110 处理完成
+2025-03-10 18:08:56,482 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:56,482 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:56,484 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 18:08:56,484 - INFO - INFO - 完成任务处理: 5fb751ae-0307-4dfc-936b-0daa79127110
+2025-03-10 18:08:56,639 - INFO - INFO - Received request: {'text': '2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。', 'mask_type': 'type_replace', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'handle': 'http://127.0.0.1:61916/callback'}, task_id: 0c1a76ac-dcdc-4388-a475-6239586ff937, text: 2024年2月17日，李明在北京参加了第..., mask_type: type_replace, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: None
+2025-03-10 18:08:56,639 - INFO - INFO - 添加任务到队列: 0c1a76ac-dcdc-4388-a475-6239586ff937, 类型: mask
+2025-03-10 18:08:57,485 - INFO - INFO - 从队列获取任务: 0c1a76ac-dcdc-4388-a475-6239586ff937, 任务类型: mask
+2025-03-10 18:08:57,485 - INFO - INFO - 开始处理Mask任务 0c1a76ac-dcdc-4388-a475-6239586ff937, 文本长度: 57字符, 脱敏类型: type_replace, 模型: paddle, handle: http://127.0.0.1:61916/callback
+2025-03-10 18:08:57,486 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-10 18:08:59,398 - INFO - INFO - Mask任务 0c1a76ac-dcdc-4388-a475-6239586ff937 处理完成
+2025-03-10 18:08:59,398 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:59,398 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-10 18:08:59,400 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-10 18:08:59,400 - INFO - INFO - 完成任务处理: 0c1a76ac-dcdc-4388-a475-6239586ff937

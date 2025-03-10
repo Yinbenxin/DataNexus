@@ -7,7 +7,7 @@ from app.services.rerank_service import RerankService
 from app.utils.queue_manager import task_queue
 from app.utils.logger import logger
 from app.models import *
-
+import os
 class TaskProcessor:
     def __init__(self):
         self.embedding_service = EmbeddingService()
@@ -39,6 +39,8 @@ class TaskProcessor:
         Returns:
             bool: 回调是否成功
         """
+        logger.info(f"返回结果到接口 {handle}")
+
         if not handle:
             handle = os.getenv("HANDLE")
         if not handle:
@@ -46,7 +48,8 @@ class TaskProcessor:
             logger.info(f"没有回调地址，直接删除本地任务数据 {task_id}")
             await model.delete(task_id)
             return True
-            
+        logger.info(f"返回结果到接口 {handle}")
+        
         callback_data = {"task_id": task_id, "status": status, **data}
         
         try:
@@ -56,22 +59,23 @@ class TaskProcessor:
                         error_msg = f"返回结果到接口 {handle} 失败: {response.status}"
                         logger.error(error_msg)
                         # 更新本地任务状态为失败
-                        await self._update_task_status(task_id, model, "failed", {
-                            "error": error_msg,
-                            **data  # 保留原始数据
-                        })
+                        # await self._update_task_status(task_id, model, "failed", {
+                        #     "error": error_msg,
+                        #     **data  # 保留原始数据
+                        # })
                         return False
                     # 回调成功后删除本地任务数据
+                    logger.info(f"返回结果到接口 {handle} 成功")
                     await model.delete(task_id)
                     return True
         except Exception as e:
             error_msg = f"返回结果到接口 {handle} 时发生错误: {str(e)}"
             logger.error(error_msg)
             # 更新本地任务状态为失败
-            await self._update_task_status(task_id, model, "failed", {
-                "error": error_msg,
-                **data  # 保留原始数据
-            })
+            # await self._update_task_status(task_id, model, "failed", {
+            #     "error": error_msg,
+            #     **data  # 保留原始数据
+            # })
             return False
 
     async def _update_task_status(self, 
@@ -118,16 +122,14 @@ class TaskProcessor:
             logger.info(f"Embedding任务 {task_id} 处理完成")
 
             # 发送回调
-            if handle:
-                await self._send_callback(handle, task_id, "completed", {"embedding": embedding}, model)
+            await self._send_callback(handle, task_id, "completed", {"embedding": embedding}, model)
 
         except Exception as e:
             error_msg = str(e)
             logger.error(f"处理任务 {task_id} 时发生错误: {error_msg}")
             
             # 发送错误回调
-            if handle:
-                await self._send_callback(handle, task_id, "failed", {"error": error_msg}, model)
+            await self._send_callback(handle, task_id, "failed", {"error": error_msg}, model)
 
         finally:
             # 标记任务完成
@@ -172,19 +174,17 @@ class TaskProcessor:
             logger.info(f"Mask任务 {task_id} 处理完成")
 
             # 发送回调
-            if handle:
-                await self._send_callback(handle, task_id, "completed", {
-                    "masked_text": masked_text,
-                    "mapping": mapping
-                }, model)
+            await self._send_callback(handle, task_id, "completed", {
+                "masked_text": masked_text,
+                "mapping": mapping
+            }, model)
 
         except Exception as e:
             error_msg = str(e)
             logger.error(f"处理任务 {task_id} 时发生错误: {error_msg}")
             
             # 发送错误回调
-            if handle:
-                await self._send_callback(handle, task_id, "failed", {"error": error_msg}, model)
+            await self._send_callback(handle, task_id, "failed", {"error": error_msg}, model)
 
         finally:
             # 标记任务完成
@@ -220,16 +220,14 @@ class TaskProcessor:
             logger.info(f"Rerank任务 {task_id} 处理完成")
 
             # 发送回调
-            if handle:
-                await self._send_callback(handle, task_id, "completed", {"rankings": ranked_pairs}, model)
+            await self._send_callback(handle, task_id, "completed", {"rankings": ranked_pairs}, model)
 
         except Exception as e:
             error_msg = str(e)
             logger.error(f"处理任务 {task_id} 时发生错误: {error_msg}")
             
             # 发送错误回调
-            if handle:
-                await self._send_callback(handle, task_id, "failed", {"error": error_msg}, model)
+            await self._send_callback(handle, task_id, "failed", {"error": error_msg}, model)
 
         finally:
             # 标记任务完成

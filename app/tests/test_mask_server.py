@@ -3,6 +3,9 @@ import json
 import os
 import signal
 import threading
+from dotenv import load_dotenv
+import requests
+import time
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse
 load_dotenv()
@@ -83,7 +86,7 @@ class TestMaskServer(unittest.TestCase):
             "text": "2024年2月17日，李明在北京参加了第十届世界人工智能峰会。",
             "mask_type": "similar",
             "mask_model": "paddle",
-            "mask_field": ["日期", "姓名", "地区"]
+            "mask_field": ["日期", "姓名", "地区"],
         }
 
         # 从环境变量中读取API配置
@@ -106,6 +109,18 @@ class TestMaskServer(unittest.TestCase):
         self.assertIn("task_id", result, "响应中应包含task_id字段")
         self.assertIsInstance(result["task_id"], str, "task_id应为字符串类型")
         self.assertTrue(len(result["task_id"]) > 0, "task_id不应为空")
+
+        # 等待回调结果
+        timeout = time.time() + 30  # 30秒超时
+        while not CallbackHandler.received_data and time.time() < timeout:
+            time.sleep(1)
+
+        # 验证回调结果
+        self.assertTrue(len(CallbackHandler.received_data) > 0, "未收到回调数据")
+        callback_data = CallbackHandler.received_data[-1]
+        self.assertEqual(callback_data["status"], "completed", "任务状态应为completed")
+        self.assertIn("masked_text", callback_data, "回调数据应包含masked_text字段")
+        self.assertIn("mapping", callback_data, "回调数据应包含mapping字段")
 
 if __name__ == '__main__':
     # 注册信号处理器
