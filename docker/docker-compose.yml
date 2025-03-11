@@ -26,3 +26,5 @@ services:
 
     volumes:
       - /tmp/model/:/tmp/model/
+      - /Users/yinbenxin/.cache/:/root/.cache/
+
