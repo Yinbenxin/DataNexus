@@ -14,7 +14,7 @@ class EmbeddingService:
 
         if model_name_or_path=="":
             model_name_or_path = 'TencentBAC/Conan-embedding-v1'
-        self.model = SentenceTransformer('TencentBAC/Conan-embedding-v1')
+        self.model = SentenceTransformer(model_name_or_path)
         logger.info(f"Embedding模型加载完成, 模型路径: {model_name_or_path}")
 
     async def generate_embedding(self, text: str) -> List[float]:

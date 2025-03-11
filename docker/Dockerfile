@@ -13,7 +13,7 @@ RUN apt-get install -y libgomp1
 COPY requirements.txt /app/
 
 # 更新pip和setuptools，然后安装项目依赖
-RUN pip install --no-cache-dir --upgrade pip setuptools>=61.0.0 
+RUN pip install --no-cache-dir --upgrade pip setuptools==61.0.0 
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 复制其余项目文件

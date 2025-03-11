@@ -5,19 +5,17 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    image: nexusdata:latest
+    image: nexusdata:1.0
     container_name: nexusdata
     restart: unless-stopped
     ports:
       - "8000:8000"
-      - "8001:6379"
     environment:
-      - REDIS_URL=redis://localhost:6379/0
       - HOST=0.0.0.0
       - PORT=8000
       - WORKERS=4
-      - QUEUE_MAX_SIZE=100
-      - TASK_TIMEOUT=300
+      - QUEUE_MAX_SIZE=1000
+      - TASK_TIMEOUT=3000
       - TASK_RETENTION_DAYS=30
       - MODEL_PATH=/app/models
       - EMBEDDING_MODEL_PATH=/app/models/Conan-embedding-v1
