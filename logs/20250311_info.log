@@ -1,0 +1,54 @@
+2025-03-11 09:51:40,627 - INFO - INFO - Embedding模型加载中, 模型路径: ./model/Conan-embedding-v1
+2025-03-11 09:53:04,950 - INFO - INFO - Embedding模型加载中, 模型路径: ./model/Conan-embedding-v1
+2025-03-11 09:54:06,108 - INFO - INFO - Embedding模型加载中, 模型路径: ./model/Conan-embedding-v1
+2025-03-11 09:55:17,841 - INFO - INFO - Embedding模型加载中, 模型路径: ./model/Conan-embedding-v1
+2025-03-11 09:55:22,628 - INFO - INFO - Embedding模型加载中, 模型路径: ./model/Conan-embedding-v1
+2025-03-11 10:09:19,956 - INFO - INFO - Embedding模型加载中, 模型路径: ./model/Conan-embedding-v1
+2025-03-11 10:09:39,201 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 10:57:40,405 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 10:59:26,662 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 10:59:26,814 - INFO - ERROR - Embedding模型加载失败: Error while deserializing header: HeaderTooLarge
+2025-03-11 11:17:45,217 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 11:17:45,379 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 11:17:45,379 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:17:47,697 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:17:47,697 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-11 11:17:47,715 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-11 11:17:47,975 - INFO - INFO - 加载模型完成
+2025-03-11 11:17:48,176 - INFO - INFO - Rerank模型加载中
+2025-03-11 11:17:50,431 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-11 11:17:50,437 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:17:51,313 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:17:51,313 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-11 11:17:51,314 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-11 11:17:51,586 - INFO - INFO - 加载模型完成
+2025-03-11 11:18:06,648 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 7110b1cc-51ed-4c01-ab11-dd2e573c95ff, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-11 11:18:06,649 - INFO - INFO - 添加任务到队列: 7110b1cc-51ed-4c01-ab11-dd2e573c95ff, 类型: embedding
+2025-03-11 11:18:07,621 - INFO - INFO - 从队列获取任务: 7110b1cc-51ed-4c01-ab11-dd2e573c95ff, 任务类型: embedding
+2025-03-11 11:18:07,622 - INFO - INFO - 开始处理Embedding任务 7110b1cc-51ed-4c01-ab11-dd2e573c95ff, 文本长度: 36
+2025-03-11 11:18:07,623 - INFO - INFO - Embedding文本: 2edca33b-dad9-49c3-a441-e5672d6b1429
+2025-03-11 11:18:09,693 - INFO - INFO - Embedding任务 7110b1cc-51ed-4c01-ab11-dd2e573c95ff 处理完成
+2025-03-11 11:18:09,693 - INFO - INFO - 返回结果到接口 None
+2025-03-11 11:18:09,693 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-11 11:18:09,695 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-11 11:18:09,695 - INFO - INFO - 完成任务处理: 7110b1cc-51ed-4c01-ab11-dd2e573c95ff
+2025-03-11 11:18:09,698 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 7942e119-ffca-482e-b3c4-c07760c4ad8e, text: 测试文本，文本长度: 4, handle: None
+2025-03-11 11:18:09,699 - INFO - INFO - 添加任务到队列: 7942e119-ffca-482e-b3c4-c07760c4ad8e, 类型: embedding
+2025-03-11 11:18:10,696 - INFO - INFO - 从队列获取任务: 7942e119-ffca-482e-b3c4-c07760c4ad8e, 任务类型: embedding
+2025-03-11 11:18:10,697 - INFO - INFO - 开始处理Embedding任务 7942e119-ffca-482e-b3c4-c07760c4ad8e, 文本长度: 4
+2025-03-11 11:18:10,697 - INFO - INFO - Embedding文本: 测试文本
+2025-03-11 11:18:10,861 - INFO - INFO - Embedding任务 7942e119-ffca-482e-b3c4-c07760c4ad8e 处理完成
+2025-03-11 11:18:10,861 - INFO - INFO - 返回结果到接口 None
+2025-03-11 11:18:10,861 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-11 11:18:10,863 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback 成功
+2025-03-11 11:18:10,864 - INFO - INFO - 完成任务处理: 7942e119-ffca-482e-b3c4-c07760c4ad8e
+2025-03-11 11:18:11,712 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: e520df89-c05d-4b2f-beb4-d26fce9ab5d9, text: ，文本长度: 0, handle: None
+2025-03-11 11:18:11,713 - INFO - INFO - 添加任务到队列: e520df89-c05d-4b2f-beb4-d26fce9ab5d9, 类型: embedding
+2025-03-11 11:18:11,865 - INFO - INFO - 从队列获取任务: e520df89-c05d-4b2f-beb4-d26fce9ab5d9, 任务类型: embedding
+2025-03-11 11:18:11,865 - INFO - INFO - 开始处理Embedding任务 e520df89-c05d-4b2f-beb4-d26fce9ab5d9, 文本长度: 0
+2025-03-11 11:18:11,865 - INFO - INFO - Embedding文本: 
+2025-03-11 11:18:11,976 - INFO - INFO - Embedding任务 e520df89-c05d-4b2f-beb4-d26fce9ab5d9 处理完成
+2025-03-11 11:18:11,977 - INFO - INFO - 返回结果到接口 None
+2025-03-11 11:18:11,977 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
+2025-03-11 11:18:11,977 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
+2025-03-11 11:18:11,977 - INFO - INFO - 完成任务处理: e520df89-c05d-4b2f-beb4-d26fce9ab5d9

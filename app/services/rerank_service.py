@@ -1,5 +1,4 @@
 from typing import List, Tuple, Dict, Any
-from sentence_transformers import CrossEncoder
 import numpy as np
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer

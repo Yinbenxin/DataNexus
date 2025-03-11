@@ -8,6 +8,9 @@ from app.utils.queue_manager import task_queue
 from app.utils.logger import logger
 from app.models import *
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 class TaskProcessor:
     def __init__(self):
         self.embedding_service = EmbeddingService()

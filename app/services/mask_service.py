@@ -4,7 +4,6 @@ import hashlib
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 import base64
-from sentence_transformers import SentenceTransformer
 from paddlenlp import Taskflow
 import datasets
 from .info_extract.info_extractor import InfoExtractor
