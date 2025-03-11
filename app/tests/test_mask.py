@@ -25,7 +25,7 @@ class TestMaskAPI(unittest.TestCase):
         cls.handle_url = os.getenv('HANDLE_URL')
         if not cls.handle_url:
             raise ValueError('HANDLE_URL environment variable is not set')
-
+        cls.handle_url = "http://192.168.101.122:61916/callback"
         # 从URL中解析主机和端口
         from urllib.parse import urlparse
         parsed_url = urlparse(cls.handle_url)
@@ -61,7 +61,6 @@ class TestMaskAPI(unittest.TestCase):
             "mask_type": mask_type,
             "mask_model": "paddle",
             "mask_field": self.mask_fields,
-            "handle": self.handle_url
         }
 
         # 创建任务

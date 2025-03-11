@@ -52,3 +52,59 @@
 2025-03-11 11:18:11,977 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916/callback
 2025-03-11 11:18:11,977 - INFO - ERROR - 返回结果到接口 http://127.0.0.1:61916/callback 时发生错误: Cannot connect to host 127.0.0.1:61916 ssl:default [Connect call failed ('127.0.0.1', 61916)]
 2025-03-11 11:18:11,977 - INFO - INFO - 完成任务处理: e520df89-c05d-4b2f-beb4-d26fce9ab5d9
+2025-03-11 11:28:47,661 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 11:28:47,777 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 11:28:47,777 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:28:48,951 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:28:48,951 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-11 11:28:48,970 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-11 11:28:49,316 - INFO - INFO - 加载模型完成
+2025-03-11 11:28:49,512 - INFO - INFO - Rerank模型加载中, 模型路径: model_name_or_path
+2025-03-11 11:29:08,959 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 11:29:09,068 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 11:29:09,068 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:29:10,675 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:29:10,675 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-11 11:29:10,694 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-11 11:29:10,806 - INFO - INFO - 加载模型完成
+2025-03-11 11:29:10,927 - INFO - INFO - Rerank模型加载中, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-11 11:29:32,953 - INFO - INFO - Rerank模型加载完成, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-11 11:29:32,960 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:29:34,004 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 11:29:34,004 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-11 11:29:34,005 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-11 11:29:34,380 - INFO - INFO - 加载模型完成
+2025-03-11 13:56:29,062 - INFO - INFO - Embedding模型加载中, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 13:56:29,181 - INFO - INFO - Embedding模型加载完成, 模型路径: /Users/yinbenxin/git/model/Conan-embedding-v1
+2025-03-11 13:56:29,181 - INFO - INFO - 信息抽取模型加载中, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 13:56:30,223 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /Users/yinbenxin/git/model/uie-medium
+2025-03-11 13:56:30,223 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-11 13:56:30,242 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /Users/yinbenxin/git/model/bge-small-zh
+2025-03-11 13:56:30,474 - INFO - INFO - 加载模型完成
+2025-03-11 13:56:30,659 - INFO - INFO - Rerank模型加载中, 模型路径: /Users/yinbenxin/git/model/gte-multilingual-reranker-base
+2025-03-11 13:56:51,761 - INFO - INFO - 未设置EMBEDDING_MODEL_PATH环境变量，使用默认模型: TencentBAC/Conan-embedding-v1
+2025-03-11 13:57:11,901 - INFO - INFO - Embedding模型加载完成, 模型路径: TencentBAC/Conan-embedding-v1
+2025-03-11 13:57:11,901 - INFO - INFO - 信息抽取模型加载中, 模型路径: None
+2025-03-11 13:58:00,266 - INFO - INFO - 未设置EMBEDDING_MODEL_PATH环境变量，使用默认模型: TencentBAC/Conan-embedding-v1
+2025-03-11 13:58:05,034 - INFO - INFO - 未设置EMBEDDING_MODEL_PATH环境变量，使用默认模型: TencentBAC/Conan-embedding-v1
+2025-03-11 14:00:25,249 - INFO - INFO - 未设置EMBEDDING_MODEL_PATH环境变量，使用默认模型: TencentBAC/Conan-embedding-v1
+2025-03-11 14:01:52,990 - INFO - INFO - 未设置EMBEDDING_MODEL_PATH环境变量，使用默认模型: TencentBAC/Conan-embedding-v1
+2025-03-11 14:02:46,397 - INFO - INFO - Embedding模型加载完成, 模型路径: TencentBAC/Conan-embedding-v1
+2025-03-11 14:02:46,398 - INFO - INFO - 信息抽取模型加载中, 模型路径: None
+2025-03-11 14:04:44,266 - INFO - INFO - 未设置EMBEDDING_MODEL_PATH环境变量，使用默认模型: TencentBAC/Conan-embedding-v1
+2025-03-11 14:05:07,910 - INFO - INFO - Embedding模型加载完成, 模型路径: TencentBAC/Conan-embedding-v1
+2025-03-11 14:05:07,911 - INFO - INFO - 信息抽取模型加载中, 模型路径: None
+2025-03-11 14:10:23,003 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-11 14:10:23,152 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-11 14:10:23,152 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-11 14:10:24,440 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-11 14:10:24,440 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-11 14:10:24,459 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-11 14:10:24,603 - INFO - INFO - 加载模型完成
+2025-03-11 14:10:24,738 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-11 14:10:29,811 - INFO - INFO - Rerank模型加载完成, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-11 14:10:29,815 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-11 14:10:30,611 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-11 14:10:30,611 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-11 14:10:30,612 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-11 14:10:30,703 - INFO - INFO - 加载模型完成

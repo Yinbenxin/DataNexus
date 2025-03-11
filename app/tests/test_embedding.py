@@ -14,11 +14,14 @@ class TestEmbeddingAPI(unittest.TestCase):
         """测试前的准备工作"""
         # 从环境变量中读取API配置
         api_host = os.getenv("API_HOST", "127.0.0.1")
+        api_host = "192.168.101.122"
         api_port = os.getenv("API_PORT", "8000")
         api_version = os.getenv("API_VERSION", "v1")
-        self.callback_host = "127.0.0.1"
+        self.callback_host = "192.168.101.122"
         self.callback_port = 61916
-        self.handle_url = "http://127.0.0.1:61916/callback"
+        # self.handle_url = "http://127.0.0.1:61916/callback"
+        self.handle_url = "http://192.168.101.122:61916/callback"
+
         # 构建API基础URL
         self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/embedding"
         self.headers = {"Content-Type": "application/json"}

@@ -9,8 +9,9 @@ from app.utils.logger import logger
 class RerankService:
     def __init__(self):
         #从env中获取模型路径
-        logger.info(f"Rerank模型加载中")
-        model_name_or_path=os.getenv("RERANK_MODEL_PATH")
+        model_name_or_path=os.getenv("RERANK_MODEL_PATH", "/tmp/model/new-impl")
+        logger.info(f"Rerank模型加载中, 模型路径: {model_name_or_path}")
+
         if model_name_or_path=="":
             self.model = None
             self.tokenizer = None

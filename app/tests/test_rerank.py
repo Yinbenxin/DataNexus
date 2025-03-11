@@ -41,7 +41,7 @@ class TestRerankAPI(unittest.TestCase):
         # 构建API基础URL和回调URL
         self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/rerank"
         self.headers = {"Content-Type": "application/json"}
-        self.callback_url = f"http://localhost:{self.server_port}/callback"
+        self.callback_url = f"http://192.168.101.122:{self.server_port}/callback"
         
         # 测试数据
         self.sample_query = "药品管理"

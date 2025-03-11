@@ -13,14 +13,16 @@ services:
     environment:
       - HOST=0.0.0.0
       - PORT=8000
-      - WORKERS=1  # 先降低worker数量，确保模型能正常加载
+      - WORKERS=4  # 先降低worker数量，确保模型能正常加载
       - QUEUE_MAX_SIZE=1000
       - TASK_TIMEOUT=3000
       - TASK_RETENTION_DAYS=30
-      - MODEL_PATH=/app/models
-      - EMBEDDING_MODEL_PATH=/app/models/Conan-embedding-v1
-      - RERANK_MODEL_PATH=/app/models/gte-multilingual-reranker-base
-      - INFO_EXTRACT_MODEL_PATH=/app/models/uie-medium
-      - EMBEDDING_SMELL_ZH=/app/models/bge-small-zh
+      - MODEL_PATH=/tmp/model/
+      - EMBEDDING_MODEL_PATH=/tmp/model/Conan-embedding-v1
+      - RERANK_MODEL_PATH=/tmp/model/gte-multilingual-reranker-base
+      - INFO_EXTRACT_MODEL_PATH=/tmp/model/uie-medium
+      - EMBEDDING_SMELL_ZH=/tmp/model/bge-small-zh
+      - HANDLE_URL = http://192.168.101.122:61916/callback
+
     volumes:
-      - /Users/yinbenxin/git/model:/app/models
+      - /tmp/model/:/tmp/model/
