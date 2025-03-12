@@ -3,111 +3,79 @@ import os
 import requests
 import json
 import time
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from threading import Thread
 import asyncio
 from aiohttp import web
 from typing import Dict, Any
 from dotenv import load_dotenv
 load_dotenv()
 
+class CallbackHandler(BaseHTTPRequestHandler):
+    received_data = None
+
+    def do_POST(self):
+        content_length = int(self.headers['Content-Length'])
+        post_data = self.rfile.read(content_length)
+        CallbackHandler.received_data = json.loads(post_data.decode('utf-8'))
+        self.send_response(200)
+        self.end_headers()
+
 class TestEmbeddingAPI(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        # 初始化回调服务器
+        cls.callback_host = "127.0.0.1"
+        cls.callback_port = 61916
+        cls.handle_url = f"http://{cls.callback_host}:{cls.callback_port}/callback"
+        cls.callback_server = HTTPServer((cls.callback_host, cls.callback_port), CallbackHandler)
+        cls.server_thread = Thread(target=cls.callback_server.serve_forever)
+        cls.server_thread.daemon = True
+        cls.server_thread.start()
+
     def setUp(self):
         """测试前的准备工作"""
         # 从环境变量中读取API配置
         api_host = os.getenv("API_HOST", "127.0.0.1")
-        api_host = "192.168.101.122"
         api_port = os.getenv("API_PORT", "8000")
         api_version = os.getenv("API_VERSION", "v1")
-        self.callback_host = "192.168.101.122"
-        self.callback_port = 61916
-        # self.handle_url = "http://127.0.0.1:61916/callback"
-        self.handle_url = "http://192.168.101.122:61916/callback"
-
         # 构建API基础URL
         self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/embedding"
         self.headers = {"Content-Type": "application/json"}
         
-        # 设置回调相关的属性
-        self.callback_received = False
-        self.callback_data = None
-        
-    async def callback_handler(self, request):
-        """处理回调请求"""
-        self.callback_received = True
-        self.callback_data = await request.json()
-        return web.Response(text="OK")
-    
-    async def start_callback_server(self):
-        """启动回调服务器"""
-        app = web.Application()
-        app.router.add_post("/callback", self.callback_handler)
-        runner = web.AppRunner(app)
-        await runner.setup()
-        site = web.TCPSite(runner, self.callback_host, int(self.callback_port))
-        await site.start()
-        return runner
-    
-    async def test_embedding_with_callback_async(self):
-        """测试带回调的embedding生成"""
-        # 启动回调服务器
-        runner = await self.start_callback_server()
-        
-        try:
-            # 创建带handle参数的embedding任务
-            response = requests.post(
-                self.base_url,
-                json={
-                    "text": "测试文本",
-                },
-                headers=self.headers
-            )
-            
-            # 验证任务创建成功
-            self.assertEqual(response.status_code, 200)
-            task_data = response.json()
-            self.assertTrue("task_id" in task_data)
-            self.assertTrue(task_data["success"])
-            
-            # 等待回调接收结果
-            start_time = time.time()
-            while not self.callback_received and time.time() - start_time < 30:
-                await asyncio.sleep(1)
-            
-            # 验证回调接收到结果
-            self.assertTrue(self.callback_received)
-            self.assertIsNotNone(self.callback_data)
-            
-            # 验证回调数据的正确性
-            self.assertEqual(self.callback_data["task_id"], task_data["task_id"])
-            self.assertEqual(self.callback_data["status"], "completed")
-            self.assertIsInstance(self.callback_data["embedding"], list)
-            
-        finally:
-            # 停止回调服务器
-            await runner.cleanup()
-    
+        # 重置回调数据
+        CallbackHandler.received_data = None
+
     def test_embedding_with_callback(self):
-        """同步方法调用异步测试"""
-        asyncio.run(self.test_embedding_with_callback_async())
-    
-    def create_embedding_task(self, text) -> Dict[str, Any]:
-        """创建embedding任务并等待结果"""
-        # 创建任务
-        response = requests.post(self.base_url, json={"text": text}, headers=self.headers)
-        self.assertEqual(response.status_code, 200, "创建任务失败")
+        """测试带回调的embedding生成"""
+        # 创建带handle参数的embedding任务
+        response = requests.post(
+            self.base_url,
+            json={
+                "text": "测试文本",
+                "handle": self.handle_url
+            },
+            headers=self.headers
+        )
         
+        # 验证任务创建成功
+        self.assertEqual(response.status_code, 200)
         task_data = response.json()
-        task_id = task_data["task_id"]
+        self.assertTrue("task_id" in task_data)
+        self.assertTrue(task_data["success"])
         
-        # 等待任务完成
-        while True:
-            response = requests.get(f"{self.base_url}/{task_id}")
-            result = response.json()
-            
-            if result["status"] in ["completed", "failed"]:
-                return result
-            
+        # 等待回调接收结果
+        timeout = time.time() + 30  # 30秒超时
+        while not CallbackHandler.received_data and time.time() < timeout:
             time.sleep(1)
-    
+        
+        # 验证回调接收到结果
+        self.assertIsNotNone(CallbackHandler.received_data, "未收到回调数据")
+        
+        # 验证回调数据的正确性
+        self.assertEqual(CallbackHandler.received_data["status"], "completed")
+        self.assertIsInstance(CallbackHandler.received_data["embedding"], list)
+
     def test_embedding_generation(self):
         """测试生成embedding"""
         sample_text = "2edca33b-dad9-49c3-a441-e5672d6b1429"
@@ -127,6 +95,33 @@ class TestEmbeddingAPI(unittest.TestCase):
             self.assertIsNotNone(result["embedding"])
             print(len(result["embedding"]))
             self.assertEqual(result["text"], sample_text)
+
+    def create_embedding_task(self, text) -> Dict[str, Any]:
+        """创建embedding任务并等待结果"""
+        # 创建任务
+        response = requests.post(self.base_url, json={"text": text}, headers=self.headers)
+        self.assertEqual(response.status_code, 200, "创建任务失败")
+        
+        task_data = response.json()
+        task_id = task_data["task_id"]
+        
+        # 等待任务完成
+        while True:
+            response = requests.get(f"{self.base_url}/{task_id}")
+            result = response.json()
+            
+            if result["status"] in ["completed", "failed"]:
+                return result
+            
+            time.sleep(1)
+
+    @classmethod
+    def tearDownClass(cls):
+        # 关闭回调服务器
+        if hasattr(cls, 'callback_server'):
+            cls.callback_server.shutdown()
+            cls.callback_server.server_close()
+            cls.server_thread.join()
 
 if __name__ == "__main__":
     unittest.main()

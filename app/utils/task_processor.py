@@ -165,6 +165,7 @@ class TaskProcessor:
 
         try:
             # 执行脱敏处理
+            logger.info(f"开始处理Mask任务 {task_id}")
             masked_text, mapping = await self.mask_service.process_mask(
                 text=text,
                 mask_type=mask_type,
@@ -174,7 +175,7 @@ class TaskProcessor:
             )
             await model.delete(task_id)
             
-            logger.info(f"Mask任务 {task_id} 处理完成")
+            logger.info(f"Mask任务 {task_id} 处理完成， {len(text)}-->{len(masked_text)}")
 
             # 发送回调
             await self._send_callback(handle, task_id, "completed", {

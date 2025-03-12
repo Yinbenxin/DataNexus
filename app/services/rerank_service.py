@@ -1,29 +1,24 @@
 from typing import List, Tuple, Dict, Any
 import numpy as np
 import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from transformers import AutoModelForSequenceClassification, AutoTokenizer,AutoModel
 import os
 from app.utils.logger import logger
-
+from sentence_transformers import SentenceTransformer
 
 class RerankService:
     def __init__(self):
-        #从env中获取模型路径
-        model_name_or_path=os.getenv("RERANK_MODEL_PATH", "/tmp/model/new-impl")
-        logger.info(f"Rerank模型加载中, 模型路径: {model_name_or_path}")
-
-        if model_name_or_path=="":
-            self.model = None
-            self.tokenizer = None
-        else:
-            model = AutoModelForSequenceClassification.from_pretrained(
-                model_name_or_path,
-                trust_remote_code=True
-            )
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            self.model = model.to(device)
-        logger.info(f"Rerank模型加载完成, 模型路径: {model_name_or_path}")
+        logger.info(f"Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base")
+        # Load model directly
+        # model = AutoModelForSequenceClassification.from_pretrained("Alibaba-NLP/gte-multilingual-reranker-base", trust_remote_code=True)
+        # model = SentenceTransformer("Alibaba-NLP/gte-multilingual-reranker-base", trust_remote_code=True)
+        # self.tokenizer = model.tokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained("Alibaba-NLP/gte-multilingual-reranker-base", trust_remote_code=True)
+        model = AutoModelForSequenceClassification.from_pretrained("Alibaba-NLP/gte-multilingual-reranker-base", trust_remote_code=True)
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.model = model.to(device)
+        # 初始化 tokenizer
+        logger.info(f"Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base")
 
     async def rerank_texts(self, query: str, texts: List[str], top_k: int) -> List[Tuple[str, float]]:
         """对文本进行重排序

@@ -66,6 +66,7 @@ class MaskService:
         mapping = {}
         # 提取关键词
         keywords = self.extract_keywords(mask_field, masked_text)
+        logger.info("keywords: {}".format(keywords))
         if len(keywords) == 0:
             return masked_text, mapping
 

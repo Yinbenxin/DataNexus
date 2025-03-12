@@ -22,7 +22,7 @@ services:
       - RERANK_MODEL_PATH=/tmp/model/gte-multilingual-reranker-base
       - INFO_EXTRACT_MODEL_PATH=/tmp/model/uie-medium
       - EMBEDDING_SMELL_ZH=/tmp/model/bge-small-zh
-      - HANDLE_URL = http://192.168.101.122:61916/callback
+      - HANDLE_URL = http://192.168.101.60:61916/callback
 
     volumes:
       - /tmp/model/:/tmp/model/

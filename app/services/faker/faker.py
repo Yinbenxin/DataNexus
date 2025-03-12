@@ -18,13 +18,9 @@ class Faker:
         self._init_model_embeddings()
 
     def _init_model_embeddings(self):
-        model_name_or_path=os.getenv("EMBEDDING_SMELL_ZH")
-        logger.info("加载模型：EMBEDDING_SMELL_ZH: {}".format(model_name_or_path))
-        if model_name_or_path:
-            self.model = SentenceTransformer(model_name_or_path)
-        else:
-            self.model = SentenceTransformer('llm-model/bge-small-zh')
-        logger.info("加载模型完成")
+        logger.info("加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh")
+        self.model = SentenceTransformer('BAAI/bge-small-zh')
+        logger.info("加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh")
         all_type = list(FAKER_TYPES_MAP.keys())+list(OTHER_TYPE_MAP.keys())
         self.all_type_embeddings = self.model.encode(all_type, convert_to_tensor=True, normalize_embeddings=True)
     def similarity_type(self, data_type: str) -> List[tuple[float, str]]:
