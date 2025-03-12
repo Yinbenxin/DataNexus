@@ -721,3 +721,99 @@
 2025-03-12 10:49:11,476 - INFO - INFO - 开始处理上传的图片数据
 2025-03-12 10:49:11,476 - INFO - ERROR - 图片数据验证失败: 无法解析图片数据，请确保上传了有效的图片文件
 2025-03-12 10:49:11,476 - INFO - ERROR - 图片数据验证失败: 无法解析图片数据，请确保上传了有效的图片文件
+2025-03-12 10:55:09,134 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 10:55:11,241 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 10:55:11,241 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 10:55:13,250 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 10:55:13,250 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 10:55:13,277 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 10:55:13,549 - INFO - INFO - 加载模型完成
+2025-03-12 10:55:13,921 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:01:42,014 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:01:44,465 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:01:44,465 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:01:46,434 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:01:46,434 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:01:46,458 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:01:46,714 - INFO - INFO - 加载模型完成
+2025-03-12 11:01:47,069 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:07:18,226 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:07:18,364 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:07:18,364 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:07:19,759 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:07:19,759 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:07:19,779 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:07:19,967 - INFO - INFO - 加载模型完成
+2025-03-12 11:07:20,124 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:07:20,966 - INFO - INFO - Rerank模型加载完成, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:07:20,971 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:07:22,137 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:07:22,137 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:07:22,138 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:07:22,305 - INFO - INFO - 加载模型完成
+2025-03-12 11:07:22,417 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-12 11:19:38,454 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:19:38,575 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:19:38,575 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:19:40,542 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:19:40,542 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:19:40,561 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:19:40,803 - INFO - INFO - 加载模型完成
+2025-03-12 11:19:41,217 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:19:43,362 - INFO - INFO - Rerank模型加载完成, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:19:43,368 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:19:44,547 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:19:44,547 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:19:44,548 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:19:44,645 - INFO - INFO - 加载模型完成
+2025-03-12 11:22:04,881 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:22:05,017 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:22:05,017 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:22:07,201 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:22:07,201 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:22:07,226 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:22:07,408 - INFO - INFO - 加载模型完成
+2025-03-12 11:22:07,554 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:22:14,260 - INFO - INFO - Rerank模型加载完成, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:22:14,264 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:22:15,445 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:22:15,445 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:22:15,445 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:22:15,544 - INFO - INFO - 加载模型完成
+2025-03-12 11:22:49,312 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:22:49,418 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 11:22:49,418 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:22:51,314 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:22:51,314 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:22:51,333 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:22:51,429 - INFO - INFO - 加载模型完成
+2025-03-12 11:22:51,545 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:22:52,973 - INFO - INFO - Rerank模型加载完成, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 11:22:52,976 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:22:54,181 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 11:22:54,181 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 11:22:54,182 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 11:22:54,281 - INFO - INFO - 加载模型完成
+2025-03-12 13:33:22,308 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 13:33:22,480 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 13:33:22,480 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 13:33:24,003 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 13:33:24,003 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 13:33:24,024 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 13:33:24,305 - INFO - INFO - 加载模型完成
+2025-03-12 13:33:24,490 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 13:36:36,648 - INFO - INFO - Embedding模型加载中, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 13:36:36,807 - INFO - INFO - Embedding模型加载完成, 模型路径: /tmp/model/Conan-embedding-v1
+2025-03-12 13:36:36,807 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 13:36:38,400 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 13:36:38,400 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 13:36:38,422 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 13:36:38,678 - INFO - INFO - 加载模型完成
+2025-03-12 13:36:38,831 - INFO - INFO - Rerank模型加载中, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 13:36:39,501 - INFO - INFO - Rerank模型加载完成, 模型路径: /tmp/model/gte-multilingual-reranker-base
+2025-03-12 13:36:39,507 - INFO - INFO - 信息抽取模型加载中, 模型路径: /tmp/model/uie-medium
+2025-03-12 13:36:40,684 - INFO - INFO - 信息抽取模型加载完成, 模型路径: /tmp/model/uie-medium
+2025-03-12 13:36:40,684 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-12 13:36:40,685 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: /tmp/model/bge-small-zh
+2025-03-12 13:36:40,786 - INFO - INFO - 加载模型完成
+2025-03-12 13:36:41,037 - INFO - INFO - OCR模型加载完成，使用设备: cpu
