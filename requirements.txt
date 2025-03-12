@@ -17,3 +17,4 @@ paddlenlp==2.5.2
 faker==36.1.1
 aiohttp==3.11.13
 aiofiles==24.1.0
+python-multipart==0.0.20

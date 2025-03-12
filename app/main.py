@@ -38,11 +38,13 @@ def shutdown_event():
 from app.api.mask_router import router as mask_router
 from app.api.embedding_router import router as embedding_router
 from app.api.rerank_router import router as rerank_router
+from app.api.ocr_router import router as ocr_router
 
 # 注册路由
 app.include_router(mask_router, prefix="/api/v1/mask", tags=["mask"])
 app.include_router(embedding_router, prefix="/api/v1/embedding", tags=["embedding"])
 app.include_router(rerank_router, prefix="/api/v1/rerank", tags=["rerank"])
+app.include_router(ocr_router, prefix="/api/v1/ocr", tags=["ocr"])
 
 @app.get("/ping")
 async def ping():
