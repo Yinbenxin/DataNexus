@@ -4,7 +4,7 @@ import numpy as np
 import requests
 from pdf2image import convert_from_bytes
 from app.utils.logger import logger
-from app.services.ocr_core import OCRQAnything
+from app.services.ocr.ocr_core import OCRQAnything
 
 class OCRService:
     def __init__(self, model_dir='model/ocr_models', device='cpu'):
