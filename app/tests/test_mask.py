@@ -25,7 +25,7 @@ class TestMaskAPI(unittest.TestCase):
         cls.handle_url = os.getenv('HANDLE_URL')
         if not cls.handle_url:
             raise ValueError('HANDLE_URL environment variable is not set')
-        # cls.handle_url = "http://192.168.101.122:61916/callback"
+        cls.handle_url = "http://192.168.101.122:61916"
         # 从URL中解析主机和端口
         from urllib.parse import urlparse
         parsed_url = urlparse(cls.handle_url)
@@ -87,6 +87,8 @@ class TestMaskAPI(unittest.TestCase):
         self.assertIsNotNone(callback_data["masked_text"])
         self.assertIsNotNone(callback_data["mapping"])
 
+        print("callback_data: ", callback_data)
+
     def test_type_replace_mask(self):
         """测试类型替换脱敏"""
         result = self.create_mask_task("type_replace")
@@ -96,6 +98,7 @@ class TestMaskAPI(unittest.TestCase):
         self.assertEqual(callback_data["status"], "completed")
         self.assertIsNotNone(callback_data["masked_text"])
         self.assertIsNotNone(callback_data["mapping"])
+        print("callback_data: ", callback_data)
 
     def test_delete_mask(self):
         """测试删除脱敏"""
@@ -106,6 +109,7 @@ class TestMaskAPI(unittest.TestCase):
         self.assertEqual(callback_data["status"], "completed")
         self.assertIsNotNone(callback_data["masked_text"])
         self.assertIsNotNone(callback_data["mapping"])
+        print("callback_data: ", callback_data)
 
     def test_aes_mask(self):
         """测试AES加密脱敏"""
@@ -116,6 +120,7 @@ class TestMaskAPI(unittest.TestCase):
         self.assertEqual(callback_data["status"], "completed")
         self.assertIsNotNone(callback_data["masked_text"])
         self.assertIsNotNone(callback_data["mapping"])
+        print("callback_data: ", callback_data)
 
     def test_md5_mask(self):
         """测试MD5脱敏"""
@@ -126,6 +131,7 @@ class TestMaskAPI(unittest.TestCase):
         self.assertEqual(callback_data["status"], "completed")
         self.assertIsNotNone(callback_data["masked_text"])
         self.assertIsNotNone(callback_data["mapping"])
+        print("callback_data: ", callback_data)
 
     def test_sha256_mask(self):
         """测试SHA256脱敏"""
@@ -136,6 +142,7 @@ class TestMaskAPI(unittest.TestCase):
         self.assertEqual(callback_data["status"], "completed")
         self.assertIsNotNone(callback_data["masked_text"])
         self.assertIsNotNone(callback_data["mapping"])
+        print("callback_data: ", callback_data)
 
     def test_asterisk_mask(self):
         """测试星号掩码脱敏"""
@@ -146,6 +153,7 @@ class TestMaskAPI(unittest.TestCase):
         self.assertEqual(callback_data["status"], "completed")
         self.assertIsNotNone(callback_data["masked_text"])
         self.assertIsNotNone(callback_data["mapping"])
+        print("callback_data: ", callback_data)
 
     def test_invalid_mask_type(self):
         """测试无效的脱敏类型"""
@@ -154,6 +162,7 @@ class TestMaskAPI(unittest.TestCase):
         
         callback_data = self.wait_for_callback()
         self.assertEqual(callback_data["status"], "failed")
+        print("callback_data: ", callback_data)
 
     @classmethod
     def tearDownClass(cls):

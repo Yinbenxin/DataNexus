@@ -38,40 +38,13 @@
    ```bash
    pip install -r requirements.txt
    ```
-3. 模型下载：
+3. 模型说明：
    ```bash
-   export MODEL_PATH=./models
-   git clone https://huggingface.co/TencentBAC/Conan-embedding-v1 ${MODEL_PATH}
-   git clone https://huggingface.co/Alibaba-NLP/gte-multilingual-reranker-base ${MODEL_PATH}
-   git clone https://huggingface.co/PaddlePaddle/uie-medium ${MODEL_PATH}
-   git clone https://huggingface.co/BAAI/bge-small-zh ${MODEL_PATH}
-   ```
-
-## 配置说明
-
-1. 创建`.env`文件并设置必要的环境变量：
-   ```bash
-   # Redis配置
-   REDIS_URL=redis://localhost:6379/0
-
-   # 服务配置
-   HOST=0.0.0.0
-   PORT=8000
-   WORKERS=4
-
-   # 任务队列配置
-   QUEUE_MAX_SIZE=100
-   TASK_TIMEOUT=300
-
-   # 任务清理配置
-   TASK_RETENTION_DAYS=30
-
-   # 模型路径配置
-   MODEL_PATH="/path/to/models"
-   EMBEDDING_MODEL_PATH="${MODEL_PATH}/Conan-embedding-v1"
-   RERANK_MODEL_PATH="${MODEL_PATH}/gte-multilingual-reranker-base"
-   INFO_EXTRACT_MODEL_PATH="${MODEL_PATH}/uie-medium"
-   EMBEDDING_SMELL_ZH="${MODEL_PATH}/bge-small-zh"
+     #所有模型会在启动时自动下载到本地
+     https://huggingface.co/TencentBAC/Conan-embedding-v1
+     https://huggingface.co/Alibaba-NLP/gte-multilingual-reranker-base 
+     https://huggingface.co/PaddlePaddle/uie-medium 
+     https://huggingface.co/BAAI/bge-small-zh 
    ```
 
 ## 启动服务
@@ -241,7 +214,7 @@ response = requests.post(
     "http://localhost:8000/api/v1/embedding",
     json={
         "text": "需要处理的文本",
-        "handle": "http://your-callback-url/api/callback"
+        "handle": "http://your-callback-url"
     }
 )
 

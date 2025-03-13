@@ -25,9 +25,10 @@ class TestEmbeddingAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 初始化回调服务器
-        cls.callback_host = "127.0.0.1"
+        # cls.callback_host = "127.0.0.1"
+        cls.callback_host = "192.168.101.122"
         cls.callback_port = 61916
-        cls.handle_url = f"http://{cls.callback_host}:{cls.callback_port}/callback"
+        cls.handle_url = f"http://{cls.callback_host}:{cls.callback_port}"
         cls.callback_server = HTTPServer((cls.callback_host, cls.callback_port), CallbackHandler)
         cls.server_thread = Thread(target=cls.callback_server.serve_forever)
         cls.server_thread.daemon = True
@@ -36,7 +37,9 @@ class TestEmbeddingAPI(unittest.TestCase):
     def setUp(self):
         """测试前的准备工作"""
         # 从环境变量中读取API配置
-        api_host = os.getenv("API_HOST", "127.0.0.1")
+        api_host = os.getenv("API_HOST", "127.0.0.1")#本地
+        api_host = "192.168.101.122"
+
         api_port = os.getenv("API_PORT", "8000")
         api_version = os.getenv("API_VERSION", "v1")
         # 构建API基础URL
@@ -57,7 +60,7 @@ class TestEmbeddingAPI(unittest.TestCase):
             },
             headers=self.headers
         )
-        
+        print(response.json())
         # 验证任务创建成功
         self.assertEqual(response.status_code, 200)
         task_data = response.json()
@@ -75,6 +78,7 @@ class TestEmbeddingAPI(unittest.TestCase):
         # 验证回调数据的正确性
         self.assertEqual(CallbackHandler.received_data["status"], "completed")
         self.assertIsInstance(CallbackHandler.received_data["embedding"], list)
+        print(CallbackHandler.received_data)
 
     def test_embedding_generation(self):
         """测试生成embedding"""

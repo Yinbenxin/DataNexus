@@ -6,7 +6,7 @@ import asyncio
 from app.utils.task_processor import task_processor
 
 # 加载环境变量
-load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
 # 创建FastAPI应用实例
 app = FastAPI(

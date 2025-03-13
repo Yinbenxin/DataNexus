@@ -6,8 +6,8 @@ class TestOCRAPI(unittest.TestCase):
     def setUp(self):
         """测试前的准备工作"""
         # 从环境变量中读取API配置
-        api_host = os.getenv("API_HOST", "127.0.0.1")
-        # api_host = "192.168.101.122"
+        # api_host = os.getenv("API_HOST", "127.0.0.1")
+        api_host = "192.168.101.122"
 
         api_port = os.getenv("API_PORT", "8000")
         api_version = os.getenv("API_VERSION", "v1")
