@@ -25,7 +25,9 @@ class TestMaskAPI(unittest.TestCase):
         cls.handle_url = os.getenv('HANDLE_URL')
         if not cls.handle_url:
             raise ValueError('HANDLE_URL environment variable is not set')
-        cls.handle_url = "http://192.168.101.122:61916"
+        # cls.handle_url = "http://192.168.101.122:61916"
+        cls.handle_url = "http://127.0.0.1:61916"
+
         # 从URL中解析主机和端口
         from urllib.parse import urlparse
         parsed_url = urlparse(cls.handle_url)
@@ -48,9 +50,9 @@ class TestMaskAPI(unittest.TestCase):
         # 构建API基础URL
         self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/mask"
         self.headers = {"Content-Type": "application/json"}
-        self.sample_text = "2024年2月17日，李明在北京参加了第十届世界人工智能峰会。该活动由国际人工智能协会主办，并在国家会议中心举行。"
+        self.sample_text = "12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。"
         self.mask_fields = ["日期", "姓名", "职业", "地区", "外国人名"]
-
+        self.force_convert = [["DeepMind", "深度思考"],["董事会成员","领导班子"]]
     def create_mask_task(self, mask_type: str) -> Dict[str, Any]:
         """创建脱敏任务"""
         # 重置回调数据
@@ -61,6 +63,8 @@ class TestMaskAPI(unittest.TestCase):
             "mask_type": mask_type,
             "mask_model": "paddle",
             "mask_field": self.mask_fields,
+            "force_convert": self.force_convert,
+            "handle": self.handle_url
         }
 
         # 创建任务

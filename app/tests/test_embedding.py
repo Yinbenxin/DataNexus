@@ -25,8 +25,8 @@ class TestEmbeddingAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 初始化回调服务器
-        # cls.callback_host = "127.0.0.1"
-        cls.callback_host = "192.168.101.122"
+        cls.callback_host = "127.0.0.1"
+        # cls.callback_host = "192.168.101.122"
         cls.callback_port = 61916
         cls.handle_url = f"http://{cls.callback_host}:{cls.callback_port}"
         cls.callback_server = HTTPServer((cls.callback_host, cls.callback_port), CallbackHandler)
@@ -38,7 +38,7 @@ class TestEmbeddingAPI(unittest.TestCase):
         """测试前的准备工作"""
         # 从环境变量中读取API配置
         api_host = os.getenv("API_HOST", "127.0.0.1")#本地
-        api_host = "192.168.101.122"
+        # api_host = "192.168.101.122"
 
         api_port = os.getenv("API_PORT", "8000")
         api_version = os.getenv("API_VERSION", "v1")

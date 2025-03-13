@@ -24,7 +24,7 @@ class InfoExtractor:
         return {info_type: self.extract_by_pattern(text, pattern)
                 for info_type, pattern in self.FIXED_TYPES.items()}
     
-    def extract_by_type(self, text, info_types)-> Dict[str, List[str]]:
+    def extract_by_type(self, text, info_types)-> (Dict[str, List[str]], Dict[str, List[str]]):
         """根据指定的类型提取信息
 
         Args:
@@ -33,7 +33,7 @@ class InfoExtractor:
 
         Returns:
             Dict[str, List[str]]: 提取到的信息字典，键为信息类型，值为对应的提取结果列表
-
+            Dict[str, List[str]]: 提取结果的详细信息字典，键为提取文本，值为[类型, 概率]列表
         """
         # 如果传入的是单个类型字符串，转换为列表
         if isinstance(info_types, str):
@@ -44,6 +44,7 @@ class InfoExtractor:
         info_types_by_fixed = []
         info_types_by_other = []
         result_dict = {}
+        results_map = {}
 
         for i in info_extract_types:
             if i in self.FIXED_TYPES:
@@ -61,15 +62,22 @@ class InfoExtractor:
             fixed_results = self.extract_by_fixed_type(text, info_types_by_fixed)
             for info_type, values in fixed_results.items():
                 result_dict[info_type] = values
+                # 对于固定类型，概率设置为100
+                for value in values:
+                    results_map[value] = [info_type, 1]
 
         # 处理其他类型的提取结果
         if info_types_by_other:
-            other_results = self.extract_by_other_type(text, info_types_by_other)
+            other_results, result_map = self.extract_by_other_type(text, info_types_by_other)
             for info_type, result in zip(info_types_by_other, other_results):
                 original_type = next((k for k, v in self.CONVERT_MAP.items() if v == info_type), info_type)
                 result_dict[original_type] = result
+                # 从result_map中获取概率信息
+                if info_type in result_map:
+                    for entity in result_map[info_type]:
+                        results_map[entity['text']] = [original_type, int(entity['probability']*100)]
 
-        return result_dict
+        return result_dict, results_map
 
     def extract_by_fixed_type(self, text, info_types)-> Dict[str, List[str]]:
         """根据指定的类型提取信息
@@ -97,17 +105,20 @@ class InfoExtractor:
             results[info_type] = self.extract_by_pattern(text, self.FIXED_TYPES[info_type])
         return results
     
-    def extract_by_other_type(self, text, info_types)-> List[List[str]]:
+    def extract_by_other_type(self, text, info_types)-> (List[List[str]], Dict):
         schema_set = set(info_types)
         self.information_extract.set_schema(schema_set)
         result = self.information_extract(text)
         results = []
         for info_type in info_types:
             type_results = []
+            map_results = []
             if info_type in result[0]:
                 for entity in result[0][info_type]:
                     type_results.append(entity['text'])
+                    # map_results.append(info_type, entity['text'], entity['probability'])
             results.append(type_results)
-        return results
+            # results_map.append(map_results)
+        return results, result[0]
 
 

@@ -6,6 +6,7 @@ import time
 from typing import Dict, Any, List, Tuple
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from threading import Thread
+handle_url = "http://127.0.0.1:61916"
 
 class CallbackHandler(BaseHTTPRequestHandler):
     received_data = None
@@ -21,10 +22,12 @@ class TestRerankAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 获取环境变量中的回调地址
-        cls.handle_url = os.getenv('HANDLE_URL')
+        cls.handle_url = handle_url
         if not cls.handle_url:
             raise ValueError('HANDLE_URL environment variable is not set')
-        cls.handle_url = "http://192.168.101.122:61916"
+        # cls.handle_url = "http://192.168.101.122:61916"
+        cls.handle_url = handle_url
+
         # 从URL中解析主机和端口
         from urllib.parse import urlparse
         parsed_url = urlparse(cls.handle_url)
@@ -46,7 +49,7 @@ class TestRerankAPI(unittest.TestCase):
         # 构建API基础URL和回调URL
         self.base_url = f"http://{api_host}:{api_port}/api/{api_version}/rerank"
         self.headers = {"Content-Type": "application/json"}
-        self.callback_url = os.getenv('HANDLE_URL')
+        self.callback_url = handle_url
         
         # 测试数据
         self.sample_query = "药品管理"
@@ -86,7 +89,7 @@ class TestRerankAPI(unittest.TestCase):
         self.assertEqual(CallbackHandler.received_data["status"], "completed")
         self.assertIsInstance(CallbackHandler.received_data["rankings"], list)
         self.assertEqual(len(CallbackHandler.received_data["rankings"]), 3)  # 默认top_k=3
-
+        print(CallbackHandler.received_data)
         # 验证每个排序结果的格式
         for rank_result in CallbackHandler.received_data["rankings"]:
             self.assertIsInstance(rank_result, list)

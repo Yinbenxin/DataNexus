@@ -169,7 +169,7 @@ class TaskProcessor:
         try:
             # 执行脱敏处理
             logger.info(f"开始处理Mask任务 {task_id}")
-            masked_text, mapping = await self.mask_service.process_mask(
+            masked_text, mapping, extract_probability = await self.mask_service.process_mask(
                 text=text,
                 mask_type=mask_type,
                 mask_model=mask_model,
@@ -183,7 +183,8 @@ class TaskProcessor:
             # 发送回调
             await self._send_callback(handle, task_id, "completed", {
                 "masked_text": masked_text,
-                "mapping": mapping
+                "mapping": mapping,
+                "probability": extract_probability
             }, model)
 
         except Exception as e:

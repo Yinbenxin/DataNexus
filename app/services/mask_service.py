@@ -20,10 +20,10 @@ class MaskService:
         self.information_extract = InfoExtractor()  
         logger.info("MaskService initialized, embedding model: {}".format(embedding_model))  
         self.faker_generate = Faker()
-    def extract_keywords(self, schema: List[str], text: str) -> Dict[str, List[str]]:
-        keys_dict = self.information_extract.extract_by_type(text, schema)
+    def extract_keywords(self, schema: List[str], text: str) -> (Dict[str, List[str]], Dict[str, List[str]]):
+        keys_dict, keys_map = self.information_extract.extract_by_type(text, schema)
         # 使用列表推导式将所有值合并成一个列表
-        return keys_dict
+        return keys_dict, keys_map
 
     def _generate_similar_text(self, data_type: str, texts: List[str]) -> List[str]:
         """生成相似文本"""
@@ -59,16 +59,17 @@ class MaskService:
         """使用星号掩码"""
         return ['*' * len(text) for text in texts]
 
-    async def mask_text(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None, force_convert: List[List[str]] = None) -> Tuple[str, Dict[str, str]]:
+    async def mask_text(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None, force_convert: List[List[str]] = None) -> (str, Dict[str, str], Dict[str, List[str]]):
         """对文本进行脱敏处理"""
         # 首先处理强制转换
         masked_text = text
         mapping = {}
         # 提取关键词
-        keywords = self.extract_keywords(mask_field, masked_text)
+        keywords, keywords_map = self.extract_keywords(mask_field, masked_text)
         logger.info("keywords: {}".format(keywords))
+
         if len(keywords) == 0:
-            return masked_text, mapping
+            return masked_text, mapping, {}
 
         mask_type_smart = mask_type.lower()
         # 根据不同的脱敏类型选择处理函数
@@ -105,12 +106,15 @@ class MaskService:
                     # 检查是否在强制转换列表中
                     if original in force_convert_key:
                         continue
-                    if original in masked_text:
+                    elif original in masked_text:
                         masked_text = masked_text.replace(original, masked)
                         mapping[original] = masked
+                        keywords_map[original].append(masked)
+        result_probability = [v.insert(1, k) or v for k, v in keywords_map.items()]
+        logger.info("keywords: {}".format(result_probability))
 
-        return masked_text, mapping
+        return masked_text, mapping, result_probability
 
-    async def process_mask(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None, force_convert: List[List[str]] = None) -> Tuple[str, Dict[str, str]]:
+    async def process_mask(self, text: str, mask_type: str = "similar", mask_model: str = "paddle", mask_field: List[str] = None, force_convert: List[List[str]] = None) -> (str, Dict[str, str], Dict[str, List[str]]):
         """处理脱敏任务"""
         return await self.mask_text(text, mask_type, mask_model, mask_field, force_convert)
