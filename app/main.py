@@ -4,13 +4,9 @@ from dotenv import load_dotenv
 import os
 import asyncio
 from app.utils.task_processor import task_processor
-from app.utils.task_cleaner import clean_expired_tasks
-# 加载环境变量
-load_dotenv()
 
-# 初始化数据库
-from app.models.database import init_db
-init_db()
+# 加载环境变量
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
 # 创建FastAPI应用实例
 app = FastAPI(
@@ -32,14 +28,6 @@ app.add_middleware(
 async def startup_event():
     # 启动任务处理器
     asyncio.create_task(task_processor.start_processing())
-    
-    # 启动定时清理任务
-    async def schedule_cleanup():
-        while True:
-            await asyncio.sleep(24 * 60 * 60)  # 每24小时执行一次
-            await clean_expired_tasks()
-    
-    asyncio.create_task(schedule_cleanup())
 
 @app.on_event("shutdown")
 def shutdown_event():
@@ -47,11 +35,13 @@ def shutdown_event():
     task_processor.stop_processing()
 
 # 导入路由
+from app.api.ocr_router import router as ocr_router
 from app.api.mask_router import router as mask_router
 from app.api.embedding_router import router as embedding_router
 from app.api.rerank_router import router as rerank_router
 
 # 注册路由
+app.include_router(ocr_router, prefix="/api/v1/ocr", tags=["ocr"])
 app.include_router(mask_router, prefix="/api/v1/mask", tags=["mask"])
 app.include_router(embedding_router, prefix="/api/v1/embedding", tags=["embedding"])
 app.include_router(rerank_router, prefix="/api/v1/rerank", tags=["rerank"])

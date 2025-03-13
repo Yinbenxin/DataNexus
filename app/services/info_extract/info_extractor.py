@@ -12,12 +12,9 @@ class InfoExtractor:
     def __init__(self):
         self.FIXED_TYPES = FIXED_TYPES
         self.CONVERT_MAP = CONVERT_MAP
-        model_name_or_path=os.getenv("INFO_EXTRACT_MODEL_PATH")
-        if model_name_or_path=="":
-            model_name_or_path = 'uie-tiny'
-        logger.info(f"信息抽取模型加载中, 模型路径: {model_name_or_path}")
-        self.information_extract = Taskflow('information_extraction',  schema=["临时schema"], task_path=model_name_or_path)  # 初始化时设置临时schema避免警告
-        logger.info(f"信息抽取模型加载完成, 模型路径: {model_name_or_path}")
+        logger.info(f"信息抽取模型加载, 模型路径: uie-medium")
+        self.information_extract = Taskflow('information_extraction', schema=["临时schema"], model='uie-medium', padding='max_length')
+        logger.info(f"信息抽取模型加载完成, 模型路径: uie-medium")
     def extract_by_pattern(self, text, pattern):
         """统一的正则表达式提取方法"""
         return re.findall(pattern, text)
@@ -112,3 +109,5 @@ class InfoExtractor:
                     type_results.append(entity['text'])
             results.append(type_results)
         return results
+
+

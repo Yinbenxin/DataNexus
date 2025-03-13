@@ -4,7 +4,6 @@ import hashlib
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 import base64
-from sentence_transformers import SentenceTransformer
 from paddlenlp import Taskflow
 import datasets
 from .info_extract.info_extractor import InfoExtractor
@@ -67,6 +66,7 @@ class MaskService:
         mapping = {}
         # 提取关键词
         keywords = self.extract_keywords(mask_field, masked_text)
+        logger.info("keywords: {}".format(keywords))
         if len(keywords) == 0:
             return masked_text, mapping
 

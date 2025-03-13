@@ -5,23 +5,12 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    image: nexusdata:latest
+    image: nexusdata:1.0
     container_name: nexusdata
     restart: unless-stopped
     ports:
       - "8000:8000"
-      - "5432:5432"
-    environment:
-      - DATABASE_URL=postgresql://datanexus:123@localhost:5432/nexusdata
-      - HOST=0.0.0.0
-      - PORT=8000
-      - WORKERS=4
-      - QUEUE_MAX_SIZE=100
-      - TASK_TIMEOUT=300
-      - TASK_RETENTION_DAYS=30
-    volumes:
-      - ../model:/app/model
-      - postgres_data:/var/lib/postgresql/data
 
-volumes:
-  postgres_data:
+    volumes:
+      - /Users/yinbenxin/.cache/:/root/.cache/
+      - /Users/yinbenxin/.paddlenlp/:/root/.paddlenlp/

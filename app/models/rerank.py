@@ -1,17 +1,33 @@
-from sqlalchemy import Column, Integer, String, DateTime, JSON, Float
 from datetime import datetime
-from app.models.database import Base
+from typing import Dict, Any, Optional
+from app.models.file_models import FileModel
 
-class RerankTask(Base):
-    __tablename__ = "rerank_tasks"
+class RerankTask(FileModel):
+    def __init__(self):
+        super().__init__("rerank_task")
 
-    id = Column(Integer, primary_key=True, index=True)
-    task_id = Column(String, unique=True, index=True)
-    status = Column(String)  # pending, processing, completed, failed
-    query = Column(String)
-    texts = Column(JSON)  # 候选文本列表
-    top_k = Column(Integer)
-    scores = Column(JSON)  # 存储相似度得分
-    rankings = Column(JSON)  # 存储排序后的文本索引
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    async def create(self, task_id: str, data: Dict[str, Any]) -> bool:
+        file_path = self._get_file_path(task_id)
+        task_data = {
+            "task_id": task_id,
+            "status": "pending",
+            "query": data["query"],
+            "texts": data["texts"],
+            "top_k": data["top_k"],
+            "handle": data.get("handle"),
+            "scores": None,
+            "rankings": None,
+            "created_at": datetime.utcnow().isoformat(),
+            "updated_at": datetime.utcnow().isoformat()
+        }
+        
+        fd = self._acquire_lock(file_path)
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(self._serialize(task_data))
+            return True
+        finally:
+            self._release_lock(fd)
+
+# 创建全局实例
+rerank_task_model = RerankTask()
