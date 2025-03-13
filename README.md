@@ -30,6 +30,7 @@
 - Alibaba-NLP/gte-multilingual-reranker-base
 - PaddlePaddle/uie-medium
 - BAAI/bge-small-zh
+- OCR
 
 ## 安装说明
 
@@ -95,6 +96,9 @@ uvicorn app.main:app --reload
 }
 ```
 
+调用实例见 tests/test_mask.py
+```
+
 #### 2. Embedding接口
 
 ##### 请求地址
@@ -124,6 +128,9 @@ uvicorn app.main:app --reload
     "embedding": [0.1, 0.2, ...],  // 向量数组
     "text": "原始文本"
 }
+```
+
+调用实例见 tests/test_embedding.py
 ```
 
 #### 3. Rerank接口
@@ -162,97 +169,54 @@ uvicorn app.main:app --reload
 }
 ```
 
-#### 4. 同步调用示例
-
-同步调用方式通过轮询获取任务结果：
-
-1. 创建任务：
-```python
-import requests
-
-# 创建Embedding任务
-response = requests.post(
-    "http://localhost:8000/api/v1/embedding",
-    json={"text": "需要处理的文本"}
-)
-
-task_id = response.json()["task_id"]
+调用实例见 tests/test_rerank.py
 ```
 
-2. 轮询获取结果：
-```python
-import time
+#### 4. OCR接口
 
-while True:
-    # 查询任务状态
-    response = requests.get(f"http://localhost:8000/api/v1/embedding/{task_id}")
-    result = response.json()
-    
-    if result["status"] == "completed":
-        # 处理成功的结果
-        embedding = result["embedding"]
-        break
-    elif result["status"] == "failed":
-        # 处理失败
-        error = result.get("error")
-        break
-    
-    # 等待一段时间后继续查询
-    time.sleep(1)
-```
+##### 图片文本提取
 
-#### 2. 异步回调
+###### 请求地址
+`POST /api/v1/ocr/image`
 
-异步回调方式通过提供回调地址自动接收结果：
+###### 请求格式
+- Content-Type: application/octet-stream
+- 请求体：图片的二进制数据
 
-1. 创建任务时提供回调地址：
-```python
-import requests
-
-# 创建Embedding任务
-response = requests.post(
-    "http://localhost:8000/api/v1/embedding",
-    json={
-        "text": "需要处理的文本",
-        "handle": "http://your-callback-url"
-    }
-)
-
-task_id = response.json()["task_id"]
-```
-
-2. 实现回调接口：
-```python
-from fastapi import FastAPI, Request
-
-app = FastAPI()
-
-@app.post("/api/callback")
-async def callback(request: Request):
-    result = await request.json()
-    
-    if result["status"] == "completed":
-        # 处理成功的结果
-        task_id = result["task_id"]
-        embedding = result["embedding"]
-    else:
-        # 处理失败
-        error = result.get("error")
-    
-    return {"status": "ok"}
-```
-
-回调结果格式：
+###### 响应格式
 ```json
 {
-    "task_id": "任务ID",
-    "status": "completed",  # 或 "failed"
-    "embedding": [...],     # 处理成功时返回
-    "error": "错误信息"     # 处理失败时返回
+    "result": "提取的文本内容"
 }
 ```
 
-注意事项：
-- 回调接口需要返回HTTP状态码200表示成功接收
-- 建议实现回调接口的幂等性，防止重复处理
-- 回调超时或失败可能会重试
+##### PDF文本提取
+
+###### 请求地址
+`POST /api/v1/ocr/pdf`
+
+###### 请求参数
+```json
+{
+    "pdf_url": "PDF文件的URL地址",
+    "page": 0  // 可选，指定页码，-1表示提取所有页面
+}
+```
+
+###### 响应格式
+```json
+{
+    "result": "提取的文本内容"
+}
+```
+
+###### 错误响应
+```json
+{
+    "detail": "错误信息描述"
+}
+```
+
+调用实例见 tests/test_ocr.py
+```
+
