@@ -10,7 +10,6 @@ from app.models import *
 import os
 from dotenv import load_dotenv
 import socket
-
 load_dotenv()
 class TaskProcessor:
     def __init__(self):
@@ -25,13 +24,24 @@ class TaskProcessor:
             "mask": mask_task_model,
             "rerank": rerank_task_model
         }
+
+
+        mask_url = os.getenv("MASK_URL")
+        rerank_url = os.getenv("RERANK_URL")
+        embedding_url = os.getenv("EMBEDDING_URL")
+        ip_address = os.getenv("IP_ADDRESS")
+
+        if not ip_address:
         # 获取handle URL，如果环境变量为空则使用本地IP
-        self.handle = os.getenv("HANDLE_URL")
-        if not self.handle:
             hostname = socket.gethostname()
             ip_address = socket.gethostbyname(hostname)
-            self.handle = f"http://{ip_address}:61916"
-        logger.info(f"handle: {self.handle}")
+            
+        self.mask_url = f"http://{ip_address}:{mask_url}"
+        self.rerank_url = f"http://{ip_address}:{rerank_url}"
+        self.embedding_url = f"http://{ip_address}:{embedding_url}"
+    
+        logger.info(f"mask_url: {self.mask_url}，rerank_url: {self.rerank_url}，embedding_url: {self.embedding_url}")
+
     async def _send_callback(self, 
                            handle: str, 
                            task_id: str, 
@@ -50,16 +60,21 @@ class TaskProcessor:
         Returns:
             bool: 回调是否成功
         """
-        logger.info(f"返回结果到接口 {handle}")
-
+        logger.info(f"--------开始返回数据----------model.__name__: {model.__name__}")
         if not handle:
-            handle = self.handle
-        if not handle:
-            # 如果没有回调地址，直接删除本地任务数据
-            logger.info(f"没有回调地址，直接删除本地任务数据 {task_id}")
-            await model.delete(task_id)
-            return True
-        logger.info(f"返回结果到接口 {handle}")
+        #根据任务类型获取回调地址
+            if model.__name__ == "embedding":
+                handle = self.embedding_url
+            elif model.__name__ == "mask":
+                handle = self.mask_url
+            elif model.__name__ == "rerank":
+                handle = self.rerank_url
+            else:
+                # 如果没有回调地址，直接删除本地任务数据
+                logger.info(f"没有回调地址，直接删除本地任务数据 {task_id}")
+                await model.delete(task_id)
+                return True
+        logger.info(f"返回接口确认 {handle}")
         
         callback_data = {"task_id": task_id, "status": status, **data}
         
@@ -71,17 +86,12 @@ class TaskProcessor:
                         logger.error(error_msg)
                         return False
                     # 回调成功后删除本地任务数据
-                    logger.info(f"返回结果到接口 {handle} 成功")
+                    logger.info(f"------------返回结果到接口 {handle} 完成------------")
                     await model.delete(task_id)
                     return True
         except Exception as e:
             error_msg = f"返回结果到接口 {handle} 时发生错误: {str(e)}"
             logger.error(error_msg)
-            # 更新本地任务状态为失败
-            # await self._update_task_status(task_id, model, "failed", {
-            #     "error": error_msg,
-            #     **data  # 保留原始数据
-            # })
             return False
 
     async def _update_task_status(self, 
@@ -264,6 +274,10 @@ class TaskProcessor:
     def stop_processing(self):
         """停止任务处理"""
         self.running = False
-
+    def get_local_ip(self):
+            # 备选方案：获取主机名对应的IP
+            hostname = socket.gethostname()
+            ip = socket.gethostbyname(hostname)
+            return ip
 # 创建全局任务处理器实例
 task_processor = TaskProcessor()

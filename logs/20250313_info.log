@@ -1,0 +1,130 @@
+2025-03-13 18:54:40,879 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-13 18:54:46,158 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-13 18:54:46,159 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-13 18:54:48,023 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-13 18:54:48,023 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-13 18:54:48,049 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-13 18:54:51,667 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-13 18:54:51,912 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-13 18:54:54,772 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-13 18:54:54,772 - INFO - INFO - 所用服务模型加载成功！
+2025-03-13 18:54:54,772 - INFO - INFO - handle: http://192.168.101.122:61916
+2025-03-13 18:54:54,786 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-13 18:54:55,812 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-13 18:54:55,812 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-13 18:54:55,813 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-13 18:54:59,366 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-13 18:54:59,886 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-13 18:55:03,408 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'aes', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 0f447362-a33b-4515-b92e-a8b3c9ae28ea, text: 12月30日早晨,DeepMind在Y(..., mask_type: aes, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:03,409 - INFO - INFO - 添加任务到队列: 0f447362-a33b-4515-b92e-a8b3c9ae28ea, 类型: mask
+2025-03-13 18:55:03,902 - INFO - INFO - 从队列获取任务: 0f447362-a33b-4515-b92e-a8b3c9ae28ea, 任务类型: mask
+2025-03-13 18:55:03,902 - INFO - INFO - 开始处理Mask任务 0f447362-a33b-4515-b92e-a8b3c9ae28ea, 文本长度: 301字符, 脱敏类型: aes, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-13 18:55:03,902 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-13 18:55:03,902 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:03,902 - INFO - INFO - 开始处理Mask任务 0f447362-a33b-4515-b92e-a8b3c9ae28ea
+2025-03-13 18:55:06,086 - INFO - INFO - keywords: {'外国人名': [], '地区': ['英国', '英国'], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '职业': [], '日期': []}
+2025-03-13 18:55:06,089 - INFO - INFO - keywords: [['地区', '英国', 59, 'bqK4WRx3tZN+2Y4Dd++zu+gw+ENQYeXLxgdAvLEdjYQ='], ['姓名', '詹姆斯沃克', 98, 'ukpGOSUubliPYm6yPpnNHmXOHmTJ+osKmhotQSAFUQM='], ['姓名', 'Anderson', 48, 'ukpGOSUubliPYm6yPpnNHpKkQKPtToD+hcITvCybsSc='], ['姓名', 'RobertJohnson', 89, 'ukpGOSUubliPYm6yPpnNHosciZBvka2NJhpWozDce38='], ['姓名', '罗伯特·约翰逊', 97, 'ukpGOSUubliPYm6yPpnNHkJjA1wpLhQjef6T042Ej0tlvEQElAzF36e/FDX1bF/T'], ['姓名', '约翰·史密斯', 99, 'ukpGOSUubliPYm6yPpnNHsFANieoQpjyCciZrdpRqfvEfaZeHlcuJaH3oKN4cayN'], ['姓名', '约瑟夫·安德森', 98, 'ukpGOSUubliPYm6yPpnNHjGRzFSg0Z+32dWMtlBfawyg82R1iMyZfe8gNq+Xt1Db'], ['姓名', '安德森', 98, 'ukpGOSUubliPYm6yPpnNHjKvdQGghhDVJH+9Awgsw8w=']]
+2025-03-13 18:55:06,090 - INFO - INFO - Mask任务 0f447362-a33b-4515-b92e-a8b3c9ae28ea 处理完成， 301-->780
+2025-03-13 18:55:06,090 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:06,090 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:06,093 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916 成功
+2025-03-13 18:55:06,094 - INFO - INFO - 完成任务处理: 0f447362-a33b-4515-b92e-a8b3c9ae28ea
+2025-03-13 18:55:06,423 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'asterisk', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 4e82ec6b-37ad-4b4e-8fa5-d2ce7450968d, text: 12月30日早晨,DeepMind在Y(..., mask_type: asterisk, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:06,424 - INFO - INFO - 添加任务到队列: 4e82ec6b-37ad-4b4e-8fa5-d2ce7450968d, 类型: mask
+2025-03-13 18:55:07,094 - INFO - INFO - 从队列获取任务: 4e82ec6b-37ad-4b4e-8fa5-d2ce7450968d, 任务类型: mask
+2025-03-13 18:55:07,094 - INFO - INFO - 开始处理Mask任务 4e82ec6b-37ad-4b4e-8fa5-d2ce7450968d, 文本长度: 301字符, 脱敏类型: asterisk, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-13 18:55:07,094 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-13 18:55:07,094 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:07,094 - INFO - INFO - 开始处理Mask任务 4e82ec6b-37ad-4b4e-8fa5-d2ce7450968d
+2025-03-13 18:55:09,208 - INFO - INFO - keywords: {'外国人名': [], '地区': ['英国', '英国'], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '职业': [], '日期': []}
+2025-03-13 18:55:09,208 - INFO - INFO - keywords: [['地区', '英国', 59, '**'], ['姓名', '詹姆斯沃克', 98, '*****'], ['姓名', 'Anderson', 48, '********'], ['姓名', 'RobertJohnson', 89, '*************'], ['姓名', '罗伯特·约翰逊', 97, '*******'], ['姓名', '约翰·史密斯', 99, '******'], ['姓名', '约瑟夫·安德森', 98, '*******'], ['姓名', '安德森', 98, '***']]
+2025-03-13 18:55:09,208 - INFO - INFO - Mask任务 4e82ec6b-37ad-4b4e-8fa5-d2ce7450968d 处理完成， 301-->279
+2025-03-13 18:55:09,208 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:09,208 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:09,209 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916 成功
+2025-03-13 18:55:09,209 - INFO - INFO - 完成任务处理: 4e82ec6b-37ad-4b4e-8fa5-d2ce7450968d
+2025-03-13 18:55:09,440 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'delete', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 12e62fb6-ab77-4f37-bea8-ba85c99c0282, text: 12月30日早晨,DeepMind在Y(..., mask_type: delete, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:09,440 - INFO - INFO - 添加任务到队列: 12e62fb6-ab77-4f37-bea8-ba85c99c0282, 类型: mask
+2025-03-13 18:55:10,210 - INFO - INFO - 从队列获取任务: 12e62fb6-ab77-4f37-bea8-ba85c99c0282, 任务类型: mask
+2025-03-13 18:55:10,210 - INFO - INFO - 开始处理Mask任务 12e62fb6-ab77-4f37-bea8-ba85c99c0282, 文本长度: 301字符, 脱敏类型: delete, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-13 18:55:10,211 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-13 18:55:10,211 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:10,211 - INFO - INFO - 开始处理Mask任务 12e62fb6-ab77-4f37-bea8-ba85c99c0282
+2025-03-13 18:55:12,220 - INFO - INFO - keywords: {'外国人名': [], '地区': ['英国', '英国'], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '职业': [], '日期': []}
+2025-03-13 18:55:12,220 - INFO - INFO - keywords: [['地区', '英国', 59, ''], ['姓名', '詹姆斯沃克', 98, ''], ['姓名', 'Anderson', 48, ''], ['姓名', 'RobertJohnson', 89, ''], ['姓名', '罗伯特·约翰逊', 97, ''], ['姓名', '约翰·史密斯', 99, ''], ['姓名', '约瑟夫·安德森', 98, ''], ['姓名', '安德森', 98, '']]
+2025-03-13 18:55:12,221 - INFO - INFO - Mask任务 12e62fb6-ab77-4f37-bea8-ba85c99c0282 处理完成， 301-->216
+2025-03-13 18:55:12,221 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:12,221 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:12,222 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916 成功
+2025-03-13 18:55:12,222 - INFO - INFO - 完成任务处理: 12e62fb6-ab77-4f37-bea8-ba85c99c0282
+2025-03-13 18:55:12,456 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'invalid_type', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 9a917aaf-efc1-4523-a224-e89a44935736, text: 12月30日早晨,DeepMind在Y(..., mask_type: invalid_type, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:12,456 - INFO - INFO - 添加任务到队列: 9a917aaf-efc1-4523-a224-e89a44935736, 类型: mask
+2025-03-13 18:55:13,223 - INFO - INFO - 从队列获取任务: 9a917aaf-efc1-4523-a224-e89a44935736, 任务类型: mask
+2025-03-13 18:55:13,223 - INFO - INFO - 开始处理Mask任务 9a917aaf-efc1-4523-a224-e89a44935736, 文本长度: 301字符, 脱敏类型: invalid_type, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-13 18:55:13,223 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-13 18:55:13,223 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:13,223 - INFO - INFO - 开始处理Mask任务 9a917aaf-efc1-4523-a224-e89a44935736
+2025-03-13 18:55:15,302 - INFO - INFO - keywords: {'外国人名': [], '地区': ['英国', '英国'], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '职业': [], '日期': []}
+2025-03-13 18:55:15,303 - INFO - ERROR - 处理任务 9a917aaf-efc1-4523-a224-e89a44935736 时发生错误: 不支持的脱敏类型：invalid_type
+2025-03-13 18:55:15,303 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:15,303 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:15,303 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916 成功
+2025-03-13 18:55:15,304 - INFO - INFO - 完成任务处理: 9a917aaf-efc1-4523-a224-e89a44935736
+2025-03-13 18:55:15,468 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'md5', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 78b72a2b-092e-40d7-b937-32d77e954600, text: 12月30日早晨,DeepMind在Y(..., mask_type: md5, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:15,469 - INFO - INFO - 添加任务到队列: 78b72a2b-092e-40d7-b937-32d77e954600, 类型: mask
+2025-03-13 18:55:16,304 - INFO - INFO - 从队列获取任务: 78b72a2b-092e-40d7-b937-32d77e954600, 任务类型: mask
+2025-03-13 18:55:16,304 - INFO - INFO - 开始处理Mask任务 78b72a2b-092e-40d7-b937-32d77e954600, 文本长度: 301字符, 脱敏类型: md5, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-13 18:55:16,304 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-13 18:55:16,304 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:16,304 - INFO - INFO - 开始处理Mask任务 78b72a2b-092e-40d7-b937-32d77e954600
+2025-03-13 18:55:18,416 - INFO - INFO - keywords: {'外国人名': [], '地区': ['英国', '英国'], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '职业': [], '日期': []}
+2025-03-13 18:55:18,417 - INFO - INFO - keywords: [['地区', '英国', 59, 'a6bb21be9f9d23461f51b80322fcd118'], ['姓名', '詹姆斯沃克', 98, '23556da3187c4f7e51f5293873f06e70'], ['姓名', 'Anderson', 48, 'b32b1b822dd59451b17b08f97fdfe81e'], ['姓名', 'RobertJohnson', 89, '24bc31b1244bb4016c76d41e249ebfed'], ['姓名', '罗伯特·约翰逊', 97, '28dcda1946e6bf51eac3c2d74d2e9db2'], ['姓名', '约翰·史密斯', 99, 'd97107624b968ebf7186dc66c8fea4ed'], ['姓名', '约瑟夫·安德森', 98, '6fb8ccff29b94e30922063603f7bf92f'], ['姓名', '安德森', 98, 'ea89a69ed3e6a1fa1a40bec39c987dab']]
+2025-03-13 18:55:18,417 - INFO - INFO - Mask任务 78b72a2b-092e-40d7-b937-32d77e954600 处理完成， 301-->568
+2025-03-13 18:55:18,417 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:18,417 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:18,418 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916 成功
+2025-03-13 18:55:18,418 - INFO - INFO - 完成任务处理: 78b72a2b-092e-40d7-b937-32d77e954600
+2025-03-13 18:55:18,483 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'sha256', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: aa068548-dfe2-4b8b-9612-722a69246fd1, text: 12月30日早晨,DeepMind在Y(..., mask_type: sha256, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:18,483 - INFO - INFO - 添加任务到队列: aa068548-dfe2-4b8b-9612-722a69246fd1, 类型: mask
+2025-03-13 18:55:19,420 - INFO - INFO - 从队列获取任务: aa068548-dfe2-4b8b-9612-722a69246fd1, 任务类型: mask
+2025-03-13 18:55:19,421 - INFO - INFO - 开始处理Mask任务 aa068548-dfe2-4b8b-9612-722a69246fd1, 文本长度: 301字符, 脱敏类型: sha256, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-13 18:55:19,421 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-13 18:55:19,422 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:19,422 - INFO - INFO - 开始处理Mask任务 aa068548-dfe2-4b8b-9612-722a69246fd1
+2025-03-13 18:55:21,495 - INFO - INFO - keywords: {'外国人名': [], '地区': ['英国', '英国'], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '职业': [], '日期': []}
+2025-03-13 18:55:21,495 - INFO - INFO - keywords: [['地区', '英国', 59, 'd055c3998f13e70ea26810e935dbb4bb44aa7edaeb42eea0ff5abbc2b9aa75f7'], ['姓名', '詹姆斯沃克', 98, 'e9f1b16f5c4ad74396585369d6d34bc48d085ab2845e4fb84a37bbb09efcd751'], ['姓名', 'Anderson', 48, '9eac806b76bab0185444c731f3f419fe67f52bc777431faba5e671097528abd3'], ['姓名', 'RobertJohnson', 89, '369eec36fdee4eb932f83097fa7eed1ef24d3e9dc746c25d08c707ed51f176a1'], ['姓名', '罗伯特·约翰逊', 97, '7b03035f269d77b67ea9fa0fb5426841500e88859a531c9f2fe8123abb68a81b'], ['姓名', '约翰·史密斯', 99, '3930033890e7475dbf458e15a468b6d74eda1f1e30af66f0afa26b009448c1cd'], ['姓名', '约瑟夫·安德森', 98, 'ab685aafaff26c20b247a1caa98d0113cbc39c7880d5a86a918f3a8d5c16e1ed'], ['姓名', '安德森', 98, 'b94e3ccee9ce78c994e709d5b3b6eac61d4ed39c8266843fa22ff38f1172eebe']]
+2025-03-13 18:55:21,495 - INFO - INFO - Mask任务 aa068548-dfe2-4b8b-9612-722a69246fd1 处理完成， 301-->920
+2025-03-13 18:55:21,495 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:21,495 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:21,496 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916 成功
+2025-03-13 18:55:21,496 - INFO - INFO - 完成任务处理: aa068548-dfe2-4b8b-9612-722a69246fd1
+2025-03-13 18:55:22,510 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 53e8a769-5115-4054-83b3-943f8a70ef87, text: 12月30日早晨,DeepMind在Y(..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:22,512 - INFO - INFO - 添加任务到队列: 53e8a769-5115-4054-83b3-943f8a70ef87, 类型: mask
+2025-03-13 18:55:23,499 - INFO - INFO - 从队列获取任务: 53e8a769-5115-4054-83b3-943f8a70ef87, 任务类型: mask
+2025-03-13 18:55:23,500 - INFO - INFO - 开始处理Mask任务 53e8a769-5115-4054-83b3-943f8a70ef87, 文本长度: 301字符, 脱敏类型: similar, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-13 18:55:23,500 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-13 18:55:23,500 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:23,500 - INFO - INFO - 开始处理Mask任务 53e8a769-5115-4054-83b3-943f8a70ef87
+2025-03-13 18:55:25,550 - INFO - INFO - keywords: {'外国人名': [], '地区': ['英国', '英国'], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '职业': [], '日期': []}
+2025-03-13 18:55:25,905 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061165452003479
+2025-03-13 18:55:25,922 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
+2025-03-13 18:55:25,922 - INFO - INFO - keywords: [['地区', '英国', 59, '河北省'], ['姓名', '詹姆斯沃克', 98, '杨宁'], ['姓名', 'Anderson', 48, '李阳'], ['姓名', 'RobertJohnson', 89, '孙秀荣'], ['姓名', '罗伯特·约翰逊', 97, '王琳'], ['姓名', '约翰·史密斯', 99, '夏婷婷'], ['姓名', '约瑟夫·安德森', 98, '唐红'], ['姓名', '安德森', 98, '李萍']]
+2025-03-13 18:55:25,923 - INFO - INFO - Mask任务 53e8a769-5115-4054-83b3-943f8a70ef87 处理完成， 301-->242
+2025-03-13 18:55:25,923 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:25,923 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:25,924 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916 成功
+2025-03-13 18:55:25,924 - INFO - INFO - 完成任务处理: 53e8a769-5115-4054-83b3-943f8a70ef87
+2025-03-13 18:55:26,530 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'type_replace', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 0ae208e5-d976-43e0-8344-f9def7e0e8cb, text: 12月30日早晨,DeepMind在Y(..., mask_type: type_replace, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:26,531 - INFO - INFO - 添加任务到队列: 0ae208e5-d976-43e0-8344-f9def7e0e8cb, 类型: mask
+2025-03-13 18:55:26,925 - INFO - INFO - 从队列获取任务: 0ae208e5-d976-43e0-8344-f9def7e0e8cb, 任务类型: mask
+2025-03-13 18:55:26,925 - INFO - INFO - 开始处理Mask任务 0ae208e5-d976-43e0-8344-f9def7e0e8cb, 文本长度: 301字符, 脱敏类型: type_replace, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-13 18:55:26,926 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-13 18:55:26,926 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-13 18:55:26,926 - INFO - INFO - 开始处理Mask任务 0ae208e5-d976-43e0-8344-f9def7e0e8cb
+2025-03-13 18:55:29,055 - INFO - INFO - keywords: {'外国人名': [], '地区': ['英国', '英国'], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '职业': [], '日期': []}
+2025-03-13 18:55:29,055 - INFO - INFO - keywords: [['地区', '英国', 59, '某国'], ['姓名', '詹姆斯沃克', 98, '詹某'], ['姓名', 'Anderson', 48, '某n'], ['姓名', 'RobertJohnson', 89, '某n'], ['姓名', '罗伯特·约翰逊', 97, '罗某'], ['姓名', '约翰·史密斯', 99, '某斯'], ['姓名', '约瑟夫·安德森', 98, '某森'], ['姓名', '安德森', 98, '安某']]
+2025-03-13 18:55:29,056 - INFO - INFO - Mask任务 0ae208e5-d976-43e0-8344-f9def7e0e8cb 处理完成， 301-->238
+2025-03-13 18:55:29,056 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:29,056 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916
+2025-03-13 18:55:29,056 - INFO - INFO - 返回结果到接口 http://127.0.0.1:61916 成功
+2025-03-13 18:55:29,057 - INFO - INFO - 完成任务处理: 0ae208e5-d976-43e0-8344-f9def7e0e8cb

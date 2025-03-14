@@ -5,6 +5,7 @@ from app.models.file_models import FileModel
 class RerankTask(FileModel):
     def __init__(self):
         super().__init__("rerank_task")
+        self.__name__ = "rerank"
 
     async def create(self, task_id: str, data: Dict[str, Any]) -> bool:
         file_path = self._get_file_path(task_id)

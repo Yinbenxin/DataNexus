@@ -10,6 +10,7 @@ from aiohttp import web
 from typing import Dict, Any
 from dotenv import load_dotenv
 load_dotenv()
+call_back_url = "http://127.0.0.1:5001/rerank"
 
 class CallbackHandler(BaseHTTPRequestHandler):
     received_data = None
@@ -24,11 +25,12 @@ class CallbackHandler(BaseHTTPRequestHandler):
 class TestEmbeddingAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        # 初始化回调服务器
-        cls.callback_host = "127.0.0.1"
-        # cls.callback_host = "192.168.101.122"
-        cls.callback_port = 61916
-        cls.handle_url = f"http://{cls.callback_host}:{cls.callback_port}"
+        # 从URL中解析主机和端口
+        from urllib.parse import urlparse
+        parsed_url = urlparse(call_back_url)
+        cls.callback_host = parsed_url.hostname or '0.0.0.0'
+        cls.callback_port = parsed_url.port
+
         cls.callback_server = HTTPServer((cls.callback_host, cls.callback_port), CallbackHandler)
         cls.server_thread = Thread(target=cls.callback_server.serve_forever)
         cls.server_thread.daemon = True
@@ -55,8 +57,8 @@ class TestEmbeddingAPI(unittest.TestCase):
         response = requests.post(
             self.base_url,
             json={
-                "text": "测试文本",
-                "handle": self.handle_url
+                "text": "测试文本"
+                # "handle": self.handle_url
             },
             headers=self.headers
         )

@@ -1,0 +1,450 @@
+2025-03-14 16:09:56,847 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:12:07,151 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:12:12,597 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:12:15,902 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:12:19,841 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:12:27,802 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:18:59,995 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:19:51,241 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:19:51,241 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:19:52,049 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:19:52,049 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:19:52,073 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:19:52,185 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:19:52,409 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:19:54,170 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:19:54,171 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:20:10,548 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:20:12,890 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:20:12,890 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:20:13,985 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:20:13,985 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:20:14,005 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:20:16,702 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:20:16,827 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:20:18,093 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:20:18,093 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:20:18,093 - INFO - INFO - mask_url: http://172.0.0.1:5002/mask，rerank_url: http://172.0.0.1:5001/rerank，embedding_url: http://172.0.0.1:5001/embedding
+2025-03-14 16:20:18,097 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:20:18,909 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:20:18,910 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:20:18,910 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:20:21,734 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:20:22,061 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-14 16:20:34,893 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'aes', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 6b12df43-7946-48a3-aaf6-eded256df8b8, text: 12月30日早晨,DeepMind在Y(..., mask_type: aes, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:34,894 - INFO - INFO - 添加任务到队列: 6b12df43-7946-48a3-aaf6-eded256df8b8, 类型: mask
+2025-03-14 16:20:35,081 - INFO - INFO - 从队列获取任务: 6b12df43-7946-48a3-aaf6-eded256df8b8, 任务类型: mask
+2025-03-14 16:20:35,082 - INFO - INFO - 开始处理Mask任务 6b12df43-7946-48a3-aaf6-eded256df8b8, 文本长度: 301字符, 脱敏类型: aes, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-14 16:20:35,082 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-14 16:20:35,082 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:35,082 - INFO - INFO - 开始处理Mask任务 6b12df43-7946-48a3-aaf6-eded256df8b8
+2025-03-14 16:20:37,130 - INFO - INFO - keywords: {'职业': [], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '地区': ['英国', '英国'], '日期': [], '外国人名': []}
+2025-03-14 16:20:37,132 - INFO - INFO - keywords: [['姓名', '詹姆斯沃克', 98, 'CPRHmNZ/NYzfsCOHceprrJgtEuWyfAp+p/IpIJU6fZM='], ['姓名', 'Anderson', 48, 'CPRHmNZ/NYzfsCOHceprrE1ojwR9AlGH7ZrnbiUvTlQ='], ['姓名', 'RobertJohnson', 89, 'CPRHmNZ/NYzfsCOHceprrA3krHzj/G57DQ1Km7mMZG8='], ['姓名', '罗伯特·约翰逊', 97, 'CPRHmNZ/NYzfsCOHceprrHOHGtjHWaBu2JHtsW77J9Rz1SfgKZWxc6Ltf2TQX5J9'], ['姓名', '约翰·史密斯', 99, 'CPRHmNZ/NYzfsCOHceprrCU96Oers9VHKTcH3WcH8oBVAD3h9nUVZrtbfd9t/wbc'], ['姓名', '约瑟夫·安德森', 98, 'CPRHmNZ/NYzfsCOHceprrIRO9c7to3RyJM5dlxij02iJXpIy/bFbcvrPQEtqYTVG'], ['姓名', '安德森', 98, 'CPRHmNZ/NYzfsCOHceprrG+h+6oHZRg/2W2Hy8ioNvc='], ['地区', '英国', 59, 'PLUe/c5xT2scu9vpgM+dbd8/Xkme+RZC5vpyI/6OXTM=']]
+2025-03-14 16:20:37,133 - INFO - INFO - Mask任务 6b12df43-7946-48a3-aaf6-eded256df8b8 处理完成， 301-->780
+2025-03-14 16:20:37,133 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:20:37,133 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:20:37,135 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:20:37,135 - INFO - INFO - 完成任务处理: 6b12df43-7946-48a3-aaf6-eded256df8b8
+2025-03-14 16:20:37,914 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'asterisk', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 6c5daacd-da90-41f4-8d59-f23fbaa73d69, text: 12月30日早晨,DeepMind在Y(..., mask_type: asterisk, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:37,915 - INFO - INFO - 添加任务到队列: 6c5daacd-da90-41f4-8d59-f23fbaa73d69, 类型: mask
+2025-03-14 16:20:38,136 - INFO - INFO - 从队列获取任务: 6c5daacd-da90-41f4-8d59-f23fbaa73d69, 任务类型: mask
+2025-03-14 16:20:38,136 - INFO - INFO - 开始处理Mask任务 6c5daacd-da90-41f4-8d59-f23fbaa73d69, 文本长度: 301字符, 脱敏类型: asterisk, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-14 16:20:38,136 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-14 16:20:38,136 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:38,137 - INFO - INFO - 开始处理Mask任务 6c5daacd-da90-41f4-8d59-f23fbaa73d69
+2025-03-14 16:20:40,193 - INFO - INFO - keywords: {'职业': [], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '地区': ['英国', '英国'], '日期': [], '外国人名': []}
+2025-03-14 16:20:40,193 - INFO - INFO - keywords: [['姓名', '詹姆斯沃克', 98, '*****'], ['姓名', 'Anderson', 48, '********'], ['姓名', 'RobertJohnson', 89, '*************'], ['姓名', '罗伯特·约翰逊', 97, '*******'], ['姓名', '约翰·史密斯', 99, '******'], ['姓名', '约瑟夫·安德森', 98, '*******'], ['姓名', '安德森', 98, '***'], ['地区', '英国', 59, '**']]
+2025-03-14 16:20:40,193 - INFO - INFO - Mask任务 6c5daacd-da90-41f4-8d59-f23fbaa73d69 处理完成， 301-->279
+2025-03-14 16:20:40,193 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:20:40,193 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:20:40,194 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:20:40,194 - INFO - INFO - 完成任务处理: 6c5daacd-da90-41f4-8d59-f23fbaa73d69
+2025-03-14 16:20:40,934 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'delete', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 07201d06-8c8a-4211-8b88-b5982588f61f, text: 12月30日早晨,DeepMind在Y(..., mask_type: delete, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:40,935 - INFO - INFO - 添加任务到队列: 07201d06-8c8a-4211-8b88-b5982588f61f, 类型: mask
+2025-03-14 16:20:41,196 - INFO - INFO - 从队列获取任务: 07201d06-8c8a-4211-8b88-b5982588f61f, 任务类型: mask
+2025-03-14 16:20:41,196 - INFO - INFO - 开始处理Mask任务 07201d06-8c8a-4211-8b88-b5982588f61f, 文本长度: 301字符, 脱敏类型: delete, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-14 16:20:41,196 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-14 16:20:41,196 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:41,196 - INFO - INFO - 开始处理Mask任务 07201d06-8c8a-4211-8b88-b5982588f61f
+2025-03-14 16:20:43,195 - INFO - INFO - keywords: {'职业': [], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '地区': ['英国', '英国'], '日期': [], '外国人名': []}
+2025-03-14 16:20:43,195 - INFO - INFO - keywords: [['姓名', '詹姆斯沃克', 98, ''], ['姓名', 'Anderson', 48, ''], ['姓名', 'RobertJohnson', 89, ''], ['姓名', '罗伯特·约翰逊', 97, ''], ['姓名', '约翰·史密斯', 99, ''], ['姓名', '约瑟夫·安德森', 98, ''], ['姓名', '安德森', 98, ''], ['地区', '英国', 59, '']]
+2025-03-14 16:20:43,195 - INFO - INFO - Mask任务 07201d06-8c8a-4211-8b88-b5982588f61f 处理完成， 301-->216
+2025-03-14 16:20:43,195 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:20:43,195 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:20:43,196 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:20:43,196 - INFO - INFO - 完成任务处理: 07201d06-8c8a-4211-8b88-b5982588f61f
+2025-03-14 16:20:43,953 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'invalid_type', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: be919942-acc2-49d1-b48a-7df6d3fff7f6, text: 12月30日早晨,DeepMind在Y(..., mask_type: invalid_type, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:43,953 - INFO - INFO - 添加任务到队列: be919942-acc2-49d1-b48a-7df6d3fff7f6, 类型: mask
+2025-03-14 16:20:44,197 - INFO - INFO - 从队列获取任务: be919942-acc2-49d1-b48a-7df6d3fff7f6, 任务类型: mask
+2025-03-14 16:20:44,197 - INFO - INFO - 开始处理Mask任务 be919942-acc2-49d1-b48a-7df6d3fff7f6, 文本长度: 301字符, 脱敏类型: invalid_type, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-14 16:20:44,197 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-14 16:20:44,197 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:44,197 - INFO - INFO - 开始处理Mask任务 be919942-acc2-49d1-b48a-7df6d3fff7f6
+2025-03-14 16:20:46,279 - INFO - INFO - keywords: {'职业': [], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '地区': ['英国', '英国'], '日期': [], '外国人名': []}
+2025-03-14 16:20:46,279 - INFO - ERROR - 处理任务 be919942-acc2-49d1-b48a-7df6d3fff7f6 时发生错误: 不支持的脱敏类型：invalid_type
+2025-03-14 16:20:46,279 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:20:46,279 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:20:46,280 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:20:46,281 - INFO - INFO - 完成任务处理: be919942-acc2-49d1-b48a-7df6d3fff7f6
+2025-03-14 16:20:46,973 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'md5', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: c20bd0fa-570d-4b2e-8c69-3f986b1faeaf, text: 12月30日早晨,DeepMind在Y(..., mask_type: md5, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:46,974 - INFO - INFO - 添加任务到队列: c20bd0fa-570d-4b2e-8c69-3f986b1faeaf, 类型: mask
+2025-03-14 16:20:47,281 - INFO - INFO - 从队列获取任务: c20bd0fa-570d-4b2e-8c69-3f986b1faeaf, 任务类型: mask
+2025-03-14 16:20:47,282 - INFO - INFO - 开始处理Mask任务 c20bd0fa-570d-4b2e-8c69-3f986b1faeaf, 文本长度: 301字符, 脱敏类型: md5, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-14 16:20:47,282 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-14 16:20:47,282 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:47,282 - INFO - INFO - 开始处理Mask任务 c20bd0fa-570d-4b2e-8c69-3f986b1faeaf
+2025-03-14 16:20:49,284 - INFO - INFO - keywords: {'职业': [], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '地区': ['英国', '英国'], '日期': [], '外国人名': []}
+2025-03-14 16:20:49,285 - INFO - INFO - keywords: [['姓名', '詹姆斯沃克', 98, '23556da3187c4f7e51f5293873f06e70'], ['姓名', 'Anderson', 48, 'b32b1b822dd59451b17b08f97fdfe81e'], ['姓名', 'RobertJohnson', 89, '24bc31b1244bb4016c76d41e249ebfed'], ['姓名', '罗伯特·约翰逊', 97, '28dcda1946e6bf51eac3c2d74d2e9db2'], ['姓名', '约翰·史密斯', 99, 'd97107624b968ebf7186dc66c8fea4ed'], ['姓名', '约瑟夫·安德森', 98, '6fb8ccff29b94e30922063603f7bf92f'], ['姓名', '安德森', 98, 'ea89a69ed3e6a1fa1a40bec39c987dab'], ['地区', '英国', 59, 'a6bb21be9f9d23461f51b80322fcd118']]
+2025-03-14 16:20:49,285 - INFO - INFO - Mask任务 c20bd0fa-570d-4b2e-8c69-3f986b1faeaf 处理完成， 301-->568
+2025-03-14 16:20:49,285 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:20:49,285 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:20:49,286 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:20:49,286 - INFO - INFO - 完成任务处理: c20bd0fa-570d-4b2e-8c69-3f986b1faeaf
+2025-03-14 16:20:49,984 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'sha256', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 9af3dba3-703c-4106-bdce-8129a753f2f2, text: 12月30日早晨,DeepMind在Y(..., mask_type: sha256, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:49,985 - INFO - INFO - 添加任务到队列: 9af3dba3-703c-4106-bdce-8129a753f2f2, 类型: mask
+2025-03-14 16:20:50,287 - INFO - INFO - 从队列获取任务: 9af3dba3-703c-4106-bdce-8129a753f2f2, 任务类型: mask
+2025-03-14 16:20:50,288 - INFO - INFO - 开始处理Mask任务 9af3dba3-703c-4106-bdce-8129a753f2f2, 文本长度: 301字符, 脱敏类型: sha256, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-14 16:20:50,288 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-14 16:20:50,288 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:50,288 - INFO - INFO - 开始处理Mask任务 9af3dba3-703c-4106-bdce-8129a753f2f2
+2025-03-14 16:20:52,364 - INFO - INFO - keywords: {'职业': [], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '地区': ['英国', '英国'], '日期': [], '外国人名': []}
+2025-03-14 16:20:52,365 - INFO - INFO - keywords: [['姓名', '詹姆斯沃克', 98, 'e9f1b16f5c4ad74396585369d6d34bc48d085ab2845e4fb84a37bbb09efcd751'], ['姓名', 'Anderson', 48, '9eac806b76bab0185444c731f3f419fe67f52bc777431faba5e671097528abd3'], ['姓名', 'RobertJohnson', 89, '369eec36fdee4eb932f83097fa7eed1ef24d3e9dc746c25d08c707ed51f176a1'], ['姓名', '罗伯特·约翰逊', 97, '7b03035f269d77b67ea9fa0fb5426841500e88859a531c9f2fe8123abb68a81b'], ['姓名', '约翰·史密斯', 99, '3930033890e7475dbf458e15a468b6d74eda1f1e30af66f0afa26b009448c1cd'], ['姓名', '约瑟夫·安德森', 98, 'ab685aafaff26c20b247a1caa98d0113cbc39c7880d5a86a918f3a8d5c16e1ed'], ['姓名', '安德森', 98, 'b94e3ccee9ce78c994e709d5b3b6eac61d4ed39c8266843fa22ff38f1172eebe'], ['地区', '英国', 59, 'd055c3998f13e70ea26810e935dbb4bb44aa7edaeb42eea0ff5abbc2b9aa75f7']]
+2025-03-14 16:20:52,365 - INFO - INFO - Mask任务 9af3dba3-703c-4106-bdce-8129a753f2f2 处理完成， 301-->920
+2025-03-14 16:20:52,365 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:20:52,365 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:20:52,366 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:20:52,366 - INFO - INFO - 完成任务处理: 9af3dba3-703c-4106-bdce-8129a753f2f2
+2025-03-14 16:20:52,995 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'similar', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: c7d66e20-64a9-43b7-a16c-aa0f13281742, text: 12月30日早晨,DeepMind在Y(..., mask_type: similar, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:52,995 - INFO - INFO - 添加任务到队列: c7d66e20-64a9-43b7-a16c-aa0f13281742, 类型: mask
+2025-03-14 16:20:53,367 - INFO - INFO - 从队列获取任务: c7d66e20-64a9-43b7-a16c-aa0f13281742, 任务类型: mask
+2025-03-14 16:20:53,368 - INFO - INFO - 开始处理Mask任务 c7d66e20-64a9-43b7-a16c-aa0f13281742, 文本长度: 301字符, 脱敏类型: similar, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-14 16:20:53,369 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-14 16:20:53,369 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:53,369 - INFO - INFO - 开始处理Mask任务 c7d66e20-64a9-43b7-a16c-aa0f13281742
+2025-03-14 16:20:55,390 - INFO - INFO - keywords: {'职业': [], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '地区': ['英国', '英国'], '日期': [], '外国人名': []}
+2025-03-14 16:20:55,515 - INFO - INFO - 相似度最高的类型: 姓名-->姓名, 相似度:1.0000001192092896
+2025-03-14 16:20:55,532 - INFO - INFO - 相似度最高的类型: 地区-->省份, 相似度:0.9061165452003479
+2025-03-14 16:20:55,532 - INFO - INFO - keywords: [['姓名', '詹姆斯沃克', 98, '黄凤兰'], ['姓名', 'Anderson', 48, '秦建平'], ['姓名', 'RobertJohnson', 89, '朱丽丽'], ['姓名', '罗伯特·约翰逊', 97, '安莹'], ['姓名', '约翰·史密斯', 99, '王宇'], ['姓名', '约瑟夫·安德森', 98, '吕丽华'], ['姓名', '安德森', 98, '简淑珍'], ['地区', '英国', 59, '安徽省']]
+2025-03-14 16:20:55,533 - INFO - INFO - Mask任务 c7d66e20-64a9-43b7-a16c-aa0f13281742 处理完成， 301-->246
+2025-03-14 16:20:55,533 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:20:55,533 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:20:55,534 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:20:55,534 - INFO - INFO - 完成任务处理: c7d66e20-64a9-43b7-a16c-aa0f13281742
+2025-03-14 16:20:56,026 - INFO - INFO - Received request: {'text': '12月30日早晨,DeepMind在Y(原脸书)上发文宣布,约瑟夫·安德森(Joseph Anderson)将正式回归DeepMind,重新担任CEO,同时DeepMind的董事会将迎来重组。具体来看,Oracle联席CEO詹姆斯沃克、前英国财政部部长、颇具影响力的英国经济学家约翰·史密斯和lnnoveCEO罗伯特·约翰逊(RobertJohnson)将组成新的初始董事会成员。这三人组合之中,只有罗伯特·约翰逊是DeepMind原七人董事会成员,而且在传言中,是他主导策划了安德森的罢免事件。DeepMind还表示,更多细节有待公布。三分钟后,安德森转发了这则消息并附上上三个爱心和一个敬礼的表情。', 'mask_type': 'type_replace', 'mask_model': 'paddle', 'mask_field': ['日期', '姓名', '职业', '地区', '外国人名'], 'force_convert': [['DeepMind', '深度思考'], ['董事会成员', '领导班子']], 'handle': 'http://127.0.0.1:61916'}, task_id: 17f1e5c9-db24-49e6-963e-cee73afa46c0, text: 12月30日早晨,DeepMind在Y(..., mask_type: type_replace, mask_model: paddle, mask_field: ['日期', '姓名', '职业', '地区', '外国人名'], force_convert: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:56,027 - INFO - INFO - 添加任务到队列: 17f1e5c9-db24-49e6-963e-cee73afa46c0, 类型: mask
+2025-03-14 16:20:56,535 - INFO - INFO - 从队列获取任务: 17f1e5c9-db24-49e6-963e-cee73afa46c0, 任务类型: mask
+2025-03-14 16:20:56,535 - INFO - INFO - 开始处理Mask任务 17f1e5c9-db24-49e6-963e-cee73afa46c0, 文本长度: 301字符, 脱敏类型: type_replace, 模型: paddle, handle: http://127.0.0.1:61916
+2025-03-14 16:20:56,535 - INFO - INFO - 指定脱敏字段: ['日期', '姓名', '职业', '地区', '外国人名']
+2025-03-14 16:20:56,535 - INFO - INFO - 强制转换映射: [['DeepMind', '深度思考'], ['董事会成员', '领导班子']]
+2025-03-14 16:20:56,536 - INFO - INFO - 开始处理Mask任务 17f1e5c9-db24-49e6-963e-cee73afa46c0
+2025-03-14 16:20:58,501 - INFO - INFO - keywords: {'职业': [], '姓名': ['詹姆斯沃克', 'Anderson', 'RobertJohnson', '罗伯特·约翰逊', '约翰·史密斯', '约瑟夫·安德森', '安德森', '安德森', '罗伯特·约翰逊'], '地区': ['英国', '英国'], '日期': [], '外国人名': []}
+2025-03-14 16:20:58,502 - INFO - INFO - keywords: [['姓名', '詹姆斯沃克', 98, '詹某'], ['姓名', 'Anderson', 48, '某n'], ['姓名', 'RobertJohnson', 89, '某n'], ['姓名', '罗伯特·约翰逊', 97, '罗某'], ['姓名', '约翰·史密斯', 99, '某斯'], ['姓名', '约瑟夫·安德森', 98, '某森'], ['姓名', '安德森', 98, '安某'], ['地区', '英国', 59, '某国']]
+2025-03-14 16:20:58,502 - INFO - INFO - Mask任务 17f1e5c9-db24-49e6-963e-cee73afa46c0 处理完成， 301-->238
+2025-03-14 16:20:58,502 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:20:58,502 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:20:58,503 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:20:58,503 - INFO - INFO - 完成任务处理: 17f1e5c9-db24-49e6-963e-cee73afa46c0
+2025-03-14 16:21:21,439 - INFO - INFO - 开始创建Rerank任务，task_id: 270b95a5-725d-4eae-b990-e0d1cc3c16fe, query: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:21,439 - INFO - INFO - 添加任务到队列: 270b95a5-725d-4eae-b990-e0d1cc3c16fe, 类型: rerank
+2025-03-14 16:21:21,524 - INFO - INFO - 从队列获取任务: 270b95a5-725d-4eae-b990-e0d1cc3c16fe, 任务类型: rerank
+2025-03-14 16:21:21,525 - INFO - INFO - 开始处理Rerank任务 270b95a5-725d-4eae-b990-e0d1cc3c16fe, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:21,525 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:21,525 - INFO - INFO - 使用设备: cpu
+2025-03-14 16:21:21,769 - INFO - INFO - Rerank任务 270b95a5-725d-4eae-b990-e0d1cc3c16fe 处理完成
+2025-03-14 16:21:21,769 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:21,769 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:21:21,770 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:21:21,770 - INFO - INFO - 完成任务处理: 270b95a5-725d-4eae-b990-e0d1cc3c16fe
+2025-03-14 16:21:22,453 - INFO - INFO - 开始创建Rerank任务，task_id: 7c15d7e5-9dc6-40fb-9ca7-daef94cd5f39, query: , 候选文本数量: 10
+2025-03-14 16:21:22,454 - INFO - INFO - 添加任务到队列: 7c15d7e5-9dc6-40fb-9ca7-daef94cd5f39, 类型: rerank
+2025-03-14 16:21:22,771 - INFO - INFO - 从队列获取任务: 7c15d7e5-9dc6-40fb-9ca7-daef94cd5f39, 任务类型: rerank
+2025-03-14 16:21:22,771 - INFO - INFO - 开始处理Rerank任务 7c15d7e5-9dc6-40fb-9ca7-daef94cd5f39, 查询文本: , 候选文本数量: 10
+2025-03-14 16:21:22,771 - INFO - INFO - 正在对查询文本进行重排序: , 候选文本数量: 10
+2025-03-14 16:21:22,771 - INFO - INFO - 使用设备: cpu
+2025-03-14 16:21:22,947 - INFO - INFO - Rerank任务 7c15d7e5-9dc6-40fb-9ca7-daef94cd5f39 处理完成
+2025-03-14 16:21:22,947 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:22,947 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:21:22,948 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:21:22,948 - INFO - INFO - 完成任务处理: 7c15d7e5-9dc6-40fb-9ca7-daef94cd5f39
+2025-03-14 16:21:23,470 - INFO - INFO - 开始创建Rerank任务，task_id: 0cf5eebe-23c1-41c3-b861-6045a89a61d3, query: 药品管理, 候选文本数量: 0
+2025-03-14 16:21:23,470 - INFO - INFO - 添加任务到队列: 0cf5eebe-23c1-41c3-b861-6045a89a61d3, 类型: rerank
+2025-03-14 16:21:23,949 - INFO - INFO - 从队列获取任务: 0cf5eebe-23c1-41c3-b861-6045a89a61d3, 任务类型: rerank
+2025-03-14 16:21:23,950 - INFO - INFO - 开始处理Rerank任务 0cf5eebe-23c1-41c3-b861-6045a89a61d3, 查询文本: 药品管理, 候选文本数量: 0
+2025-03-14 16:21:23,950 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 0
+2025-03-14 16:21:23,950 - INFO - INFO - 使用设备: cpu
+2025-03-14 16:21:23,950 - INFO - INFO - Rerank任务 0cf5eebe-23c1-41c3-b861-6045a89a61d3 处理完成
+2025-03-14 16:21:23,950 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:23,950 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:21:23,951 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:21:23,951 - INFO - INFO - 完成任务处理: 0cf5eebe-23c1-41c3-b861-6045a89a61d3
+2025-03-14 16:21:24,496 - INFO - INFO - 开始创建Rerank任务，task_id: 000eb63d-9ac2-442e-ae40-9dc2e5deb83b, query: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 候选文本数量: 10
+2025-03-14 16:21:24,497 - INFO - INFO - 添加任务到队列: 000eb63d-9ac2-442e-ae40-9dc2e5deb83b, 类型: rerank
+2025-03-14 16:21:24,952 - INFO - INFO - 从队列获取任务: 000eb63d-9ac2-442e-ae40-9dc2e5deb83b, 任务类型: rerank
+2025-03-14 16:21:24,953 - INFO - INFO - 开始处理Rerank任务 000eb63d-9ac2-442e-ae40-9dc2e5deb83b, 查询文本: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 候选文本数量: 10
+2025-03-14 16:21:24,953 - INFO - INFO - 正在对查询文本进行重排序: aaaaaaaaaa, 候选文本数量: 10
+2025-03-14 16:21:24,953 - INFO - INFO - 使用设备: cpu
+2025-03-14 16:21:28,247 - INFO - INFO - Rerank任务 000eb63d-9ac2-442e-ae40-9dc2e5deb83b 处理完成
+2025-03-14 16:21:28,247 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:28,247 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:21:28,248 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:21:28,248 - INFO - INFO - 完成任务处理: 000eb63d-9ac2-442e-ae40-9dc2e5deb83b
+2025-03-14 16:21:28,525 - INFO - INFO - 开始创建Rerank任务，task_id: 5b568f05-3bd0-4f54-bf98-9d01830273f5, query: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:28,525 - INFO - INFO - 添加任务到队列: 5b568f05-3bd0-4f54-bf98-9d01830273f5, 类型: rerank
+2025-03-14 16:21:29,249 - INFO - INFO - 从队列获取任务: 5b568f05-3bd0-4f54-bf98-9d01830273f5, 任务类型: rerank
+2025-03-14 16:21:29,249 - INFO - INFO - 开始处理Rerank任务 5b568f05-3bd0-4f54-bf98-9d01830273f5, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:29,249 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:29,249 - INFO - INFO - 使用设备: cpu
+2025-03-14 16:21:29,453 - INFO - INFO - Rerank任务 5b568f05-3bd0-4f54-bf98-9d01830273f5 处理完成
+2025-03-14 16:21:29,453 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:29,453 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:21:29,454 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:21:29,454 - INFO - INFO - 完成任务处理: 5b568f05-3bd0-4f54-bf98-9d01830273f5
+2025-03-14 16:21:29,535 - INFO - INFO - 开始创建Rerank任务，task_id: 54d8d0d2-dd36-4a70-8ba8-8335725c76f5, query: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:29,535 - INFO - INFO - 添加任务到队列: 54d8d0d2-dd36-4a70-8ba8-8335725c76f5, 类型: rerank
+2025-03-14 16:21:30,455 - INFO - INFO - 从队列获取任务: 54d8d0d2-dd36-4a70-8ba8-8335725c76f5, 任务类型: rerank
+2025-03-14 16:21:30,456 - INFO - INFO - 开始处理Rerank任务 54d8d0d2-dd36-4a70-8ba8-8335725c76f5, 查询文本: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:30,457 - INFO - INFO - 正在对查询文本进行重排序: 药品管理, 候选文本数量: 10
+2025-03-14 16:21:30,457 - INFO - INFO - 使用设备: cpu
+2025-03-14 16:21:30,681 - INFO - INFO - Rerank任务 54d8d0d2-dd36-4a70-8ba8-8335725c76f5 处理完成
+2025-03-14 16:21:30,681 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:30,681 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:21:30,682 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:21:30,682 - INFO - INFO - 完成任务处理: 54d8d0d2-dd36-4a70-8ba8-8335725c76f5
+2025-03-14 16:21:38,798 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 9e1c392f-0dea-4c06-9353-810621b35272, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-14 16:21:38,799 - INFO - INFO - 添加任务到队列: 9e1c392f-0dea-4c06-9353-810621b35272, 类型: embedding
+2025-03-14 16:21:39,692 - INFO - INFO - 从队列获取任务: 9e1c392f-0dea-4c06-9353-810621b35272, 任务类型: embedding
+2025-03-14 16:21:39,693 - INFO - INFO - 开始处理Embedding任务 9e1c392f-0dea-4c06-9353-810621b35272, 文本长度: 36
+2025-03-14 16:21:39,694 - INFO - INFO - Embedding文本: 36
+2025-03-14 16:21:39,835 - INFO - INFO - Embedding任务 9e1c392f-0dea-4c06-9353-810621b35272 处理完成
+2025-03-14 16:21:39,835 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:39,835 - INFO - INFO - 没有回调地址，直接删除本地任务数据 9e1c392f-0dea-4c06-9353-810621b35272
+2025-03-14 16:21:39,835 - INFO - INFO - 完成任务处理: 9e1c392f-0dea-4c06-9353-810621b35272
+2025-03-14 16:21:39,840 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: a9b3d05d-c318-49f5-be43-ff1b50e90715, text: 测试文本，文本长度: 4, handle: http://127.0.0.1:61916
+2025-03-14 16:21:39,840 - INFO - INFO - 添加任务到队列: a9b3d05d-c318-49f5-be43-ff1b50e90715, 类型: embedding
+2025-03-14 16:21:40,836 - INFO - INFO - 从队列获取任务: a9b3d05d-c318-49f5-be43-ff1b50e90715, 任务类型: embedding
+2025-03-14 16:21:40,837 - INFO - INFO - 开始处理Embedding任务 a9b3d05d-c318-49f5-be43-ff1b50e90715, 文本长度: 4
+2025-03-14 16:21:40,837 - INFO - INFO - Embedding文本: 4
+2025-03-14 16:21:40,928 - INFO - INFO - Embedding任务 a9b3d05d-c318-49f5-be43-ff1b50e90715 处理完成
+2025-03-14 16:21:40,928 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:40,929 - INFO - INFO - 返回接口确认 http://127.0.0.1:61916
+2025-03-14 16:21:40,930 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:61916 完成------------
+2025-03-14 16:21:40,930 - INFO - INFO - 完成任务处理: a9b3d05d-c318-49f5-be43-ff1b50e90715
+2025-03-14 16:21:41,864 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 8945ac32-7e99-4812-a73a-2281693360dd, text: ，文本长度: 0, handle: None
+2025-03-14 16:21:41,865 - INFO - INFO - 添加任务到队列: 8945ac32-7e99-4812-a73a-2281693360dd, 类型: embedding
+2025-03-14 16:21:41,932 - INFO - INFO - 从队列获取任务: 8945ac32-7e99-4812-a73a-2281693360dd, 任务类型: embedding
+2025-03-14 16:21:41,932 - INFO - INFO - 开始处理Embedding任务 8945ac32-7e99-4812-a73a-2281693360dd, 文本长度: 0
+2025-03-14 16:21:41,932 - INFO - INFO - Embedding文本: 0
+2025-03-14 16:21:42,012 - INFO - INFO - Embedding任务 8945ac32-7e99-4812-a73a-2281693360dd 处理完成
+2025-03-14 16:21:42,012 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:21:42,012 - INFO - INFO - 没有回调地址，直接删除本地任务数据 8945ac32-7e99-4812-a73a-2281693360dd
+2025-03-14 16:21:42,012 - INFO - INFO - 完成任务处理: 8945ac32-7e99-4812-a73a-2281693360dd
+2025-03-14 16:23:03,238 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:28:28,031 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:29:19,841 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:29:19,842 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:29:20,923 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:29:20,923 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:29:20,947 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:29:22,564 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:29:22,778 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:29:25,240 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:29:25,241 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:29:25,241 - INFO - INFO - mask_url: http://172.0.0.1:5002/mask，rerank_url: http://172.0.0.1:5001/rerank，embedding_url: http://172.0.0.1:5001/embedding
+2025-03-14 16:29:25,246 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:29:26,059 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:29:26,059 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:29:26,060 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:29:28,350 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:29:28,699 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-14 16:31:03,482 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:31:10,530 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:31:10,530 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:31:12,390 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:31:12,390 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:31:12,410 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:31:16,557 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:31:16,684 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:31:19,370 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:31:19,370 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:31:19,370 - INFO - INFO - mask_url: http://172.0.0.1:5002/mask，rerank_url: http://172.0.0.1:5001/rerank，embedding_url: http://172.0.0.1:5001/embedding
+2025-03-14 16:31:19,374 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:31:20,170 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:31:20,170 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:31:20,171 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:31:23,541 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:31:23,867 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-14 16:31:27,817 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:31:30,545 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:31:30,545 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:31:31,609 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:31:31,609 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:31:31,629 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:31:33,324 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:31:33,451 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:31:34,493 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:31:34,494 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:31:34,494 - INFO - INFO - mask_url: http://127.0.0.1:5002/mask，rerank_url: http://127.0.0.1:5001/rerank，embedding_url: http://127.0.0.1:5001/embedding
+2025-03-14 16:31:34,497 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:31:35,392 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:31:35,392 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:31:35,393 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:31:36,565 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:31:36,833 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-14 16:31:45,004 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 61ccf1bd-009c-41f4-8251-ef3c3fad64d5, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-14 16:31:45,004 - INFO - INFO - 添加任务到队列: 61ccf1bd-009c-41f4-8251-ef3c3fad64d5, 类型: embedding
+2025-03-14 16:31:45,853 - INFO - INFO - 从队列获取任务: 61ccf1bd-009c-41f4-8251-ef3c3fad64d5, 任务类型: embedding
+2025-03-14 16:31:45,853 - INFO - INFO - 开始处理Embedding任务 61ccf1bd-009c-41f4-8251-ef3c3fad64d5, 文本长度: 36
+2025-03-14 16:31:45,854 - INFO - INFO - Embedding文本: 36
+2025-03-14 16:31:45,989 - INFO - INFO - Embedding任务 61ccf1bd-009c-41f4-8251-ef3c3fad64d5 处理完成
+2025-03-14 16:31:45,989 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:31:45,989 - INFO - INFO - 没有回调地址，直接删除本地任务数据 61ccf1bd-009c-41f4-8251-ef3c3fad64d5
+2025-03-14 16:31:45,989 - INFO - INFO - 完成任务处理: 61ccf1bd-009c-41f4-8251-ef3c3fad64d5
+2025-03-14 16:31:46,016 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 81c003bb-ffff-4a4a-bc42-2a5d74d3af44, text: 测试文本，文本长度: 4, handle: None
+2025-03-14 16:31:46,016 - INFO - INFO - 添加任务到队列: 81c003bb-ffff-4a4a-bc42-2a5d74d3af44, 类型: embedding
+2025-03-14 16:31:46,991 - INFO - INFO - 从队列获取任务: 81c003bb-ffff-4a4a-bc42-2a5d74d3af44, 任务类型: embedding
+2025-03-14 16:31:46,992 - INFO - INFO - 开始处理Embedding任务 81c003bb-ffff-4a4a-bc42-2a5d74d3af44, 文本长度: 4
+2025-03-14 16:31:46,992 - INFO - INFO - Embedding文本: 4
+2025-03-14 16:31:47,103 - INFO - INFO - Embedding任务 81c003bb-ffff-4a4a-bc42-2a5d74d3af44 处理完成
+2025-03-14 16:31:47,103 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:31:47,103 - INFO - INFO - 没有回调地址，直接删除本地任务数据 81c003bb-ffff-4a4a-bc42-2a5d74d3af44
+2025-03-14 16:31:47,103 - INFO - INFO - 完成任务处理: 81c003bb-ffff-4a4a-bc42-2a5d74d3af44
+2025-03-14 16:32:16,142 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 9e1e025b-f343-428e-a0b4-b07828e7c766, text: ，文本长度: 0, handle: None
+2025-03-14 16:32:16,143 - INFO - INFO - 添加任务到队列: 9e1e025b-f343-428e-a0b4-b07828e7c766, 类型: embedding
+2025-03-14 16:32:17,134 - INFO - INFO - 从队列获取任务: 9e1e025b-f343-428e-a0b4-b07828e7c766, 任务类型: embedding
+2025-03-14 16:32:17,135 - INFO - INFO - 开始处理Embedding任务 9e1e025b-f343-428e-a0b4-b07828e7c766, 文本长度: 0
+2025-03-14 16:32:17,135 - INFO - INFO - Embedding文本: 0
+2025-03-14 16:32:17,284 - INFO - INFO - Embedding任务 9e1e025b-f343-428e-a0b4-b07828e7c766 处理完成
+2025-03-14 16:32:17,284 - INFO - INFO - --------开始返回数据----------
+2025-03-14 16:32:17,284 - INFO - INFO - 没有回调地址，直接删除本地任务数据 9e1e025b-f343-428e-a0b4-b07828e7c766
+2025-03-14 16:32:17,284 - INFO - INFO - 完成任务处理: 9e1e025b-f343-428e-a0b4-b07828e7c766
+2025-03-14 16:33:00,039 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:33:04,219 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:33:04,219 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:33:05,263 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:33:05,263 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:33:05,283 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:33:06,402 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:33:06,531 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:33:09,191 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:33:09,192 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:33:09,192 - INFO - INFO - mask_url: http://127.0.0.1:5002/mask，rerank_url: http://127.0.0.1:5001/rerank，embedding_url: http://127.0.0.1:5001/embedding
+2025-03-14 16:33:09,196 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:33:10,015 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:33:10,015 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:33:10,015 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:33:10,956 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:33:11,319 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-14 16:33:15,216 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:33:16,889 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:33:16,889 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:33:17,921 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:33:17,921 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:33:17,944 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:33:21,007 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:33:21,128 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:33:22,234 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:33:22,234 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:33:22,234 - INFO - INFO - mask_url: http://127.0.0.1:5002/mask，rerank_url: http://127.0.0.1:5001/rerank，embedding_url: http://127.0.0.1:5001/embedding
+2025-03-14 16:33:22,238 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:33:23,248 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:33:23,248 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:33:23,248 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:33:26,610 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:33:26,892 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-14 16:33:30,849 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:35:39,336 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:36:02,632 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:36:06,408 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:36:06,408 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:36:07,421 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:36:07,421 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:36:07,444 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:36:09,062 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:36:09,192 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:36:10,301 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:36:10,301 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:36:10,302 - INFO - INFO - mask_url: http://127.0.0.1:5002/mask，rerank_url: http://127.0.0.1:5001/rerank，embedding_url: http://127.0.0.1:5001/embedding
+2025-03-14 16:36:10,305 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:36:11,174 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:36:11,174 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:36:11,175 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:36:13,637 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:36:13,909 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-14 16:36:14,351 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 36619d2d-84b0-4b7f-adbe-54a3937c7fca, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-14 16:36:14,351 - INFO - INFO - 添加任务到队列: 36619d2d-84b0-4b7f-adbe-54a3937c7fca, 类型: embedding
+2025-03-14 16:36:14,919 - INFO - INFO - 从队列获取任务: 36619d2d-84b0-4b7f-adbe-54a3937c7fca, 任务类型: embedding
+2025-03-14 16:36:14,919 - INFO - INFO - 开始处理Embedding任务 36619d2d-84b0-4b7f-adbe-54a3937c7fca, 文本长度: 36
+2025-03-14 16:36:14,919 - INFO - INFO - Embedding文本: 36
+2025-03-14 16:36:15,053 - INFO - INFO - Embedding任务 36619d2d-84b0-4b7f-adbe-54a3937c7fca 处理完成
+2025-03-14 16:36:15,054 - INFO - INFO - --------开始返回数据----------model.__name__: Embedding
+2025-03-14 16:36:15,054 - INFO - INFO - 没有回调地址，直接删除本地任务数据 36619d2d-84b0-4b7f-adbe-54a3937c7fca
+2025-03-14 16:36:15,054 - INFO - INFO - 完成任务处理: 36619d2d-84b0-4b7f-adbe-54a3937c7fca
+2025-03-14 16:36:15,364 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: b195a844-aeac-4217-909f-734948535e4c, text: 测试文本，文本长度: 4, handle: None
+2025-03-14 16:36:15,364 - INFO - INFO - 添加任务到队列: b195a844-aeac-4217-909f-734948535e4c, 类型: embedding
+2025-03-14 16:36:16,055 - INFO - INFO - 从队列获取任务: b195a844-aeac-4217-909f-734948535e4c, 任务类型: embedding
+2025-03-14 16:36:16,055 - INFO - INFO - 开始处理Embedding任务 b195a844-aeac-4217-909f-734948535e4c, 文本长度: 4
+2025-03-14 16:36:16,056 - INFO - INFO - Embedding文本: 4
+2025-03-14 16:36:16,155 - INFO - INFO - Embedding任务 b195a844-aeac-4217-909f-734948535e4c 处理完成
+2025-03-14 16:36:16,155 - INFO - INFO - --------开始返回数据----------model.__name__: Embedding
+2025-03-14 16:36:16,155 - INFO - INFO - 没有回调地址，直接删除本地任务数据 b195a844-aeac-4217-909f-734948535e4c
+2025-03-14 16:36:16,155 - INFO - INFO - 完成任务处理: b195a844-aeac-4217-909f-734948535e4c
+2025-03-14 16:36:45,506 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: a54d3279-1a01-4e8f-a167-603e828b04ed, text: ，文本长度: 0, handle: None
+2025-03-14 16:36:45,506 - INFO - INFO - 添加任务到队列: a54d3279-1a01-4e8f-a167-603e828b04ed, 类型: embedding
+2025-03-14 16:36:46,184 - INFO - INFO - 从队列获取任务: a54d3279-1a01-4e8f-a167-603e828b04ed, 任务类型: embedding
+2025-03-14 16:36:46,185 - INFO - INFO - 开始处理Embedding任务 a54d3279-1a01-4e8f-a167-603e828b04ed, 文本长度: 0
+2025-03-14 16:36:46,185 - INFO - INFO - Embedding文本: 0
+2025-03-14 16:36:46,296 - INFO - INFO - Embedding任务 a54d3279-1a01-4e8f-a167-603e828b04ed 处理完成
+2025-03-14 16:36:46,296 - INFO - INFO - --------开始返回数据----------model.__name__: Embedding
+2025-03-14 16:36:46,296 - INFO - INFO - 没有回调地址，直接删除本地任务数据 a54d3279-1a01-4e8f-a167-603e828b04ed
+2025-03-14 16:36:46,297 - INFO - INFO - 完成任务处理: a54d3279-1a01-4e8f-a167-603e828b04ed
+2025-03-14 16:36:54,408 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:36:57,990 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:37:14,298 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:38:09,688 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:38:56,739 - INFO - INFO - Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:38:57,399 - INFO - INFO - Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1
+2025-03-14 16:38:57,399 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:38:58,151 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:38:58,151 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:38:58,175 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:38:58,237 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:38:58,355 - INFO - INFO - Rerank模型加载, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:38:59,537 - INFO - INFO - Rerank模型加载完成, 模型: Alibaba-NLP/gte-multilingual-reranker-base
+2025-03-14 16:38:59,537 - INFO - INFO - 所用服务模型加载成功！
+2025-03-14 16:38:59,537 - INFO - INFO - mask_url: http://127.0.0.1:5002/mask，rerank_url: http://127.0.0.1:5001/rerank，embedding_url: http://127.0.0.1:5001/embedding
+2025-03-14 16:38:59,548 - INFO - INFO - 信息抽取模型加载, 模型路径: uie-medium
+2025-03-14 16:39:00,395 - INFO - INFO - 信息抽取模型加载完成, 模型路径: uie-medium
+2025-03-14 16:39:00,395 - INFO - INFO - MaskService initialized, embedding model: None
+2025-03-14 16:39:00,396 - INFO - INFO - 加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:39:00,535 - INFO - INFO - 加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh
+2025-03-14 16:39:00,826 - INFO - INFO - OCR模型加载完成，使用设备: cpu
+2025-03-14 16:39:03,316 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: a6e12464-ddba-42aa-a760-4ba9811a4ad0, text: 2edca33b-d，文本长度: 36, handle: None
+2025-03-14 16:39:03,317 - INFO - INFO - 添加任务到队列: a6e12464-ddba-42aa-a760-4ba9811a4ad0, 类型: embedding
+2025-03-14 16:39:03,838 - INFO - INFO - 从队列获取任务: a6e12464-ddba-42aa-a760-4ba9811a4ad0, 任务类型: embedding
+2025-03-14 16:39:03,839 - INFO - INFO - 开始处理Embedding任务 a6e12464-ddba-42aa-a760-4ba9811a4ad0, 文本长度: 36
+2025-03-14 16:39:03,840 - INFO - INFO - Embedding文本: 36
+2025-03-14 16:39:04,038 - INFO - INFO - Embedding任务 a6e12464-ddba-42aa-a760-4ba9811a4ad0 处理完成
+2025-03-14 16:39:04,038 - INFO - INFO - --------开始返回数据----------model.__name__: embedding
+2025-03-14 16:39:04,038 - INFO - INFO - 返回接口确认 http://127.0.0.1:5001/embedding
+2025-03-14 16:39:04,042 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:5001/embedding 完成------------
+2025-03-14 16:39:04,042 - INFO - INFO - 完成任务处理: a6e12464-ddba-42aa-a760-4ba9811a4ad0
+2025-03-14 16:39:04,335 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: f8ffe889-039c-4c6d-88b1-5bda156156d8, text: 测试文本，文本长度: 4, handle: None
+2025-03-14 16:39:04,335 - INFO - INFO - 添加任务到队列: f8ffe889-039c-4c6d-88b1-5bda156156d8, 类型: embedding
+2025-03-14 16:39:05,043 - INFO - INFO - 从队列获取任务: f8ffe889-039c-4c6d-88b1-5bda156156d8, 任务类型: embedding
+2025-03-14 16:39:05,044 - INFO - INFO - 开始处理Embedding任务 f8ffe889-039c-4c6d-88b1-5bda156156d8, 文本长度: 4
+2025-03-14 16:39:05,044 - INFO - INFO - Embedding文本: 4
+2025-03-14 16:39:05,124 - INFO - INFO - Embedding任务 f8ffe889-039c-4c6d-88b1-5bda156156d8 处理完成
+2025-03-14 16:39:05,124 - INFO - INFO - --------开始返回数据----------model.__name__: embedding
+2025-03-14 16:39:05,124 - INFO - INFO - 返回接口确认 http://127.0.0.1:5001/embedding
+2025-03-14 16:39:05,126 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:5001/embedding 完成------------
+2025-03-14 16:39:05,126 - INFO - INFO - 完成任务处理: f8ffe889-039c-4c6d-88b1-5bda156156d8
+2025-03-14 16:39:05,352 - INFO - INFO - 开始创建Embedding任务， 创建任务 task_id: 79e3dc95-ad1a-45bb-86aa-6f71b17eaa49, text: ，文本长度: 0, handle: None
+2025-03-14 16:39:05,353 - INFO - INFO - 添加任务到队列: 79e3dc95-ad1a-45bb-86aa-6f71b17eaa49, 类型: embedding
+2025-03-14 16:39:06,127 - INFO - INFO - 从队列获取任务: 79e3dc95-ad1a-45bb-86aa-6f71b17eaa49, 任务类型: embedding
+2025-03-14 16:39:06,128 - INFO - INFO - 开始处理Embedding任务 79e3dc95-ad1a-45bb-86aa-6f71b17eaa49, 文本长度: 0
+2025-03-14 16:39:06,129 - INFO - INFO - Embedding文本: 0
+2025-03-14 16:39:06,244 - INFO - INFO - Embedding任务 79e3dc95-ad1a-45bb-86aa-6f71b17eaa49 处理完成
+2025-03-14 16:39:06,244 - INFO - INFO - --------开始返回数据----------model.__name__: embedding
+2025-03-14 16:39:06,244 - INFO - INFO - 返回接口确认 http://127.0.0.1:5001/embedding
+2025-03-14 16:39:06,246 - INFO - INFO - ------------返回结果到接口 http://127.0.0.1:5001/embedding 完成------------
+2025-03-14 16:39:06,246 - INFO - INFO - 完成任务处理: 79e3dc95-ad1a-45bb-86aa-6f71b17eaa49

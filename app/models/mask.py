@@ -10,7 +10,7 @@ from .file_models import FileModel
 class MaskTask(FileModel):
     def __init__(self):
         super().__init__("mask_task")
-
+        self.__name__ = "mask"
     async def create(self, task_id: str, data: Dict[str, Any]) -> bool:
         file_path = self._get_file_path(task_id)
         task_data = {
