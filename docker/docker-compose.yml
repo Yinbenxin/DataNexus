@@ -12,5 +12,4 @@ services:
       - "8000:8000"
 
     volumes:
-      - /Users/yinbenxin/.cache/:/root/.cache/
       - /Users/yinbenxin/.paddlenlp/:/root/.paddlenlp/
