@@ -15,7 +15,19 @@ class EmbeddingService:
         try:
             logger.info(f"Embedding模型加载开始, 模型: TencentBAC/Conan-embedding-v1")
             # 加载分词器和模型
-            self.model = SentenceTransformer("TencentBAC/Conan-embedding-v1")
+            try:
+                self.model = SentenceTransformer("TencentBAC/Conan-embedding-v1", local_files_only=True)
+                logger.info(f"本地模型加载成功，self.model：{self.model}")
+                
+            except:
+                self.model = SentenceTransformer("TencentBAC/Conan-embedding-v1")
+                logger.info(f"联网加载模型成功")
+
+            if self.model is None:
+                self.model = SentenceTransformer("TencentBAC/Conan-embedding-v1")
+                
+            if self.model is None:
+                raise Exception("Embedding模型加载失败")
             # 将模型设置为评估模式
             self.model.eval()
             logger.info(f"Embedding模型加载完成, 模型: TencentBAC/Conan-embedding-v1")
