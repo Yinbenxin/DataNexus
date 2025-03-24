@@ -19,7 +19,11 @@ class Faker:
 
     def _init_model_embeddings(self):
         logger.info("加载模型：EMBEDDING_SMELL_ZH: BAAI/bge-small-zh")
-        self.model = SentenceTransformer('BAAI/bge-small-zh')
+        try:
+            self.model = SentenceTransformer('BAAI/bge-small-zh', local_files_only=True)
+        except:
+            self.model = SentenceTransformer('BAAI/bge-small-zh')
+            logger.info(f"联网加载模型成功")
         logger.info("加载模型完成， EMBEDDING_SMELL_ZH: BAAI/bge-small-zh")
         all_type = list(FAKER_TYPES_MAP.keys())+list(OTHER_TYPE_MAP.keys())
         self.all_type_embeddings = self.model.encode(all_type, convert_to_tensor=True, normalize_embeddings=True)
