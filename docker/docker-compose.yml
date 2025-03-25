@@ -13,3 +13,4 @@ services:
 
     volumes:
       - /Users/yinbenxin/.paddlenlp/:/root/.paddlenlp/
+      - /Users/yinbenxin/.cache/:/root/.cache/
