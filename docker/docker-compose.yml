@@ -7,10 +7,15 @@ services:
       dockerfile: docker/Dockerfile
     image: nexusdata:1.0
     container_name: nexusdata
+    privileged: true
     restart: unless-stopped
     ports:
       - "8000:8000"
-
+    environment:
+      - TZ=Asia/Shanghai
+    # volumes:
+      # - /root/.cache/:/root/.cache/
+      # - /root/.paddlenlp/:/root/.paddlenlp/
     volumes:
-      - /Users/yinbenxin/.paddlenlp/:/root/.paddlenlp/
       - /Users/yinbenxin/.cache/:/root/.cache/
+      - /Users/yinbenxin/.paddlenlp/:/root/.paddlenlp/

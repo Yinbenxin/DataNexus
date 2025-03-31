@@ -7,6 +7,8 @@ from typing import Dict, Any
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from threading import Thread
 from dotenv import load_dotenv
+handle_url = "http://127.0.0.1:61916"
+
 load_dotenv()
 class CallbackHandler(BaseHTTPRequestHandler):
     received_data = None
@@ -22,11 +24,9 @@ class TestMaskAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 获取环境变量中的回调地址
-        cls.handle_url = os.getenv('HANDLE_URL')
-        if not cls.handle_url:
-            raise ValueError('HANDLE_URL environment variable is not set')
+        cls.handle_url = handle_url
         # cls.handle_url = "http://192.168.101.122:61916"
-        cls.handle_url = "http://127.0.0.1:61916"
+        # cls.handle_url = "http://127.0.0.1:61916"
 
         # 从URL中解析主机和端口
         from urllib.parse import urlparse
