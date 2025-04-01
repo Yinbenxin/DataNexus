@@ -10,7 +10,7 @@ from aiohttp import web
 from typing import Dict, Any
 from dotenv import load_dotenv
 load_dotenv()
-call_back_url = "http://127.0.0.1:5001/rerank"
+call_back_url = "http://127.0.0.1:5001/embedding"
 
 class CallbackHandler(BaseHTTPRequestHandler):
     received_data = None
@@ -111,15 +111,6 @@ class TestEmbeddingAPI(unittest.TestCase):
         task_data = response.json()
         task_id = task_data["task_id"]
         
-        # 等待任务完成
-        while True:
-            response = requests.get(f"{self.base_url}/{task_id}")
-            result = response.json()
-            
-            if result["status"] in ["completed", "failed"]:
-                return result
-            
-            time.sleep(1)
 
     @classmethod
     def tearDownClass(cls):
