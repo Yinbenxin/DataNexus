@@ -21,7 +21,7 @@ COPY requirements.txt /app/
 
 # 更新pip和setuptools，然后安装项目依赖
 RUN pip install --no-cache-dir --upgrade pip setuptools==61.0.0 && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 
 # 复制其余项目文件
 COPY . /app/
