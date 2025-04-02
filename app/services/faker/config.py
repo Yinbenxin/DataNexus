@@ -22,6 +22,13 @@ FAKER_TYPES_MAP = {
     '经度': 'longitude',
     '日期': 'date',
     '时间': 'time',
+    '身份证号码': 'ssn',
+    'ipv4地址':'ipv4',
+    'ipv6地址':'ipv6',
+    'url':'url',
+    'uuid':'uuid4',
+    'mac地址':'mac_address',
+    'tld':'tld',
 }
 
 # 其他类型映射，新增类型需要在该字典中添加，并在faker_data中添加对应的json文件
@@ -30,6 +37,9 @@ OTHER_TYPE_MAP={
     '宗教信仰': 'religions',
     '政治身份': 'political_identities',
     '政府部门': 'government_departments',
+    '疾病':'diseases',
+    '品牌':'brands',
+    '药物名称':'drugs',
 }
 
 

@@ -64,7 +64,7 @@ class InfoExtractor:
                 result_dict[info_type] = values
                 # 对于固定类型，概率设置为100
                 for value in values:
-                    results_map[value] = [info_type, 1]
+                    results_map[value] = [info_type, 100]
 
         # 处理其他类型的提取结果
         if info_types_by_other:
@@ -75,7 +75,7 @@ class InfoExtractor:
                 # 从result_map中获取概率信息
                 if info_type in result_map:
                     for entity in result_map[info_type]:
-                        results_map[entity['text']] = [original_type, int(entity['probability']*100)]
+                        results_map[entity['text']] = [original_type, int(entity['probability']*100.0)]
 
         return result_dict, results_map
 
