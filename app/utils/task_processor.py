@@ -32,14 +32,28 @@ class TaskProcessor:
         ip_address = os.getenv("IP_ADDRESS")
 
         if not ip_address:
-        # 获取handle URL，如果环境变量为空则使用本地IP
-            hostname = socket.gethostname()
-            ip_address = socket.gethostbyname(hostname)
+            # 备选方案：获取主机名对应的IP
+            try:
+                # 创建一个 UDP 套接字并连接到一个外部地址
+                s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                s.connect(('8.8.8.8', 80))
+                # 获取本地 IP
+                ip_address = s.getsockname()[0]
+                s.close()
+            except Exception as e:
+                # 如果上述方法失败，尝试使用备选方案
+                try:
+                    hostname = socket.gethostname()
+                    ip_address = socket.gethostbyname(hostname)
+                except Exception as e:
+                    logger.info(f"获取 IP 地址时出错: {e}")
+                    ip_address ="127.0.0.1"
+        logger.info(f"获取 IP 地址: {ip_address}")
             
         self.mask_url = f"http://{ip_address}:{mask_url}"
         self.rerank_url = f"http://{ip_address}:{rerank_url}"
         self.embedding_url = f"http://{ip_address}:{embedding_url}"
-    
+
         logger.info(f"mask_url: {self.mask_url}，rerank_url: {self.rerank_url}，embedding_url: {self.embedding_url}")
 
     async def _send_callback(self, 
