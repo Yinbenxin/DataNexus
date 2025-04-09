@@ -12,7 +12,7 @@ from typing import Dict, Any, List
 from dotenv import load_dotenv
 
 load_dotenv()
-call_back_url = "http://127.0.0.1:5001/mask"
+call_back_url = "http://10.100.66.130:5002/mask"
 
 class CallbackHandler(BaseHTTPRequestHandler):
     received_data = {}
